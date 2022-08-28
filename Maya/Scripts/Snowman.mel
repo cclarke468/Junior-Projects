@@ -1,0 +1,58 @@
+//MAYA MEL COMMANDS: https://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/Commands/index.html
+
+/*create body spheres*/
+polySphere -r 5 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+//polySphere -radius 5 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
+
+move -r -os -wd 0 5 0;
+//move -relative -objectSpace -worldSpaceDistance 0 5 0;
+select -replace pSphere1.vtx[380];
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add pSphere1.vtx[5];
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+softSelect -softSelectDistance 3.707027 -softSelectUVDistance 0.0630965;
+move -r -os -wd 0 0.7 0 ;
+
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+polySphere -e -r 3.5;
+//-e = -edit
+
+polySphere -q -sy;
+//-q = -query
+
+print(`polySphere -q -sy`);
+//the backtick ` character is on the same key on the keyboard as the tilde~
+//btw, the current selection in the maya scene is what the script is acting on
+
+move -r -os -wd 0 10.35 0 ;
+
+polySphere -r 2.5 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 14.5 0;
+
+/*create face*/
+polyCone -radius 0.5 -height 2 -subdivisionsX 20 -subdivisionsY 3 -subdivisionsZ 0 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
+move -r -os -wd 3.53 14.5 0 ;
+rotate -relative -objectSpace -forceOrderXYZ 0 0 -93.3 ;
+scale -relative 1 1.497978 1;
+
+polySphere -r 0.4 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 2.1 15 -1.13;
+scale -r 0.3 1 1;
+rotate -r -os -fo 5.3 28.76 10.9;
+polyMirrorFace  -cutMesh 1 -axis 2 -axisDirection 0 -mergeMode 1 -mergeThresholdType 1 -mergeThreshold 0.01 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 pSphere4;
+rotate -r -os -fo 4 0 0;
+
+/*create hat*/
+polyCylinder -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
+move -r -os -wd 0 17.6 0.42;
+rotate -r -os -fo 8.628005 0 0;
+duplicate -returnRootsOnly;
+scale -r 1.58 0.15 1.58;
+move -r -os -wd 0 -0.79479 0;
+
+/*create arms*/
+polyCylinder -r 0.2 -h 5 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 0.94 12.16 -3.67;
+rotate -r -os -fo -64.82 -10 -4.68;
