@@ -1,5 +1,7 @@
 //MAYA MEL COMMANDS: https://help.autodesk.com/cloudhelp/2022/ENU/Maya-Tech-Docs/Commands/index.html
 
+softSelect -softSelectReset; //softselect keeps not working
+
 /*create body spheres*/
 polySphere -r 5 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 //polySphere -radius 5 -subdivisionsX 20 -subdivisionsY 20 -axis 0 1 0 -createUVs 2 -constructionHistory 1;
@@ -12,37 +14,51 @@ selectPref -paintSelectRefine 1 -paintSelect 1;
 select -add pSphere1.vtx[5];
 dR_paintRelease;
 selectPref -paintSelectRefine 0 -paintSelect 0;
-softSelect -softSelectDistance 3.707027 -softSelectUVDistance 0.0630965;
+softSelect -softSelectDistance 3.707027 -softSelectUVDistance 0.0630965; //this line will work only sometimes
 move -r -os -wd 0 0.7 0 ;
 
 polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 polySphere -e -r 3.5;
 //-e = -edit
-
 polySphere -q -sy;
 //-q = -query
-
 print(`polySphere -q -sy`);
 //the backtick ` character is on the same key on the keyboard as the tilde~
 //btw, the current selection in the maya scene is what the script is acting on
-
 move -r -os -wd 0 10.35 0 ;
 
 polySphere -r 2.5 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 move -r -os -wd 0 14.5 0;
 
 /*create face*/
+//cone
 polyCone -radius 0.5 -height 2 -subdivisionsX 20 -subdivisionsY 3 -subdivisionsZ 0 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 move -r -os -wd 3.53 14.5 0 ;
 rotate -relative -objectSpace -forceOrderXYZ 0 0 -93.3 ;
 scale -relative 1 1.497978 1;
+select -r pCone1.e[34] ;
+select -add pCone1.e[20:39] ;
+move -r -os -wd -0.111481 0 -0.0511374 ; //this line stops working over time
+select -deselect pCone1.e[20:39] ;
+select -r pCone1.vtx[60] ;
+move -r -os -wd 0 0 -0.0950026 ;
 
+//eyes
 polySphere -r 0.4 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 move -r -os -wd 2.1 15 -1.13;
 scale -r 0.3 1 1;
 rotate -r -os -fo 5.3 28.76 10.9;
 polyMirrorFace  -cutMesh 1 -axis 2 -axisDirection 0 -mergeMode 1 -mergeThresholdType 1 -mergeThreshold 0.01 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 pSphere4;
 rotate -r -os -fo 4 0 0;
+softSelect -ssd 0.363167 -sud 0.0630965 ; //this line also usually does not work
+select -r pSphere4.vtx[74] ;
+move -r -os -wd 0 0 -0.0970684 ;
+select -r pSphere4.vtx[222] ;
+move -r -os -wd 0 0 0.0366779 ;
+select -r pSphere4.vtx[477] ;
+move -r -os -wd 0 0.0806982 0 ;
+select -r pSphere4.vtx[721] ;
+move -r -os -wd 0 -0.109186 0 ;
 
 /*create hat*/
 polyCylinder -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
