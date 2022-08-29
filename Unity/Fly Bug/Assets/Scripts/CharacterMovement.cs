@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -20,7 +21,7 @@ public class CharacterMovement : MonoBehaviour
     public void Update()
     {
         Vector3 direction = Vector3.up * joystick.Vertical + Vector3.right * joystick.Horizontal;
-        if (Input.GetKey(KeyCode.Space)) flying = !flying;
+        // if (Input.GetKey(KeyCode.Space)) flying = !flying;
         if (flying) characterController.Move(Vector3.forward * speed * Time.deltaTime);
         characterController.Move( direction * turnSpeed * Time.deltaTime);
         // transform.Rotate(direction * turnSpeed * Time.deltaTime);
@@ -28,10 +29,24 @@ public class CharacterMovement : MonoBehaviour
     
     public void Launch()
     {
-        while (flying)
+        if (!flying)
         {
-            characterController.Move(Vector3.forward * speed * Time.deltaTime);
+            StartCoroutine(Flying());
+            flying = true;
+            print("launch");
         }
+        else if (flying)
+        {
+            StopCoroutine(Flying());
+            flying = false;
+            print("landed");
+        }
+    }
+
+    private IEnumerator Flying()
+    {
+        characterController.Move(Vector3.forward * speed * Time.deltaTime);
+        yield return new WaitForSeconds(0.2f);
     }
 
     public void Death()

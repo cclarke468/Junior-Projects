@@ -68,7 +68,83 @@ duplicate -returnRootsOnly;
 scale -r 1.58 0.15 1.58;
 move -r -os -wd 0 -0.79479 0;
 
+/*create scarf*/
+polyCylinder -name "Scarf" -r 2.5 -h 1.1 -sx 20 -sy 3 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 0 13.344714 0 ;
+rotate -r -os -fo 0 0 -2.531;
+scale -r 1.03 1 1.03;
+select -r Scarf.e[19] ;
+select -add Scarf.e[0:19] ;
+scale -r -p -2.38419e-07cm 12.794714cm -4.76837e-07cm 1.067145 1.067145 1.067145 ;
+select -r Scarf.e[61] ;
+select -add Scarf.e[60:79] ;
+scale -r -p 0.0242897cm 13.894177cm -4.76837e-07cm 1.041982 1.041982 1.041982 ;
+
+select -r Scarf.f[58] ;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add Scarf.f[38] ;
+select -add Scarf.f[18] Scarf.f[38] Scarf.f[58] Scarf.f[78] Scarf.f[98] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+move -r -os -wd 0.0674609 -0.196961 0 ;
+
+selectPref -paintSelectRefine 0 -paintSelect 0;
+select -r Scarf.f[8] ;
+select -add Scarf.f[0:99] ;
+select -r Scarf.f[28] ;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add Scarf.f[8] ;
+select -add Scarf.f[8] Scarf.f[28] Scarf.f[48] Scarf.f[68] Scarf.f[88] ;
+select -add Scarf.f[49] ;
+select -add Scarf.f[29] ;
+select -add Scarf.f[9] Scarf.f[29] Scarf.f[49] Scarf.f[69] Scarf.f[89] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+move -r -os -wd 0 0.130489 0 ;
+
+polyPlane -w 1.2 -h 4 -sx 1 -sy 4 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 3.1 11.8 0.43 ;
+rotate -r -os -fo 74 90 0 ;
+select -add pPlane1.e[12] ;
+select -r pPlane1.e[9] ;
+move -r -os -wd 0 -0.316355 0 ;
+select -r pPlane1.e[0] ;
+move -r -os -wd 0 -0.211625 0 ;
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx 2.84488883 -pvy 11.72900573 -pvz 0.43 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 pPlane1.f[0:3];
+setAttr "polyExtrudeFace1.localTranslate" -type double3 0 0 0.282956 ;
+select -r pPlane1.e[13] ;
+move -r -os -wd 0 0 0.259583 ;
+select -r pPlane1.e[12] ;
+move -r -os -wd 0 -0.387536 0 ;
+
+
 /*create arms*/
-polyCylinder -r 0.2 -h 5 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+polyCylinder -r 0.2 -h 5 -sx 20 -sy 4 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
 move -r -os -wd 0.94 12.16 -3.67;
 rotate -r -os -fo -64.82 -10 -4.68;
+select -r pCylinder3.e[76] ;
+select -add pCylinder3.e[60:79] ;
+move -r -os -wd -smn 0 0 -0.172967 ;
+select -d pCylinder3.e[60:79] ;
+
+polyCylinder -r .15 -h .75 -sx 20 -sy 3 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 1.4 13.52 -6;
+rotate -r -os -fo -29.75;
+select -r pCylinder4.e[78] ;
+select -add pCylinder4.e[60:79] ;
+scale -r -p 1.418303cm 13.846511cm -6.125943cm 0.52514 0.52514 0.52514;
+select -r pCylinder4 ;
+duplicate -rr;
+rotate -r -os -fo -35.91242 0 0 ;
+move -r -os -wd 0 0 -0.296738 ;
+scale -r 1 2.134719 1 ;
+move -r -os -wd 0 0.532303 0 ;
+
+select -r pCylinder5 ;
+select -add pCylinder4 ;
+select -add pCylinder3 ;
+polyUnite -ch 1 -mergeUVSets 1 -centerPivot -name pCylinder5 pCylinder5 pCylinder4 pCylinder3;
+
+polyMirrorFace  -cutMesh 1 -axis 2 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 pCylinder6;
