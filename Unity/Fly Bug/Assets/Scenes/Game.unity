@@ -1258,6 +1258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   turnSpeed: 5
+  cameraTransform: {fileID: 827269526}
   joystick: {fileID: 1985223107}
 --- !u!143 &1388414767
 CharacterController:
