@@ -30,6 +30,7 @@ move -r -os -wd 0 10.35 0 ;
 polySphere -r 2.5 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 move -r -os -wd 0 14.5 0;
 
+
 /*create face*/
 //cone
 polyCone -radius 0.5 -height 2 -subdivisionsX 20 -subdivisionsY 3 -subdivisionsZ 0 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
@@ -60,6 +61,7 @@ move -r -os -wd 0 0.0806982 0 ;
 select -r pSphere4.vtx[721] ;
 move -r -os -wd 0 -0.109186 0 ;
 
+
 /*create hat*/
 polyCylinder -radius 1 -height 2 -subdivisionsX 20 -subdivisionsY 1 -subdivisionsZ 1 -axis 0 1 0 -roundCap 0 -createUVs 3 -constructionHistory 1;
 move -r -os -wd 0 17.6 0.42;
@@ -67,6 +69,7 @@ rotate -r -os -fo 8.628005 0 0;
 duplicate -returnRootsOnly;
 scale -r 1.58 0.15 1.58;
 move -r -os -wd 0 -0.79479 0;
+
 
 /*create scarf*/
 polyCylinder -name "Scarf" -r 2.5 -h 1.1 -sx 20 -sy 3 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
@@ -105,8 +108,8 @@ selectPref -paintSelectRefine 0 -paintSelect 0;
 move -r -os -wd 0 0.130489 0 ;
 
 polyPlane -w 1.2 -h 4 -sx 1 -sy 4 -ax 0 1 0 -cuv 2 -ch 1;
-move -r -os -wd 3.1 11.8 0.43 ;
-rotate -r -os -fo 74 90 0 ;
+move -r -os -wd 3.09 11.83 0.79 ;
+rotate -r -os -fo 0 84.4 -74 ;
 select -add pPlane1.e[12] ;
 select -r pPlane1.e[9] ;
 move -r -os -wd 0 -0.316355 0 ;
@@ -147,4 +150,89 @@ select -add pCylinder4 ;
 select -add pCylinder3 ;
 polyUnite -ch 1 -mergeUVSets 1 -centerPivot -name pCylinder5 pCylinder5 pCylinder4 pCylinder3;
 
-polyMirrorFace  -cutMesh 1 -axis 2 -axisDirection 0 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 pCylinder6;
+polyMirrorFace  -cutMesh 0 -axis 2 -axisDirection 1 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 pCylinder6;
+polySeparate -uss 1 -inp 1 pCylinder6;
+connectAttr -f polyMirror2.firstNewFace polySeparate1.startFace;
+connectAttr -f polyMirror2.lastNewFace polySeparate1.endFace;
+select -r pCylinder10 ;
+move -r -os -wd 0 -0.760551 0 ;
+select -r pCylinder10.e[499] ;
+select -add pCylinder10.e[461] pCylinder10.e[464] pCylinder10.e[466] pCylinder10.e[468] pCylinder10.e[470] pCylinder10.e[472] pCylinder10.e[474] pCylinder10.e[476] pCylinder10.e[478] pCylinder10.e[480] pCylinder10.e[482] pCylinder10.e[484] pCylinder10.e[486] pCylinder10.e[488] pCylinder10.e[490] pCylinder10.e[492] pCylinder10.e[494] pCylinder10.e[496] pCylinder10.e[498:499] ;
+move -r -os -wd 0 0.334493 0 ;
+select -r pCylinder10.e[458] ;
+select -add pCylinder10.e[421] pCylinder10.e[424] pCylinder10.e[426] pCylinder10.e[428] pCylinder10.e[430] pCylinder10.e[432] pCylinder10.e[434] pCylinder10.e[436] pCylinder10.e[438] pCylinder10.e[440] pCylinder10.e[442] pCylinder10.e[444] pCylinder10.e[446] pCylinder10.e[448] pCylinder10.e[450] pCylinder10.e[452] pCylinder10.e[454] pCylinder10.e[456] pCylinder10.e[458:459] ;
+move -r -os -wd 0 0 0.44866 ;
+
+polyCylinder -r .15 -h .75 -sx 20 -sy 3 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 1 11.25 4.5;
+rotate -r -os -fo -59.103675 0 0 ;
+select -r pCylinder11.e[18] ;
+select -add pCylinder11.e[0:19] ;
+scale -r -p 1.035142cm 11.061919cm 4.816245cm 0.544252 0.544252 0.544252 ;
+
+
+/*create snow*/
+polyCube -width 18 -height 2 -depth 24 -sx 4 -sy 1 -sz 4 -ax 0 1 0 -cuv 4 -ch 1;
+select -r pCube1.vtx[12] ;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add pCube1.vtx[13] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+move -r -os -wd 0 1.004622 0 ;
+rotate -r -p 2.25cm 2.004622cm 6cm -os -fo 0 0 6.309968 ;
+select -r pCube1.vtx[22] ;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add pCube1.vtx[21] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add pCube1.vtx[20] ;
+select -add pCube1.vtx[23] ;
+select -add pCube1.vtx[24] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+rotate -r -p 0cm 1cm -6cm -os -fo 0 0 -5.290351 ;
+select -r pCube1 ;
+select -add pCube1.vtx[20:24] ;
+select -r pCube1.vtx[14] ;
+move -r -os -wd 0 0.742382 0 ;
+select -r pCube1 ;
+select -add pCube1.vtx[14] ;
+select -r pCube1.vtx[19] ;
+move -r -os -wd 0 -0.449071 0 ;
+select -r pCube1.vtx[5] ;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add pCube1.vtx[9] ;
+select -add pCube1.vtx[5:9] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+rotate -r -p 0cm 1cm 12cm -os -fo 0 0 2.300129 ;
+
+
+/*create buttons*/
+polyCylinder -n "button" -r .3 -h .1 -sx 20 -sy 1 -sz 2 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 3.35 12.05 0; 
+rotate -r -os -fo 0 0 -90;
+select -r button.f[48] ;
+dR_paintPress;
+selectPref -paintSelectRefine 1 -paintSelect 1;
+select -add button.f[47] ;
+select -add button.f[40:59] ;
+dR_paintRelease;
+selectPref -paintSelectRefine 0 -paintSelect 0;
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx 3.400000001 -pvy 12.05000003 -pvz -5.960464478e-08 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 button.f[40:59];
+setAttr "polyExtrudeFace2.localTranslate" -type double3 0 0 0.060803 ;
+setAttr "polyExtrudeFace2.localScale" -type double3 0.566667 0.566667 0.566667 ;
+select -r button ;
+duplicate -rr;
+move -r -os -wd 1.285944 0.105244 0 ;
+duplicate -rr;
+move -r -os -wd 1.312753 -0.123042 0 ;
+rotate -r -os -fo 0 0 -22.519099 ;
+select -r button ;
+move -r -os -wd 0 -0.31489 0 ;
+rotate -r -os -fo 0 0 26.211301 ;
