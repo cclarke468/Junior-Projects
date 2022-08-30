@@ -18,10 +18,8 @@ softSelect -softSelectDistance 3.707027 -softSelectUVDistance 0.0630965; //this 
 move -r -os -wd 0 0.7 0 ;
 
 polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
-polySphere -e -r 3.5;
-//-e = -edit
-polySphere -q -sy;
-//-q = -query
+polySphere -e -r 3.5; //-e = -edit
+polySphere -q -sy; //-q = -query
 print(`polySphere -q -sy`);
 //the backtick ` character is on the same key on the keyboard as the tilde~
 //btw, the current selection in the maya scene is what the script is acting on
