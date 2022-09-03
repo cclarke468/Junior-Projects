@@ -1,0 +1,17 @@
+//polysphere function returns a string;
+//retrieve the name/type name of a selection using ls
+
+print(`ls -selection`); //prints all selected objects in scene, backticks very important
+
+string  $polySphereVar[];
+$polySphereVar = `polySphere -r 1 -sx 1 -sy 1 -ax 0 1 0 -cuv 2 -ch 1`;
+//don't forget backticks!!
+print($polySphereVar); //prints the name and node name of polysphere inside the variable
+
+move -relative 0 1 2 $polySphereVar[0]; //since the var is an array, have to specify obj number
+
+float $radius = `polySphere -query -radius $polySphereVar[0]`;
+print($radius);
+
+polySphere -edit -radius ($radius - 0.2) $polySphereVar[0];
+//edit radius of obj

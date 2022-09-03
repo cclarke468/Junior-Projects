@@ -1,0 +1,46 @@
+/* Arithmetic Operators:
+    +
+    -
+    *
+    /
+    ++ (increment)
+    -- (decrement)
+    % (modulus operator, only returns the remainder that is left over);
+        13 / 5 returns 2; 
+        13 % 5 returns 3, since that is the amount left over;
+        This operator is useful for figuring out if a number is even or odd 
+        by dividing the number by two; any even number will return a 0, but any odd number returns a 1
+            2 % 2 == 0; even
+            3 % 2 == 1; odd
+    ^ (power/exponent)
+*/
+
+/* Assignment Operators:
+    = 
+    += (add new var to current var) 4 += 6 == 10
+    -=
+    *=
+    /=
+    %=
+    ^=
+*/
+
+/* Comparison Operators:
+    //all return bools/true or false/1 or 0;
+
+    == (equal to)
+    != (not equal to)
+    >
+    <
+    >=
+    <=
+*/
+
+/* Logic Operators (also bools):
+    && (and)
+    || (or)
+    ! (not)
+*/
+
+print(1>2); //returns 0, false
+print(!(1>2)); //returns 1, true;

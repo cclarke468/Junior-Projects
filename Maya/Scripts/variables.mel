@@ -1,0 +1,27 @@
+//to define variable names, use this format: type $variableName;
+/*
+    types of vars...
+    int: 1, 3241, -54;
+    float: 3.555555;
+    string: "hello";
+    bool: 1 or 0;
+    array: [1,2,3];
+*/
+int $number;
+$number = 27;
+print("number: " + $number);
+
+string $text = "hello world";
+print($text);
+
+float $pi = 3.14;
+
+//bool does not exist in mel, so use int of 0 or 1
+int $isOn = 1;
+
+//array declaration/initialization looks like this:
+int $numList[] = {7, -1, -45};
+print($numList); //prints entire array
+print($numList[2]); //prints -45
+$numList[2] = 0;
+print($numList);
