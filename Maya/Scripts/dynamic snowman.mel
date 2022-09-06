@@ -1,0 +1,12 @@
+float $rBase = 5;
+float $rMid = $rBase * 0.75 ;
+float $rTop = $rMid * 0.75;
+
+polySphere -r $rBase -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 $rBase 0;
+
+polySphere -r $rMid -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 (($rBase*2) + $rMid) 0;
+
+polySphere -r $rTop -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 (($rBase*2)+($rMid*2) + $rTop) 0;
