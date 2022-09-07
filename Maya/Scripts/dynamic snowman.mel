@@ -2,11 +2,40 @@ float $rBase = 5;
 float $rMid = $rBase * 0.75 ;
 float $rTop = $rMid * 0.75;
 
-polySphere -r $rBase -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+float $percent = 0.55;
+
+polySphere -n"baseSphere" -r $rBase -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
 move -r -os -wd 0 $rBase 0;
 
-polySphere -r $rMid -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
-move -r -os -wd 0 (($rBase*2) + $rMid) 0;
+polySphere -n "midSphere" -r $rMid -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 (($rBase*2) + $rMid*$percent) 0;
 
-polySphere -r $rTop -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
-move -r -os -wd 0 (($rBase*2)+($rMid*2) + $rTop) 0;
+polySphere -n "topSphere" -r $rTop -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 (($rBase*2)+($rMid*2) + $rTop*($percent/4)) 0;
+
+float $snowmanHeight = ($rBase*2)+($rMid*2) + ($rTop*($percent/4)+$rTop);
+float $rHat = $rTop/2;
+
+polyCylinder -n "hat" -r $rHat -h ($rTop*1.5) -sx 20 -sy 5 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 0 ($snowmanHeight+($rTop*$percent)) 0;
+select -r hat.f[0:19] ;
+polyExtrudeFacet -constructionHistory 1 -keepFacesTogether 1 -pvx -1.192092896e-07 -pvy 16.33999999 -pvz -1.788139343e-07 -divisions 1 -twist 0 -taper 1 -off 0 -thickness 0 -smoothingAngle 30 hat.f[0:19];
+setAttr "polyExtrudeFace1.localTranslate" -type double3 0 0 ($rHat/2) ;
+
+float $rNose = $rHat/2;
+float $hNose = $rTop;
+
+polyCone -n "nose" -r $rNose -h $hNose -sx 20 -sy 1 -sz 0 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd ($rTop+($hNose/2)*$percent) ($snowmanHeight-$rTop) 0;
+rotate -r -os -fo 0 0 -90;
+
+polyCylinder -n "eyes" -r ($rNose*.75) -h ($rNose/3) -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd 0 ($snowmanHeight-($rTop*0.8)) 0;
+rotate -r -os -fo 30 -5 -90;
+move -r -os -wd 0 ($rTop) 0;
+polyMirrorFace  -cutMesh 0 -axis 2 -axisDirection 1 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1 eyes;
+
+polyCube -w $rNose -h $rBase -d $rNose -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1;
+move -r -os -wd 0 (($rBase*2) + $rMid*$percent) ($rMid+($rMid/2));
+rotate -r -os -fo 110;
+polyMirrorFace  -cutMesh 0 -axis 2 -axisDirection 1 -mergeMode 0 -mergeThresholdType 0 -mergeThreshold 0.001 -mirrorAxis 2 -mirrorPosition 0 -smoothingAngle 30 -flipUVs 0 -ch 1;
