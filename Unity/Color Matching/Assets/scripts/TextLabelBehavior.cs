@@ -1,0 +1,28 @@
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
+[RequireComponent(typeof(Text))]
+public class TextLabelBehavior : MonoBehaviour
+{
+    public Text label;
+    public UnityEvent startEvent;
+    void Start()
+    {
+        label = GetComponent<Text>();
+    }
+
+    public void UpdateLabel(FloatData obj)
+    {
+        label.text = obj.value.ToString();
+    }
+
+    public void UpdateLabel(IntData obj)
+    {
+        label.text = obj.value.ToString();
+    }
+
+    public void UpdateTextLabel(string str)
+    {
+        label.text = str;
+    }
+}

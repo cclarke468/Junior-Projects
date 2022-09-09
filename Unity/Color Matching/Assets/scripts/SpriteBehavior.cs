@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpriteBehavior : MonoBehaviour
 {
     private SpriteRenderer rendererObj;
-    private ColorID colorID;
+    // public ColorID colorID;
 
     private void Start()
     {
@@ -15,5 +15,6 @@ public class SpriteBehavior : MonoBehaviour
     public void ChangeRendererColor(ColorID color)
     {
         rendererObj.color = color.colorValue;
+        print(rendererObj.color);
     }
 }
