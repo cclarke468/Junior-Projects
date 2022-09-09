@@ -1,0 +1,3 @@
+[submodule "Unity/UnityScripts"]
+	path = Unity/UnityScripts
+	url = https://github.com/cclarke468/UnityScripts
