@@ -1,4 +1,7 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
+
 [CreateAssetMenu]
 
 public class IntData : ScriptableObject
@@ -14,9 +17,26 @@ public class IntData : ScriptableObject
             value = var;
         }
 
+        public void SetIntData(IntData var)
+        {
+            value = var.value;
+        }
+
+        public void CompareData(IntData obj)
+        {
+            if (value >= obj.value)
+            {
+                
+            }
+            else
+            {
+                value = obj.value;
+            }
+        }
         public void UpdateValue(int num)
         {
             value += num;
         }
 
+     
 }

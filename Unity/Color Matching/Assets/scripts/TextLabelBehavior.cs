@@ -4,11 +4,12 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text))]
 public class TextLabelBehavior : MonoBehaviour
 {
-    public Text label;
+    private Text label;
     public UnityEvent startEvent;
     void Start()
     {
         label = GetComponent<Text>();
+        startEvent.Invoke();
     }
 
     public void UpdateLabel(FloatData obj)

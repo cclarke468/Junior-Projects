@@ -6,7 +6,7 @@ public class SpriteBehavior : MonoBehaviour
     private SpriteRenderer rendererObj;
     // public ColorID colorID;
 
-    private void Start()
+    private void Awake() //had to change from Start() because it was running after the startevent that invokes it in another script
     {
         rendererObj = GetComponent<SpriteRenderer>();
         // colorID = GetComponent<IDContainerBehavior>().idObj;
@@ -15,6 +15,7 @@ public class SpriteBehavior : MonoBehaviour
     public void ChangeRendererColor(ColorID color)
     {
         rendererObj.color = color.colorValue;
-        print(rendererObj.color);
+        // print(rendererObj.color);
+        // print(color.colorValue);
     }
 }
