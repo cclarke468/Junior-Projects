@@ -1,0 +1,20 @@
+//functions are defined like this:
+proc /*procedure*/ HelloWorld()
+{
+    print("Hi world!\n");
+}
+
+//the function will only run when called, so running the proc block won't do anything until you do this...
+
+HelloWorld();
+//every time you update the function, make sure you run the definition in maya before calling the function
+//again, otherwise it won't update in maya
+
+proc WelcomeFunction(string $name, int $num)
+{
+    print("Hello, " + $name+"! Welcome to HECK!\nYou have " + $num + " years left!\n");
+    //remember, $name and $int cease to exist outside this code block--outside of the block is outside of the scope
+}
+
+WelcomeFunction("Zelda", 2);
+// print($name) <<this throws an error, it's out of scope

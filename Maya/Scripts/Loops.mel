@@ -7,3 +7,34 @@ for (statement 1; statement 2; statement 3) // no semicolon after statement 3
     // statement 3: executed every time, after the code block
 }
 */
+
+for ($i=0; $i<10; $i++)
+{
+    print($i + "\n");
+}
+
+print("End of loop\n");
+print($i + " is i now.\n");
+
+while ($i > 0)
+{
+    print("while loop " + $i + "\n");
+    $i--;
+}
+
+print("i is now "+ $i +".\nInitiating do-while loop...\n");
+
+//do while loop runs the code once first (the 'do' and then loops it if the while condition is true)
+do 
+{
+    $i++;
+    print("The do-while loop runs first, then checks if it's true...this is loop " + $i +"\n");
+}
+while($i < -1);
+
+string $people[] = {"Josh","Tim", "Zelda", "Link","Genos", "Hannibal Lector"};
+
+for ($i=0; $i<(size($people)); $i++)
+{
+    print("\nhey there, " + $people[$i]);
+}
