@@ -1,0 +1,38 @@
+//ue for loop to loop through 1-10, print only even numbers;
+//my solutions...
+for ($i=1; $i<10; $i++)
+{
+    $i++;
+    print($i+"\n");
+}
+
+//Clayton's solution...
+for ($i=1; $i<=10; $i++)
+{
+    if($i % 2 == 0) //modulus % returns 0 if it is even, 1 if it's odd
+    {
+        print("even: " + $i + "\n");
+    }
+//     else if ($i % 2 == 1)
+//     {
+//         print("odd: " + $i + "\n");;
+//     }
+}
+
+//create a function that does this
+proc PrintEvenNumbers(int $num, int $range) //when declaring proc/functions, don't use void! or return types! yet!
+{
+    for ($i=$num; $i<=$range; $i++)
+    {
+        if($i % 2 == 0) //modulus % returns 0 if it is even, 1 if it's odd
+        {
+            print("even: " + $i + "\n");
+        }
+    //     else if ($i % 2 == 1)
+    //     {
+    //         print("odd: " + $i + "\n");;
+    //     }
+    }
+}
+
+PrintEvenNumbers(1,10);

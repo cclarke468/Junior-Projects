@@ -1,0 +1,24 @@
+// Staircase Generator
+float $w = 9, $d = 3, $h = .5;
+float $stepH = .5, $stepR = 15, $p = -6;
+int $totalSteps = 20;
+string $stepsName = "step1";
+
+proc SpiralStaircaseGenerator(float $width, float $depth, float $height, 
+float $stepHeight, float  $stepRotation, float  $pivotOffset, int $numOfSteps, 
+string $name)
+{
+    polyCube -n $name -w $width -h $height -d $depth -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1;
+    move -r $pivotOffset 0 0 $name.scalePivot $name.rotatePivot; //moves the obj for some reason?
+    move -r -os -wd ($pivotOffset*= -1) ($height/2) 0; // corrects movement of obj without changing pivot
+
+    for ($i=1; $i<($numOfSteps); $i++)
+    {
+        // duplicate -smartTransform;
+        duplicate -rr;
+        move -r -os -wd 0 $stepHeight 0 ;
+        rotate -r -os -fo 0 $stepRotation 0 ;
+    }
+}
+
+SpiralStaircaseGenerator($w,$d,$h,$stepH,$stepR,$p,$totalSteps,$stepsName);
