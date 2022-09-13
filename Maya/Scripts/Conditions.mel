@@ -1,0 +1,13 @@
+// Conditions
+
+// comparisons: 
+//     ==
+//     !=
+//     >=
+//     <=
+
+if (1 == 1)
+{
+    print("Hello World!\nThis is a new line.\n"); // escape characters in strings start with backslash \
+
+}

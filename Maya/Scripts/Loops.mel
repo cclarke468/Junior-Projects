@@ -1,0 +1,9 @@
+//for loop
+/*
+for (statement 1; statement 2; statement 3) // no semicolon after statement 3
+{
+    //statement 1: executed one time before code block
+    // statement 2: define a condition
+    // statement 3: executed every time, after the code block
+}
+*/
