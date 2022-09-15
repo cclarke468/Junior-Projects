@@ -13,19 +13,22 @@ public class CoroutineBehavior : MonoBehaviour
     private WaitForFixedUpdate _waitForFixedUpdate;
     public IntData i;
     public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
-    private IEnumerator Counting()
+   
+    private void Start()
     {
         _waitForSeconds = new WaitForSeconds(seconds);
         _waitForFixedUpdate = new WaitForFixedUpdate();
+        startEvent.Invoke();
         
+    }
+    private IEnumerator Counting()
+    {
         startCountEvent.Invoke();
         yield return _waitForSeconds;
-        // print("late start");
         while (i.value > 0)
         {
             repeatCountEvent.Invoke();
             i.value--;
-            // print(i);
             yield return _waitForSeconds;
         }
         endCountEvent.Invoke();
@@ -35,7 +38,7 @@ public class CoroutineBehavior : MonoBehaviour
     {
         while (canRun)
         {
-            yield return _waitForFixedUpdate;
+            yield return _waitForSeconds;
             repeatUntilFalseEvent.Invoke();
         }
     }
@@ -51,8 +54,5 @@ public class CoroutineBehavior : MonoBehaviour
         StartCoroutine(Counting());
     }
 
-    private void Start()
-    {
-        startEvent.Invoke();
-    }
+    
 }
