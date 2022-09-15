@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a04c8cca970a474f8e9255d715b7535, type: 3}
-  m_Name: V3 A
+  m_Script: {fileID: 11500000, guid: 2c9660cca8d3a344ab9c6b5ff82d43ba, type: 3}
+  m_Name: Pink
   m_EditorClassIdentifier: 
-  value: {x: 50, y: 77, z: 0}
+  colorValue: {r: 1, g: 0.6556604, b: 0.82845366, a: 1}
