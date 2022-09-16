@@ -12,18 +12,24 @@ public class MatchBehavior : MonoBehaviour
     {
         // print(idObj);
         // print(other.GetComponent<IDContainerBehavior>().idObj);
-        print(gameObject);
+        print(idObj);
         var tempObj = other.GetComponent<IDContainerBehavior>();
-        if (tempObj == null) yield break;
+        if (tempObj == null)
+        {
+            print(other.gameObject + " null");
+            yield break;
+        }
 
         var otherID = tempObj.idObj;
         if (otherID == idObj)
         {
             matchEvent.Invoke();
+            print(gameObject + " matched to " + other.gameObject + ". OtherID is " + otherID + " and my ID is " + idObj);
         }
         else
         {
             noMatchEvent.Invoke();
+            print(gameObject + " did NOT match to " + other.gameObject + ". OtherID is " + otherID + " but my ID is " + idObj);
             yield return new WaitForSeconds(0.5f);
             noMatchDelayedEvent.Invoke();
         }
