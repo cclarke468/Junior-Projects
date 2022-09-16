@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -211707321981923507}
   - component: {fileID: -3204979940008415891}
   - component: {fileID: 5024281555189686259}
+  - component: {fileID: 3094506290106821107}
   m_Layer: 7
   m_Name: ring
   m_TagString: Untagged
@@ -193,6 +194,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idObj: {fileID: 0}
   startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  colorIDDataList: {fileID: 11400000, guid: 4e6be7556d648f643934d2f429847bb2, type: 2}
+--- !u!114 &3094506290106821107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801808256250779559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546970241f26eaf4eacf530d59ee1344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 0}
+  matchEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1801808256250779558}
+        m_TargetAssemblyTypeName: UnityEngine.SpriteRenderer, UnityEngine
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8217966394426697341, guid: ea31c430179df2d4f907ef0821a3c055, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: match
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2414232854496735496}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  noMatchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  noMatchDelayedEvent:
     m_PersistentCalls:
       m_Calls: []
   colorIDDataList: {fileID: 11400000, guid: 4e6be7556d648f643934d2f429847bb2, type: 2}

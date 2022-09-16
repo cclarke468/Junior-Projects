@@ -15,7 +15,6 @@ public class SpriteBehavior : MonoBehaviour
     public void ChangeRendererColor(ColorID color)
     {
         rendererObj.color = color.colorValue;
-        
     }
     
     public void ChangeRendererColor(ColorIDDataList colorList)
@@ -23,4 +22,5 @@ public class SpriteBehavior : MonoBehaviour
         rendererObj.color = colorList.currentColor.colorValue;
 
     }
+    // public void Change
 }

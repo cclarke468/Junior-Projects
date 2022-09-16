@@ -10,8 +10,9 @@ public class MatchBehavior : MonoBehaviour
 
     private IEnumerator OnTriggerEnter(Collider other)
     {
-        print(idObj);
-        print(other.GetComponent<IDContainerBehavior>().idObj);
+        // print(idObj);
+        // print(other.GetComponent<IDContainerBehavior>().idObj);
+        print(gameObject);
         var tempObj = other.GetComponent<IDContainerBehavior>();
         if (tempObj == null) yield break;
 
