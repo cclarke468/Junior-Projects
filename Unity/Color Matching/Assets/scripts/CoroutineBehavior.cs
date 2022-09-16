@@ -38,8 +38,8 @@ public class CoroutineBehavior : MonoBehaviour
     {
         while (canRun)
         {
-            yield return _waitForSeconds;
             repeatUntilFalseEvent.Invoke();
+            yield return _waitForSeconds;
         }
     }
 
