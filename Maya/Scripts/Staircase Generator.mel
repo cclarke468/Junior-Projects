@@ -1,9 +1,13 @@
 // Staircase Generator
 float $w = 9, $d = 3, $h = .5;
-float $stepH = .5, $stepR = 15, $p = -6;
-int $totalSteps = 20;
+float $stepH = 1, $stepR = 15, $p = -6;
+int $totalSteps = 40;
 string $stepsName = "step1";
+string $banisterName = "rail1";
+float $staircaseHeight = $stepH * $totalSteps;
 
+float $cylinderRadius = (abs($p)-($w/3)) ; 
+float $cylinderHeight = $staircaseHeight;
 proc SpiralStaircaseGenerator(float $width, float $depth, float $height, 
 float $stepHeight, float  $stepRotation, float  $pivotOffset, int $numOfSteps, 
 string $name)
@@ -22,3 +26,20 @@ string $name)
 }
 
 SpiralStaircaseGenerator($w,$d,$h,$stepH,$stepR,$p,$totalSteps,$stepsName);
+
+//optional center cylinder:
+polyCylinder -r $cylinderRadius -h $cylinderHeight -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+move -r -os -wd $p ($cylinderHeight/2) 0;
+
+polyCube -w 0.5 -h 5 -d 0.5 -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1;
+move -r $p 0 0 $name.scalePivot $name.rotatePivot;
+move -r -os -wd (abs($w/2) - 0.5) (5/2) 0;
+// move -r $pivotOffset 0 0 $name.scalePivot $name.rotatePivot; //moves the obj for some reason?
+// move -r -os -wd ($pivotOffset*= -1) ($height/2) 0;
+for ($i=1; $i<($totalSteps); $i++)
+    {
+        // duplicate -smartTransform;
+        duplicate -rr;
+        move -r -os -wd 0 $stepH 0 ;
+        // rotate -r -os -fo 0 $stepRotation 0 ;
+    }

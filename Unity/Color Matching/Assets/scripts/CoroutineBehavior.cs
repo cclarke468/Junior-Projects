@@ -7,13 +7,20 @@ using UnityEngine.Events;
 public class CoroutineBehavior : MonoBehaviour
 {
     //coroutines are monobehavior obj, so they would not run in a scriptable object
-    public bool canRun = false;
+    public bool canRun;
     private WaitForSeconds _waitForSeconds;
     public float seconds = 3;
     private WaitForFixedUpdate _waitForFixedUpdate;
     public IntData i;
     public UnityEvent startEvent, startCountEvent, repeatCountEvent, endCountEvent, repeatUntilFalseEvent;
-   
+
+    public bool CanRun //this was created with Rider by clicking the hammer icon to the left of the public bool canRun and clicking "encapsulate field" from drop-down
+    {
+        get => canRun;
+        set => canRun = value;
+    }
+    //the code block above makes canRun editable from unity events in the editor, similar to bool enabled for game objects
+
     private void Start()
     {
         _waitForSeconds = new WaitForSeconds(seconds);
@@ -36,7 +43,7 @@ public class CoroutineBehavior : MonoBehaviour
 
     private IEnumerator RepeatUntilFalse()
     {
-        while (canRun)
+        while (CanRun)
         {
             repeatUntilFalseEvent.Invoke();
             yield return _waitForSeconds;
@@ -45,7 +52,7 @@ public class CoroutineBehavior : MonoBehaviour
 
     public void StartRepeatUntilFalse()
     {
-        canRun = true;
+        CanRun = true;
         StartCoroutine(RepeatUntilFalse());
     }
 
@@ -53,6 +60,7 @@ public class CoroutineBehavior : MonoBehaviour
     {
         StartCoroutine(Counting());
     }
-
+    
+    
     
 }

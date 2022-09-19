@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5024281555189686259}
   - component: {fileID: 3094506290106821107}
   - component: {fileID: 6845237361790672395}
+  - component: {fileID: -8606372661659162271}
   m_Layer: 7
   m_Name: ring
   m_TagString: Untagged
@@ -126,8 +127,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801808256250779559}
   serializedVersion: 2
-  m_Mass: 25
-  m_Drag: 0.75
+  m_Mass: 10
+  m_Drag: 0.25
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -245,6 +246,7 @@ MonoBehaviour:
   noMatchDelayedEvent:
     m_PersistentCalls:
       m_Calls: []
+  delayedSeconds: 0.5
   colorIDDataList: {fileID: 11400000, guid: 4e6be7556d648f643934d2f429847bb2, type: 2}
 --- !u!114 &6845237361790672395
 MonoBehaviour:
@@ -262,6 +264,34 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-8606372661659162271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801808256250779559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fb9ba9d4d9dbb41a953b0eb1d800ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: cc40eec645fe48c4f82d7fab31634eaf, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2052342811694224498}
+        m_TargetAssemblyTypeName: DestroyBehavior, Assembly-CSharp
+        m_MethodName: SelfDestruct
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2733922486972967315
 GameObject:
   m_ObjectHideFlags: 0

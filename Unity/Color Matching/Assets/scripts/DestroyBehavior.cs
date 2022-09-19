@@ -11,6 +11,11 @@ public class DestroyBehavior : MonoBehaviour
     {
         waitForSeconds = new WaitForSeconds(seconds);
         yield return waitForSeconds;
+        SelfDestruct();
+    }
+
+    public void SelfDestruct()
+    {
         Destroy(gameObject);
     }
 }
