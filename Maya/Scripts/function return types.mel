@@ -1,0 +1,26 @@
+proc VoidProc() //return type is void
+{
+    print("hello\n");
+}
+
+
+proc string RandomNamePicker()
+{
+    string $nameList[] = {"John", "Ganon", "Carl","TaylortheLatte", "Lila", "Depression"};
+    int $listSize = size($nameList);
+    int $randNum = `rand $listSize`; // need backticks; also, rand is maya's random function
+    // print($nameList[$randNum] + "\n");
+    return ($nameList[$randNum]); //return always ends the function, no code after it will run
+}
+
+// string $randName = RandomNamePicker();
+
+// print($randName);
+
+proc int RandomNumber(int $num)
+{
+    int $randNum = `rand $num`; //rand returns a number between zero and provided number
+    return ($randNum);
+}
+
+print(RandomNamePicker() + "'s favorite number is " + RandomNumber(12) + "!\n");
