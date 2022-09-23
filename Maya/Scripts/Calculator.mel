@@ -1,0 +1,135 @@
+global proc float Sum(float $numbers[])
+{
+    float $sum;
+    for ($i=0; $i<size($numbers); $i++)
+    {
+        $sum += $numbers[$i];
+    }
+    return $sum;
+}
+
+global proc float Difference(float $numbers[])
+{
+    float $difference = $numbers[0];
+    for ($i=1; $i<size($numbers); $i++)
+    {
+        $difference -= $numbers[$i];
+    }
+    return $difference;
+}
+
+global proc float Product(float $numbers[])
+{
+    float $product = $numbers[0];
+    for ($i=1; $i<size($numbers); $i++)
+    {
+        $product *= $numbers[$i];
+    }
+    return $product;
+}
+
+global proc float Quotient(float $numbers[])
+{
+    float $quotient = $numbers[0];
+    for ($i=1; $i<size($numbers); $i++)
+    {
+        $quotient /= $numbers[$i];
+    }
+    return $quotient;
+}
+
+global proc float Exponent(float $numbers[])
+{
+    float $exponent = $numbers[0];
+    for ($i=1; $i<size($numbers); $i++)
+    {
+        $exponent = pow($exponent, $numbers[$i]);
+    }
+    return $exponent;
+}
+
+global proc float Mean(float $numbers[])
+{
+    float $mean;
+    $mean = (Sum($numbers)/size($numbers));
+    return $mean;
+}
+
+global proc float Median(float $numbers[])
+{
+    float $median, $greatestNum;
+    int $greatestIndex;
+    int $size = size($numbers);
+    //sort the array numbers from least to greatest:
+    for ($i=0; $i<$size; $i++)
+    {
+        $greatestNum = $numbers[$i];
+        $greatestIndex = $i;
+        // print("greatest num is " + $greatestNum + "\n");
+        for ($j=$i; $j<$size; $j++)
+        {
+            // print("greatest num is currently " + $greatestNum + ", current num is " + $numbers[$j] + "\n");
+            if ($greatestNum < $numbers[$j])
+            {
+                // print("num is higher! greatest will now become higher num.\n");
+                $greatestNum = $numbers[$j];
+                $greatestIndex = $j;
+            }
+        }
+        floatArrayRemoveAtIndex( $greatestIndex, $numbers);
+        floatArrayInsertAtIndex(0, $numbers, $greatestNum);
+            // print($greatestNum + " added to array.\n");
+            // print("j is " + $j + "\n");
+    }
+    print(floatArrayToString($numbers, ", ") + "\n");
+
+    //now modulus size by two--if it's odd, select index at that number
+    int $isOdd = $size % 2;
+    
+    print($isOdd);
+    // if($isOdd == 1)
+    // {
+    //     print("odd");
+    //     // $median = ($numbers[(size($numbers)/2)])
+    // }
+
+    return $median;
+}
+
+global proc Calculator(string $operation, float $numbers[])
+{
+    if($operation == "add")
+    {
+        print(Sum($numbers)+"\n");
+    }
+    else if($operation == "subtract")
+    {
+        print(Difference($numbers)+"\n");
+    }
+    else if($operation == "multiply")
+    {
+        print(Product($numbers)+"\n");
+    }
+    else if($operation == "divide")
+    {
+        print(Quotient($numbers)+"\n");
+    }
+    else if($operation == "power")
+    {
+        print(Exponent($numbers)+"\n");
+    }
+    else if($operation == "mean")
+    {
+        print(Mean($numbers)+"\n");
+    }
+    else if($operation == "median")
+    {
+        print(Median($numbers)+"\n");
+    }
+    else
+    {
+        print("That's not a valid operation. Please specify one of the following operations: add, subtract, multiply, divide, exponent, mean, or median.\n");
+    }
+}
+
+Calculator("median", {4,65,7,2,432});

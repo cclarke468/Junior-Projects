@@ -1,0 +1,78 @@
+//Fortune teller proc
+
+//generate random lottery numbers
+global proc string LotteryNumbers() //global makes the functions accessible from anywhere
+{
+    int $numbers[];
+    for ($i=0; $i<10; $i++)
+    {
+        int $num = `rand 100`;
+        $numbers[size($numbers)] = $num;
+    }
+    return (intArrayToString($numbers, ", "));
+}
+
+
+global proc BestiePicker(string $yourName)
+{
+    string $names[] = {"the manager", "Caiden", "Godzilla", "the creepy old man from the store", "Karen", "social anxiety"};
+    int $size = size($names);
+    int $randNum = `rand $size`;
+    print($yourName + ", your new best friend is.........." + $names[$randNum] + "!\n");
+}
+
+
+
+global proc FortuneTeller()
+{
+    string $fortunes[] = {"You shall become a millionaire, but lose a million in taxes.\n",
+                          "Destruction awaits in your future, but so does an adorable cat!\n",
+                          "Your life will be boring.\n",
+                          "You will be able to conquer any foe with one punch. You will be miserable.\n",
+                          "The sun will shine tomorrow and you will probably hate it, you loser.\n",
+                          "Go back to bed, it's late.\n",
+                          "Stop asking me for these.\n",
+                          "[Insert fortune here]\n",
+                          "I am a computer. beep beep bop boop.\n",
+                          "if(string $question == dumb) return return;\n"};
+    int $randNum = `rand (size($fortunes))`;
+    print($fortunes[$randNum]);
+}
+
+
+
+global proc string Zodiac(int $birthYear)
+{
+    //rat, ox, tiger, rabbit, dragon, snake, horse, sheep, monkey, rooster, dog, pig
+    int $index = ($birthYear - 4) % 12; //the remainder will be 0 through 11, which will help us figure out what sign each year is
+    string $signs[] = {"rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "sheep", "monkey", "rooster", "dog", "pig"};
+    return $signs[$index];
+}
+
+
+
+global proc FortunesForLife(string $yourName, int $yourBirthYear, int $operation)
+{
+    if($operation == 1)
+    {
+        print("Your lucky numbers are: " + LotteryNumbers() + "!\n");
+    }
+    else if($operation == 2)
+    {
+        BestiePicker($yourName);
+    }
+    else if($operation == 3)
+    {
+        FortuneTeller();
+    }
+    else if($operation == 4)
+    {
+        print("You were born in " + $yourBirthYear + ", so your zodiac sign is the " + Zodiac($yourBirthYear) + ". Congratz, little " + Zodiac($yourBirthYear) + "!\n");
+    }
+    else
+    {
+        print("You broke the fortune teller. Please input a number between 1 and 4.\n");
+    }
+}
+
+FortunesForLife("Mimi", 1997, 1);
