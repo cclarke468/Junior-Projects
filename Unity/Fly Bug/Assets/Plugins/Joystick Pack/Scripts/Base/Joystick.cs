@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
+    public UnityEvent startDragEvent, stopDragEvent;
     public float Horizontal { get { return (snapX) ? SnapFloat(input.x, AxisOptions.Horizontal) : input.x; } }
     // if snapx = true, this returns SnapFloat(...); if snapx = false, this returns input.x
     public float Vertical { get { return (snapY) ? SnapFloat(input.y, AxisOptions.Vertical) : input.y; } }
@@ -64,6 +66,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     public virtual void OnPointerDown(PointerEventData eventData) //on click pointer
     {
         OnDrag(eventData);
+        startDragEvent.Invoke();
+        print("click");
     }
 
     public void OnDrag(PointerEventData eventData) //PointerEventData--each touch creates one of these containing all relevant data
@@ -88,7 +92,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         if (magnitude > deadZone)
         {
             if (magnitude > 1)
-                input = normalised; //i think this makes sure the joystick stops at edge of handle
+                input = normalised; //i think this makes sure the joystick UI stops at edge of handle
         }
         else
             input = Vector2.zero;
@@ -141,6 +145,9 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     {
         input = Vector2.zero;
         handle.anchoredPosition = Vector2.zero;
+        stopDragEvent.Invoke();
+        print("release");
+    
     }
 
     protected Vector2 ScreenPointToAnchoredPosition(Vector2 screenPosition)

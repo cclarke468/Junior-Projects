@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class VariableJoystick : Joystick
@@ -33,12 +34,14 @@ public class VariableJoystick : Joystick
 
     public override void OnPointerDown(PointerEventData eventData)
     {
+        
         if(joystickType != JoystickType.Fixed)
         {
             background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
             background.gameObject.SetActive(true);
         }
         base.OnPointerDown(eventData);
+        // startDragEvent.Invoke();
     }
 
     public override void OnPointerUp(PointerEventData eventData)
@@ -47,6 +50,7 @@ public class VariableJoystick : Joystick
             background.gameObject.SetActive(false);
 
         base.OnPointerUp(eventData);
+        // stopDragEvent.Invoke();
     }
 
     protected override void HandleInput(float magnitude, Vector2 normalised, Vector2 radius, Camera cam)

@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour
     public Joystick joystick;
     private CharacterController characterController;
     private Vector3 direction = Vector3.zero;
+    private Vector3 forward = Vector3.forward;
     private Vector3 newVector3 = Vector3.zero;
     private WaitForSeconds waitForSeconds;
 
@@ -27,10 +28,11 @@ public class CharacterMovement : MonoBehaviour
     
     public void Update()
     {
-        direction = Vector3.up * joystick.Vertical + Vector3.right * joystick.Horizontal;
-        direction = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * direction;
-        characterController.Move( direction * turnSpeed * Time.deltaTime);
-        // transform.Rotate(direction * turnSpeed * Time.deltaTime);
+        direction = Vector3.up * joystick.Horizontal + Vector3.right * joystick.Vertical;
+        direction = direction * turnSpeed * Time.deltaTime;
+        // print(direction);
+        // characterController.Move( direction * turnSpeed * Time.deltaTime);
+        transform.Rotate(direction);
     }
     
     public void Launch()
@@ -53,7 +55,8 @@ public class CharacterMovement : MonoBehaviour
     {
         while (flying)
         {
-            characterController.Move(Vector3.forward * speed * Time.deltaTime);
+            forward = transform.forward; //use this instead of Vector3.forward to get a constantly updating "forward" value
+            characterController.Move(forward * speed * Time.deltaTime);
             yield return waitForSeconds;
         }
     }

@@ -1,4 +1,4 @@
-proc VoidProc() //return type is void
+proc VoidProc() //the emptiness means the return type is void--DON'T type void as the return value!
 {
     print("hello\n");
 }

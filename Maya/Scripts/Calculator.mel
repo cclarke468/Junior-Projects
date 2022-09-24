@@ -78,26 +78,40 @@ global proc float Median(float $numbers[])
         }
         floatArrayRemoveAtIndex( $greatestIndex, $numbers);
         floatArrayInsertAtIndex(0, $numbers, $greatestNum);
-            // print($greatestNum + " added to array.\n");
-            // print("j is " + $j + "\n");
+        // print($greatestNum + " added to array.\n");
     }
-    print(floatArrayToString($numbers, ", ") + "\n");
+    // print(floatArrayToString($numbers, ", ") + "\n");
 
     //now modulus size by two--if it's odd, select index at that number
     int $isOdd = $size % 2;
     
-    print($isOdd);
-    // if($isOdd == 1)
-    // {
-    //     print("odd");
-    //     // $median = ($numbers[(size($numbers)/2)])
-    // }
+    // print($size/2.0);//have to explicitly use a float value (decimal) to return a float instead of an int -.-
+    if($isOdd == 1)
+    {   
+        int $index = floor(($size/2.0));
+        // print($numbers[$index]);
+        $median = ($numbers[$index]);
+    }
+    else if($isOdd == 0)
+    {
+        int $index = $size/2.0; //returns higher of two indexes
+        int $index2 = $index - 1;
+        // print(Mean({$index,$index2})+"\n"); //can't call this functions because it wants floats :P
+        $median = (($numbers[$index] + $numbers[$index2])/2);
+    }
+    else
+    {
+        print("error\n");
+        $median = -9999;
+    }
 
     return $median;
 }
 
 global proc Calculator(string $operation, float $numbers[])
 {
+    print("Numbers: " + floatArrayToString($numbers, ", ") + "\n")
+    print("You picked " + $operation + "...here's your result: ");
     if($operation == "add")
     {
         print(Sum($numbers)+"\n");
@@ -132,4 +146,4 @@ global proc Calculator(string $operation, float $numbers[])
     }
 }
 
-Calculator("median", {4,65,7,2,432});
+Calculator("median", {5,2,23,-98,5,435});
