@@ -73,9 +73,9 @@ public class CharacterMovement : MonoBehaviour
     {
         Vector3 currentRotation = transform.localEulerAngles;
         print(currentRotation);
-        currentRotation.z = Mathf.Clamp(currentRotation.z, -20, 20);
+        // currentRotation.z = Mathf.Clamp(currentRotation.z, zLimit, (360-zLimit));
         // print(currentRotation);
-        // transform.rotation = Quaternion.Euler (currentRotation);
+        transform.rotation = Quaternion.Euler (currentRotation);
     }
 
     public void ResetAxesMovement()
