@@ -6,9 +6,9 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 10f;
     public float turnSpeed = 10f;
-    private bool onGround = true;
+    private bool onGround;
     private bool flying;
-    public Transform cameraTransform;
+    public GameObject camera;
     public Joystick joystick;
     private CharacterController characterController;
     private Vector3 direction = Vector3.zero;
@@ -16,12 +16,13 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 newVector3 = Vector3.zero;
     private WaitForSeconds waitForSeconds;
 
+    public float xLimit = 60, zLimit = 20;
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
         flying = false;
-        newVector3 = new Vector3(0, 1, 10);
-        print(newVector3 * 10f);
+        // newVector3 = new Vector3(0, 1, 10);
+        // print(newVector3 * 10f);
         waitForSeconds = new WaitForSeconds(0.1f * Time.deltaTime);
         // onGround = false;
     }
@@ -48,6 +49,7 @@ public class CharacterMovement : MonoBehaviour
             flying = false;
             StopCoroutine(Flying());
             print("landed");
+            ResetAxesMovement();
         }
     }
 
@@ -57,6 +59,7 @@ public class CharacterMovement : MonoBehaviour
         {
             forward = transform.forward; //use this instead of Vector3.forward to get a constantly updating "forward" value
             characterController.Move(forward * speed * Time.deltaTime);
+            LimitAxesMovement(); //needs to be in the onclick method for joystick
             yield return waitForSeconds;
         }
     }
@@ -64,5 +67,20 @@ public class CharacterMovement : MonoBehaviour
     public void Death()
     {
         speed = 0f;
+    }
+
+    public void LimitAxesMovement()
+    {
+        Vector3 currentRotation = transform.localEulerAngles;
+        print(currentRotation);
+        currentRotation.z = Mathf.Clamp(currentRotation.z, -20, 20);
+        // print(currentRotation);
+        // transform.rotation = Quaternion.Euler (currentRotation);
+    }
+
+    public void ResetAxesMovement()
+    {
+        // print(transform.rotation.y);
+        transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
     }
 }
