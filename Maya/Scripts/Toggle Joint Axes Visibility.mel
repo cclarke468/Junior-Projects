@@ -1,0 +1,23 @@
+
+string $joints[] = `ls -type joint`; //you can use ls to list every object of a certain type, like joints!
+string $currentJnt;
+int $axesAreVisible;
+for ($i=0; $i<size($joints); $i++)
+{
+    $currentJnt = $joints[$i];
+
+    select -r $currentJnt; 
+    $axesAreVisible = `toggle -q -localAxis`;
+    if($axesAreVisible == 1)
+    {
+        for ($j=0; $j<size($joints); $j++)
+        {
+            toggle -localAxis -state false $joints[$j];
+        }
+        break;
+    }
+    else if ($axesAreVisible == 0)
+    {
+        toggle -localAxis -state true;
+    }
+}

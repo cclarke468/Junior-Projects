@@ -1,0 +1,18 @@
+string $joint[] = `ls -sl`;
+string $ctrlName, $grpName;
+
+for ($i=0; $i<size($joint); $i++)
+{
+    // print($joint[$i]+"\n");
+    $ctrlName = $joint[$i] + "_ctrl";
+    circle -n $ctrlName -c 0 0 0 -nr 0 1 0 -sw 360 -r 1 -d 3 -ut 0 -tol 0.01 -s 8 -ch 1; objectMoveCommand;
+    $grpName = $ctrlName + "_grp";
+    group -name $grpName;
+    select -r $grpName $joint[$i];
+    matchTransform;
+    //parent and scale constrain joint to control
+    select -r $ctrlName $joint[$i];
+    parentConstraint -mo -weight 1;
+    scaleConstraint -offset 1 1 1 -weight 1;
+}
+
