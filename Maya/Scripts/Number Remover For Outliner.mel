@@ -1,1 +1,18 @@
-string $obj[] = `ls -hi`;
+select -hi;
+string $obj[] = `ls -sl`;
+string $name, $match;
+
+// print(stringArrayToString($obj, ", "));
+
+for ($i=0; $i<size($obj); $i++)
+{
+    $name = $obj[$i];
+    // print($name);
+    $match = `match "[0-9]+" $name`;
+    if($match)
+    {
+        // $name = $name - $match;
+        print($name);
+
+    }
+}
