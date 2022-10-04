@@ -1,0 +1,42 @@
+/*
+window;//all following commands assumed to be children of this window unless you use a command like setparent
+columnLayout;//same with this layout; all windows REQUIRE some kind of layout command or else they will not work
+button;
+button;
+intField;
+rowLayout -numberOfColumns 3; //this is a new parent with following children
+button;
+textField; 
+button;
+
+setParent ..; //sets parent up a parent level
+//setParent |; sets parent to top window, setParent "windowNameHere"; sets parent to item with that name
+intField; //this is now a child of the column layout because of the setParent ..; command
+
+showWindow;//window is invisible until you show it with this command
+*/
+
+global proc Add() //random function for the ui below
+{
+    float $sum = 4 + 432.5;
+    print("The sum is " + $sum + ".\n");
+}
+
+string $mainWindow = `window -height 300/*pixels*/ 
+                    //don't need to indent, it's just easier to read what parameters you're giving your window
+                     -title "WINDOW!!!"
+                     -sizeable 1
+                     -width 400
+                     "my_window"`; //the string at the end give the window a name (different from the title, the name is not seen)
+string $mainColumn = `columnLayout -adjustableColumn 1`;
+button -l "button! yay!" -p $mainColumn; //use -p (parent) to specifiy the exact parent of this object
+//but you don't need to store every UI element...only store what you need to access later
+
+button -enable off -label "don't touch me.";
+button -label "click me" -command "print(\"Hello there my dude\")"; //-command runs a function
+button -l "add numbers 4 and 432.5" -command Add; //weirdly, you don't put the paratheses when calling functions here
+//side note, you MUST declare the function before calling it here--and it must be a global function!
+
+showWindow $mainWindow;
+//http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands
+
