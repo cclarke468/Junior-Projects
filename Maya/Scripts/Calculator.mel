@@ -48,18 +48,10 @@ global proc float Exponent(float $numbers[])
     return $exponent;
 }
 
-global proc float Mean(float $numbers[])
+global proc float[] Sort(float $numbers[])
 {
-    float $mean;
-    $mean = (Sum($numbers)/size($numbers));
-    return $mean;
-}
-
-global proc float Median(float $numbers[])
-{
-    float $median, $greatestNum;
-    int $greatestIndex;
-    int $size = size($numbers);
+    float $greatestNum;
+    int $greatestIndex, $size = size($numbers);
     //sort the array numbers from least to greatest:
     for ($i=0; $i<$size; $i++)
     {
@@ -80,9 +72,23 @@ global proc float Median(float $numbers[])
         floatArrayInsertAtIndex(0, $numbers, $greatestNum);
         // print($greatestNum + " added to array.\n");
     }
-    // print(floatArrayToString($numbers, ", ") + "\n");
+    return $numbers;
+}
 
-    //now modulus size by two--if it's odd, select index at that number
+global proc float Mean(float $numbers[])
+{
+    float $mean;
+    $mean = (Sum($numbers)/size($numbers));
+    return $mean;
+}
+
+global proc float Median(float $numbers[])
+{
+    float $median;
+    int $size = size($numbers);
+    //sort the array numbers from least to greatest:
+    $numbers = Sort($numbers);
+   
     int $isOdd = $size % 2;
     
     // print($size/2.0);//have to explicitly use a float value (decimal) to return a float instead of an int -.-
@@ -108,9 +114,11 @@ global proc float Median(float $numbers[])
     return $median;
 }
 
+
+
 global proc Calculator(string $operation, float $numbers[])
 {
-    print("Numbers: " + floatArrayToString($numbers, ", ") + "\n")
+    print("Numbers: " + floatArrayToString($numbers, ", ") + "\n");
     print("You picked " + $operation + "...here's your result: ");
     if($operation == "add")
     {
@@ -140,10 +148,15 @@ global proc Calculator(string $operation, float $numbers[])
     {
         print(Median($numbers)+"\n");
     }
+    else if ($operation == "sort")
+    {
+        float $tempNum[] = Sort($numbers);
+        print(floatArrayToString($tempNum, ", "));
+    }
     else
     {
         print("That's not a valid operation. Please specify one of the following operations: add, subtract, multiply, divide, exponent, mean, or median.\n");
     }
 }
 
-Calculator("median", {5,2,23,-98,5,435});
+Calculator("sort", {5,2,23,-98,5,435});

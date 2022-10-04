@@ -22,21 +22,36 @@ global proc Add() //random function for the ui below
     print("The sum is " + $sum + ".\n");
 }
 
-string $mainWindow = `window -height 300/*pixels*/ 
+global proc GrabFloatValue()
+{
+    print(`floatField -q -value "float"`);
+}
+
+string $mainWindow = "my_window";
+if(`window -exists $mainWindow`) //returns true or fasle as a check if that window exists
+{
+    deleteUI $mainWindow;
+} 
+
+$mainWindow = `window -height 300/*pixels*/ 
                     //don't need to indent, it's just easier to read what parameters you're giving your window
                      -title "WINDOW!!!"
                      -sizeable 1
                      -width 400
-                     "my_window"`; //the string at the end give the window a name (different from the title, the name is not seen)
+                     //"my_window"; //the string at the end give the window a name (different from the title, the name is not seen)
+                    $mainWindow`; //in this case, we'll just use the string from itself
 string $mainColumn = `columnLayout -adjustableColumn 1`;
 button -l "button! yay!" -p $mainColumn; //use -p (parent) to specifiy the exact parent of this object
 //but you don't need to store every UI element...only store what you need to access later
 
 button -enable off -label "don't touch me.";
 button -label "click me" -command "print(\"Hello there my dude\")"; //-command runs a function
-button -l "add numbers 4 and 432.5" -command Add; //weirdly, you don't put the paratheses when calling functions here
+//button -l "add numbers" -command Add; //weirdly, you don't put the paratheses when calling functions here
 //side note, you MUST declare the function before calling it here--and it must be a global function!
-
+rowLayout -nc 2;
+floatField "float";
+floatField;
+button -l "add numbers" -command Add -p $mainColumn;
 showWindow $mainWindow;
 //http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands
 
