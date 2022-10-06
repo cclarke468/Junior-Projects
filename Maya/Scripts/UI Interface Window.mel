@@ -18,13 +18,27 @@ showWindow;//window is invisible until you show it with this command
 
 global proc Add() //random function for the ui below
 {
-    float $sum = 4 + 432.5;
-    print("The sum is " + $sum + ".\n");
+    string $field1 = `optionVar -q "firstField"`;
+    string $field2 = `optionVar -q "secondField"`;
+    string $field3 = `optionVar -q "thirdField"`;
+    string $field4 = `optionVar -q "textField"`;
+
+    float $value1 = `floatField -q -value $field1`;
+    float $value2 = `floatField -q -value $field2`;
+
+    float $sum = $value1 + $value2;
+
+    floatField -edit -value $sum $field3; //remember to specify which obj you're editing 
+    textField -e -text("The sum is " + $sum + ".") $field4;
 }
 
 global proc GrabFloatValue()
 {
-    print(`floatField -q -value "float"`);
+    // print(`floatField -q -value "float"`);
+    string $value1 = `optionVar -q "firstField"`;
+    print($value1 + "\n"); //doesn't grab value
+
+    print(`floatField -q -value $value1`); //does grab value
 }
 
 string $mainWindow = "my_window";
@@ -48,10 +62,20 @@ button -enable off -label "don't touch me.";
 button -label "click me" -command "print(\"Hello there my dude\")"; //-command runs a function
 //button -l "add numbers" -command Add; //weirdly, you don't put the paratheses when calling functions here
 //side note, you MUST declare the function before calling it here--and it must be a global function!
-rowLayout -nc 2;
-floatField "float";
-floatField;
-button -l "add numbers" -command Add -p $mainColumn;
+
+rowLayout -nc 4;
+
+// floatField "float"; //fyi this command returns a string instead of the float
+
+//option variables are like super global variables--they persist in memory
+//in this case, they are creating floatFields accessible in UI window
+//option variables 
+optionVar -stringValue "firstField" `floatField`; 
+optionVar -stringValue "secondField" `floatField`; 
+optionVar -stringValue "thirdField" `floatField -parent $mainColumn -editable 0`;
+optionVar -stringValue "textField" `textField -parent $mainColumn -editable 0`;  
+
+button -p $mainColumn -l "add numbers" -command Add;
 showWindow $mainWindow;
 //http://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands
 
