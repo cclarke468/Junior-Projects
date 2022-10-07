@@ -1,0 +1,77 @@
+global proc RandomPlacementGenerator(int $duplicates, float $minX, float $maxX, float $minY, float $maxY, float $minZ, float $maxZ)
+{
+    string $objs[] = `ls -sl`;
+    float $randomX, $randomY, $randomZ;
+    if($duplicates < 0) 
+        $duplicates = 0;
+
+    for ($i=0; $i<size($objs); $i++)
+    {
+        select -r $objs[$i];
+        for ($j=0; $j<$duplicates; $j++)
+        {
+            $randomX = rand($minX, $maxX);
+            $randomY = rand($minY, $maxY);
+            $randomZ = rand($minZ, $maxZ);
+            duplicate;
+            move -wd $randomX $randomY $randomZ;
+        }
+    }
+
+}
+
+global proc GenerationButton()
+{
+    string $intField = `optionVar -q "dupField"`;
+    string $xValues = `optionVar -q "floatField1"`;
+    string $yValues = `optionVar -q "floatField2"`;
+    string $zValues = `optionVar -q "floatField3"`;
+   
+    int $dupInt = `intFieldGrp -q -value1 $intField`;
+    if($dupInt < 0)
+    {
+        $dupInt = 0;
+        intFieldGrp -e -value1 0 $intField;
+    }
+
+    float $minX = `floatFieldGrp -q -value1 $xValues`;
+    float $maxX = `floatFieldGrp -q -value2 $xValues`;
+    float $minY = `floatFieldGrp -q -value1 $yValues`;
+    float $maxY = `floatFieldGrp -q -value2 $yValues`;
+    float $minZ = `floatFieldGrp -q -value1 $zValues`;
+    float $maxZ = `floatFieldGrp -q -value2 $zValues`;
+
+    RandomPlacementGenerator($dupInt,$minX,$maxX,$minY,$maxY,$minZ,$maxZ);
+}
+
+global proc RandomPlacementGeneratorUI()
+{
+    string $window = "mainWindow";
+    if(`window -ex $window`)
+    {
+        deleteUI $window;
+    }
+
+    $window = `window -t "Random Placement Generator" -wh 400 200 -resizeToFitChildren 1 -s off $window`;
+    string $column = `columnLayout -adj 1 -rs 10`;
+    frameLayout -label "Duplication Settings";
+    optionVar -sv "dupField" `intFieldGrp -l "Number of Duplicates: " -value1 5`;
+    
+    frameLayout -label "Range Settings";
+    
+    text -l "Enter min and max values for each axis:";
+    optionVar -sv "floatField1" `floatFieldGrp -numberOfFields 2
+        -label "X axis" 
+        -value1 -5 -value2 5`;
+    optionVar -sv "floatField2" `floatFieldGrp -numberOfFields 2
+        -label "Y axis" 
+        -value1 -5 -value2 5`;
+    optionVar -sv "floatField3" `floatFieldGrp -numberOfFields 2
+        -label "Z axis" 
+        -value1 -5 -value2 5`;
+    setParent ..;
+    button -label "Generate" -command GenerationButton;
+    showWindow $window;
+}
+
+RandomPlacementGeneratorUI();
