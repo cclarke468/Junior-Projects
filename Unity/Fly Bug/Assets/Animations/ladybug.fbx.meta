@@ -1,12 +1,17 @@
 fileFormatVersion: 2
-guid: ab27451e6769aa84bba82d9bf594842b
+guid: 2c5f63b47ac4cc5418899004e9be1b51
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 8b3cb8f5418be2a4988405cdfc697667, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,9 +42,9 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 3
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -50,7 +55,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    keepQuads: 1
+    keepQuads: 0
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
@@ -75,8 +80,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
-  importAnimation: 1
+  referencedClips:
+  - df8d84b75d208b242b0ce7b7a6e07dd0
+  - 302a75ee5821e274aa702c8d890753f0
+  - 50aec9884fcf9cd4fbba45c433f0ce7d
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -88,8 +96,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
-    rootMotionBoneName: 
+    globalScale: 3
+    rootMotionBoneName: Root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -97,7 +105,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
