@@ -890,8 +890,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -278.26}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 1.5, y: -274.73785}
+  m_SizeDelta: {x: 136.5839, y: 37.0443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809915710
 MonoBehaviour:
@@ -969,7 +969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1617,8 +1617,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388414761}
-  m_LocalRotation: {x: -0.11391023, y: -0.8400884, z: -0.19704086, w: 0.49239293}
-  m_LocalPosition: {x: 30.58, y: 5.19, z: 7.16}
+  m_LocalRotation: {x: -0.0561542, y: -0.8572484, z: -0.098483235, w: 0.5022679}
+  m_LocalPosition: {x: 29.227, y: 5.598, z: 5.74}
   m_LocalScale: {x: 0.3027733, y: 0.3027733, z: 0.3027733}
   m_Children:
   - {fileID: 2110650200}
@@ -1629,7 +1629,7 @@ Transform:
   - {fileID: 1576006428}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -26.311, y: -119.21, z: -0.17}
+  m_LocalEulerAnglesHint: {x: -13.018, y: -119.25, z: -0.156}
 --- !u!114 &1388414766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2261,8 +2261,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -3.8799}
+  m_SizeDelta: {x: 0, y: -7.7598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743052115
 MonoBehaviour:
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.27058825}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2286,18 +2286,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
+    m_MaxSize: 42
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'launch
+  m_Text: 'press to fly
 
 '
 --- !u!222 &1743052116
