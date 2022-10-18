@@ -1,0 +1,10 @@
+string $selectedObjs[] = `ls -sl`;
+
+string $cluster[] = `cluster`;
+string $locator[] = `spaceLocator -p 0 0 0`;
+select -r $locator $cluster;
+performMatchTransform 0;
+
+// float $pos[] = `xform -q -ws -rotatePivot $cluster`; //can use xform command to get the position of an object
+
+delete $cluster;
