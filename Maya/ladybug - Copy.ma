@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: ladybug.ma
-//Last modified: Tue, Oct 25, 2022 09:28:23 PM
+//Last modified: Tue, Oct 25, 2022 08:57:33 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19043)\n";
-fileInfo "UUID" "796D21B3-4E42-8CD1-3765-FA8E90E258DB";
+fileInfo "UUID" "ADD5B43D-461A-3C9F-82E6-139AF77B8E58";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "F33DC4FC-4A3E-DF8D-8EA2-FAACA737EF11";
@@ -1528,7 +1528,7 @@ createNode parentConstraint -n "R_wing_parentConstraint1" -p "R_wing_shell";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.5236156584340237 0.48299856132234043 0.20579221940472237 ;
 	setAttr ".tg[0].tor" -type "double3" -45.269857427071173 -12.333695487438861 176.69885554292998 ;
-	setAttr ".lr" -type "double3" -61.477440226915867 51.690840685962485 -59.433279040643079 ;
+	setAttr ".lr" -type "double3" 3.1805546814635168e-14 -1.9878466759146984e-14 2.5249547458556684e-15 ;
 	setAttr ".rst" -type "double3" 8.8817841970012523e-16 1.7239039985495581 -4.163336342344337e-17 ;
 	setAttr ".rsrr" -type "double3" 2.5444437451708134e-14 -9.5416640443905519e-15 7.9513867036587888e-15 ;
 	setAttr -k on ".w0";
@@ -1699,7 +1699,7 @@ createNode parentConstraint -n "L_wing_parentConstraint1" -p "L_wing_shell";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.5236144855051319 -0.48300028592892907 -0.20579422870124309 ;
 	setAttr ".tg[0].tor" -type "double3" 45.269857427071202 12.333695487438835 -3.301144457070019 ;
-	setAttr ".lr" -type "double3" 61.477440226915895 -51.690840685962527 -59.433279040643079 ;
+	setAttr ".lr" -type "double3" -2.9817700138720514e-16 -6.3611093629270335e-15 1.3953873475803795e-16 ;
 	setAttr ".rst" -type "double3" 2.2204460492503131e-16 1.7239039985495581 -2.0122792321330962e-16 ;
 	setAttr ".rsrr" -type "double3" 9.9392333795734899e-17 -1.5902773407317584e-15 7.9513867036587919e-16 ;
 	setAttr -k on ".w0";
@@ -3229,8 +3229,8 @@ createNode animCurveTU -n "R_wing_scaleZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  20 0.80953732036724735;
 select -ne :time1;
-	setAttr ".o" 16;
-	setAttr ".unw" 16;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
