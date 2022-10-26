@@ -49,7 +49,7 @@ public class CharacterMovement : MonoBehaviour
             flying = false;
             StopCoroutine(Flying());
             print("landed");
-            ResetAxesMovement();
+            // ResetAxesMovement();
         }
     }
 
@@ -59,24 +59,19 @@ public class CharacterMovement : MonoBehaviour
         {
             forward = transform.forward; //use this instead of Vector3.forward to get a constantly updating "forward" value
             characterController.Move(forward * speed * Time.deltaTime);
-            LimitAxesMovement(); //needs to be in the onclick method for joystick
+            // LimitAxesMovement(); //needs to be in the onclick method for joystick
             yield return waitForSeconds;
         }
     }
 
-    public void Death()
-    {
-        speed = 0f;
-    }
-
-    public void LimitAxesMovement()
-    {
-        Vector3 currentRotation = transform.localEulerAngles;
-        print(currentRotation);
-        // currentRotation.z = Mathf.Clamp(currentRotation.z, zLimit, (360-zLimit));
-        // print(currentRotation);
-        transform.rotation = Quaternion.Euler (currentRotation);
-    }
+    // public void LimitAxesMovement()
+    // {
+    //     Vector3 currentRotation = transform.localEulerAngles;
+    //     // print(currentRotation);
+    //     // currentRotation.z = Mathf.Clamp(currentRotation.z, zLimit, (360-zLimit));
+    //     // print(currentRotation);
+    //     transform.rotation = Quaternion.Euler (currentRotation);
+    // }
 
     public void ResetAxesMovement()
     {
