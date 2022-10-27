@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     public UnityEvent startDragEvent, stopDragEvent;
+    
     public float Horizontal { get { return (snapX) ? SnapFloat(input.x, AxisOptions.Horizontal) : input.x; } }
     // if snapx = true, this returns SnapFloat(...); if snapx = false, this returns input.x
     public float Vertical { get { return (snapY) ? SnapFloat(input.y, AxisOptions.Vertical) : input.y; } }
@@ -67,7 +68,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     {
         OnDrag(eventData);
         startDragEvent.Invoke();
-        print("click");
+        // startDragAction.Invoke();
+        // print("click");
     }
 
     public void OnDrag(PointerEventData eventData) //PointerEventData--each touch creates one of these containing all relevant data
@@ -146,7 +148,7 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         input = Vector2.zero;
         handle.anchoredPosition = Vector2.zero;
         stopDragEvent.Invoke();
-        print("release");
+        // print("release");
     
     }
 

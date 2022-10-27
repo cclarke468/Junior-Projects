@@ -17,5 +17,4 @@ public class GameActionHandler : MonoBehaviour
     {
         gameActionObj.raiseActionObj += Respond;
     }
-    
 }
