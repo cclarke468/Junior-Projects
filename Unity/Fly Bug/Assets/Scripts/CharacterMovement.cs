@@ -8,7 +8,7 @@ public class CharacterMovement : MonoBehaviour
     public float turnSpeed = 10f;
     private bool onGround;
     private bool flying;
-    public GameObject camera;
+    // public GameObject camera;
     public Joystick joystick;
     private CharacterController characterController;
     private Vector3 direction = Vector3.zero;
