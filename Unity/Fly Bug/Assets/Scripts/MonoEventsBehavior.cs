@@ -25,4 +25,5 @@ public class MonoEventsBehavior : MonoBehaviour
     {
         destroyEvent.Invoke();
     }
+    
 }

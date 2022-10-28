@@ -7,7 +7,6 @@ public class GunBehavior : MonoBehaviour
     public FloatDataSO powerLevel;
     public Transform firePoint;
     public UnityEvent awakeEvent, startEvent;
-
     void Awake()
     {
         // powerLevel.floatData = 0;
@@ -18,5 +17,9 @@ public class GunBehavior : MonoBehaviour
     {
         startEvent.Invoke();
     }
- 
+
+    public void FireGun()
+    {
+        print("fire");
+    }
 }

@@ -6,15 +6,16 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 10f;
     public float turnSpeed = 10f;
-    private bool onGround;
     private bool flying;
+    private bool dragging = false;
     // public GameObject camera;
     public Joystick joystick;
     private CharacterController characterController;
     private Vector3 direction = Vector3.zero;
     private Vector3 forward = Vector3.forward;
     private Vector3 newVector3 = Vector3.zero;
-    private WaitForSeconds waitForSeconds;
+    private WaitForSeconds waitForSecondsFlying;
+    private WaitForSeconds waitForSecondsTurning;
 
     public float xLimit = 60, zLimit = 20;
     private void Awake()
@@ -23,32 +24,55 @@ public class CharacterMovement : MonoBehaviour
         flying = false;
         // newVector3 = new Vector3(0, 1, 10);
         // print(newVector3 * 10f);
-        waitForSeconds = new WaitForSeconds(0.1f * Time.deltaTime);
+        waitForSecondsFlying = new WaitForSeconds(0.3f * Time.deltaTime);
+        waitForSecondsTurning = new WaitForSeconds(0.1f * Time.deltaTime);
         // onGround = false;
     }
     
     public void Update()
     {
-        direction = Vector3.up * joystick.Horizontal + Vector3.right * joystick.Vertical;
-        direction = direction * turnSpeed * Time.deltaTime;
-        // print(direction);
-        // characterController.Move( direction * turnSpeed * Time.deltaTime);
-        transform.Rotate(direction);
+        // direction = Vector3.up * joystick.Horizontal + Vector3.right * joystick.Vertical;
+        // direction = turnSpeed * Time.deltaTime * direction;
+        // // print(direction);
+        // // characterController.Move( direction * turnSpeed * Time.deltaTime);
+        // transform.Rotate(direction);
     }
-    
+
+    public IEnumerator Rotation()
+    {
+        while (dragging)
+        {
+            direction = Vector3.up * joystick.Horizontal + Vector3.right * joystick.Vertical;
+            direction = turnSpeed * Time.deltaTime * direction;
+            transform.Rotate(direction);
+            yield return waitForSecondsTurning;
+        }
+    }
+
+    public void UpdateRotation()
+    {
+        dragging = true;
+        StartCoroutine(Rotation());
+    }
+
+    public void EndRotation()
+    {
+        dragging = false;
+        StopCoroutine(Rotation());
+    }
     public void Launch()
     {
         if (!flying)
         {
             flying = true;
             StartCoroutine(Flying());
-            print("launch");
+            // print("launch");
         }
         else if (flying)
         {
             flying = false;
             StopCoroutine(Flying());
-            print("landed");
+            // print("landed");
             // ResetAxesMovement();
         }
     }
@@ -58,9 +82,9 @@ public class CharacterMovement : MonoBehaviour
         while (flying)
         {
             forward = transform.forward; //use this instead of Vector3.forward to get a constantly updating "forward" value
-            characterController.Move(forward * speed * Time.deltaTime);
+            characterController.Move( speed * Time.deltaTime * forward);
             // LimitAxesMovement(); //needs to be in the onclick method for joystick
-            yield return waitForSeconds;
+            yield return waitForSecondsFlying;
         }
     }
 
