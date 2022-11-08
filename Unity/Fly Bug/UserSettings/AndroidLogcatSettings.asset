@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "55090945",
         "name": "com.DefaultCompany.FlyBug",
-        "processId": 32765,
+        "processId": 23924,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -78,6 +78,12 @@
             "deviceId": "55090945",
             "name": "com.DefaultCompany.FlyBug",
             "processId": 32765,
+            "exited": false
+        },
+        {
+            "deviceId": "55090945",
+            "name": "com.DefaultCompany.FlyBug",
+            "processId": 23924,
             "exited": false
         }
     ],
