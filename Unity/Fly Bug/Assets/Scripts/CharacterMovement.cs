@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CharacterController))]
 public class CharacterMovement : MonoBehaviour
@@ -8,9 +9,13 @@ public class CharacterMovement : MonoBehaviour
     public float turnSpeed = 10f;
     private bool flying;
     private bool dragging = false;
+    // public bool invertControls = false;
+    public Toggle invertedControls;
     // public GameObject camera;
     public Joystick joystick;
     private CharacterController characterController;
+    private Vector3 verticalV3 = Vector3.up;
+    private Vector3 horizontalV3 = Vector3.left;
     private Vector3 direction = Vector3.zero;
     private Vector3 forward = Vector3.forward;
     private Vector3 newVector3 = Vector3.zero;
@@ -18,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
     private WaitForSeconds waitForSecondsTurning;
 
     public float xLimit = 60, zLimit = 20;
+    private PlayerPrefs playerPrefs; //implement
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -26,23 +32,30 @@ public class CharacterMovement : MonoBehaviour
         // print(newVector3 * 10f);
         waitForSecondsFlying = new WaitForSeconds(0.3f * Time.deltaTime);
         waitForSecondsTurning = new WaitForSeconds(0.1f * Time.deltaTime);
+        SetInvertedControls();
         // onGround = false;
     }
-    
-    public void Update()
-    {
-        // direction = Vector3.up * joystick.Horizontal + Vector3.right * joystick.Vertical;
-        // direction = turnSpeed * Time.deltaTime * direction;
-        // // print(direction);
-        // // characterController.Move( direction * turnSpeed * Time.deltaTime);
-        // transform.Rotate(direction);
-    }
 
+    public void SetInvertedControls()
+    {
+        if (invertedControls.isOn)
+        {
+            verticalV3 = Vector3.down;
+            horizontalV3 = Vector3.right;
+            print("inverted");
+        }
+        else 
+        {
+            verticalV3 = Vector3.up;
+            horizontalV3 = Vector3.left;
+            print("not inverted");
+        }
+    }
     public IEnumerator Rotation()
     {
         while (dragging)
         {
-            direction = Vector3.up * joystick.Horizontal + Vector3.right * joystick.Vertical;
+            direction = verticalV3 * joystick.Horizontal + horizontalV3 * joystick.Vertical;
             direction = turnSpeed * Time.deltaTime * direction;
             transform.Rotate(direction);
             yield return waitForSecondsTurning;

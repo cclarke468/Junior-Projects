@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,29 +21,30 @@ public class ProjectileBehavior : MonoBehaviour
         rb.velocity = transform.forward * bulletSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
-        print(other);
+        print("bullet hit " + other);
         onTriggerEnterEvent.Invoke();
         if (other.GetComponent<DestructibleObjectBehavior>())
         {
             var powerResistance = other.GetComponent<DestructibleObjectBehavior>().powerLevelNeededToDestroy;
-            print(powerResistance);
-            ImminentDestruction(powerResistance, other.gameObject, other.GetComponent<DestructibleObjectBehavior>().destroyedObj);
-            Destroy(this);
+            // print(powerResistance);
+            ImminentDestruction(powerResistance, other.GetComponent<DestructibleObjectBehavior>());
         }
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
     }
     
-    public void ImminentDestruction(FloatDataSO floatSO, GameObject obj, GameObject newObj)
+    public void ImminentDestruction(FloatDataSO floatSO, DestructibleObjectBehavior obj)
     {
         if (gunPowerLevel.floatData >= floatSO.floatData)
         {
-            print( obj + " destroyed");
-            Crumble(obj, newObj);
+            // print( obj + " destroyed");
+            obj.Crumble();
         }
         else
         {
-            print(obj + " not destroyed");
+            // print(obj + " not destroyed");
         }
     }
 

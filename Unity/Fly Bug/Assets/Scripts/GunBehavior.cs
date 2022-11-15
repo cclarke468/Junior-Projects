@@ -35,7 +35,7 @@ public class GunBehavior : MonoBehaviour
 
     public void FireGun()
     {
-        print("fire");
+        // print("fire");
         AimGun();
         aimDirection = (aimWorldPoint - firePointPos.position).normalized;
         Instantiate(bulletPrefab, firePointPos.position, Quaternion.LookRotation(aimDirection, firePointPos.up));
