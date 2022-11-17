@@ -18,7 +18,6 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 horizontalV3 = Vector3.left;
     private Vector3 direction = Vector3.zero;
     private Vector3 forward = Vector3.forward;
-    private Vector3 newVector3 = Vector3.zero;
     private WaitForSeconds waitForSecondsFlying;
     private WaitForSeconds waitForSecondsTurning;
 
@@ -42,13 +41,13 @@ public class CharacterMovement : MonoBehaviour
         {
             verticalV3 = Vector3.down;
             horizontalV3 = Vector3.right;
-            print("inverted");
+            // print("inverted");
         }
         else 
         {
             verticalV3 = Vector3.up;
             horizontalV3 = Vector3.left;
-            print("not inverted");
+            // print("not inverted");
         }
     }
     public IEnumerator Rotation()

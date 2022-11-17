@@ -9,15 +9,18 @@ public class DestructibleObjectBehavior : MonoBehaviour
     
     public void Crumble()
     {
-        gameObject.SetActive(false);
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
         destroyedObj.SetActive(true);
-        Fade();
+        StartCoroutine(Fade());
+        gameObject.SetActive(false);
         // destroyedObj.SetActive(false);
     }
 
     IEnumerator Fade()
     {
+        print("before");
         yield return new WaitForSeconds(3);
+        print("after");
         destroyedObj.SetActive(false);
     }
 }

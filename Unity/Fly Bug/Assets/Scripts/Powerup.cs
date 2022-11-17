@@ -9,7 +9,7 @@ public class Powerup : MonoBehaviour
     {
         if (other.GetComponent<CharacterController>())
         {
-            print("collected");
+            // print("collected");
             collisionEvent.Invoke();
         }
     }
