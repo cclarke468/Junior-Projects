@@ -21,7 +21,7 @@ public class ProjectileBehavior : MonoBehaviour
         rb.velocity = transform.forward * bulletSpeed * Time.deltaTime;
     }
 
-    private IEnumerator OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         print("bullet hit " + other);
         onTriggerEnterEvent.Invoke();
@@ -31,8 +31,8 @@ public class ProjectileBehavior : MonoBehaviour
             // print(powerResistance);
             ImminentDestruction(powerResistance, other.GetComponent<DestructibleObjectBehavior>());
         }
-        yield return new WaitForSeconds(0.5f);
-        Destroy(this.gameObject);
+        // yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
     }
     
     public void ImminentDestruction(FloatDataSO floatSO, DestructibleObjectBehavior obj)

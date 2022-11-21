@@ -6,21 +6,27 @@ public class DestructibleObjectBehavior : MonoBehaviour
 {
     public FloatDataSO powerLevelNeededToDestroy;
     public GameObject destroyedObj;
-    
+    public float secondsToFade = 3f;
+    private WaitForSeconds waitForSeconds;
+
+    private void Awake()
+    {
+        waitForSeconds = new WaitForSeconds(secondsToFade);
+    }
+
     public void Crumble()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         destroyedObj.SetActive(true);
         StartCoroutine(Fade());
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
         // destroyedObj.SetActive(false);
     }
 
     IEnumerator Fade()
     {
-        print("before");
-        yield return new WaitForSeconds(3);
-        print("after");
+        yield return waitForSeconds;
         destroyedObj.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
