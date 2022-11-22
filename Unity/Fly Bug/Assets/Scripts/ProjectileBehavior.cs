@@ -10,6 +10,7 @@ public class ProjectileBehavior : MonoBehaviour
     private Rigidbody rb;
     private Vector3 velocity;
     public float bulletSpeed = 1000f;
+    public float lifetimeSeconds = 5f;
     public UnityEvent onHit, crumbleEvent;
     public FloatDataSO gunPowerLevel;
     private void Awake()
@@ -17,22 +18,25 @@ public class ProjectileBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
         velocity = transform.forward * bulletSpeed * Time.deltaTime;
         rb.velocity = velocity;
+        yield return new WaitForSeconds(lifetimeSeconds);
+        Destroy(gameObject);
     }
 
     public void ZeroOutVelocity()
     {
-        rb.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero; 
         
     }
     private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ignore"))
         {
-            yield return null;
+            print("ignore");
+            yield break; //why does this work when return does not?
         }
         print("bullet hit " + other.name);
         onHit.Invoke();
@@ -57,4 +61,6 @@ public class ProjectileBehavior : MonoBehaviour
             obj.Crumble(velocity);
         }
     }
+
+    
 }
