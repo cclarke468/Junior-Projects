@@ -7,8 +7,10 @@ public class CharacterMovement : MonoBehaviour
 {
     public float speed = 10f;
     public float hoverSpeed = 1f;
+    private  float tempSpeed;
     public float turnSpeed = 10f;
     private bool flying;
+    private bool hovering;
     private bool dragging = false;
     // public bool invertControls = false;
     public Toggle invertedControls;
@@ -28,6 +30,8 @@ public class CharacterMovement : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         flying = false;
+        hovering = false;
+        tempSpeed = speed;
         // newVector3 = new Vector3(0, 1, 10);
         // print(newVector3 * 10f);
         waitForSecondsFlying = new WaitForSeconds(0.3f * Time.deltaTime);
@@ -90,23 +94,20 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
+    
     public void Hover()
     {
-        var tempSpeed = speed;
-        if (!flying)
+        if (!hovering)
         {
-            flying = true;
-            speed = tempSpeed;
-            // StartCoroutine(Flying());
-            // print("launch");
-        }
-        else if (flying)
-        {
-            flying = false;
+            hovering = true;
             speed = hoverSpeed;
-            // StopCoroutine(Flying());
-            // print("landed");
-            // ResetAxesMovement();
+            print("wasn't hovering");
+        }
+        else if (hovering)
+        {
+            hovering = false;
+            speed = tempSpeed;
+            print("was hovering");
         }
     }
 

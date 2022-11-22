@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             gameObject.SetActive(false);
             raiseAction.Invoke();
+            print("Game over...uhhhh...why are you still here?");
         }
     }
 }

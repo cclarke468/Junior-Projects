@@ -23,7 +23,12 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("bullet hit " + other);
+        if (other.CompareTag("Player"))
+        {
+            // print("character collider");
+            return;
+        }
+        print("bullet hit " + other.name);
         onHit.Invoke();
         if (other.GetComponent<DestructibleObjectBehavior>())
         {
@@ -41,10 +46,6 @@ public class ProjectileBehavior : MonoBehaviour
         {
             // print( obj + " destroyed");
             obj.Crumble();
-        }
-        else
-        {
-            // print(obj + " not destroyed");
         }
     }
 
