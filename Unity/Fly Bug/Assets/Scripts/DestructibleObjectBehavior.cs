@@ -8,23 +8,24 @@ public class DestructibleObjectBehavior : MonoBehaviour
     public GameObject destroyedObj;
     public float secondsToFade = 3f;
     private WaitForSeconds waitForSeconds;
-    public Vector3 force;
+    // public Vector3 force;
 
     private void Awake()
     {
         waitForSeconds = new WaitForSeconds(secondsToFade);
-        force = new Vector3(0, 50, 0);
+        // force = new Vector3(10, 10, 10);
     }
 
-    public void Crumble()
+    public void Crumble(Vector3 force)
     {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
         destroyedObj.SetActive(true);
         // destroyedObj.GetComponent<Rigidbody>().AddForce(vector3,ForceMode.Impulse);
         StartCoroutine(Fade());
         foreach (Rigidbody obj in destroyedObj.GetComponentsInChildren<Rigidbody>())
         {
-            Debug.Log(obj.name);
+            // Debug.Log(obj.name);
             obj.AddForce(force,ForceMode.Impulse);
         }
         // gameObject.SetActive(false);

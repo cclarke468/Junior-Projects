@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class ProjectileBehavior : MonoBehaviour
 {
     private Rigidbody rb;
+    private Vector3 velocity;
     public float bulletSpeed = 1000f;
     public UnityEvent onHit, crumbleEvent;
     public FloatDataSO gunPowerLevel;
@@ -18,15 +19,20 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void Start()
     {
-        rb.velocity = transform.forward * bulletSpeed * Time.deltaTime;
+        velocity = transform.forward * bulletSpeed * Time.deltaTime;
+        rb.velocity = velocity;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void ZeroOutVelocity()
     {
-        if (other.CompareTag("Player"))
+        rb.velocity = Vector3.zero;
+        
+    }
+    private IEnumerator OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ignore"))
         {
-            // print("character collider");
-            return;
+            yield return null;
         }
         print("bullet hit " + other.name);
         onHit.Invoke();
@@ -36,7 +42,10 @@ public class ProjectileBehavior : MonoBehaviour
             // print(powerResistance);
             ImminentDestruction(powerResistance, other.GetComponent<DestructibleObjectBehavior>());
         }
-        // yield return new WaitForSeconds(0.5f);
+
+        // gameObject.GetComponent<MeshRenderer>().enabled = false;
+        // gameObject.GetComponent<Collider>().enabled = false;
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
     
@@ -45,13 +54,7 @@ public class ProjectileBehavior : MonoBehaviour
         if (gunPowerLevel.floatData >= floatSO.floatData)
         {
             // print( obj + " destroyed");
-            obj.Crumble();
+            obj.Crumble(velocity);
         }
-    }
-
-    public void Crumble(GameObject ogObj, GameObject crumbleObj)
-    {
-        ogObj.SetActive(false);
-        crumbleObj.SetActive(true);
     }
 }
