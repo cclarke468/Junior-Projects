@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CharacterMovement : MonoBehaviour
 {
     public float speed = 10f;
+    public float hoverSpeed = 1f;
     public float turnSpeed = 10f;
     private bool flying;
     private bool dragging = false;
@@ -84,6 +85,26 @@ public class CharacterMovement : MonoBehaviour
         {
             flying = false;
             StopCoroutine(Flying());
+            // print("landed");
+            // ResetAxesMovement();
+        }
+    }
+    
+    public void Hover()
+    {
+        var tempSpeed = speed;
+        if (!flying)
+        {
+            flying = true;
+            speed = tempSpeed;
+            // StartCoroutine(Flying());
+            // print("launch");
+        }
+        else if (flying)
+        {
+            flying = false;
+            speed = hoverSpeed;
+            // StopCoroutine(Flying());
             // print("landed");
             // ResetAxesMovement();
         }

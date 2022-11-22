@@ -9,7 +9,7 @@ public class ProjectileBehavior : MonoBehaviour
 {
     private Rigidbody rb;
     public float bulletSpeed = 1000f;
-    public UnityEvent onTriggerEnterEvent, crumbleEvent;
+    public UnityEvent onHit, crumbleEvent;
     public FloatDataSO gunPowerLevel;
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class ProjectileBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print("bullet hit " + other);
-        onTriggerEnterEvent.Invoke();
+        onHit.Invoke();
         if (other.GetComponent<DestructibleObjectBehavior>())
         {
             var powerResistance = other.GetComponent<DestructibleObjectBehavior>().powerLevelNeededToDestroy;

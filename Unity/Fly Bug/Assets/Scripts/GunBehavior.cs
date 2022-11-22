@@ -11,6 +11,7 @@ public class GunBehavior : MonoBehaviour
     private Vector2 screenCenter;
     public Ray ray;
     public Camera camera;
+    public UnityEvent fireEvent;
 
     public LayerMask
         gunColliderLayerMask =
@@ -38,6 +39,7 @@ public class GunBehavior : MonoBehaviour
         // print("fire");
         AimGun();
         aimDirection = (aimWorldPoint - firePointPos.position).normalized;
+        fireEvent.Invoke();
         Instantiate(bulletPrefab, firePointPos.position, Quaternion.LookRotation(aimDirection, firePointPos.up));
     }
 
