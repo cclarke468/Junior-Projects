@@ -6,14 +6,16 @@ public class DestructibleObjectBehavior : MonoBehaviour
 {
     public FloatDataSO powerLevelNeededToDestroy;
     public GameObject destroyedObj;
-    public float secondsToFade = 3f;
-    private WaitForSeconds waitForSeconds;
-    // public Vector3 force;
+    private float delaySeconds = 5f;
+    private float shrinkSpeed = 0.01f;
+    private WaitForSeconds delayWaitForSeconds, shrinkWaitForSeconds;
+    private Vector3 scaleChange, positionChange;
 
     private void Awake()
     {
-        waitForSeconds = new WaitForSeconds(secondsToFade);
-        // force = new Vector3(10, 10, 10);
+        delayWaitForSeconds = new WaitForSeconds(delaySeconds);
+        shrinkWaitForSeconds = new WaitForSeconds(shrinkSpeed);
+        scaleChange = new Vector3(10, 10, 10);
     }
 
     public void Crumble(Vector3 force)
@@ -21,20 +23,27 @@ public class DestructibleObjectBehavior : MonoBehaviour
         gameObject.GetComponent<MeshRenderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
         destroyedObj.SetActive(true);
-        // destroyedObj.GetComponent<Rigidbody>().AddForce(vector3,ForceMode.Impulse);
-        StartCoroutine(Fade());
         foreach (Rigidbody obj in destroyedObj.GetComponentsInChildren<Rigidbody>())
         {
             // Debug.Log(obj.name);
             obj.AddForce(force,ForceMode.Impulse);
         }
-        // gameObject.SetActive(false);
-        // destroyedObj.SetActive(false);
+        
+        // print("test");
+        StartCoroutine(Shrink());
     }
 
-    IEnumerator Fade()
+    IEnumerator Shrink() //performance heavy
     {
-        yield return waitForSeconds;
+        yield return delayWaitForSeconds;
+        for (int i = 0; i < 10; i++)
+        {
+            foreach (Rigidbody obj in destroyedObj.GetComponentsInChildren<Rigidbody>())
+            {
+                obj.gameObject.transform.localScale -= scaleChange;
+            }
+            yield return shrinkWaitForSeconds;
+        }
         destroyedObj.SetActive(false);
         gameObject.SetActive(false);
     }

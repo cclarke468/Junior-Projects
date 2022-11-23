@@ -101,13 +101,13 @@ public class CharacterMovement : MonoBehaviour
         {
             hovering = true;
             speed = hoverSpeed;
-            print("wasn't hovering");
+            // print("wasn't hovering");
         }
         else if (hovering)
         {
             hovering = false;
             speed = tempSpeed;
-            print("was hovering");
+            // print("was hovering");
         }
     }
 

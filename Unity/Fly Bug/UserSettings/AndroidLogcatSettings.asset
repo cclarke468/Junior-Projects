@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "55090945",
     "m_SelectedPackage": {
         "deviceId": "55090945",
-        "name": "com.DefaultCompany.FlyBug",
-        "processId": 23924,
+        "name": "com.CarlTheDrugLord.FlyBug",
+        "processId": 12673,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -84,6 +84,18 @@
             "deviceId": "55090945",
             "name": "com.DefaultCompany.FlyBug",
             "processId": 23924,
+            "exited": false
+        },
+        {
+            "deviceId": "55090945",
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 11391,
+            "exited": false
+        },
+        {
+            "deviceId": "55090945",
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 12673,
             "exited": false
         }
     ],

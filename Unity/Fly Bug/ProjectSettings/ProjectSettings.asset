@@ -150,7 +150,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.FlyBug
+    Android: com.CarlTheDrugLord.FlyBug
     Standalone: com.CarlTheDrugLord.FlyBug
   buildNumber:
     Standalone: 0

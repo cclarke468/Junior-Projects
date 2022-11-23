@@ -59,6 +59,7 @@ public class ProjectileBehavior : MonoBehaviour
         {
             // print( obj + " destroyed");
             obj.Crumble(velocity);
+            // StartCoroutine(obj.Crumble(velocity));
         }
     }
 
