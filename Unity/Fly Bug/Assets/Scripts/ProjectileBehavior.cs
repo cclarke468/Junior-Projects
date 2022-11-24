@@ -11,7 +11,7 @@ public class ProjectileBehavior : MonoBehaviour
     private Vector3 velocity;
     public float bulletSpeed = 1000f;
     public float lifetimeSeconds = 5f;
-    public UnityEvent onHit, crumbleEvent;
+    public UnityEvent onHit, onEnemyDefeat, crumbleEvent;
     public FloatDataSO gunPowerLevel;
     private void Awake()
     {
@@ -20,10 +20,10 @@ public class ProjectileBehavior : MonoBehaviour
 
     private IEnumerator Start()
     {
-        velocity = transform.forward * (bulletSpeed * 10)* Time.fixedDeltaTime;
-        rb.AddForce(velocity);
+        velocity = transform.forward * bulletSpeed * Time.fixedDeltaTime;
+        rb.velocity = velocity;
         // print("velocity var: " + velocity +", rb velocity: " + rb.velocity);
-        print(Time.fixedDeltaTime);
+        // print(Time.fixedDeltaTime);
         yield return new WaitForSeconds(lifetimeSeconds);
         Destroy(gameObject);
     }
@@ -48,6 +48,10 @@ public class ProjectileBehavior : MonoBehaviour
             // print(powerResistance);
             ImminentDestruction(powerResistance, other.GetComponent<DestructibleObjectBehavior>());
         }
+        else if (other.GetComponent<EnemyBehavior>())
+        {
+            EnemyDestruction(other.GetComponent<EnemyBehavior>().powerLevelNeededToDestroy);
+        }
 
         // gameObject.GetComponent<MeshRenderer>().enabled = false;
         // gameObject.GetComponent<Collider>().enabled = false;
@@ -65,5 +69,14 @@ public class ProjectileBehavior : MonoBehaviour
         }
     }
 
+    public void EnemyDestruction(FloatDataSO floatSO)
+    {
+        print("enemy hit");
+        if (gunPowerLevel.floatData >= floatSO.floatData)
+        {
+            onEnemyDefeat.Invoke();
+            print("enemy down!");
+        }
+    }
     
 }

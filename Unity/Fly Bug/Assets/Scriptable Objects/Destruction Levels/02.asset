@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b950ba66335594da668ac8a0398393, type: 3}
   m_Name: 02
   m_EditorClassIdentifier: 
-  floatData: 1
+  floatData: 20

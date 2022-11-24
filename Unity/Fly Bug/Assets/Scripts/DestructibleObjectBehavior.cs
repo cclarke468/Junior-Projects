@@ -54,6 +54,6 @@ public class DestructibleObjectBehavior : MonoBehaviour
 
     public void SpawnPowerup()
     {
-        Instantiate(prefabInstance, objCenter, Quaternion.identity);
+        if(prefabInstance != null) Instantiate(prefabInstance, objCenter, Quaternion.identity);
     }
 }

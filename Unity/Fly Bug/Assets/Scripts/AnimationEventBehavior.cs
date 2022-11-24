@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class AnimationEventBehavior : MonoBehaviour
@@ -6,6 +7,12 @@ public class AnimationEventBehavior : MonoBehaviour
     public void AnimationEvent(GameAction gameAction)
     {
         // print("event");
+        gameAction.RaiseAction();
+    }
+
+    public IEnumerator AnimationEventDelayed(GameAction gameAction)
+    {
+        yield return new WaitForSeconds(5);
         gameAction.RaiseAction();
     }
 

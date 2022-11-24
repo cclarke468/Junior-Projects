@@ -5,7 +5,9 @@ using UnityEngine.Events;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    public FloatDataSO powerLevelNeededToDestroy;
     public UnityEvent onPlayerEnter;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<CharacterMovement>())
