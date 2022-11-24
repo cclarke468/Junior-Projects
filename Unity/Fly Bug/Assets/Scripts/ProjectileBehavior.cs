@@ -20,8 +20,10 @@ public class ProjectileBehavior : MonoBehaviour
 
     private IEnumerator Start()
     {
-        velocity = transform.forward * bulletSpeed * Time.deltaTime;
-        rb.velocity = velocity;
+        velocity = transform.forward * (bulletSpeed * 10)* Time.fixedDeltaTime;
+        rb.AddForce(velocity);
+        // print("velocity var: " + velocity +", rb velocity: " + rb.velocity);
+        print(Time.fixedDeltaTime);
         yield return new WaitForSeconds(lifetimeSeconds);
         Destroy(gameObject);
     }
@@ -35,10 +37,10 @@ public class ProjectileBehavior : MonoBehaviour
     {
         if (other.CompareTag("Ignore"))
         {
-            print("ignore");
+            // print("ignore");
             yield break; //why does this work when return does not?
         }
-        print("bullet hit " + other.name);
+        // print("bullet hit " + other.name);
         onHit.Invoke();
         if (other.GetComponent<DestructibleObjectBehavior>())
         {

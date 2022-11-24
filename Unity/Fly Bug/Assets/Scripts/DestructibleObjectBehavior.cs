@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class DestructibleObjectBehavior : MonoBehaviour
@@ -9,13 +10,15 @@ public class DestructibleObjectBehavior : MonoBehaviour
     private float delaySeconds = 5f;
     private float shrinkSpeed = 0.01f;
     private WaitForSeconds delayWaitForSeconds, shrinkWaitForSeconds;
-    private Vector3 scaleChange, positionChange;
+    private Vector3 scaleChange, objCenter;
+    public GameObject prefabInstance;
 
     private void Awake()
     {
         delayWaitForSeconds = new WaitForSeconds(delaySeconds);
         shrinkWaitForSeconds = new WaitForSeconds(shrinkSpeed);
         scaleChange = new Vector3(10, 10, 10);
+        objCenter = gameObject.GetComponent<Renderer>().bounds.center;
     }
 
     public void Crumble(Vector3 force)
@@ -30,6 +33,7 @@ public class DestructibleObjectBehavior : MonoBehaviour
         }
         
         // print("test");
+        SpawnPowerup();
         StartCoroutine(Shrink());
     }
 
@@ -46,5 +50,10 @@ public class DestructibleObjectBehavior : MonoBehaviour
         }
         destroyedObj.SetActive(false);
         gameObject.SetActive(false);
+    }
+
+    public void SpawnPowerup()
+    {
+        Instantiate(prefabInstance, objCenter, Quaternion.identity);
     }
 }
