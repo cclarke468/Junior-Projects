@@ -11,6 +11,7 @@ public class Powerup : MonoBehaviour
         {
             // print("collected");
             collisionEvent.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

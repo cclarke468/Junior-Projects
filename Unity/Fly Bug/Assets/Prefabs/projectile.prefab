@@ -5060,7 +5060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbf1c543686697418bfbd0dcc60f62b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 2500
+  bulletSpeed: 1000
   lifetimeSeconds: 5
   onHit:
     m_PersistentCalls:
