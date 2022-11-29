@@ -8,7 +8,7 @@ public class DestructibleObjectBehavior : MonoBehaviour
     public FloatDataSO powerLevelNeededToDestroy;
     public GameObject destroyedObj;
     private float delaySeconds = 5f;
-    private float shrinkSpeed = 0.01f;
+    private float shrinkSpeed = 0.03f;
     private WaitForSeconds delayWaitForSeconds, shrinkWaitForSeconds;
     private Vector3 scaleChange, objCenter;
     public GameObject prefabInstance;
@@ -17,7 +17,7 @@ public class DestructibleObjectBehavior : MonoBehaviour
     {
         delayWaitForSeconds = new WaitForSeconds(delaySeconds);
         shrinkWaitForSeconds = new WaitForSeconds(shrinkSpeed);
-        scaleChange = new Vector3(10, 10, 10);
+        scaleChange = new Vector3(20,20,20);
         objCenter = gameObject.GetComponent<Renderer>().bounds.center;
     }
 
@@ -40,7 +40,7 @@ public class DestructibleObjectBehavior : MonoBehaviour
     IEnumerator Shrink() //performance heavy
     {
         yield return delayWaitForSeconds;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 5; i++)
         {
             foreach (Rigidbody obj in destroyedObj.GetComponentsInChildren<Rigidbody>())
             {

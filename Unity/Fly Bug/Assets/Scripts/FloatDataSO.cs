@@ -17,4 +17,12 @@ public class FloatDataSO : ScriptableObject
     {
         floatData += num;
     }
+
+    // public void CompareData(float num)
+    // {
+    //     if (floatData == num)
+    //     {
+    //         Debug.Log("threshold");
+    //     }
+    // }
 }

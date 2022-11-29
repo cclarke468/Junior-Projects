@@ -10,10 +10,17 @@ public class GameStates : MonoBehaviour
     public UnityEvent awakeEvent;
     public GameObject shader;
     private float delay = 2f;
+    private int firstLoad = 1;
     private void Awake()
     {
         Time.timeScale = 0;
         awakeEvent.Invoke();
+        if (!PlayerPrefs.HasKey("First Load"))
+        {
+            PlayerPrefs.SetInt("First Load",1);
+            print("key created, first time loading");
+        }
+        firstLoad = PlayerPrefs.GetInt("First Load");
     }
 
     public void PauseGame()
@@ -52,5 +59,18 @@ public class GameStates : MonoBehaviour
         Time.timeScale = 1;
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(0);
+    }
+    
+    public bool CheckFirstLoad()
+    {
+        if (firstLoad != 1) return false;
+        firstLoad = 0;
+        PlayerPrefs.SetInt("First Load", 0);
+        return true;
+    }
+
+    public void ResetAllPreferences()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

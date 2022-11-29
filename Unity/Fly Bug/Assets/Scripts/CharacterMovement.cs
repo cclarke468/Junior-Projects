@@ -25,7 +25,7 @@ public class CharacterMovement : MonoBehaviour
     private WaitForSeconds waitForSecondsTurning;
 
     public float xLimit = 60, zLimit = 20;
-    private PlayerPrefs playerPrefs; //implement
+    private int invertedControlsBool = 1; //implement
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -36,7 +36,14 @@ public class CharacterMovement : MonoBehaviour
         // print(newVector3 * 10f);
         waitForSecondsFlying = new WaitForSeconds(0.3f * Time.deltaTime);
         waitForSecondsTurning = new WaitForSeconds(0.1f * Time.deltaTime);
+        if (!PlayerPrefs.HasKey("IC"))
+        {
+            PlayerPrefs.SetInt("IC",1);
+            print("IC key created");
+        }
+        invertedControls = PlayerPrefs.GetInt("IC");
         SetInvertedControls();
+        
         // onGround = false;
     }
 

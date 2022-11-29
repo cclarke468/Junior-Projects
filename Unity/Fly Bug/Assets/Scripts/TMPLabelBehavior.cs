@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,11 +9,14 @@ public class TMPLabelBehavior : MonoBehaviour
     private TextMeshProUGUI label;
     public UnityEvent startEvent;
     private string originalText;
+    public List<string> textArray;
+    private int i;
     void Start()
     {
         label = GetComponent<TextMeshProUGUI>();
         startEvent.Invoke();
         originalText = label.text;
+        i = 0;
     }
 
     public void SwitchText(string newText)
@@ -33,5 +37,12 @@ public class TMPLabelBehavior : MonoBehaviour
     public void UpdateTextLabel(string str)
     {
         label.text = str;
+    }
+
+    public void UpdateLabelFromArray()
+    {
+        if(textArray.Count < i+1) return;
+        label.text = textArray[i];
+        i++;
     }
 }
