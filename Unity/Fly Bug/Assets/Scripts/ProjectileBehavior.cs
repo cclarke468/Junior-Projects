@@ -64,7 +64,7 @@ public class ProjectileBehavior : MonoBehaviour
         if (gunPowerLevel.floatData >= floatSO.floatData)
         {
             // print( obj + " destroyed");
-            obj.Crumble(velocity);
+            obj.Crumble(velocity/2);
             // StartCoroutine(obj.Crumble(velocity));
         }
     }
