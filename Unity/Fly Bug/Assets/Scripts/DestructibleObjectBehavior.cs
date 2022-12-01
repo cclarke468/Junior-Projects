@@ -17,8 +17,15 @@ public class DestructibleObjectBehavior : MonoBehaviour
     {
         delayWaitForSeconds = new WaitForSeconds(delaySeconds);
         shrinkWaitForSeconds = new WaitForSeconds(shrinkSpeed);
-        scaleChange = new Vector3(20,20,20);
-        objCenter = gameObject.GetComponent<Renderer>().bounds.center;
+        scaleChange = new Vector3(25,25,25);
+        if (gameObject.GetComponent<Renderer>() != null)
+        {
+            objCenter = gameObject.GetComponent<Renderer>().bounds.center;
+        }
+        else
+        {
+            objCenter = transform.position;
+        }
     }
 
     public void Crumble(Vector3 force)
@@ -40,11 +47,15 @@ public class DestructibleObjectBehavior : MonoBehaviour
     IEnumerator Shrink() //performance heavy
     {
         yield return delayWaitForSeconds;
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 3; i++)
         {
             foreach (Rigidbody obj in destroyedObj.GetComponentsInChildren<Rigidbody>())
             {
-                obj.gameObject.transform.localScale -= scaleChange;
+                // obj.Sleep();
+                // print("shrink");
+                // obj.gameObject.transform.localScale -= scaleChange;
+                obj.Sleep();
+                obj.transform.localScale -= scaleChange;
             }
             yield return shrinkWaitForSeconds;
         }

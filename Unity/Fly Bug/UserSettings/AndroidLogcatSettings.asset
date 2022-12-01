@@ -3,105 +3,57 @@
     "m_SelectedPackage": {
         "deviceId": "55090945",
         "name": "com.CarlTheDrugLord.FlyBug",
-        "processId": 22564,
+        "processId": 24675,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 13922,
-            "exited": false
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 16518,
+            "exited": true
         },
         {
             "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 17605,
-            "exited": false
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 18573,
+            "exited": true
         },
         {
             "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 20338,
-            "exited": false
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 20072,
+            "exited": true
         },
         {
             "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 21473,
-            "exited": false
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 21070,
+            "exited": true
         },
         {
             "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 22286,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 22987,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 23672,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 24898,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 25536,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 26273,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 27590,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 32765,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.DefaultCompany.FlyBug",
-            "processId": 23924,
+            "name": "com.sec.android.app.launcher",
+            "processId": 3679,
             "exited": false
         },
         {
             "deviceId": "55090945",
             "name": "com.CarlTheDrugLord.FlyBug",
-            "processId": 11391,
+            "processId": 22113,
+            "exited": true
+        },
+        {
+            "deviceId": "55090945",
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 23606,
             "exited": false
         },
         {
             "deviceId": "55090945",
             "name": "com.CarlTheDrugLord.FlyBug",
-            "processId": 12673,
-            "exited": false
-        },
-        {
-            "deviceId": "55090945",
-            "name": "com.CarlTheDrugLord.FlyBug",
-            "processId": 22564,
+            "processId": 24675,
             "exited": false
         },
         {

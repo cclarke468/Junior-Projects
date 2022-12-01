@@ -11,7 +11,7 @@ public class ProjectileBehavior : MonoBehaviour
     private Vector3 velocity;
     public float bulletSpeed = 1000f;
     public float lifetimeSeconds = 5f;
-    public UnityEvent onHit, onEnemyDefeat, crumbleEvent;
+    public UnityEvent onHit, onEnemyDefeat, crumbleEvent, onDestroy;
     public FloatDataSO gunPowerLevel;
     private void Awake()
     {
@@ -47,6 +47,7 @@ public class ProjectileBehavior : MonoBehaviour
             var powerResistance = other.GetComponent<DestructibleObjectBehavior>().powerLevelNeededToDestroy;
             // print(powerResistance);
             ImminentDestruction(powerResistance, other.GetComponent<DestructibleObjectBehavior>());
+            onDestroy.Invoke();
         }
         else if (other.GetComponent<EnemyBehavior>())
         {

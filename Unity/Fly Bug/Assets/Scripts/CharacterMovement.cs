@@ -28,11 +28,11 @@ public class CharacterMovement : MonoBehaviour
         waitForSecondsTurning = new WaitForSeconds(0.1f * Time.deltaTime);
         if (!PlayerPrefs.HasKey("IC"))
         {
-            PlayerPrefs.SetInt("IC",1);
+            PlayerPrefs.SetInt("IC",0);
             print("IC key created");
         }
-        invertedControls.isOn = PlayerPrefs.GetInt("IC")==1?true:false;
-        SetInvertedControls();
+        invertedControls.isOn = PlayerPrefs.GetInt("IC")==0?true:false;
+        // SetInvertedControls();
     }
 
     public void SetInvertedControls()
@@ -42,14 +42,12 @@ public class CharacterMovement : MonoBehaviour
             verticalV3 = Vector3.down;
             horizontalV3 = Vector3.right;
             PlayerPrefs.SetInt("IC", 1);
-            // print("inverted");
         }
         else 
         {
             verticalV3 = Vector3.up;
             horizontalV3 = Vector3.left;
             PlayerPrefs.SetInt("IC", 0);
-            // print("not inverted");
         }
     }
     public IEnumerator Rotation()
@@ -80,14 +78,11 @@ public class CharacterMovement : MonoBehaviour
         {
             flying = true;
             StartCoroutine(Flying());
-            // print("launch");
         }
         else if (flying)
         {
             flying = false;
             StopCoroutine(Flying());
-            // print("landed");
-            // ResetAxesMovement();
         }
     }
     
@@ -98,13 +93,11 @@ public class CharacterMovement : MonoBehaviour
         {
             hovering = true;
             speed = hoverSpeed;
-            // print("wasn't hovering");
         }
         else if (hovering)
         {
             hovering = false;
             speed = tempSpeed;
-            // print("was hovering");
         }
     }
 
@@ -126,20 +119,5 @@ public class CharacterMovement : MonoBehaviour
             // LimitAxesMovement(); //needs to be in the onclick method for joystick
             yield return waitForSecondsFlying;
         }
-    }
-
-    // public void LimitAxesMovement()
-    // {
-    //     Vector3 currentRotation = transform.localEulerAngles;
-    //     // print(currentRotation);
-    //     // currentRotation.z = Mathf.Clamp(currentRotation.z, zLimit, (360-zLimit));
-    //     // print(currentRotation);
-    //     transform.rotation = Quaternion.Euler (currentRotation);
-    // }
-
-    public void ResetAxesMovement()
-    {
-        // print(transform.rotation.y);
-        transform.rotation = new Quaternion(0, transform.rotation.y, 0, transform.rotation.w);
     }
 }

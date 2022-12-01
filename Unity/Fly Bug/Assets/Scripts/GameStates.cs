@@ -21,7 +21,7 @@ public class GameStates : MonoBehaviour
             print("key created, first time loading");
         }
         firstLoad = PlayerPrefs.GetInt("First Load");
-        print(firstLoad);
+        // print(firstLoad);
     }
 
     public void PauseGame()
@@ -65,12 +65,12 @@ public class GameStates : MonoBehaviour
     public void CheckFirstLoad()
     {
         notFirstLoadEvent.Invoke();
-        print("play");
+        // print("play");
         if (firstLoad != 1) return;
         firstLoad = 0;
         PlayerPrefs.SetInt("First Load", 0);
         firstLoadEvent.Invoke();
-        print("instructions");
+        // print("instructions");
     }
 
     public void ResetAllPreferences()

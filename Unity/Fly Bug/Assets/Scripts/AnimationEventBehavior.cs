@@ -12,7 +12,7 @@ public class AnimationEventBehavior : MonoBehaviour
 
     public IEnumerator AnimationEventDelayed(GameAction gameAction)
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         gameAction.RaiseAction();
     }
 
