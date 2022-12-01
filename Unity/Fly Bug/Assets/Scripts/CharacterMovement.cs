@@ -12,19 +12,13 @@ public class CharacterMovement : MonoBehaviour
     private bool flying;
     private bool hovering;
     private bool dragging = false;
-    // public bool invertControls = false;
     public Toggle invertedControls;
-    // public GameObject camera;
     public Joystick joystick;
     private CharacterController characterController;
-    private Vector3 verticalV3 = Vector3.up;
-    private Vector3 horizontalV3 = Vector3.left;
-    private Vector3 direction = Vector3.zero;
-    private Vector3 forward = Vector3.forward;
+    private Vector3 verticalV3 = Vector3.up, horizontalV3 = Vector3.left, direction = Vector3.zero, forward = Vector3.forward;
     private WaitForSeconds waitForSecondsFlying;
     private WaitForSeconds waitForSecondsTurning;
 
-    public float xLimit = 60, zLimit = 20;
     private int invertedControlsBool = 1; //implement
     private void Awake()
     {
@@ -32,8 +26,6 @@ public class CharacterMovement : MonoBehaviour
         flying = false;
         hovering = false;
         tempSpeed = speed;
-        // newVector3 = new Vector3(0, 1, 10);
-        // print(newVector3 * 10f);
         waitForSecondsFlying = new WaitForSeconds(0.3f * Time.deltaTime);
         waitForSecondsTurning = new WaitForSeconds(0.1f * Time.deltaTime);
         if (!PlayerPrefs.HasKey("IC"))
@@ -41,10 +33,8 @@ public class CharacterMovement : MonoBehaviour
             PlayerPrefs.SetInt("IC",1);
             print("IC key created");
         }
-        invertedControls = PlayerPrefs.GetInt("IC");
+        invertedControlsBool = PlayerPrefs.GetInt("IC");
         SetInvertedControls();
-        
-        // onGround = false;
     }
 
     public void SetInvertedControls()
@@ -116,6 +106,15 @@ public class CharacterMovement : MonoBehaviour
             speed = tempSpeed;
             // print("was hovering");
         }
+    }
+
+    public IEnumerator SpeedUp()
+    {
+        while (speed > tempSpeed)
+        {
+            
+        }
+        yield return waitForSecondsFlying;
     }
 
     private IEnumerator Flying()
