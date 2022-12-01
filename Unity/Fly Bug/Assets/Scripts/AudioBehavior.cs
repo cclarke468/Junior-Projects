@@ -1,12 +1,16 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioBehavior : MonoBehaviour
 {
-    private int musicBool = 1;
-    private int fxBool = 1;
+    // private int musicBool = 1;
+    // private int fxBool = 1;
     // public Slider volumeSlider;
-    public AudioSource Audio;
+    public AudioSource musicSource;
+    public AudioSource FXSource;
+    public Toggle musicToggle;
+    public Toggle FXToggle;
 
     private void Start()
     {
@@ -20,23 +24,49 @@ public class AudioBehavior : MonoBehaviour
             PlayerPrefs.SetInt("FX",1);
             print("FX key created");
         }
-        musicBool = PlayerPrefs.GetInt("Music");
-        fxBool = PlayerPrefs.GetInt("FX");
-        // Audio.volume = volumeFloat;
+        musicToggle.isOn = PlayerPrefs.GetInt("Music")==1;
+        FXToggle.isOn = PlayerPrefs.GetInt("FX")==1;
     }
 
-    public void SetVolume()
+    public void ToggleAudio(AudioSource audio)
     {
-    //     volumeFloat = volumeSlider.value;
-    //     Audio.volume = volumeFloat;
-    //     PlayerPrefs.SetFloat("Volume", volumeFloat);
-        // print("volume set to " + volumeFloat);
+        audio.mute = !audio.mute;
+        audio.Pause();
     }
 
-    public void ResetAudio()
+    public void ToggleMusic()
     {
-        PlayerPrefs.DeleteKey("Music");
-        Audio.volume = 1;
-        // volumeSlider.value = 1;
+        if (musicToggle.isOn)
+        {
+            musicSource.Play();
+            musicSource.mute = false;
+        }
+        else
+        {
+            musicSource.Pause();
+            musicSource.mute = true;
+        }
+        PlayerPrefs.SetInt("Music", musicToggle.isOn ? 1 : 0);
+    }
+
+    public void ToggleFX()
+    {
+        if (FXToggle.isOn)
+        {
+            // FXSource.Play();
+            FXSource.mute = false;
+        }
+        else
+        {
+            // FXSource.Pause();
+            FXSource.mute = true;
+        }
+        PlayerPrefs.SetInt("FX", FXToggle.isOn ? 1 : 0);
+    }
+
+    public void SaveAudioPrefs()
+    {
+        PlayerPrefs.SetInt("Music", musicToggle.isOn ? 1 : 0);
+        PlayerPrefs.SetInt("FX", FXToggle.isOn ? 1 : 0);
     }
 }

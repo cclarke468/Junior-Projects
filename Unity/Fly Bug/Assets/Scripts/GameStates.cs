@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameStates : MonoBehaviour
 {
-    public UnityEvent awakeEvent;
+    public UnityEvent awakeEvent, firstLoadEvent,notFirstLoadEvent;
     public GameObject shader;
     private float delay = 2f;
     private int firstLoad = 1;
@@ -21,6 +21,7 @@ public class GameStates : MonoBehaviour
             print("key created, first time loading");
         }
         firstLoad = PlayerPrefs.GetInt("First Load");
+        print(firstLoad);
     }
 
     public void PauseGame()
@@ -61,12 +62,15 @@ public class GameStates : MonoBehaviour
         SceneManager.LoadScene(0);
     }
     
-    public bool CheckFirstLoad()
+    public void CheckFirstLoad()
     {
-        if (firstLoad != 1) return false;
+        notFirstLoadEvent.Invoke();
+        print("play");
+        if (firstLoad != 1) return;
         firstLoad = 0;
         PlayerPrefs.SetInt("First Load", 0);
-        return true;
+        firstLoadEvent.Invoke();
+        print("instructions");
     }
 
     public void ResetAllPreferences()

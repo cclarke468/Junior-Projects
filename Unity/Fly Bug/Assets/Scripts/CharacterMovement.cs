@@ -18,8 +18,6 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 verticalV3 = Vector3.up, horizontalV3 = Vector3.left, direction = Vector3.zero, forward = Vector3.forward;
     private WaitForSeconds waitForSecondsFlying;
     private WaitForSeconds waitForSecondsTurning;
-
-    private int invertedControlsBool = 1; //implement
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -33,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
             PlayerPrefs.SetInt("IC",1);
             print("IC key created");
         }
-        invertedControlsBool = PlayerPrefs.GetInt("IC");
+        invertedControls.isOn = PlayerPrefs.GetInt("IC")==1?true:false;
         SetInvertedControls();
     }
 
@@ -43,12 +41,14 @@ public class CharacterMovement : MonoBehaviour
         {
             verticalV3 = Vector3.down;
             horizontalV3 = Vector3.right;
+            PlayerPrefs.SetInt("IC", 1);
             // print("inverted");
         }
         else 
         {
             verticalV3 = Vector3.up;
             horizontalV3 = Vector3.left;
+            PlayerPrefs.SetInt("IC", 0);
             // print("not inverted");
         }
     }
