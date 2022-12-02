@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "55090945",
         "name": "com.CarlTheDrugLord.FlyBug",
-        "processId": 24675,
+        "processId": 27040,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "55090945",
             "name": "com.CarlTheDrugLord.FlyBug",
             "processId": 24675,
+            "exited": false
+        },
+        {
+            "deviceId": "55090945",
+            "name": "com.CarlTheDrugLord.FlyBug",
+            "processId": 27040,
             "exited": false
         },
         {
