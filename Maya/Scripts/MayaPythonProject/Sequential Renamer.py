@@ -14,7 +14,7 @@ def sequential_renamer(new_name="Name_##_NodeType"):
     #     remove_nums = True;
 
     for i,obj in enumerate(selected_objs):
-        new_name = parts[0] + str(i).zfill(digit_count) + parts[2]
+        new_name = parts[0] + str(i+1).zfill(digit_count) + parts[2]
         cmds.rename(obj, new_name)
         print(new_name)
 
