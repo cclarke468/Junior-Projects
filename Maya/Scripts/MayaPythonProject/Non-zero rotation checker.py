@@ -7,16 +7,20 @@ def non_zero_rotation_checker():
     is_not_zero = False
 
     for i in selected_objs:
-        obj_rotation = cmds.xform(i, rotation=True, query=True)
+        obj_rotation = cmds.getAttr('.rotate')
+        print(obj_rotation)
         for rot in obj_rotation:
+            print rot
             if rot != 0.0:
-                is_not_zero = True;
+                is_not_zero = True
                 non_zero_selection.append(i)
                 break
-        print(obj_rotation)
+            else:
+                print "yay"
+
 
     print(non_zero_selection)
-    cmds.select(non_zero_selection)
+    # cmds.select(non_zero_selection)
     if is_not_zero:
         cmds.warning("Non-zero rotations detected.")
 
