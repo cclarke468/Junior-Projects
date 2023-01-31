@@ -2,7 +2,7 @@
 // vector $axis = <<0, 1, 0>>;
 // print($axis);
 
-global proc JointGenerator(vector $tempAxis)
+global proc JointCtrlGenerator(vector $tempAxis)
 {
     string $joint[] = `ls -sl`;
     string $ctrlName, $grpName;
@@ -24,6 +24,10 @@ global proc JointGenerator(vector $tempAxis)
         scaleConstraint -offset 1 1 1 -weight 1;
     }
 }
+//create a curve or a series of shapes to get the code for creating those controls
+//add an argument to control generator (a string, which asks for circle, triangle, or any other shape), use an else if statement to 
+//parse those arguments and create the right shape
+//in python, convert the curve code to cmds.curve(d=__,p=[__],k=[__]) where __ is the list of arguments
 
 global proc JointButton()
 {
@@ -34,15 +38,15 @@ global proc JointButton()
 
     if ($axis == 1)
     {
-        JointGenerator({1,0,0});
+        JointCtrlGenerator({1,0,0});
     }
     else if ($axis == 2)
     {
-        JointGenerator({0,1,0});
+        JointCtrlGenerator({0,1,0});
     }
     else if ($axis == 3)
     {
-        JointGenerator({0,0,1});
+        JointCtrlGenerator({0,0,1});
     }
 }
 
