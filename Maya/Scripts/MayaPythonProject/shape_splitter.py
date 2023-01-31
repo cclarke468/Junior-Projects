@@ -12,7 +12,7 @@
 
 #USER CAN CHANGE THIS NUMBER
 ###################
-percentRange = .1
+percentRange = 0
 
 ####  .1 = 10% falloff
 ####  .3 = 30% falloff
