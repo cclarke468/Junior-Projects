@@ -18,7 +18,7 @@ def non_zero_rotation_checker():
         print(obj_rotation)
         for rot in obj_rotation:
             print (rot)
-            if rot != 0.0:
+            if rot >= 0.0001 or rot <= -0.0001:
                 is_not_zero = True
                 non_zero_selection.append(i)
                 break
