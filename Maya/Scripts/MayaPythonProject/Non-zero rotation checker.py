@@ -15,21 +15,21 @@ def non_zero_rotation_checker():
         # print(cmds.listAttr(i))
         # obj_rotation = cmds.joint(q=True, o=True, r=True)
         # obj_rotation = cmds.xform(i, q=True, rotation=True, ws=False) #xform doesn't get the channel box, it gets the world space (?) rotation EVEN if you specify otherwise
-        print(obj_rotation)
+        # print(obj_rotation)
         for rot in obj_rotation:
-            print (rot)
             if rot >= 0.0001 or rot <= -0.0001:
                 is_not_zero = True
                 non_zero_selection.append(i)
                 break
-            else:
-                print ("yay")
-
-
-    print(non_zero_selection)
-    # cmds.select(non_zero_selection)
+            # elif rot != 0.0:
+                # print ("Rotations were detected but were too small to make a visible difference.")
     if is_not_zero:
         cmds.warning("Non-zero rotations detected.")
+        cmds.select(non_zero_selection)
+    else:
+        print ("All rotations are zero.")
+    for sel in non_zero_selection:
+        print (sel + str(cmds.getAttr('%s.rotate' % sel)[0]))
 
 
 non_zero_rotation_checker()
