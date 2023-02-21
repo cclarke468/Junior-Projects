@@ -12,9 +12,9 @@ def joint_ctrl_generator():
         grp_name = ctrl_name + "_grp"
         ctrl = cmds.circle(name=ctrl_name, normal=(1,0,0), radius=rad)[0]
         grp = cmds.group(ctrl, name=grp_name)
-        # cmds.select(grp,jnt, r=True)
         cmds.matchTransform(grp,jnt)
-        if shouldParent: cmds.parent(ctrl, jnt)
+        # cmds.select(grp,jnt, r=True)
+        if shouldParent: cmds.parentConstraint(ctrl, jnt)
         # if shouldScale: cmds.scaleConstraint(ctrl, jnt)
 
 
