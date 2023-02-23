@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: auto FK example.ma
-//Last modified: Wed, Feb 22, 2023 10:39:48 AM
+//Last modified: Wed, Feb 22, 2023 11:02:04 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -10,17 +10,17 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19045)\n";
-fileInfo "UUID" "7A044699-4C79-224F-2A79-98B3981509D1";
+fileInfo "UUID" "953139F6-4381-C020-26EC-EC8B720087B1";
 createNode transform -s -n "persp";
 	rename -uid "C49BB5B2-470C-1659-2294-FAA9F05D1986";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 82.694152359568918 14.383817983783139 20.26697473873238 ;
+	setAttr ".t" -type "double3" 83.356477129512641 11.636079419893354 8.8804637703349893 ;
 	setAttr ".r" -type "double3" -7.9541977532371479 88.599999999989237 -3.254473118981501e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "AC41DEFF-465A-7126-6424-9BB150597CE2";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 82.181638695646569;
+	setAttr ".coi" 82.181638695637844;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3711,6 +3711,14 @@ createNode makeNurbCircle -n "makeNurbCircle25";
 	rename -uid "F9E2FA9B-418C-1CF3-BE31-FDB072539514";
 	setAttr ".nr" -type "double3" 1 0 0 ;
 	setAttr ".r" 2;
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "8593E027-4629-A372-33FB-1FB29B516595";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -451.19045826177825 -282.14284593150779 ;
+	setAttr ".tgi[0].vh" -type "double2" 448.80950597543642 288.09522664736232 ;
+	setAttr ".tgi[0].ni[0].x" -322.26190185546875;
+	setAttr ".tgi[0].ni[0].y" 93.452377319335938;
+	setAttr ".tgi[0].ni[0].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -5504,6 +5512,7 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "joint1_ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of auto FK example.ma
