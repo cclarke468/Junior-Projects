@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Dresser Drawer.ma
-//Last modified: Fri, Mar 03, 2023 10:04:27 PM
+//Last modified: Fri, Mar 03, 2023 10:40:51 PM
 //Codeset: 1252
 file -rdi 1 -ns "Desk" -dr 1 -rfn "DeskRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/Junior-Projects/Maya//JOOTDAssets/Desk.ma";
 file -rdi 1 -ns "Bed" -dr 1 -rfn "BedRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/Junior-Projects/Maya//JOOTDAssets/Bed.ma";
@@ -18,17 +18,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202202161415-df43006fd3";
 fileInfo "osv" "Windows 10 Pro for Workstations v2009 (Build: 19045)";
-fileInfo "UUID" "2BB86E5F-42F2-F84F-C203-879A032CDB1E";
+fileInfo "UUID" "FDBC23C5-4165-823D-5D2B-B4947ED9297C";
 createNode transform -s -n "persp";
 	rename -uid "2CA7B05E-4DA3-A3B9-0EDA-4DB8145D68B4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.408559694874439 418.77148919801431 662.12953318115535 ;
-	setAttr ".r" -type "double3" -26.554197753595972 0.60000000000159837 -4.9698891919644776e-16 ;
+	setAttr ".t" -type "double3" 51.157796393349066 262.07356894073206 368.17008719974126 ;
+	setAttr ".r" -type "double3" -27.15419775360084 7.800000000002794 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "710A0F2D-476B-7B5C-01F3-0489C2C58D45";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 704.84946881591145;
+	setAttr ".coi" 299.51517139157602;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4151,19 +4151,19 @@ createNode transform -n "group3" -p "Dresser_Drawer";
 	rename -uid "949F22AC-4F52-85E2-3900-1D816BD85836";
 	setAttr ".t" -type "double3" -189.20216570555755 0 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "913CB70C-448B-73EF-EDAC-5988F2FCE97C";
+	rename -uid "C9CC0BF2-427A-E185-F3C7-E7BC85830A3A";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F8FC0CD1-4FEA-AE75-4870-C7A1DE599E81";
+	rename -uid "5E222C08-4360-0A2C-51AA-A39D44B55952";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F47F7312-48FF-8EDD-1019-63A86B88F3F1";
+	rename -uid "7F888835-45C8-75D7-2941-B79A8504E6FC";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "02DB4C0E-44B0-12C1-EA19-3A881D870C6E";
+	rename -uid "CB91FAD6-42C2-7E8A-022C-ACBABEDE5483";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "95A292FF-48DA-0E0A-2458-15A03441E80A";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BBA07FC4-4F24-16AD-2C9C-EC8786743E59";
+	rename -uid "D78915D5-4176-2446-EBDF-AC97B2A95AEF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E5DCF396-4324-7D1E-6C58-8C93487D39E1";
 	setAttr ".g" yes;
@@ -4173,8 +4173,7 @@ createNode reference -n "DeskRN";
 		"DeskRN"
 		"DeskRN" 2
 		0 "|Desk:Desk" "|Dresser_Drawer|group3" "-s -r "
-		0 "|Desk:group1" "|Dresser_Drawer|group3" "-s -r "
-		"DeskRN" 0;
+		0 "|Desk:group1" "|Dresser_Drawer|group3" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "BedRN";
@@ -4186,8 +4185,7 @@ createNode reference -n "BedRN";
 		0 "|Bed:distanceDimension1" "|Dresser_Drawer|group1" "-s -r "
 		0 "|Bed:left" "|Dresser_Drawer|group1" "-s -r "
 		0 "|Bed:distanceDimension2" "|Dresser_Drawer|group1" "-s -r "
-		0 "|Bed:group2" "|Dresser_Drawer|group1" "-s -r "
-		"BedRN" 0;
+		0 "|Bed:group2" "|Dresser_Drawer|group1" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "NightstandRN";
@@ -4197,9 +4195,7 @@ createNode reference -n "NightstandRN";
 		"NightstandRN" 3
 		0 "|Nightstand:NIGHT_STAND" "|Dresser_Drawer|group2" "-s -r "
 		0 "|Nightstand:group1" "|Dresser_Drawer|group2" "-s -r "
-		2 "|Dresser_Drawer|group2|Nightstand:group1" "translate" " -type \"double3\" 258.55966150202175413 0 -33.60022203023581255"
-		
-		"NightstandRN" 0;
+		2 "|Dresser_Drawer|group2|Nightstand:group1" "translate" " -type \"double3\" 258.55966150202175413 0 -33.60022203023581255";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -4287,7 +4283,7 @@ createNode polyMoveFace -n "polyMoveFace1";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "F9C9F77F-412A-AE88-72C9-F194111C72BD";
 	setAttr ".uopa" yes;
-	setAttr -s 29 ".tk";
+	setAttr -s 18 ".tk";
 	setAttr ".tk[126]" -type "float3" 0 5.9604645e-08 0 ;
 	setAttr ".tk[127]" -type "float3" 0 -1.1920929e-07 0 ;
 	setAttr ".tk[130]" -type "float3" -2.9739952 0 0 ;
@@ -4326,7 +4322,7 @@ createNode polyTweak -n "polyTweak2";
 		 0 0 -4.030171871 0 0 -4.030171871 0 0 4.030171871 0 0 4.030171871 0 0;
 createNode tweak -n "tweak1";
 	rename -uid "6653F36A-495B-1173-15B5-0AA55F143ED5";
-	setAttr -s 93 ".vl[0].vt";
+	setAttr -s 90 ".vl[0].vt";
 	setAttr ".vl[0].vt[0]" -type "float3" 0 -2.4897826 0 ;
 	setAttr ".vl[0].vt[1]" -type "float3" 0 -2.4897826 0 ;
 	setAttr ".vl[0].vt[2]" -type "float3" 0 2.4396195 0 ;
