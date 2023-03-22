@@ -8,4 +8,4 @@ def assign_color_to_curve(color=0): #between 0-31 I think
         cmds.setAttr(shape + ".overrideEnabled" , 1)
         cmds.setAttr(shape + ".overrideColor", color)
 
-assign_color_to_curve(6)
+assign_color_to_curve(13)
