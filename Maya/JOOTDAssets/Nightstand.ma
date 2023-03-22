@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: NightStand.ma
-//Last modified: Tue, Mar 21, 2023 07:08:31 PM
+//Last modified: Wed, Mar 22, 2023 12:00:06 AM
 //Codeset: 1252
 file -rdi 1 -ns "Bed" -dr 1 -rfn "BedRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/Junior-Projects/Maya//JOOTDAssets/Bed.ma";
 file -rdi 1 -ns "AlarmClock" -rfn "AlarmClockRN" -op "v=0;p=17;f=0" -typ "mayaAscii"
@@ -19,17 +19,17 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "0EF946D5-47A6-726E-FAA4-E1B939DBD303";
+fileInfo "UUID" "B5A5678D-415E-8969-E1C3-4FB0A03E1332";
 createNode transform -s -n "persp";
 	rename -uid "EA3AE94C-4C82-F463-7C5B-5EA12F231617";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.284697286166109 127.45149995388746 178.69269211412697 ;
-	setAttr ".r" -type "double3" -25.954197752334174 -366.19999999963665 3.9990841390336069e-16 ;
+	setAttr ".t" -type "double3" 80.718796062794368 93.301269222516211 141.04573930273162 ;
+	setAttr ".r" -type "double3" -18.754197752337213 -333.79999999962627 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "68CD8F99-494C-CC61-477C-AF82B0CAE4FF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 200.2560664448865;
+	setAttr ".coi" 166.37906256154358;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
