@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Mia drop animation.ma
-//Last modified: Tue, Apr 11, 2023 01:08:45 AM
+//Last modified: Wed, Apr 12, 2023 12:54:14 AM
 //Codeset: 1252
 file -rdi 1 -ns "Mia" -rfn "MiaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/Junior-Projects/Maya//Mia.ma";
 file -rdi 1 -ns "books_and_boxes_props1" -rfn "books_and_boxes_propsRN" -op
@@ -19,12 +19,12 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "1259F8D4-4B04-3C94-7E95-1AA8C1401AA9";
+fileInfo "UUID" "5D20DCE8-4ADB-2F02-4FA5-8599FC62069B";
 createNode transform -s -n "persp";
 	rename -uid "DCC7418E-42E3-3A73-084D-AE970A71C4EA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 43.466845023988633 136.90854265821574 317.91822980313765 ;
-	setAttr ".r" -type "double3" 350.2458017298585 11173.400000028989 0 ;
+	setAttr ".t" -type "double3" 46.165441761965766 164.5648673739488 414.19075362110624 ;
+	setAttr ".r" -type "double3" 347.84580170807141 11155.799999963812 1.993199458549027e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E3D30C43-447C-E06A-CEDB-029471D046EC";
 	setAttr -k off ".v" no;
@@ -32,11 +32,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 10;
 	setAttr ".fcp" 100000000;
-	setAttr ".coi" 332.86844354732307;
+	setAttr ".coi" 424.6636742352544;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 36.645439814228126 118.85296031729844 6.2956113934377678 ;
+	setAttr ".tp" -type "double3" -8.1327986420144711 99.567008255800204 24.574199574686382 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -3795,7 +3795,7 @@ createNode mesh -n "book_Shape5" -p "book_5";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode fosterParent -n "MiaRNfosterParent1";
-	rename -uid "F5E2EC85-44B3-973E-F2C5-60871C71B460";
+	rename -uid "A229728D-45D6-1C02-9F08-8C9BA42DA2E1";
 createNode parentConstraint -n "R_Arm_IK_ctrl_grp_parentConstraint1" -p "MiaRNfosterParent1";
 	rename -uid "5C099DBC-493C-CBA9-D8B9-24945F811B38";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_hand_ctrlW0" -dv 1 -min 0 -at "double";
@@ -3813,7 +3813,7 @@ createNode parentConstraint -n "R_Arm_IK_ctrl_grp_parentConstraint1" -p "MiaRNfo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.9446851841571018 -1.661145052566205 2.5808023308687007 ;
 	setAttr ".tg[0].tor" -type "double3" 6.9514579008296229 89.999999999999844 0 ;
-	setAttr ".lr" -type "double3" -15.870454460524805 3.6439452692951213 9.9671884088436471 ;
+	setAttr ".lr" -type "double3" -13.003327914835976 -151.04746913182322 0 ;
 	setAttr ".rst" -type "double3" -35.764400482177734 91.524902343749986 -1.3477300405495924 ;
 	setAttr ".rsrr" -type "double3" -7.951386703658788e-16 6.6344382808653032e-15 3.9756933518293944e-15 ;
 	setAttr -k on ".w0";
@@ -3834,12 +3834,12 @@ createNode parentConstraint -n "L_Arm_IK_ctrl_grp_parentConstraint1" -p "MiaRNfo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.9446866553593303 -1.661155937454712 -2.5808123985558709 ;
 	setAttr ".tg[0].tor" -type "double3" 6.9514579008296229 89.999999999999844 0 ;
-	setAttr ".lr" -type "double3" -15.870454460524805 3.6439452692951213 9.9671884088436471 ;
+	setAttr ".lr" -type "double3" -13.003327914835976 -151.04746913182322 0 ;
 	setAttr ".rst" -type "double3" 35.764442443847656 91.524856567382812 -1.347730636596026 ;
 	setAttr ".rsrr" -type "double3" -7.951386703658788e-16 6.6344382808653032e-15 3.9756933518293944e-15 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "books_and_boxes_propsRNfosterParent1";
-	rename -uid "C3CDFE8C-46CE-1CD2-CA81-6CB6E822FC60";
+	rename -uid "58D2A771-4CC3-6747-1C15-94BBB168335C";
 createNode parentConstraint -n "MASTER_ctrl_grp_parentConstraint1" -p "books_and_boxes_propsRNfosterParent1";
 	rename -uid "F82DF0EE-403C-DB4B-DA30-FDA4E08B9DE7";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cog_ctrlW0" -dv 1 -min 0 -at "double";
@@ -3858,27 +3858,27 @@ createNode parentConstraint -n "MASTER_ctrl_grp_parentConstraint1" -p "books_and
 	setAttr ".tg[0].tot" -type "double3" 5.4010584514588765e-14 -88.385291557450344 
 		124.80754734606374 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000000000000185 0 90 ;
-	setAttr ".lr" -type "double3" -4.9753548959606722 -168.62151049800784 -53.218111003676803 ;
+	setAttr ".lr" -type "double3" -151.47236317987273 -185.16380382805013 -99.401463541964262 ;
 	setAttr ".rst" -type "double3" -1.2434497875801753e-14 0 -4.5562759504670679e-30 ;
 	setAttr ".rsrr" -type "double3" -179.99999999999986 0 90 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "12529B3F-430D-4D5E-E00C-E295EB7DE18B";
-	setAttr -s 38 ".lnk";
-	setAttr -s 38 ".slnk";
+	rename -uid "94B6CA59-4683-4504-DFD3-F4B2F854409F";
+	setAttr -s 16 ".lnk";
+	setAttr -s 16 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "533D5B91-4C1F-98CE-2426-378BCB98E099";
+	rename -uid "02EF96B4-4CFC-3A1B-2776-6BB51E87FB28";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "60FA4718-4722-12E4-B67B-AA9C14ABAF02";
+	rename -uid "8403D780-4CC6-4084-D54D-99891DBB3ACB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "28BC2BC1-4548-6EE7-13DA-24BDC4C3374F";
+	rename -uid "553EAED9-443C-A7C4-D801-12B9C70DD29D";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "F9A6C3AC-4986-328D-1A56-64A87926AA55";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "230E6D6D-4FB7-9E06-4223-38A2CF127F7E";
+	rename -uid "88589BFB-47EE-243D-466A-DF9C7046CBC0";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3B767C61-4C02-2CCB-4DFE-B593F4B5BF1B";
 	setAttr ".g" yes;
@@ -3888,7 +3888,7 @@ createNode reference -n "MiaRN";
 	setAttr ".fn[0]" -type "string" "C:/Users/caris/Desktop/Mia.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/caris/Desktop/Junior-Projects/Maya//Mia.ma";
 	setAttr ".fn[2]" -type "string" "C:/Users/caris/Desktop/Junior-Projects/Maya//Mia.2.ma";
-	setAttr -s 1228 ".phl";
+	setAttr -s 1233 ".phl";
 	setAttr ".phl[17]" 0;
 	setAttr ".phl[19]" 0;
 	setAttr ".phl[21]" 0;
@@ -5114,6 +5114,11 @@ createNode reference -n "MiaRN";
 	setAttr ".phl[1243]" 0;
 	setAttr ".phl[1244]" 0;
 	setAttr ".phl[1245]" 0;
+	setAttr ".phl[1246]" 0;
+	setAttr ".phl[1247]" 0;
+	setAttr ".phl[1248]" 0;
+	setAttr ".phl[1249]" 0;
+	setAttr ".phl[1250]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"MiaRN"
 		"MiaRN" 15
@@ -5210,7 +5215,7 @@ createNode reference -n "MiaRN";
 		"MiaRN.placeHolderList[23]" ""
 		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:R_eye_ctrl_grp|Mia:R_eye_ctrl|Mia:R_eye_ctrl_aimConstraint1.message" 
 		"MiaRN.placeHolderList[24]" ""
-		"MiaRN" 1334
+		"MiaRN" 1311
 		0 "|MiaRNfosterParent1|L_Arm_IK_ctrl_grp_parentConstraint1" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp" 
 		"-s -r "
 		0 "|MiaRNfosterParent1|R_Arm_IK_ctrl_grp_parentConstraint1" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp" 
@@ -5223,134 +5228,78 @@ createNode reference -n "MiaRN";
 		" -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl" "R_Leg_IKFK" 
 		" -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl" "MasterScale" 
+		" -k 1 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp" 
 		"visibility" " 0"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp" 
 		"rotate" " -type \"double3\" -178.94230179129212388 0 90"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:C_lower_lip_ctrl_grp|Mia:C_lower_lip_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:C_lower_lip_ctrl_grp|Mia:C_lower_lip_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:C_lower_lip_ctrl_grp|Mia:C_lower_lip_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:C_lower_lip_ctrl_grp|Mia:C_lower_lip_ctrl" 
-		"translateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_lower_lip_corner_ctrl_grp|Mia:L_lower_lip_corner_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_lower_lip_corner_ctrl_grp|Mia:L_lower_lip_corner_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_lower_lip_corner_ctrl_grp|Mia:L_lower_lip_corner_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_lower_lip_corner_ctrl_grp|Mia:L_lower_lip_corner_ctrl" 
-		"translateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 -1.22274157665297789 0"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:L_hand_ctrl_grp|Mia:L_hand_ctrl" 
+		"FollowWristOrientation" " -k 1 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:R_hand_ctrl_grp|Mia:R_hand_ctrl" 
 		"FollowWristOrientation" " -k 1 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl" 
-		"Follow" " -av -k 1 4"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"translateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"rotateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"rotateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:L_look_at_ctrl_grp|Mia:L_look_at_ctrl" 
-		"rotateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"translateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"rotateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"rotateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:look_at_ctrl_grp|Mia:look_at__ctrl|Mia:R_look_at_ctrl_grp|Mia:R_look_at__ctrl" 
-		"rotateX" " -av"
+		"Follow" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_Base_ctrl_grp|Mia:L_Arm_IK_Base_ctrl" 
+		"Follow" " -k 1 3"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp|Mia:L_Arm_IK_ctrl" 
+		"Follow" " -k 1 3"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_Offset_grp|Mia:L_Arm_PV_ctrl" 
 		"Follow" " -k 1 3"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_parentConstraint1" 
-		"cog_ctrlW1" " -av -k 1 0"
+		"cog_ctrlW1" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_parentConstraint1" 
-		"MiaW2" " -av -k 1 0"
+		"MiaW2" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_parentConstraint1" 
-		"L_clavicle_ctrlW3" " -av -k 1 1"
+		"L_clavicle_ctrlW3" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_parentConstraint1" 
-		"L_Arm_IK_ctrlW4" " -av -k 1 0"
+		"L_Arm_IK_ctrlW4" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"cog_ctrlW1" " -av -k 1 0"
+		"cog_ctrlW1" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"MiaW2" " -av -k 1 0"
+		"MiaW2" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"L_clavicle_ctrlW3" " -av -k 1 1"
+		"L_clavicle_ctrlW3" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_PV_ctrl_grp|Mia:L_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"L_Arm_IK_ctrlW4" " -av -k 1 0"
+		"L_Arm_IK_ctrlW4" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_Base_ctrl_grp|Mia:R_Arm_IK_Base_ctrl" 
+		"Follow" " -k 1 3"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl" 
 		"Follow" " -k 1 3"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_Offset_grp|Mia:R_Arm_PV_ctrl" 
 		"Follow" " -k 1 3"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_ctrl_grp_parentConstraint1" 
-		"MiaW2" " -av -k 1 0"
+		"MiaW2" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_ctrl_grp_parentConstraint1" 
-		"R_clavicle_ctrlW3" " -av -k 1 1"
+		"R_clavicle_ctrlW3" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_ctrl_grp_parentConstraint1" 
-		"R_Arm_IK_ctrlW4" " -av -k 1 0"
+		"R_Arm_IK_ctrlW4" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"MiaW2" " -av -k 1 0"
+		"MiaW2" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"R_clavicle_ctrlW3" " -av -k 1 1"
+		"R_clavicle_ctrlW3" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_PV_ctrl_grp|Mia:R_Arm_PV_ctrl_grp_scaleConstraint1" 
-		"R_Arm_IK_ctrlW4" " -av -k 1 0"
+		"R_Arm_IK_ctrlW4" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_Base_ctrl_grp|Mia:L_Leg_IK_Base_ctrl" 
+		"Follow" " -k 1 3"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_Base_ctrl_grp|Mia:L_Leg_IK_Base_ctrl_grp_parentConstraint1" 
+		"MiaW2" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_Base_ctrl_grp|Mia:L_Leg_IK_Base_ctrl_grp_parentConstraint1" 
+		"L_leg_clavicle_jnt_ctrlW3" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_Base_ctrl_grp|Mia:L_Leg_IK_Base_ctrl_grp_scaleConstraint1" 
+		"MiaW2" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_Base_ctrl_grp|Mia:L_Leg_IK_Base_ctrl_grp_scaleConstraint1" 
+		"L_leg_clavicle_jnt_ctrlW3" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl" 
+		"Follow" " -k 1 0"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl" 
+		"RockFoot" " -k 1 0"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl" 
+		"FootRoll" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl" 
 		"ControlVisibility" " -k 1 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_foot_roll_ctrl_grp|Mia:L_foot_roll_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_foot_roll_ctrl_grp|Mia:L_foot_roll_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_foot_roll_ctrl_grp|Mia:L_foot_roll_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_foot_roll_ctrl_grp|Mia:L_foot_roll_ctrl" 
-		"translateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"translateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"rotate" " -type \"double3\" -0.85314817601589599 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"rotateX" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"rotateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl" 
-		"rotateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl|Mia:L_IK_foot_toe_ctrl_grp|Mia:L_IK_foot_toe_offset_grp1|Mia:L_IK_foot_toe_ctrl|Mia:L_IK_foot_ball_ctrl_grp|Mia:L_IK_foot_ball_offset_grp1|Mia:L_IK_foot_ball_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl|Mia:L_IK_foot_toe_ctrl_grp|Mia:L_IK_foot_toe_offset_grp1|Mia:L_IK_foot_toe_ctrl|Mia:L_IK_foot_ball_ctrl_grp|Mia:L_IK_foot_ball_offset_grp1|Mia:L_IK_foot_ball_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl|Mia:L_IK_foot_toe_ctrl_grp|Mia:L_IK_foot_toe_offset_grp1|Mia:L_IK_foot_toe_ctrl|Mia:L_IK_foot_ball_ctrl_grp|Mia:L_IK_foot_ball_offset_grp1|Mia:L_IK_foot_ball_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl|Mia:L_IK_foot_toe_ctrl_grp|Mia:L_IK_foot_toe_offset_grp1|Mia:L_IK_foot_toe_ctrl|Mia:L_IK_foot_ball_ctrl_grp|Mia:L_IK_foot_ball_offset_grp1|Mia:L_IK_foot_ball_ctrl" 
-		"translateX" " -av"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl|Mia:L_IK_foot_toe_ctrl_grp|Mia:L_IK_foot_toe_offset_grp1|Mia:L_IK_foot_toe_ctrl|Mia:L_IK_foot_ball_ctrl_grp|Mia:L_IK_foot_ball_offset_grp1|Mia:L_IK_foot_ball_ctrl|Mia:L_foot_IK_handle_1" 
 		"visibility" " 0"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_IK_ctrl_grp|Mia:L_Leg_IK_ctrl|Mia:L_IK_foot_out_ctrl_grp|Mia:L_IK_foot_out_ctrl|Mia:L_IK_foot_in_ctrl_grp|Mia:L_IK_foot_in_ctrl|Mia:L_IK_foot_heel_ctrl_grp|Mia:L_IK_foot_heel_offset_grp1|Mia:L_IK_foot_heel_ctrl|Mia:L_IK_foot_toe_ctrl_grp|Mia:L_IK_foot_toe_offset_grp1|Mia:L_IK_foot_toe_ctrl|Mia:L_IK_foot_ball_ctrl_grp|Mia:L_IK_foot_ball_offset_grp1|Mia:L_IK_foot_ball_ctrl|Mia:L_leg_ikHandle1" 
@@ -5362,26 +5311,32 @@ createNode reference -n "MiaRN";
 		
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Leg|Mia:L_Leg_PV_ctrl_grp|Mia:L_Leg_PV_Offset_grp|Mia:L_Leg_PV_ctrl" 
 		"Follow" " -k 1 3"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_Base_ctrl_grp|Mia:R_Leg_IK_Base_ctrl" 
+		"Follow" " -k 1 3"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_Base_ctrl_grp|Mia:R_Leg_IK_Base_ctrl_grp_parentConstraint1" 
+		"MiaW2" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_Base_ctrl_grp|Mia:R_Leg_IK_Base_ctrl_grp_parentConstraint1" 
+		"R_leg_clavicle_jnt_ctrlW3" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_Base_ctrl_grp|Mia:R_Leg_IK_Base_ctrl_grp_scaleConstraint1" 
+		"MiaW2" " -k 1"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_Base_ctrl_grp|Mia:R_Leg_IK_Base_ctrl_grp_scaleConstraint1" 
+		"R_leg_clavicle_jnt_ctrlW3" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl" 
 		"Follow" " -k 1 0"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl" 
-		"FootRoll" " -av -k 1 0"
+		"RockFoot" " -k 1 0"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl" 
+		"FootRoll" " -k 1"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl" 
 		"ControlVisibility" " -k 1 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl" 
-		"translateY" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl" 
-		"translateZ" " -av"
-		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl" 
-		"translateX" " -av"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl|Mia:R_IK_foot_toe_ctrl_grp|Mia:R_IK_foot_toe_offset_grp1|Mia:R_IK_foot_toe_ctrl|Mia:R_IK_foot_ball_ctrl_grp|Mia:R_IK_foot_ball_offset_grp1|Mia:R_IK_foot_ball_ctrl|Mia:R_foot_IK_handle_1" 
 		"visibility" " 0"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl|Mia:R_IK_foot_toe_ctrl_grp|Mia:R_IK_foot_toe_offset_grp1|Mia:R_IK_foot_toe_ctrl|Mia:R_IK_foot_ball_ctrl_grp|Mia:R_IK_foot_ball_offset_grp1|Mia:R_IK_foot_ball_ctrl|Mia:R_leg_ikHandle1" 
 		"visibility" " 0"
 		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_IK_foot_out_ctrl_grp|Mia:R_IK_foot_out_ctrl|Mia:R_IK_foot_in_ctrl_grp|Mia:R_IK_foot_in_ctrl|Mia:R_IK_foot_heel_ctrl_grp|Mia:R_IK_foot_heel_offset_grp1|Mia:R_IK_foot_heel_ctrl|Mia:R_IK_foot_toe_ctrl_grp|Mia:R_IK_foot_toe_offset_grp1|Mia:R_IK_foot_toe_ctrl|Mia:R_IK_foot_toe_tap_ctrl_grp|Mia:R_IK_foot_toe_tap_ctrl|Mia:R_foot_IK_handle_2" 
 		"visibility" " 0"
+		2 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_PV_ctrl_grp|Mia:R_Leg_PV_Offset_grp|Mia:R_Leg_PV_ctrl" 
+		"Follow" " -k 1 3"
 		2 "|Mia:Mia|Mia:Controls|Mia:L_hand_LOC_grp|Mia:L_hand_LOC" "translate" " -type \"double3\" 0 0 0.099874604290049324"
 		
 		2 "|Mia:Mia|Mia:Geometry|Mia:eyes|Mia:R_eye|Mia:R_eye_scaleConstraint1" "R_EyeW0" 
@@ -5406,15 +5361,15 @@ createNode reference -n "MiaRN";
 		
 		2 "Mia:All_Controls" "unitlessValues" " -s 662"
 		2 "Mia:All_Controls" "linearValues" " -s 513"
-		2 "Mia:All_Controls" "lv[1:500]" (" -11.95786441682059476 -6.9569146683183547 0.59514556927644202 0 0 0 177.15923293109659653 1.41002696253314852 24.07295884531233199 12.01280044693140248 27.69574827804542494 -0.61044279528850298 0 0 0 114.40910216209098849 -0.40011818679136368 41.36648376534367344 -9.79988148887469279 -0.51948777144223257 -7.57339101782248747 0 0 0 24.79793752908416238 4.68242823768962779 10.91828493354578278 22.40800927747233118 0 19.13637155357144337 0 0 0 15.19430957445699981 2.85141439414854947 -13.01358665948822413 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.28186271412574371 0.022033001536701846 0.2004330874849245 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.39181233644554547 -0.16433008316091963 -0.73728291808012481 0.38255676825193929 0.019313022076330916 -0.75985834914031658 -1.47016081388355668 -0.91684978372552783 0.47875248552802019 0 0 0 0 0 0 0 0 0 0.95353428249144789 0.22051"
-		+ "867856634677 -0.27889216599521277 0 0 0 -0.00051219030107292141 -0.0094488622268165661 -0.0019433363938240529 0 0 0 -54.83174498661627894 -153.0258283151143246 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 129.46009971022397167 -12.32380685602912784 39.36787774738515822 0 0 -121.62102414698233588 0 0 0 0 0 0 31.21537812502170084 -36.94230567986166847 -1.48194173189798239 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "Mia:All_Controls" "lv[1:500]" (" -11.95786441682064449 -16.68988458368403371 0.59514556927641171 0 0 0 136.6644633682443839 0.43879044485341145 35.29959608121215808 -8.62191025697859992 4.9918594361248374 -0.61044279528851841 0 0 0 168.85857475111345138 0.3 -17.07697722464972756 8.25452346979431617 -8.38675747705481633 -22.58485008980247244 0 0 0 19.93575310243110721 2.52518357129602578 13.88628995253912102 20.19718147779050099 0 17.2483313581307236 0 0 0 20.81781444779718981 3.15537785436438556 -12.55837441162515233 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.28186271412574371 0.022033001536701846 0.2004330874849245 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.47016081388355668 -0.91684978372552783 0.47875248552802019 0 0 0 0 0 0 0 0 0 0.95353428249144789 0.22051867856634677 -0.27889216599521277 0 0 0 -0.00051219030107292141 -0.0094488622268165661 -0.0019433363938240529 0 0 0 -54.83174498661"
+		+ "627894 -153.0258283151143246 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.59237023183911519 0 -0.83582158692549369 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 152.12306193422128331 -7.12964136980271235 8.58101453379680557 0 0 -121.62102414698233588 0 0 0 0 0 0 31.2153781250217861 -24.24599562091016125 -5.92087516095161526 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		)
 		2 "Mia:All_Controls" "lv[501:513]" " 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "Mia:All_Controls" "linearValues" " -s 495"
 		2 "Mia:All_Controls" "angularValues" " -s 513"
-		2 "Mia:All_Controls" "av[1:500]" (" 0 0 0 0 0 0 0 0 6.15768880016855125 0 0 0 0 0 0 0 -3.5962352518590941 0 0 0 0 0 0 0 46.77371191723691624 19.00486795024230702 -19.07668372834666215 0 0 0 0 0 0 -41.98029979937363265 -15.73981426820255081 -27.68465362341772007 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14.67110914512501729 0 0 35.76841213460897251 0 0 0 0 0 0 0 0 -14.67110914512501729 0 0 35.76841213460897251 0 0 0 0 0 -14.67110914512501729 0 0 35.76841213460897251 0 0 0 0 0 30.16158198359130438 0 0 -11.23920728049958839 0 0 0 0 0 0 0 24.3706767325062188 -8.26522075330111505 -3.72593777657883551 0 0 0 0 -34.40036214025484185 0 0 12.25008635513508892 0 0 51.58423518158146237 0 0 0 0 0 0 0 0 16.40810414869841694 0 0 32.53550554703254249 0 0 -12.33912875050646285 0 0 3.76918697653241352 0 -3.70457873263731274 36.08530381026630351 -2.46372151939872364 0 -8.74592161851212602 0 0 33.32011805707884378 0 0 2.45033811693445447 0 0 0 0 6.03914143589601693 -0.77230462671313072 -1.50271646021455196 19.34669897906131553 -16.28716671177964415 -4.57648506256430387 0 "
-		+ "0 0 12.56504771038272494 -27.41574800546716162 25.01828675900175014 -1.4559509263982835 26.71590498311506678 7.78063260117408095 50.1913372062884946 17.87201431879013569 -29.2630932862783979 -18.46821526261888735 0 0 -13.18582055502353789 -0.39526556914713568 -5.57991870060778439 -15.38049880345187148 8.72671165278720906 -31.76009125951920353 -14.07835045313764688 -26.27777517317057843 -13.30955962948641158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.67985238183016339 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11.68257568748156316 26.86338203233816202 23.7582126891009473 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21.04452373424861733 -30.78082188399454111 -2.0880374410717546 6.47"
-		+ "193425728223204 -19.34516543852247139 -17.34878145523427051 0.8903819701742669 16.51159760707917101 0 0 0 0 0 0 0 0 0 1.77130069494997655 5.77247767460723704 -1.19540600646510686 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10.6688926398518813 12.09840031283746775 2.76411900191918791 -35.99294038825325259 0 89.99999999999997158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.85314817601589599 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "Mia:All_Controls" "av[1:500]" (" 0 0 0 0 0 0 0 180 0 0 0 0 0 0 0 0 210.73637195449160231 0 0 0 0 0 0 0 32.78573451801685934 16.16640734798448165 -36.33707444383870921 0 0 0 0 0 0 -41.98029979937363265 -15.73981426820255081 -27.68465362341772007 0 0 0 0 0 0 0 0 0 0 0 0 0 -20.83112453302817713 0 0 9.03720579092692944 0 0 48.40490523785353361 0 0 0 0 0 -32.08230614246007661 0 0 5.93997083813231974 0 -0.058561467057894404 40.18746103531846359 -0.073490035365639306 0 -20.37117130796044506 0 0 14.31098247601970641 0 0 27.78052923849055134 0 0 -8.00335639639328456 0 0 34.13787909843635759 0 7.51293292074311481 8.66071803145880459 0 4.43617993363922736 0 0 0 0 0 21.410295113296133 -26.10357641847078725 7.27717716566467576 0 0 0 0 -34.40036214025484185 0 0 12.25008635513508892 0 0 51.58423518158146237 0 0 0 0 0 0 0 0 16.40810414869841694 0 0 32.53550554703254249 0 0 -12.33912875050646285 0 0 3.76918697653241352 0 -3.70457873263731274 36.08530381026630351 -2.46372151939872364 0 -8.74592161851212602 0 0 33.32011805707884378 0 0 2.45033811693445447 0 0"
+		+ " 0 0 6.03914143589601693 -0.77230462671313072 -1.50271646021455196 19.34669897906131553 -16.28716671177964415 -4.57648506256430387 0 0 0 -8.0212509828627816 -2.03338121475747791 5.84342715504221033 -20.77099574976924501 14.82120926917217218 2.86290776899790478 9.80393391403140591 -23.80667752411886795 -33.77964399567024145 0 -14.24140393633592439 0 -13.18582055502353789 -0.39526556914713568 -5.57991870060778439 -15.38049880345187148 8.72671165278720906 -31.76009125951920353 6.54806856415626637 -20.26197881470903539 -21.54460631062321596 11.38358733762748365 -16.0691778098848026 -4.15839923003520795 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.50146198564850852 -18.83672505147101717 -0.88939651149755938 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.67985238183016339 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+		+ "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11.68257568748156316 26.86338203233816202 23.7582126891009473 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43.97172469588785759 39.72817470780515947 55.72461192035649447 1.06436216455475607 -12.17951681568138333 10.70642905664498379 -5.22219741419334316 -7.47002004187308 3.6005060845893313 24.25567263227669557 -13.88888626888975253 9.77637353930767894 -1.63586959214820693 0 0 -3.96887983511906883 0 0 -34.28972905984623054 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9.15567118721392248 0 -151.04746913182327717 -10.71506021239337336 0 89.99999999999997158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.85314817601589599 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		)
 		2 "Mia:All_Controls" "av[501:513]" " 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		2 "Mia:All_Controls" "angularValues" " -s 498"
@@ -5485,12 +5440,18 @@ createNode reference -n "MiaRN";
 		+ "99 \"Mia:R_IK_foot_ball_ctrl.translateY\" 1 500 \"Mia:R_IK_foot_ball_ctrl.translateX\" 1 501 \"Mia:R_IK_foot_ball_ctrl.visibility\" 0 673 \"Mia:L_IK_foot_ball_ctrl.scaleZ\" 0 674 \"Mia:L_IK_foot_ball_ctrl.scaleY\" 0 675 \"Mia:L_IK_foot_ball_ctrl.scaleX\" 0 676 \"Mia:L_IK_foot_ball_ctrl.rotateZ\" 2 502 \"Mia:L_IK_foot_ball_ctrl.rotateY\" 2 503 \"Mia:L_IK_foot_ball_ctrl.rotateX\" 2 504 \"Mia:L_IK_foot_ball_ctrl.translateZ\" 1 502 \"Mia:L_IK_foot_ball_ctrl.translateY\" 1 503 \"Mia:L_IK_foot_ball_ctrl.translateX\" 1 504 \"Mia:L_IK_foot_ball_ctrl.visibility\" 0 677 \"Mia:L_foot_roll_ctrl.scaleZ\" 0 678 \"Mia:L_foot_roll_ctrl.scaleY\" 0 679 \"Mia:L_foot_roll_ctrl.scaleX\" 0 680 \"Mia:L_foot_roll_ctrl.rotateZ\" 2 505 \"Mia:L_foot_roll_ctrl.rotateY\" 2 506 \"Mia:L_foot_roll_ctrl.rotateX\" 2 507 \"Mia:L_foot_roll_ctrl.translateZ\" 1 505 \"Mia:L_foot_roll_ctrl.translateY\" 1 506 \"Mia:L_foot_roll_ctrl.translateX\" 1 507 \"Mia:L_foot_roll_ctrl.visibility\" 0 681 \"Mia:R_foot_roll_ctrl.scaleZ\" 0 682 \"Mia:R_foot_roll_ctrl.scaleY\" 0 683 \"Mia:R_foot_roll_ctrl.scaleX\" 0 "
 		+ "684 \"Mia:R_foot_roll_ctrl.rotateZ\" 2 508 \"Mia:R_foot_roll_ctrl.rotateY\" 2 509 \"Mia:R_foot_roll_ctrl.rotateX\" 2 510 \"Mia:R_foot_roll_ctrl.translateZ\" 1 508 \"Mia:R_foot_roll_ctrl.translateY\" 1 509 \"Mia:R_foot_roll_ctrl.translateX\" 1 510 \"Mia:R_foot_roll_ctrl.visibility\" 0 685"
 		)
-		2 "Mia:Mia_base_BlendShape" "w[0:21]" " -s 22 0 0 0 0 0 0 0 0 0 0 0 0 0.66429340999999997 0 0 0 0 0 0 0 0 0"
+		2 "Mia:Mia_base_BlendShape" "w[0:21]" " -s 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "Mia:Mia_base_BlendShape" "weight" " -s 3"
-		2 "Mia:Mia_base_BlendShape" "weight[10]" " -av"
-		2 "Mia:Mia_base_BlendShape" "weight[11]" " -av"
-		2 "Mia:Mia_base_BlendShape" "weight[12]" " -av"
+		3 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl|Mia:L_eye_ctrl_aimConstraint1.constraintRotateX" 
+		"|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl.rotateX" 
+		""
+		3 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl|Mia:L_eye_ctrl_aimConstraint1.constraintRotateY" 
+		"|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl.rotateY" 
+		""
+		3 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl|Mia:L_eye_ctrl_aimConstraint1.constraintRotateZ" 
+		"|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl.rotateZ" 
+		""
 		3 "Mia:All_Controls.angularValues[303]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:R_eye_upper_lid_outer_ctrl_grp|Mia:R_eye_upper_lid_outer_ctrl.rotateX" 
 		""
 		3 "Mia:All_Controls.angularValues[302]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:R_eye_upper_lid_outer_ctrl_grp|Mia:R_eye_upper_lid_outer_ctrl.rotateY" 
@@ -5502,15 +5463,6 @@ createNode reference -n "MiaRN";
 		3 "Mia:All_Controls.linearValues[302]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:R_eye_upper_lid_outer_ctrl_grp|Mia:R_eye_upper_lid_outer_ctrl.translateY" 
 		""
 		3 "Mia:All_Controls.linearValues[301]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:R_eye_upper_lid_outer_ctrl_grp|Mia:R_eye_upper_lid_outer_ctrl.translateZ" 
-		""
-		3 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl|Mia:L_eye_ctrl_aimConstraint1.constraintRotateX" 
-		"|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl.rotateX" 
-		""
-		3 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl|Mia:L_eye_ctrl_aimConstraint1.constraintRotateY" 
-		"|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl.rotateY" 
-		""
-		3 "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl|Mia:L_eye_ctrl_aimConstraint1.constraintRotateZ" 
-		"|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:L_eye_ctrl_grp|Mia:L_eye_ctrl.rotateZ" 
 		""
 		3 "Mia:All_Controls.angularValues[300]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:face_cog_ctrl_grp|Mia:face_cog_ctrl|Mia:R_eye_upper_lid_inner_ctrl_grp|Mia:R_eye_upper_lid_inner_ctrl.rotateX" 
 		""
@@ -5598,2355 +5550,2365 @@ createNode reference -n "MiaRN";
 		"MiaRN.placeHolderList[63]" ""
 		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:hair_ctrls|Mia:base_hair__1_ctrl_grp|Mia:base_hair__1_ctrl|Mia:base_hair__2_ctrl_grp|Mia:base_hair__2_ctrl|Mia:base_hair__3_ctrl_grp|Mia:base_hair__3_ctrl|Mia:base_hair__4_ctrl_grp|Mia:base_hair__4_ctrl|Mia:base_hair__5_ctrl_grp|Mia:base_hair__5_ctrl.rotateZ" 
 		"MiaRN.placeHolderList[64]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.translateX" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1.translateY" 
 		"MiaRN.placeHolderList[65]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.translateY" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1.translateX" 
 		"MiaRN.placeHolderList[66]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.translateZ" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1.translateZ" 
 		"MiaRN.placeHolderList[67]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateX" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1.rotateX" 
 		"MiaRN.placeHolderList[68]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateY" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1.rotateY" 
 		"MiaRN.placeHolderList[69]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateZ" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:cog_ctrl|Mia:FK_Controls|Mia:spine_jnt_01_ctrl_grp|Mia:spine_jnt_01_ctrl|Mia:spine_jnt_02_ctrl_grp|Mia:spine_jnt_02_ctrl|Mia:spine_jnt_03_ctrl_grp|Mia:spine_jnt_03_ctrl|Mia:spine_jnt_04_ctrl_grp|Mia:spine_jnt_04_ctrl|Mia:neck_jnt_01_ctrl_grp|Mia:neck_jnt_01_ctrl|Mia:neck_jnt_02_ctrl_grp|Mia:neck_jnt_02_ctrl|Mia:head_jnt_01_ctrl_grp|Mia:head_jnt_01_ctrl|Mia:test_blendshape_smile_ctrl|Mia:nurbsCircle1.rotateZ" 
 		"MiaRN.placeHolderList[70]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateOrder" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.translateX" 
 		"MiaRN.placeHolderList[71]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.parentInverseMatrix" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.translateY" 
 		"MiaRN.placeHolderList[72]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotatePivot" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.translateZ" 
 		"MiaRN.placeHolderList[73]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotatePivotTranslate" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateX" 
 		"MiaRN.placeHolderList[74]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.translateX" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateY" 
 		"MiaRN.placeHolderList[75]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.translateY" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateZ" 
 		"MiaRN.placeHolderList[76]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.translateZ" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotateOrder" 
 		"MiaRN.placeHolderList[77]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateX" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.parentInverseMatrix" 
 		"MiaRN.placeHolderList[78]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateY" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotatePivot" 
 		"MiaRN.placeHolderList[79]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateZ" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:L_Arm|Mia:L_Arm_IK_ctrl_grp.rotatePivotTranslate" 
 		"MiaRN.placeHolderList[80]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateOrder" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.translateX" 
 		"MiaRN.placeHolderList[81]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.parentInverseMatrix" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.translateY" 
 		"MiaRN.placeHolderList[82]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotatePivot" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.translateZ" 
 		"MiaRN.placeHolderList[83]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotatePivotTranslate" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateX" 
 		"MiaRN.placeHolderList[84]" ""
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateY" 
+		"MiaRN.placeHolderList[85]" ""
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateZ" 
+		"MiaRN.placeHolderList[86]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotateOrder" 
+		"MiaRN.placeHolderList[87]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.parentInverseMatrix" 
+		"MiaRN.placeHolderList[88]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotatePivot" 
+		"MiaRN.placeHolderList[89]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp.rotatePivotTranslate" 
+		"MiaRN.placeHolderList[90]" ""
 		5 0 "MiaRN" "Mia:All_Controls.linearValues[26]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl.translateY" 
-		"MiaRN.placeHolderList[85]" "MiaRN.placeHolderList[86]" "Mia:R_Arm_IK_ctrl.ty"
+		"MiaRN.placeHolderList[91]" "MiaRN.placeHolderList[92]" "Mia:R_Arm_IK_ctrl.ty"
 		5 0 "MiaRN" "Mia:All_Controls.linearValues[25]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl.translateZ" 
-		"MiaRN.placeHolderList[87]" "MiaRN.placeHolderList[88]" "Mia:R_Arm_IK_ctrl.tz"
+		"MiaRN.placeHolderList[93]" "MiaRN.placeHolderList[94]" "Mia:R_Arm_IK_ctrl.tz"
 		5 0 "MiaRN" "Mia:All_Controls.linearValues[27]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl.translateX" 
-		"MiaRN.placeHolderList[89]" "MiaRN.placeHolderList[90]" "Mia:R_Arm_IK_ctrl.tx"
+		"MiaRN.placeHolderList[95]" "MiaRN.placeHolderList[96]" "Mia:R_Arm_IK_ctrl.tx"
 		5 0 "MiaRN" "Mia:All_Controls.angularValues[27]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl.rotateX" 
-		"MiaRN.placeHolderList[91]" "MiaRN.placeHolderList[92]" "Mia:R_Arm_IK_ctrl.rx"
+		"MiaRN.placeHolderList[97]" "MiaRN.placeHolderList[98]" "Mia:R_Arm_IK_ctrl.rx"
 		5 0 "MiaRN" "Mia:All_Controls.angularValues[25]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl.rotateZ" 
-		"MiaRN.placeHolderList[93]" "MiaRN.placeHolderList[94]" "Mia:R_Arm_IK_ctrl.rz"
+		"MiaRN.placeHolderList[99]" "MiaRN.placeHolderList[100]" "Mia:R_Arm_IK_ctrl.rz"
 		5 0 "MiaRN" "Mia:All_Controls.angularValues[26]" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Arm|Mia:R_Arm_IK_ctrl_grp|Mia:R_Arm_IK_ctrl.rotateY" 
-		"MiaRN.placeHolderList[95]" "MiaRN.placeHolderList[96]" "Mia:R_Arm_IK_ctrl.ry"
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl.message" 
-		"MiaRN.placeHolderList[97]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_IK_ctrl_grp|Mia:R_Leg_IK_ctrl|Mia:R_Leg_IK_ctrlShape.message" 
-		"MiaRN.placeHolderList[98]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotate" 
-		"MiaRN.placeHolderList[99]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateX" 
-		"MiaRN.placeHolderList[100]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateY" 
-		"MiaRN.placeHolderList[101]" ""
-		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateZ" 
-		"MiaRN.placeHolderList[102]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.parentMatrix" 
+		"MiaRN.placeHolderList[101]" "MiaRN.placeHolderList[102]" "Mia:R_Arm_IK_ctrl.ry"
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:transform_ctrl_grp|Mia:transform_ctrl|Mia:cog_ctrl_grp|Mia:IK_Controls|Mia:R_Leg|Mia:R_Leg_PV_ctrl_grp|Mia:R_Leg_PV_Offset_grp|Mia:R_Leg_PV_ctrl.message" 
 		"MiaRN.placeHolderList[103]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.translate" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotate" 
 		"MiaRN.placeHolderList[104]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotatePivot" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateX" 
 		"MiaRN.placeHolderList[105]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotatePivotTranslate" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateY" 
 		"MiaRN.placeHolderList[106]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateOrder" 
+		5 4 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateZ" 
 		"MiaRN.placeHolderList[107]" ""
-		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.scale" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.parentMatrix" 
 		"MiaRN.placeHolderList[108]" ""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[1]" "MiaRN.placeHolderList[109]" 
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.translate" 
+		"MiaRN.placeHolderList[109]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotatePivot" 
+		"MiaRN.placeHolderList[110]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotatePivotTranslate" 
+		"MiaRN.placeHolderList[111]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.rotateOrder" 
+		"MiaRN.placeHolderList[112]" ""
+		5 3 "MiaRN" "|Mia:Mia|Mia:Controls|Mia:R_hand_LOC_grp|Mia:R_hand_LOC.scale" 
+		"MiaRN.placeHolderList[113]" ""
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[1]" "MiaRN.placeHolderList[114]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[2]" "MiaRN.placeHolderList[110]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[2]" "MiaRN.placeHolderList[115]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[3]" "MiaRN.placeHolderList[111]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[3]" "MiaRN.placeHolderList[116]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[4]" "MiaRN.placeHolderList[112]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[4]" "MiaRN.placeHolderList[117]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[5]" "MiaRN.placeHolderList[113]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[5]" "MiaRN.placeHolderList[118]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[6]" "MiaRN.placeHolderList[114]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[6]" "MiaRN.placeHolderList[119]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[7]" "MiaRN.placeHolderList[115]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[7]" "MiaRN.placeHolderList[120]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[8]" "MiaRN.placeHolderList[116]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[8]" "MiaRN.placeHolderList[121]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[9]" "MiaRN.placeHolderList[117]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[9]" "MiaRN.placeHolderList[122]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[10]" "MiaRN.placeHolderList[118]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[10]" "MiaRN.placeHolderList[123]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[11]" "MiaRN.placeHolderList[119]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[11]" "MiaRN.placeHolderList[124]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[12]" "MiaRN.placeHolderList[120]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[12]" "MiaRN.placeHolderList[125]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[13]" "MiaRN.placeHolderList[121]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[13]" "MiaRN.placeHolderList[126]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[14]" "MiaRN.placeHolderList[122]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[14]" "MiaRN.placeHolderList[127]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[15]" "MiaRN.placeHolderList[123]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[15]" "MiaRN.placeHolderList[128]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[16]" "MiaRN.placeHolderList[124]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[16]" "MiaRN.placeHolderList[129]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[17]" "MiaRN.placeHolderList[125]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[17]" "MiaRN.placeHolderList[130]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[18]" "MiaRN.placeHolderList[126]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[18]" "MiaRN.placeHolderList[131]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[19]" "MiaRN.placeHolderList[127]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[19]" "MiaRN.placeHolderList[132]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[20]" "MiaRN.placeHolderList[128]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[20]" "MiaRN.placeHolderList[133]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[21]" "MiaRN.placeHolderList[129]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[21]" "MiaRN.placeHolderList[134]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[22]" "MiaRN.placeHolderList[130]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[22]" "MiaRN.placeHolderList[135]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[23]" "MiaRN.placeHolderList[131]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[23]" "MiaRN.placeHolderList[136]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[24]" "MiaRN.placeHolderList[132]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[24]" "MiaRN.placeHolderList[137]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[25]" "MiaRN.placeHolderList[133]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[25]" "MiaRN.placeHolderList[138]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[26]" "MiaRN.placeHolderList[134]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[26]" "MiaRN.placeHolderList[139]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[27]" "MiaRN.placeHolderList[135]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[27]" "MiaRN.placeHolderList[140]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[28]" "MiaRN.placeHolderList[136]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[28]" "MiaRN.placeHolderList[141]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[29]" "MiaRN.placeHolderList[137]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[29]" "MiaRN.placeHolderList[142]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[30]" "MiaRN.placeHolderList[138]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[30]" "MiaRN.placeHolderList[143]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[31]" "MiaRN.placeHolderList[139]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[31]" "MiaRN.placeHolderList[144]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[32]" "MiaRN.placeHolderList[140]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[32]" "MiaRN.placeHolderList[145]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[33]" "MiaRN.placeHolderList[141]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[33]" "MiaRN.placeHolderList[146]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[34]" "MiaRN.placeHolderList[142]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[34]" "MiaRN.placeHolderList[147]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[35]" "MiaRN.placeHolderList[143]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[35]" "MiaRN.placeHolderList[148]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[36]" "MiaRN.placeHolderList[144]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[36]" "MiaRN.placeHolderList[149]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[37]" "MiaRN.placeHolderList[145]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[37]" "MiaRN.placeHolderList[150]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[38]" "MiaRN.placeHolderList[146]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[38]" "MiaRN.placeHolderList[151]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[39]" "MiaRN.placeHolderList[147]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[39]" "MiaRN.placeHolderList[152]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[40]" "MiaRN.placeHolderList[148]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[40]" "MiaRN.placeHolderList[153]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[41]" "MiaRN.placeHolderList[149]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[41]" "MiaRN.placeHolderList[154]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[42]" "MiaRN.placeHolderList[150]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[42]" "MiaRN.placeHolderList[155]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[43]" "MiaRN.placeHolderList[151]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[43]" "MiaRN.placeHolderList[156]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[44]" "MiaRN.placeHolderList[152]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[44]" "MiaRN.placeHolderList[157]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[45]" "MiaRN.placeHolderList[153]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[45]" "MiaRN.placeHolderList[158]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[46]" "MiaRN.placeHolderList[154]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[46]" "MiaRN.placeHolderList[159]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[47]" "MiaRN.placeHolderList[155]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[47]" "MiaRN.placeHolderList[160]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[48]" "MiaRN.placeHolderList[156]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[48]" "MiaRN.placeHolderList[161]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[49]" "MiaRN.placeHolderList[157]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[49]" "MiaRN.placeHolderList[162]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[50]" "MiaRN.placeHolderList[158]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[50]" "MiaRN.placeHolderList[163]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[51]" "MiaRN.placeHolderList[159]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[51]" "MiaRN.placeHolderList[164]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[52]" "MiaRN.placeHolderList[160]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[52]" "MiaRN.placeHolderList[165]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[53]" "MiaRN.placeHolderList[161]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[53]" "MiaRN.placeHolderList[166]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[54]" "MiaRN.placeHolderList[162]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[54]" "MiaRN.placeHolderList[167]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[55]" "MiaRN.placeHolderList[163]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[55]" "MiaRN.placeHolderList[168]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[56]" "MiaRN.placeHolderList[164]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[56]" "MiaRN.placeHolderList[169]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[57]" "MiaRN.placeHolderList[165]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[57]" "MiaRN.placeHolderList[170]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[58]" "MiaRN.placeHolderList[166]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[58]" "MiaRN.placeHolderList[171]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[59]" "MiaRN.placeHolderList[167]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[59]" "MiaRN.placeHolderList[172]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[60]" "MiaRN.placeHolderList[168]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[60]" "MiaRN.placeHolderList[173]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[61]" "MiaRN.placeHolderList[169]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[61]" "MiaRN.placeHolderList[174]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[62]" "MiaRN.placeHolderList[170]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[62]" "MiaRN.placeHolderList[175]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[63]" "MiaRN.placeHolderList[171]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[63]" "MiaRN.placeHolderList[176]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[64]" "MiaRN.placeHolderList[172]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[64]" "MiaRN.placeHolderList[177]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[65]" "MiaRN.placeHolderList[173]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[65]" "MiaRN.placeHolderList[178]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[66]" "MiaRN.placeHolderList[174]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[66]" "MiaRN.placeHolderList[179]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[67]" "MiaRN.placeHolderList[175]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[67]" "MiaRN.placeHolderList[180]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[68]" "MiaRN.placeHolderList[176]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[68]" "MiaRN.placeHolderList[181]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[69]" "MiaRN.placeHolderList[177]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[69]" "MiaRN.placeHolderList[182]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[70]" "MiaRN.placeHolderList[178]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[70]" "MiaRN.placeHolderList[183]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[71]" "MiaRN.placeHolderList[179]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[71]" "MiaRN.placeHolderList[184]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[72]" "MiaRN.placeHolderList[180]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[72]" "MiaRN.placeHolderList[185]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[73]" "MiaRN.placeHolderList[181]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[73]" "MiaRN.placeHolderList[186]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[74]" "MiaRN.placeHolderList[182]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[74]" "MiaRN.placeHolderList[187]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[75]" "MiaRN.placeHolderList[183]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[75]" "MiaRN.placeHolderList[188]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[76]" "MiaRN.placeHolderList[184]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[76]" "MiaRN.placeHolderList[189]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[77]" "MiaRN.placeHolderList[185]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[77]" "MiaRN.placeHolderList[190]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[78]" "MiaRN.placeHolderList[186]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[78]" "MiaRN.placeHolderList[191]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[79]" "MiaRN.placeHolderList[187]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[79]" "MiaRN.placeHolderList[192]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[80]" "MiaRN.placeHolderList[188]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[80]" "MiaRN.placeHolderList[193]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[81]" "MiaRN.placeHolderList[189]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[81]" "MiaRN.placeHolderList[194]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[82]" "MiaRN.placeHolderList[190]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[82]" "MiaRN.placeHolderList[195]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[83]" "MiaRN.placeHolderList[191]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[83]" "MiaRN.placeHolderList[196]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[84]" "MiaRN.placeHolderList[192]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[84]" "MiaRN.placeHolderList[197]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[85]" "MiaRN.placeHolderList[193]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[85]" "MiaRN.placeHolderList[198]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[86]" "MiaRN.placeHolderList[194]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[86]" "MiaRN.placeHolderList[199]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[87]" "MiaRN.placeHolderList[195]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[87]" "MiaRN.placeHolderList[200]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[88]" "MiaRN.placeHolderList[196]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[88]" "MiaRN.placeHolderList[201]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[89]" "MiaRN.placeHolderList[197]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[89]" "MiaRN.placeHolderList[202]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[90]" "MiaRN.placeHolderList[198]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[90]" "MiaRN.placeHolderList[203]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[91]" "MiaRN.placeHolderList[199]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[91]" "MiaRN.placeHolderList[204]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[92]" "MiaRN.placeHolderList[200]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[92]" "MiaRN.placeHolderList[205]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[93]" "MiaRN.placeHolderList[201]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[93]" "MiaRN.placeHolderList[206]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[94]" "MiaRN.placeHolderList[202]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[94]" "MiaRN.placeHolderList[207]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[95]" "MiaRN.placeHolderList[203]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[95]" "MiaRN.placeHolderList[208]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[96]" "MiaRN.placeHolderList[204]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[96]" "MiaRN.placeHolderList[209]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[97]" "MiaRN.placeHolderList[205]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[97]" "MiaRN.placeHolderList[210]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[98]" "MiaRN.placeHolderList[206]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[98]" "MiaRN.placeHolderList[211]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[99]" "MiaRN.placeHolderList[207]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[99]" "MiaRN.placeHolderList[212]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[100]" "MiaRN.placeHolderList[208]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[100]" "MiaRN.placeHolderList[213]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[101]" "MiaRN.placeHolderList[209]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[101]" "MiaRN.placeHolderList[214]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[102]" "MiaRN.placeHolderList[210]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[102]" "MiaRN.placeHolderList[215]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[103]" "MiaRN.placeHolderList[211]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[103]" "MiaRN.placeHolderList[216]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[104]" "MiaRN.placeHolderList[212]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[104]" "MiaRN.placeHolderList[217]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[105]" "MiaRN.placeHolderList[213]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[105]" "MiaRN.placeHolderList[218]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[106]" "MiaRN.placeHolderList[214]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[106]" "MiaRN.placeHolderList[219]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[107]" "MiaRN.placeHolderList[215]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[107]" "MiaRN.placeHolderList[220]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[108]" "MiaRN.placeHolderList[216]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[108]" "MiaRN.placeHolderList[221]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[109]" "MiaRN.placeHolderList[217]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[109]" "MiaRN.placeHolderList[222]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[110]" "MiaRN.placeHolderList[218]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[110]" "MiaRN.placeHolderList[223]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[111]" "MiaRN.placeHolderList[219]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[111]" "MiaRN.placeHolderList[224]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[112]" "MiaRN.placeHolderList[220]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[112]" "MiaRN.placeHolderList[225]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[113]" "MiaRN.placeHolderList[221]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[113]" "MiaRN.placeHolderList[226]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[114]" "MiaRN.placeHolderList[222]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[114]" "MiaRN.placeHolderList[227]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[115]" "MiaRN.placeHolderList[223]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[115]" "MiaRN.placeHolderList[228]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[116]" "MiaRN.placeHolderList[224]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[116]" "MiaRN.placeHolderList[229]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[117]" "MiaRN.placeHolderList[225]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[117]" "MiaRN.placeHolderList[230]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[118]" "MiaRN.placeHolderList[226]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[118]" "MiaRN.placeHolderList[231]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[119]" "MiaRN.placeHolderList[227]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[119]" "MiaRN.placeHolderList[232]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[120]" "MiaRN.placeHolderList[228]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[120]" "MiaRN.placeHolderList[233]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[121]" "MiaRN.placeHolderList[229]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[121]" "MiaRN.placeHolderList[234]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[122]" "MiaRN.placeHolderList[230]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[122]" "MiaRN.placeHolderList[235]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[123]" "MiaRN.placeHolderList[231]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[123]" "MiaRN.placeHolderList[236]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[124]" "MiaRN.placeHolderList[232]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[124]" "MiaRN.placeHolderList[237]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[125]" "MiaRN.placeHolderList[233]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[125]" "MiaRN.placeHolderList[238]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[126]" "MiaRN.placeHolderList[234]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[126]" "MiaRN.placeHolderList[239]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[127]" "MiaRN.placeHolderList[235]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[127]" "MiaRN.placeHolderList[240]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[128]" "MiaRN.placeHolderList[236]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[128]" "MiaRN.placeHolderList[241]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[129]" "MiaRN.placeHolderList[237]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[129]" "MiaRN.placeHolderList[242]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[130]" "MiaRN.placeHolderList[238]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[130]" "MiaRN.placeHolderList[243]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[131]" "MiaRN.placeHolderList[239]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[131]" "MiaRN.placeHolderList[244]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[132]" "MiaRN.placeHolderList[240]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[132]" "MiaRN.placeHolderList[245]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[133]" "MiaRN.placeHolderList[241]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[133]" "MiaRN.placeHolderList[246]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[134]" "MiaRN.placeHolderList[242]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[134]" "MiaRN.placeHolderList[247]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[135]" "MiaRN.placeHolderList[243]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[135]" "MiaRN.placeHolderList[248]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[136]" "MiaRN.placeHolderList[244]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[136]" "MiaRN.placeHolderList[249]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[137]" "MiaRN.placeHolderList[245]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[137]" "MiaRN.placeHolderList[250]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[138]" "MiaRN.placeHolderList[246]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[138]" "MiaRN.placeHolderList[251]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[139]" "MiaRN.placeHolderList[247]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[139]" "MiaRN.placeHolderList[252]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[140]" "MiaRN.placeHolderList[248]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[140]" "MiaRN.placeHolderList[253]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[141]" "MiaRN.placeHolderList[249]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[141]" "MiaRN.placeHolderList[254]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[142]" "MiaRN.placeHolderList[250]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[142]" "MiaRN.placeHolderList[255]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[143]" "MiaRN.placeHolderList[251]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[143]" "MiaRN.placeHolderList[256]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[144]" "MiaRN.placeHolderList[252]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[144]" "MiaRN.placeHolderList[257]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[145]" "MiaRN.placeHolderList[253]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[145]" "MiaRN.placeHolderList[258]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[146]" "MiaRN.placeHolderList[254]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[146]" "MiaRN.placeHolderList[259]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[147]" "MiaRN.placeHolderList[255]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[147]" "MiaRN.placeHolderList[260]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[148]" "MiaRN.placeHolderList[256]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[148]" "MiaRN.placeHolderList[261]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[149]" "MiaRN.placeHolderList[257]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[149]" "MiaRN.placeHolderList[262]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[150]" "MiaRN.placeHolderList[258]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[150]" "MiaRN.placeHolderList[263]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[151]" "MiaRN.placeHolderList[259]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[151]" "MiaRN.placeHolderList[264]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[152]" "MiaRN.placeHolderList[260]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[152]" "MiaRN.placeHolderList[265]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[153]" "MiaRN.placeHolderList[261]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[153]" "MiaRN.placeHolderList[266]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[154]" "MiaRN.placeHolderList[262]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[154]" "MiaRN.placeHolderList[267]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[155]" "MiaRN.placeHolderList[263]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[155]" "MiaRN.placeHolderList[268]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[156]" "MiaRN.placeHolderList[264]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[156]" "MiaRN.placeHolderList[269]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[157]" "MiaRN.placeHolderList[265]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[157]" "MiaRN.placeHolderList[270]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[158]" "MiaRN.placeHolderList[266]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[158]" "MiaRN.placeHolderList[271]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[159]" "MiaRN.placeHolderList[267]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[159]" "MiaRN.placeHolderList[272]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[160]" "MiaRN.placeHolderList[268]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[160]" "MiaRN.placeHolderList[273]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[161]" "MiaRN.placeHolderList[269]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[161]" "MiaRN.placeHolderList[274]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[162]" "MiaRN.placeHolderList[270]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[162]" "MiaRN.placeHolderList[275]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[163]" "MiaRN.placeHolderList[271]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[163]" "MiaRN.placeHolderList[276]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[164]" "MiaRN.placeHolderList[272]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[164]" "MiaRN.placeHolderList[277]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[165]" "MiaRN.placeHolderList[273]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[165]" "MiaRN.placeHolderList[278]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[166]" "MiaRN.placeHolderList[274]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[166]" "MiaRN.placeHolderList[279]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[167]" "MiaRN.placeHolderList[275]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[167]" "MiaRN.placeHolderList[280]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[168]" "MiaRN.placeHolderList[276]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[168]" "MiaRN.placeHolderList[281]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[169]" "MiaRN.placeHolderList[277]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[169]" "MiaRN.placeHolderList[282]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[170]" "MiaRN.placeHolderList[278]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[170]" "MiaRN.placeHolderList[283]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[171]" "MiaRN.placeHolderList[279]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[171]" "MiaRN.placeHolderList[284]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[172]" "MiaRN.placeHolderList[280]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[172]" "MiaRN.placeHolderList[285]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[173]" "MiaRN.placeHolderList[281]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[173]" "MiaRN.placeHolderList[286]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[174]" "MiaRN.placeHolderList[282]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[174]" "MiaRN.placeHolderList[287]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[175]" "MiaRN.placeHolderList[283]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[175]" "MiaRN.placeHolderList[288]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[176]" "MiaRN.placeHolderList[284]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[176]" "MiaRN.placeHolderList[289]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[177]" "MiaRN.placeHolderList[285]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[177]" "MiaRN.placeHolderList[290]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[178]" "MiaRN.placeHolderList[286]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[178]" "MiaRN.placeHolderList[291]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[179]" "MiaRN.placeHolderList[287]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[179]" "MiaRN.placeHolderList[292]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[180]" "MiaRN.placeHolderList[288]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[180]" "MiaRN.placeHolderList[293]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[181]" "MiaRN.placeHolderList[289]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[181]" "MiaRN.placeHolderList[294]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[182]" "MiaRN.placeHolderList[290]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[182]" "MiaRN.placeHolderList[295]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[183]" "MiaRN.placeHolderList[291]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[183]" "MiaRN.placeHolderList[296]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[184]" "MiaRN.placeHolderList[292]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[184]" "MiaRN.placeHolderList[297]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[185]" "MiaRN.placeHolderList[293]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[185]" "MiaRN.placeHolderList[298]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[186]" "MiaRN.placeHolderList[294]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[186]" "MiaRN.placeHolderList[299]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[187]" "MiaRN.placeHolderList[295]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[187]" "MiaRN.placeHolderList[300]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[188]" "MiaRN.placeHolderList[296]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[188]" "MiaRN.placeHolderList[301]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[189]" "MiaRN.placeHolderList[297]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[189]" "MiaRN.placeHolderList[302]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[190]" "MiaRN.placeHolderList[298]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[190]" "MiaRN.placeHolderList[303]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[191]" "MiaRN.placeHolderList[299]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[191]" "MiaRN.placeHolderList[304]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[192]" "MiaRN.placeHolderList[300]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[192]" "MiaRN.placeHolderList[305]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[193]" "MiaRN.placeHolderList[301]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[193]" "MiaRN.placeHolderList[306]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[194]" "MiaRN.placeHolderList[302]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[194]" "MiaRN.placeHolderList[307]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[195]" "MiaRN.placeHolderList[303]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[195]" "MiaRN.placeHolderList[308]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[196]" "MiaRN.placeHolderList[304]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[196]" "MiaRN.placeHolderList[309]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[197]" "MiaRN.placeHolderList[305]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[197]" "MiaRN.placeHolderList[310]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[198]" "MiaRN.placeHolderList[306]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[198]" "MiaRN.placeHolderList[311]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[199]" "MiaRN.placeHolderList[307]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[199]" "MiaRN.placeHolderList[312]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[200]" "MiaRN.placeHolderList[308]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[200]" "MiaRN.placeHolderList[313]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[201]" "MiaRN.placeHolderList[309]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[201]" "MiaRN.placeHolderList[314]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[202]" "MiaRN.placeHolderList[310]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[202]" "MiaRN.placeHolderList[315]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[203]" "MiaRN.placeHolderList[311]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[203]" "MiaRN.placeHolderList[316]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[204]" "MiaRN.placeHolderList[312]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[204]" "MiaRN.placeHolderList[317]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[205]" "MiaRN.placeHolderList[313]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[205]" "MiaRN.placeHolderList[318]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[206]" "MiaRN.placeHolderList[314]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[206]" "MiaRN.placeHolderList[319]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[207]" "MiaRN.placeHolderList[315]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[207]" "MiaRN.placeHolderList[320]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[208]" "MiaRN.placeHolderList[316]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[208]" "MiaRN.placeHolderList[321]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[209]" "MiaRN.placeHolderList[317]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[209]" "MiaRN.placeHolderList[322]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[210]" "MiaRN.placeHolderList[318]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[210]" "MiaRN.placeHolderList[323]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[211]" "MiaRN.placeHolderList[319]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[211]" "MiaRN.placeHolderList[324]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[212]" "MiaRN.placeHolderList[320]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[212]" "MiaRN.placeHolderList[325]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[213]" "MiaRN.placeHolderList[321]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[213]" "MiaRN.placeHolderList[326]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[214]" "MiaRN.placeHolderList[322]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[214]" "MiaRN.placeHolderList[327]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[215]" "MiaRN.placeHolderList[323]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[215]" "MiaRN.placeHolderList[328]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[216]" "MiaRN.placeHolderList[324]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[216]" "MiaRN.placeHolderList[329]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[217]" "MiaRN.placeHolderList[325]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[217]" "MiaRN.placeHolderList[330]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[218]" "MiaRN.placeHolderList[326]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[218]" "MiaRN.placeHolderList[331]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[219]" "MiaRN.placeHolderList[327]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[219]" "MiaRN.placeHolderList[332]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[220]" "MiaRN.placeHolderList[328]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[220]" "MiaRN.placeHolderList[333]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[221]" "MiaRN.placeHolderList[329]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[221]" "MiaRN.placeHolderList[334]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[222]" "MiaRN.placeHolderList[330]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[222]" "MiaRN.placeHolderList[335]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[223]" "MiaRN.placeHolderList[331]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[223]" "MiaRN.placeHolderList[336]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[224]" "MiaRN.placeHolderList[332]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[224]" "MiaRN.placeHolderList[337]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[225]" "MiaRN.placeHolderList[333]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[225]" "MiaRN.placeHolderList[338]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[226]" "MiaRN.placeHolderList[334]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[226]" "MiaRN.placeHolderList[339]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[227]" "MiaRN.placeHolderList[335]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[227]" "MiaRN.placeHolderList[340]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[228]" "MiaRN.placeHolderList[336]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[228]" "MiaRN.placeHolderList[341]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[229]" "MiaRN.placeHolderList[337]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[229]" "MiaRN.placeHolderList[342]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[230]" "MiaRN.placeHolderList[338]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[230]" "MiaRN.placeHolderList[343]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[231]" "MiaRN.placeHolderList[339]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[231]" "MiaRN.placeHolderList[344]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[232]" "MiaRN.placeHolderList[340]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[232]" "MiaRN.placeHolderList[345]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[245]" "MiaRN.placeHolderList[341]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[245]" "MiaRN.placeHolderList[346]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[246]" "MiaRN.placeHolderList[342]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[246]" "MiaRN.placeHolderList[347]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[247]" "MiaRN.placeHolderList[343]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[247]" "MiaRN.placeHolderList[348]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[248]" "MiaRN.placeHolderList[344]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[248]" "MiaRN.placeHolderList[349]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[249]" "MiaRN.placeHolderList[345]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[249]" "MiaRN.placeHolderList[350]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[250]" "MiaRN.placeHolderList[346]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[250]" "MiaRN.placeHolderList[351]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[251]" "MiaRN.placeHolderList[347]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[251]" "MiaRN.placeHolderList[352]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[252]" "MiaRN.placeHolderList[348]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[252]" "MiaRN.placeHolderList[353]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[253]" "MiaRN.placeHolderList[349]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[253]" "MiaRN.placeHolderList[354]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[254]" "MiaRN.placeHolderList[350]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[254]" "MiaRN.placeHolderList[355]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[255]" "MiaRN.placeHolderList[351]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[255]" "MiaRN.placeHolderList[356]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[256]" "MiaRN.placeHolderList[352]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[256]" "MiaRN.placeHolderList[357]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[257]" "MiaRN.placeHolderList[353]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[257]" "MiaRN.placeHolderList[358]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[258]" "MiaRN.placeHolderList[354]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[258]" "MiaRN.placeHolderList[359]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[259]" "MiaRN.placeHolderList[355]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[259]" "MiaRN.placeHolderList[360]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[260]" "MiaRN.placeHolderList[356]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[260]" "MiaRN.placeHolderList[361]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[261]" "MiaRN.placeHolderList[357]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[261]" "MiaRN.placeHolderList[362]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[262]" "MiaRN.placeHolderList[358]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[262]" "MiaRN.placeHolderList[363]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[263]" "MiaRN.placeHolderList[359]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[263]" "MiaRN.placeHolderList[364]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[264]" "MiaRN.placeHolderList[360]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[264]" "MiaRN.placeHolderList[365]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[265]" "MiaRN.placeHolderList[361]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[265]" "MiaRN.placeHolderList[366]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[266]" "MiaRN.placeHolderList[362]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[266]" "MiaRN.placeHolderList[367]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[267]" "MiaRN.placeHolderList[363]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[267]" "MiaRN.placeHolderList[368]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[268]" "MiaRN.placeHolderList[364]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[268]" "MiaRN.placeHolderList[369]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[269]" "MiaRN.placeHolderList[365]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[269]" "MiaRN.placeHolderList[370]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[270]" "MiaRN.placeHolderList[366]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[270]" "MiaRN.placeHolderList[371]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[271]" "MiaRN.placeHolderList[367]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[271]" "MiaRN.placeHolderList[372]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[272]" "MiaRN.placeHolderList[368]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[272]" "MiaRN.placeHolderList[373]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[273]" "MiaRN.placeHolderList[369]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[273]" "MiaRN.placeHolderList[374]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[274]" "MiaRN.placeHolderList[370]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[274]" "MiaRN.placeHolderList[375]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[275]" "MiaRN.placeHolderList[371]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[275]" "MiaRN.placeHolderList[376]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[276]" "MiaRN.placeHolderList[372]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[276]" "MiaRN.placeHolderList[377]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[277]" "MiaRN.placeHolderList[373]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[277]" "MiaRN.placeHolderList[378]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[278]" "MiaRN.placeHolderList[374]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[278]" "MiaRN.placeHolderList[379]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[279]" "MiaRN.placeHolderList[375]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[279]" "MiaRN.placeHolderList[380]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[280]" "MiaRN.placeHolderList[376]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[280]" "MiaRN.placeHolderList[381]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[281]" "MiaRN.placeHolderList[377]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[281]" "MiaRN.placeHolderList[382]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[282]" "MiaRN.placeHolderList[378]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[282]" "MiaRN.placeHolderList[383]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[283]" "MiaRN.placeHolderList[379]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[283]" "MiaRN.placeHolderList[384]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[284]" "MiaRN.placeHolderList[380]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[284]" "MiaRN.placeHolderList[385]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[285]" "MiaRN.placeHolderList[381]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[285]" "MiaRN.placeHolderList[386]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[286]" "MiaRN.placeHolderList[382]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[286]" "MiaRN.placeHolderList[387]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[287]" "MiaRN.placeHolderList[383]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[287]" "MiaRN.placeHolderList[388]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[288]" "MiaRN.placeHolderList[384]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[288]" "MiaRN.placeHolderList[389]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[289]" "MiaRN.placeHolderList[385]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[289]" "MiaRN.placeHolderList[390]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[290]" "MiaRN.placeHolderList[386]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[290]" "MiaRN.placeHolderList[391]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[291]" "MiaRN.placeHolderList[387]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[291]" "MiaRN.placeHolderList[392]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[292]" "MiaRN.placeHolderList[388]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[292]" "MiaRN.placeHolderList[393]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[293]" "MiaRN.placeHolderList[389]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[293]" "MiaRN.placeHolderList[394]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[294]" "MiaRN.placeHolderList[390]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[294]" "MiaRN.placeHolderList[395]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[295]" "MiaRN.placeHolderList[391]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[295]" "MiaRN.placeHolderList[396]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[296]" "MiaRN.placeHolderList[392]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[296]" "MiaRN.placeHolderList[397]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[297]" "MiaRN.placeHolderList[393]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[297]" "MiaRN.placeHolderList[398]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[298]" "MiaRN.placeHolderList[394]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[298]" "MiaRN.placeHolderList[399]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[299]" "MiaRN.placeHolderList[395]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[299]" "MiaRN.placeHolderList[400]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[300]" "MiaRN.placeHolderList[396]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[300]" "MiaRN.placeHolderList[401]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[301]" "MiaRN.placeHolderList[397]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[301]" "MiaRN.placeHolderList[402]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[302]" "MiaRN.placeHolderList[398]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[302]" "MiaRN.placeHolderList[403]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[303]" "MiaRN.placeHolderList[399]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[303]" "MiaRN.placeHolderList[404]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[304]" "MiaRN.placeHolderList[400]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[304]" "MiaRN.placeHolderList[405]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[305]" "MiaRN.placeHolderList[401]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[305]" "MiaRN.placeHolderList[406]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[306]" "MiaRN.placeHolderList[402]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[306]" "MiaRN.placeHolderList[407]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[307]" "MiaRN.placeHolderList[403]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[307]" "MiaRN.placeHolderList[408]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[308]" "MiaRN.placeHolderList[404]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[308]" "MiaRN.placeHolderList[409]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[309]" "MiaRN.placeHolderList[405]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[309]" "MiaRN.placeHolderList[410]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[310]" "MiaRN.placeHolderList[406]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[310]" "MiaRN.placeHolderList[411]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[311]" "MiaRN.placeHolderList[407]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[311]" "MiaRN.placeHolderList[412]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[312]" "MiaRN.placeHolderList[408]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[312]" "MiaRN.placeHolderList[413]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[313]" "MiaRN.placeHolderList[409]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[313]" "MiaRN.placeHolderList[414]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[314]" "MiaRN.placeHolderList[410]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[314]" "MiaRN.placeHolderList[415]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[315]" "MiaRN.placeHolderList[411]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[315]" "MiaRN.placeHolderList[416]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[316]" "MiaRN.placeHolderList[412]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[316]" "MiaRN.placeHolderList[417]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[317]" "MiaRN.placeHolderList[413]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[317]" "MiaRN.placeHolderList[418]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[318]" "MiaRN.placeHolderList[414]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[318]" "MiaRN.placeHolderList[419]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[319]" "MiaRN.placeHolderList[415]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[319]" "MiaRN.placeHolderList[420]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[320]" "MiaRN.placeHolderList[416]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[320]" "MiaRN.placeHolderList[421]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[321]" "MiaRN.placeHolderList[417]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[321]" "MiaRN.placeHolderList[422]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[322]" "MiaRN.placeHolderList[418]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[322]" "MiaRN.placeHolderList[423]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[323]" "MiaRN.placeHolderList[419]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[323]" "MiaRN.placeHolderList[424]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[324]" "MiaRN.placeHolderList[420]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[324]" "MiaRN.placeHolderList[425]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[325]" "MiaRN.placeHolderList[421]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[325]" "MiaRN.placeHolderList[426]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[326]" "MiaRN.placeHolderList[422]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[326]" "MiaRN.placeHolderList[427]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[327]" "MiaRN.placeHolderList[423]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[327]" "MiaRN.placeHolderList[428]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[328]" "MiaRN.placeHolderList[424]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[328]" "MiaRN.placeHolderList[429]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[329]" "MiaRN.placeHolderList[425]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[329]" "MiaRN.placeHolderList[430]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[330]" "MiaRN.placeHolderList[426]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[330]" "MiaRN.placeHolderList[431]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[331]" "MiaRN.placeHolderList[427]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[331]" "MiaRN.placeHolderList[432]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[332]" "MiaRN.placeHolderList[428]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[332]" "MiaRN.placeHolderList[433]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[333]" "MiaRN.placeHolderList[429]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[333]" "MiaRN.placeHolderList[434]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[334]" "MiaRN.placeHolderList[430]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[334]" "MiaRN.placeHolderList[435]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[335]" "MiaRN.placeHolderList[431]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[335]" "MiaRN.placeHolderList[436]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[336]" "MiaRN.placeHolderList[432]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[336]" "MiaRN.placeHolderList[437]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[337]" "MiaRN.placeHolderList[433]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[337]" "MiaRN.placeHolderList[438]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[338]" "MiaRN.placeHolderList[434]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[338]" "MiaRN.placeHolderList[439]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[339]" "MiaRN.placeHolderList[435]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[339]" "MiaRN.placeHolderList[440]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[340]" "MiaRN.placeHolderList[436]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[340]" "MiaRN.placeHolderList[441]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[341]" "MiaRN.placeHolderList[437]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[341]" "MiaRN.placeHolderList[442]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[342]" "MiaRN.placeHolderList[438]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[342]" "MiaRN.placeHolderList[443]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[343]" "MiaRN.placeHolderList[439]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[343]" "MiaRN.placeHolderList[444]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[344]" "MiaRN.placeHolderList[440]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[344]" "MiaRN.placeHolderList[445]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[345]" "MiaRN.placeHolderList[441]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[345]" "MiaRN.placeHolderList[446]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[346]" "MiaRN.placeHolderList[442]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[346]" "MiaRN.placeHolderList[447]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[347]" "MiaRN.placeHolderList[443]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[347]" "MiaRN.placeHolderList[448]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[348]" "MiaRN.placeHolderList[444]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[348]" "MiaRN.placeHolderList[449]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[349]" "MiaRN.placeHolderList[445]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[349]" "MiaRN.placeHolderList[450]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[350]" "MiaRN.placeHolderList[446]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[350]" "MiaRN.placeHolderList[451]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[351]" "MiaRN.placeHolderList[447]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[351]" "MiaRN.placeHolderList[452]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[352]" "MiaRN.placeHolderList[448]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[352]" "MiaRN.placeHolderList[453]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[353]" "MiaRN.placeHolderList[449]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[353]" "MiaRN.placeHolderList[454]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[354]" "MiaRN.placeHolderList[450]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[354]" "MiaRN.placeHolderList[455]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[355]" "MiaRN.placeHolderList[451]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[355]" "MiaRN.placeHolderList[456]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[356]" "MiaRN.placeHolderList[452]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[356]" "MiaRN.placeHolderList[457]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[357]" "MiaRN.placeHolderList[453]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[357]" "MiaRN.placeHolderList[458]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[358]" "MiaRN.placeHolderList[454]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[358]" "MiaRN.placeHolderList[459]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[359]" "MiaRN.placeHolderList[455]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[359]" "MiaRN.placeHolderList[460]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[360]" "MiaRN.placeHolderList[456]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[360]" "MiaRN.placeHolderList[461]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[361]" "MiaRN.placeHolderList[457]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[361]" "MiaRN.placeHolderList[462]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[362]" "MiaRN.placeHolderList[458]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[362]" "MiaRN.placeHolderList[463]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[363]" "MiaRN.placeHolderList[459]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[363]" "MiaRN.placeHolderList[464]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[364]" "MiaRN.placeHolderList[460]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[364]" "MiaRN.placeHolderList[465]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[365]" "MiaRN.placeHolderList[461]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[365]" "MiaRN.placeHolderList[466]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[366]" "MiaRN.placeHolderList[462]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[366]" "MiaRN.placeHolderList[467]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[367]" "MiaRN.placeHolderList[463]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[367]" "MiaRN.placeHolderList[468]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[368]" "MiaRN.placeHolderList[464]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[368]" "MiaRN.placeHolderList[469]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[369]" "MiaRN.placeHolderList[465]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[369]" "MiaRN.placeHolderList[470]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[370]" "MiaRN.placeHolderList[466]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[370]" "MiaRN.placeHolderList[471]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[371]" "MiaRN.placeHolderList[467]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[371]" "MiaRN.placeHolderList[472]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[372]" "MiaRN.placeHolderList[468]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[372]" "MiaRN.placeHolderList[473]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[373]" "MiaRN.placeHolderList[469]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[373]" "MiaRN.placeHolderList[474]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[374]" "MiaRN.placeHolderList[470]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[374]" "MiaRN.placeHolderList[475]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[375]" "MiaRN.placeHolderList[471]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[375]" "MiaRN.placeHolderList[476]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[376]" "MiaRN.placeHolderList[472]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[376]" "MiaRN.placeHolderList[477]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[377]" "MiaRN.placeHolderList[473]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[377]" "MiaRN.placeHolderList[478]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[378]" "MiaRN.placeHolderList[474]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[378]" "MiaRN.placeHolderList[479]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[379]" "MiaRN.placeHolderList[475]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[379]" "MiaRN.placeHolderList[480]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[380]" "MiaRN.placeHolderList[476]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[380]" "MiaRN.placeHolderList[481]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[381]" "MiaRN.placeHolderList[477]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[381]" "MiaRN.placeHolderList[482]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[382]" "MiaRN.placeHolderList[478]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[382]" "MiaRN.placeHolderList[483]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[383]" "MiaRN.placeHolderList[479]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[383]" "MiaRN.placeHolderList[484]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[384]" "MiaRN.placeHolderList[480]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[384]" "MiaRN.placeHolderList[485]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[385]" "MiaRN.placeHolderList[481]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[385]" "MiaRN.placeHolderList[486]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[386]" "MiaRN.placeHolderList[482]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[386]" "MiaRN.placeHolderList[487]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[387]" "MiaRN.placeHolderList[483]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[387]" "MiaRN.placeHolderList[488]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[388]" "MiaRN.placeHolderList[484]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[388]" "MiaRN.placeHolderList[489]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[389]" "MiaRN.placeHolderList[485]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[389]" "MiaRN.placeHolderList[490]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[390]" "MiaRN.placeHolderList[486]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[390]" "MiaRN.placeHolderList[491]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[391]" "MiaRN.placeHolderList[487]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[391]" "MiaRN.placeHolderList[492]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[392]" "MiaRN.placeHolderList[488]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[392]" "MiaRN.placeHolderList[493]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[541]" "MiaRN.placeHolderList[489]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[541]" "MiaRN.placeHolderList[494]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[542]" "MiaRN.placeHolderList[490]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[542]" "MiaRN.placeHolderList[495]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[543]" "MiaRN.placeHolderList[491]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[543]" "MiaRN.placeHolderList[496]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[544]" "MiaRN.placeHolderList[492]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[544]" "MiaRN.placeHolderList[497]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[545]" "MiaRN.placeHolderList[493]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[545]" "MiaRN.placeHolderList[498]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[546]" "MiaRN.placeHolderList[494]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[546]" "MiaRN.placeHolderList[499]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[547]" "MiaRN.placeHolderList[495]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[547]" "MiaRN.placeHolderList[500]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[548]" "MiaRN.placeHolderList[496]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[548]" "MiaRN.placeHolderList[501]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[549]" "MiaRN.placeHolderList[497]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[549]" "MiaRN.placeHolderList[502]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[550]" "MiaRN.placeHolderList[498]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[550]" "MiaRN.placeHolderList[503]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[551]" "MiaRN.placeHolderList[499]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[551]" "MiaRN.placeHolderList[504]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[552]" "MiaRN.placeHolderList[500]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[552]" "MiaRN.placeHolderList[505]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[553]" "MiaRN.placeHolderList[501]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[553]" "MiaRN.placeHolderList[506]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[554]" "MiaRN.placeHolderList[502]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[554]" "MiaRN.placeHolderList[507]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[555]" "MiaRN.placeHolderList[503]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[555]" "MiaRN.placeHolderList[508]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[556]" "MiaRN.placeHolderList[504]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[556]" "MiaRN.placeHolderList[509]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[557]" "MiaRN.placeHolderList[505]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[557]" "MiaRN.placeHolderList[510]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[558]" "MiaRN.placeHolderList[506]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[558]" "MiaRN.placeHolderList[511]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[559]" "MiaRN.placeHolderList[507]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[559]" "MiaRN.placeHolderList[512]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[560]" "MiaRN.placeHolderList[508]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[560]" "MiaRN.placeHolderList[513]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[561]" "MiaRN.placeHolderList[509]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[561]" "MiaRN.placeHolderList[514]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[562]" "MiaRN.placeHolderList[510]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[562]" "MiaRN.placeHolderList[515]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[563]" "MiaRN.placeHolderList[511]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[563]" "MiaRN.placeHolderList[516]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[564]" "MiaRN.placeHolderList[512]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[564]" "MiaRN.placeHolderList[517]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[565]" "MiaRN.placeHolderList[513]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[565]" "MiaRN.placeHolderList[518]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[566]" "MiaRN.placeHolderList[514]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[566]" "MiaRN.placeHolderList[519]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[567]" "MiaRN.placeHolderList[515]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[567]" "MiaRN.placeHolderList[520]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[568]" "MiaRN.placeHolderList[516]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[568]" "MiaRN.placeHolderList[521]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[569]" "MiaRN.placeHolderList[517]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[569]" "MiaRN.placeHolderList[522]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[570]" "MiaRN.placeHolderList[518]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[570]" "MiaRN.placeHolderList[523]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[571]" "MiaRN.placeHolderList[519]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[571]" "MiaRN.placeHolderList[524]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[572]" "MiaRN.placeHolderList[520]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[572]" "MiaRN.placeHolderList[525]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[573]" "MiaRN.placeHolderList[521]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[573]" "MiaRN.placeHolderList[526]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[574]" "MiaRN.placeHolderList[522]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[574]" "MiaRN.placeHolderList[527]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[575]" "MiaRN.placeHolderList[523]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[575]" "MiaRN.placeHolderList[528]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[576]" "MiaRN.placeHolderList[524]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[576]" "MiaRN.placeHolderList[529]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[577]" "MiaRN.placeHolderList[525]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[577]" "MiaRN.placeHolderList[530]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[578]" "MiaRN.placeHolderList[526]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[578]" "MiaRN.placeHolderList[531]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[579]" "MiaRN.placeHolderList[527]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[579]" "MiaRN.placeHolderList[532]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[580]" "MiaRN.placeHolderList[528]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[580]" "MiaRN.placeHolderList[533]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[581]" "MiaRN.placeHolderList[529]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[581]" "MiaRN.placeHolderList[534]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[582]" "MiaRN.placeHolderList[530]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[582]" "MiaRN.placeHolderList[535]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[583]" "MiaRN.placeHolderList[531]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[583]" "MiaRN.placeHolderList[536]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[584]" "MiaRN.placeHolderList[532]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[584]" "MiaRN.placeHolderList[537]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[585]" "MiaRN.placeHolderList[533]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[585]" "MiaRN.placeHolderList[538]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[586]" "MiaRN.placeHolderList[534]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[586]" "MiaRN.placeHolderList[539]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[587]" "MiaRN.placeHolderList[535]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[587]" "MiaRN.placeHolderList[540]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[588]" "MiaRN.placeHolderList[536]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[588]" "MiaRN.placeHolderList[541]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[589]" "MiaRN.placeHolderList[537]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[589]" "MiaRN.placeHolderList[542]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[590]" "MiaRN.placeHolderList[538]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[590]" "MiaRN.placeHolderList[543]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[591]" "MiaRN.placeHolderList[539]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[591]" "MiaRN.placeHolderList[544]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[592]" "MiaRN.placeHolderList[540]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[592]" "MiaRN.placeHolderList[545]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[593]" "MiaRN.placeHolderList[541]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[593]" "MiaRN.placeHolderList[546]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[594]" "MiaRN.placeHolderList[542]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[594]" "MiaRN.placeHolderList[547]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[595]" "MiaRN.placeHolderList[543]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[595]" "MiaRN.placeHolderList[548]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[596]" "MiaRN.placeHolderList[544]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[596]" "MiaRN.placeHolderList[549]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[597]" "MiaRN.placeHolderList[545]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[597]" "MiaRN.placeHolderList[550]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[598]" "MiaRN.placeHolderList[546]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[598]" "MiaRN.placeHolderList[551]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[599]" "MiaRN.placeHolderList[547]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[599]" "MiaRN.placeHolderList[552]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[600]" "MiaRN.placeHolderList[548]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[600]" "MiaRN.placeHolderList[553]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[601]" "MiaRN.placeHolderList[549]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[601]" "MiaRN.placeHolderList[554]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[602]" "MiaRN.placeHolderList[550]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[602]" "MiaRN.placeHolderList[555]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[603]" "MiaRN.placeHolderList[551]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[603]" "MiaRN.placeHolderList[556]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[604]" "MiaRN.placeHolderList[552]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[604]" "MiaRN.placeHolderList[557]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[605]" "MiaRN.placeHolderList[553]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[605]" "MiaRN.placeHolderList[558]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[606]" "MiaRN.placeHolderList[554]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[606]" "MiaRN.placeHolderList[559]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[607]" "MiaRN.placeHolderList[555]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[607]" "MiaRN.placeHolderList[560]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[608]" "MiaRN.placeHolderList[556]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[608]" "MiaRN.placeHolderList[561]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[609]" "MiaRN.placeHolderList[557]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[609]" "MiaRN.placeHolderList[562]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[610]" "MiaRN.placeHolderList[558]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[610]" "MiaRN.placeHolderList[563]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[611]" "MiaRN.placeHolderList[559]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[611]" "MiaRN.placeHolderList[564]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[612]" "MiaRN.placeHolderList[560]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[612]" "MiaRN.placeHolderList[565]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[616]" "MiaRN.placeHolderList[561]" 
+		5 4 "MiaRN" "Mia:All_Controls.unitlessValues[616]" "MiaRN.placeHolderList[566]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[1]" "MiaRN.placeHolderList[562]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[1]" "MiaRN.placeHolderList[567]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[2]" "MiaRN.placeHolderList[563]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[2]" "MiaRN.placeHolderList[568]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[3]" "MiaRN.placeHolderList[564]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[3]" "MiaRN.placeHolderList[569]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[4]" "MiaRN.placeHolderList[565]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[4]" "MiaRN.placeHolderList[570]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[5]" "MiaRN.placeHolderList[566]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[5]" "MiaRN.placeHolderList[571]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[6]" "MiaRN.placeHolderList[567]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[6]" "MiaRN.placeHolderList[572]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[7]" "MiaRN.placeHolderList[568]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[7]" "MiaRN.placeHolderList[573]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[8]" "MiaRN.placeHolderList[569]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[8]" "MiaRN.placeHolderList[574]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[9]" "MiaRN.placeHolderList[570]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[9]" "MiaRN.placeHolderList[575]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[10]" "MiaRN.placeHolderList[571]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[10]" "MiaRN.placeHolderList[576]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[11]" "MiaRN.placeHolderList[572]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[11]" "MiaRN.placeHolderList[577]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[12]" "MiaRN.placeHolderList[573]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[12]" "MiaRN.placeHolderList[578]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[13]" "MiaRN.placeHolderList[574]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[13]" "MiaRN.placeHolderList[579]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[14]" "MiaRN.placeHolderList[575]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[14]" "MiaRN.placeHolderList[580]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[15]" "MiaRN.placeHolderList[576]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[15]" "MiaRN.placeHolderList[581]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[16]" "MiaRN.placeHolderList[577]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[16]" "MiaRN.placeHolderList[582]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[17]" "MiaRN.placeHolderList[578]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[17]" "MiaRN.placeHolderList[583]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[18]" "MiaRN.placeHolderList[579]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[18]" "MiaRN.placeHolderList[584]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[19]" "MiaRN.placeHolderList[580]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[19]" "MiaRN.placeHolderList[585]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[20]" "MiaRN.placeHolderList[581]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[20]" "MiaRN.placeHolderList[586]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[21]" "MiaRN.placeHolderList[582]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[21]" "MiaRN.placeHolderList[587]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[22]" "MiaRN.placeHolderList[583]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[22]" "MiaRN.placeHolderList[588]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[23]" "MiaRN.placeHolderList[584]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[23]" "MiaRN.placeHolderList[589]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[24]" "MiaRN.placeHolderList[585]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[24]" "MiaRN.placeHolderList[590]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[25]" "MiaRN.placeHolderList[586]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[25]" "MiaRN.placeHolderList[591]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[26]" "MiaRN.placeHolderList[587]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[26]" "MiaRN.placeHolderList[592]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[27]" "MiaRN.placeHolderList[588]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[27]" "MiaRN.placeHolderList[593]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[28]" "MiaRN.placeHolderList[589]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[28]" "MiaRN.placeHolderList[594]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[29]" "MiaRN.placeHolderList[590]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[29]" "MiaRN.placeHolderList[595]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[30]" "MiaRN.placeHolderList[591]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[30]" "MiaRN.placeHolderList[596]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[31]" "MiaRN.placeHolderList[592]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[31]" "MiaRN.placeHolderList[597]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[32]" "MiaRN.placeHolderList[593]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[32]" "MiaRN.placeHolderList[598]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[33]" "MiaRN.placeHolderList[594]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[33]" "MiaRN.placeHolderList[599]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[34]" "MiaRN.placeHolderList[595]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[34]" "MiaRN.placeHolderList[600]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[35]" "MiaRN.placeHolderList[596]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[35]" "MiaRN.placeHolderList[601]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[36]" "MiaRN.placeHolderList[597]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[36]" "MiaRN.placeHolderList[602]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[37]" "MiaRN.placeHolderList[598]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[37]" "MiaRN.placeHolderList[603]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[38]" "MiaRN.placeHolderList[599]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[38]" "MiaRN.placeHolderList[604]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[39]" "MiaRN.placeHolderList[600]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[39]" "MiaRN.placeHolderList[605]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[40]" "MiaRN.placeHolderList[601]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[40]" "MiaRN.placeHolderList[606]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[41]" "MiaRN.placeHolderList[602]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[41]" "MiaRN.placeHolderList[607]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[42]" "MiaRN.placeHolderList[603]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[42]" "MiaRN.placeHolderList[608]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[43]" "MiaRN.placeHolderList[604]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[43]" "MiaRN.placeHolderList[609]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[44]" "MiaRN.placeHolderList[605]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[44]" "MiaRN.placeHolderList[610]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[45]" "MiaRN.placeHolderList[606]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[45]" "MiaRN.placeHolderList[611]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[46]" "MiaRN.placeHolderList[607]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[46]" "MiaRN.placeHolderList[612]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[47]" "MiaRN.placeHolderList[608]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[47]" "MiaRN.placeHolderList[613]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[48]" "MiaRN.placeHolderList[609]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[48]" "MiaRN.placeHolderList[614]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[49]" "MiaRN.placeHolderList[610]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[49]" "MiaRN.placeHolderList[615]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[50]" "MiaRN.placeHolderList[611]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[50]" "MiaRN.placeHolderList[616]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[51]" "MiaRN.placeHolderList[612]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[51]" "MiaRN.placeHolderList[617]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[52]" "MiaRN.placeHolderList[613]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[52]" "MiaRN.placeHolderList[618]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[53]" "MiaRN.placeHolderList[614]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[53]" "MiaRN.placeHolderList[619]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[54]" "MiaRN.placeHolderList[615]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[54]" "MiaRN.placeHolderList[620]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[55]" "MiaRN.placeHolderList[616]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[55]" "MiaRN.placeHolderList[621]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[56]" "MiaRN.placeHolderList[617]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[56]" "MiaRN.placeHolderList[622]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[57]" "MiaRN.placeHolderList[618]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[57]" "MiaRN.placeHolderList[623]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[58]" "MiaRN.placeHolderList[619]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[58]" "MiaRN.placeHolderList[624]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[59]" "MiaRN.placeHolderList[620]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[59]" "MiaRN.placeHolderList[625]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[60]" "MiaRN.placeHolderList[621]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[60]" "MiaRN.placeHolderList[626]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[61]" "MiaRN.placeHolderList[622]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[61]" "MiaRN.placeHolderList[627]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[62]" "MiaRN.placeHolderList[623]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[62]" "MiaRN.placeHolderList[628]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[63]" "MiaRN.placeHolderList[624]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[63]" "MiaRN.placeHolderList[629]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[64]" "MiaRN.placeHolderList[625]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[64]" "MiaRN.placeHolderList[630]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[65]" "MiaRN.placeHolderList[626]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[65]" "MiaRN.placeHolderList[631]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[66]" "MiaRN.placeHolderList[627]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[66]" "MiaRN.placeHolderList[632]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[67]" "MiaRN.placeHolderList[628]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[67]" "MiaRN.placeHolderList[633]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[68]" "MiaRN.placeHolderList[629]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[68]" "MiaRN.placeHolderList[634]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[69]" "MiaRN.placeHolderList[630]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[69]" "MiaRN.placeHolderList[635]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[70]" "MiaRN.placeHolderList[631]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[70]" "MiaRN.placeHolderList[636]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[71]" "MiaRN.placeHolderList[632]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[71]" "MiaRN.placeHolderList[637]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[72]" "MiaRN.placeHolderList[633]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[72]" "MiaRN.placeHolderList[638]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[73]" "MiaRN.placeHolderList[634]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[73]" "MiaRN.placeHolderList[639]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[74]" "MiaRN.placeHolderList[635]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[74]" "MiaRN.placeHolderList[640]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[75]" "MiaRN.placeHolderList[636]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[75]" "MiaRN.placeHolderList[641]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[76]" "MiaRN.placeHolderList[637]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[76]" "MiaRN.placeHolderList[642]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[77]" "MiaRN.placeHolderList[638]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[77]" "MiaRN.placeHolderList[643]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[78]" "MiaRN.placeHolderList[639]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[78]" "MiaRN.placeHolderList[644]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[79]" "MiaRN.placeHolderList[640]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[79]" "MiaRN.placeHolderList[645]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[80]" "MiaRN.placeHolderList[641]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[80]" "MiaRN.placeHolderList[646]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[81]" "MiaRN.placeHolderList[642]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[81]" "MiaRN.placeHolderList[647]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[82]" "MiaRN.placeHolderList[643]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[82]" "MiaRN.placeHolderList[648]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[83]" "MiaRN.placeHolderList[644]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[83]" "MiaRN.placeHolderList[649]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[84]" "MiaRN.placeHolderList[645]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[84]" "MiaRN.placeHolderList[650]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[85]" "MiaRN.placeHolderList[646]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[85]" "MiaRN.placeHolderList[651]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[86]" "MiaRN.placeHolderList[647]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[86]" "MiaRN.placeHolderList[652]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[87]" "MiaRN.placeHolderList[648]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[87]" "MiaRN.placeHolderList[653]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[88]" "MiaRN.placeHolderList[649]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[88]" "MiaRN.placeHolderList[654]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[89]" "MiaRN.placeHolderList[650]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[89]" "MiaRN.placeHolderList[655]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[90]" "MiaRN.placeHolderList[651]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[90]" "MiaRN.placeHolderList[656]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[91]" "MiaRN.placeHolderList[652]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[91]" "MiaRN.placeHolderList[657]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[92]" "MiaRN.placeHolderList[653]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[92]" "MiaRN.placeHolderList[658]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[93]" "MiaRN.placeHolderList[654]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[93]" "MiaRN.placeHolderList[659]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[94]" "MiaRN.placeHolderList[655]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[94]" "MiaRN.placeHolderList[660]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[95]" "MiaRN.placeHolderList[656]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[95]" "MiaRN.placeHolderList[661]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[96]" "MiaRN.placeHolderList[657]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[96]" "MiaRN.placeHolderList[662]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[97]" "MiaRN.placeHolderList[658]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[97]" "MiaRN.placeHolderList[663]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[98]" "MiaRN.placeHolderList[659]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[98]" "MiaRN.placeHolderList[664]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[99]" "MiaRN.placeHolderList[660]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[99]" "MiaRN.placeHolderList[665]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[100]" "MiaRN.placeHolderList[661]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[100]" "MiaRN.placeHolderList[666]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[101]" "MiaRN.placeHolderList[662]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[101]" "MiaRN.placeHolderList[667]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[102]" "MiaRN.placeHolderList[663]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[102]" "MiaRN.placeHolderList[668]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[103]" "MiaRN.placeHolderList[664]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[103]" "MiaRN.placeHolderList[669]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[104]" "MiaRN.placeHolderList[665]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[104]" "MiaRN.placeHolderList[670]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[105]" "MiaRN.placeHolderList[666]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[105]" "MiaRN.placeHolderList[671]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[106]" "MiaRN.placeHolderList[667]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[106]" "MiaRN.placeHolderList[672]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[107]" "MiaRN.placeHolderList[668]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[107]" "MiaRN.placeHolderList[673]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[108]" "MiaRN.placeHolderList[669]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[108]" "MiaRN.placeHolderList[674]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[109]" "MiaRN.placeHolderList[670]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[109]" "MiaRN.placeHolderList[675]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[110]" "MiaRN.placeHolderList[671]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[110]" "MiaRN.placeHolderList[676]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[111]" "MiaRN.placeHolderList[672]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[111]" "MiaRN.placeHolderList[677]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[112]" "MiaRN.placeHolderList[673]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[112]" "MiaRN.placeHolderList[678]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[113]" "MiaRN.placeHolderList[674]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[113]" "MiaRN.placeHolderList[679]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[114]" "MiaRN.placeHolderList[675]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[114]" "MiaRN.placeHolderList[680]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[115]" "MiaRN.placeHolderList[676]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[115]" "MiaRN.placeHolderList[681]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[116]" "MiaRN.placeHolderList[677]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[116]" "MiaRN.placeHolderList[682]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[117]" "MiaRN.placeHolderList[678]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[117]" "MiaRN.placeHolderList[683]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[118]" "MiaRN.placeHolderList[679]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[118]" "MiaRN.placeHolderList[684]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[119]" "MiaRN.placeHolderList[680]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[119]" "MiaRN.placeHolderList[685]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[120]" "MiaRN.placeHolderList[681]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[120]" "MiaRN.placeHolderList[686]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[121]" "MiaRN.placeHolderList[682]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[121]" "MiaRN.placeHolderList[687]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[122]" "MiaRN.placeHolderList[683]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[122]" "MiaRN.placeHolderList[688]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[123]" "MiaRN.placeHolderList[684]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[123]" "MiaRN.placeHolderList[689]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[124]" "MiaRN.placeHolderList[685]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[124]" "MiaRN.placeHolderList[690]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[125]" "MiaRN.placeHolderList[686]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[125]" "MiaRN.placeHolderList[691]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[126]" "MiaRN.placeHolderList[687]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[126]" "MiaRN.placeHolderList[692]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[127]" "MiaRN.placeHolderList[688]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[127]" "MiaRN.placeHolderList[693]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[128]" "MiaRN.placeHolderList[689]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[128]" "MiaRN.placeHolderList[694]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[129]" "MiaRN.placeHolderList[690]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[129]" "MiaRN.placeHolderList[695]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[130]" "MiaRN.placeHolderList[691]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[130]" "MiaRN.placeHolderList[696]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[131]" "MiaRN.placeHolderList[692]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[131]" "MiaRN.placeHolderList[697]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[132]" "MiaRN.placeHolderList[693]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[132]" "MiaRN.placeHolderList[698]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[133]" "MiaRN.placeHolderList[694]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[133]" "MiaRN.placeHolderList[699]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[134]" "MiaRN.placeHolderList[695]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[134]" "MiaRN.placeHolderList[700]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[135]" "MiaRN.placeHolderList[696]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[135]" "MiaRN.placeHolderList[701]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[136]" "MiaRN.placeHolderList[697]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[136]" "MiaRN.placeHolderList[702]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[137]" "MiaRN.placeHolderList[698]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[137]" "MiaRN.placeHolderList[703]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[138]" "MiaRN.placeHolderList[699]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[138]" "MiaRN.placeHolderList[704]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[139]" "MiaRN.placeHolderList[700]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[139]" "MiaRN.placeHolderList[705]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[140]" "MiaRN.placeHolderList[701]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[140]" "MiaRN.placeHolderList[706]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[141]" "MiaRN.placeHolderList[702]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[141]" "MiaRN.placeHolderList[707]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[142]" "MiaRN.placeHolderList[703]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[142]" "MiaRN.placeHolderList[708]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[143]" "MiaRN.placeHolderList[704]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[143]" "MiaRN.placeHolderList[709]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[144]" "MiaRN.placeHolderList[705]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[144]" "MiaRN.placeHolderList[710]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[145]" "MiaRN.placeHolderList[706]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[145]" "MiaRN.placeHolderList[711]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[146]" "MiaRN.placeHolderList[707]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[146]" "MiaRN.placeHolderList[712]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[147]" "MiaRN.placeHolderList[708]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[147]" "MiaRN.placeHolderList[713]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[148]" "MiaRN.placeHolderList[709]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[148]" "MiaRN.placeHolderList[714]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[149]" "MiaRN.placeHolderList[710]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[149]" "MiaRN.placeHolderList[715]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[150]" "MiaRN.placeHolderList[711]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[150]" "MiaRN.placeHolderList[716]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[151]" "MiaRN.placeHolderList[712]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[151]" "MiaRN.placeHolderList[717]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[152]" "MiaRN.placeHolderList[713]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[152]" "MiaRN.placeHolderList[718]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[153]" "MiaRN.placeHolderList[714]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[153]" "MiaRN.placeHolderList[719]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[154]" "MiaRN.placeHolderList[715]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[154]" "MiaRN.placeHolderList[720]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[155]" "MiaRN.placeHolderList[716]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[155]" "MiaRN.placeHolderList[721]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[156]" "MiaRN.placeHolderList[717]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[156]" "MiaRN.placeHolderList[722]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[157]" "MiaRN.placeHolderList[718]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[157]" "MiaRN.placeHolderList[723]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[158]" "MiaRN.placeHolderList[719]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[158]" "MiaRN.placeHolderList[724]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[159]" "MiaRN.placeHolderList[720]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[159]" "MiaRN.placeHolderList[725]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[160]" "MiaRN.placeHolderList[721]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[160]" "MiaRN.placeHolderList[726]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[161]" "MiaRN.placeHolderList[722]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[161]" "MiaRN.placeHolderList[727]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[162]" "MiaRN.placeHolderList[723]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[162]" "MiaRN.placeHolderList[728]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[163]" "MiaRN.placeHolderList[724]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[163]" "MiaRN.placeHolderList[729]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[164]" "MiaRN.placeHolderList[725]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[164]" "MiaRN.placeHolderList[730]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[165]" "MiaRN.placeHolderList[726]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[165]" "MiaRN.placeHolderList[731]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[166]" "MiaRN.placeHolderList[727]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[166]" "MiaRN.placeHolderList[732]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[167]" "MiaRN.placeHolderList[728]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[167]" "MiaRN.placeHolderList[733]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[168]" "MiaRN.placeHolderList[729]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[168]" "MiaRN.placeHolderList[734]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[169]" "MiaRN.placeHolderList[730]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[169]" "MiaRN.placeHolderList[735]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[170]" "MiaRN.placeHolderList[731]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[170]" "MiaRN.placeHolderList[736]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[171]" "MiaRN.placeHolderList[732]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[171]" "MiaRN.placeHolderList[737]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[172]" "MiaRN.placeHolderList[733]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[172]" "MiaRN.placeHolderList[738]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[173]" "MiaRN.placeHolderList[734]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[173]" "MiaRN.placeHolderList[739]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[174]" "MiaRN.placeHolderList[735]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[174]" "MiaRN.placeHolderList[740]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[184]" "MiaRN.placeHolderList[736]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[184]" "MiaRN.placeHolderList[741]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[185]" "MiaRN.placeHolderList[737]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[185]" "MiaRN.placeHolderList[742]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[186]" "MiaRN.placeHolderList[738]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[186]" "MiaRN.placeHolderList[743]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[187]" "MiaRN.placeHolderList[739]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[187]" "MiaRN.placeHolderList[744]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[188]" "MiaRN.placeHolderList[740]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[188]" "MiaRN.placeHolderList[745]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[189]" "MiaRN.placeHolderList[741]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[189]" "MiaRN.placeHolderList[746]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[190]" "MiaRN.placeHolderList[742]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[190]" "MiaRN.placeHolderList[747]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[191]" "MiaRN.placeHolderList[743]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[191]" "MiaRN.placeHolderList[748]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[192]" "MiaRN.placeHolderList[744]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[192]" "MiaRN.placeHolderList[749]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[193]" "MiaRN.placeHolderList[745]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[193]" "MiaRN.placeHolderList[750]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[194]" "MiaRN.placeHolderList[746]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[194]" "MiaRN.placeHolderList[751]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[195]" "MiaRN.placeHolderList[747]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[195]" "MiaRN.placeHolderList[752]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[196]" "MiaRN.placeHolderList[748]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[196]" "MiaRN.placeHolderList[753]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[197]" "MiaRN.placeHolderList[749]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[197]" "MiaRN.placeHolderList[754]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[198]" "MiaRN.placeHolderList[750]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[198]" "MiaRN.placeHolderList[755]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[199]" "MiaRN.placeHolderList[751]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[199]" "MiaRN.placeHolderList[756]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[200]" "MiaRN.placeHolderList[752]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[200]" "MiaRN.placeHolderList[757]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[201]" "MiaRN.placeHolderList[753]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[201]" "MiaRN.placeHolderList[758]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[202]" "MiaRN.placeHolderList[754]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[202]" "MiaRN.placeHolderList[759]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[203]" "MiaRN.placeHolderList[755]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[203]" "MiaRN.placeHolderList[760]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[204]" "MiaRN.placeHolderList[756]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[204]" "MiaRN.placeHolderList[761]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[205]" "MiaRN.placeHolderList[757]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[205]" "MiaRN.placeHolderList[762]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[206]" "MiaRN.placeHolderList[758]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[206]" "MiaRN.placeHolderList[763]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[207]" "MiaRN.placeHolderList[759]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[207]" "MiaRN.placeHolderList[764]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[208]" "MiaRN.placeHolderList[760]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[208]" "MiaRN.placeHolderList[765]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[209]" "MiaRN.placeHolderList[761]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[209]" "MiaRN.placeHolderList[766]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[210]" "MiaRN.placeHolderList[762]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[210]" "MiaRN.placeHolderList[767]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[211]" "MiaRN.placeHolderList[763]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[211]" "MiaRN.placeHolderList[768]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[212]" "MiaRN.placeHolderList[764]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[212]" "MiaRN.placeHolderList[769]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[213]" "MiaRN.placeHolderList[765]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[213]" "MiaRN.placeHolderList[770]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[214]" "MiaRN.placeHolderList[766]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[214]" "MiaRN.placeHolderList[771]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[215]" "MiaRN.placeHolderList[767]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[215]" "MiaRN.placeHolderList[772]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[216]" "MiaRN.placeHolderList[768]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[216]" "MiaRN.placeHolderList[773]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[217]" "MiaRN.placeHolderList[769]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[217]" "MiaRN.placeHolderList[774]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[218]" "MiaRN.placeHolderList[770]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[218]" "MiaRN.placeHolderList[775]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[219]" "MiaRN.placeHolderList[771]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[219]" "MiaRN.placeHolderList[776]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[220]" "MiaRN.placeHolderList[772]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[220]" "MiaRN.placeHolderList[777]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[221]" "MiaRN.placeHolderList[773]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[221]" "MiaRN.placeHolderList[778]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[222]" "MiaRN.placeHolderList[774]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[222]" "MiaRN.placeHolderList[779]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[223]" "MiaRN.placeHolderList[775]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[223]" "MiaRN.placeHolderList[780]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[224]" "MiaRN.placeHolderList[776]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[224]" "MiaRN.placeHolderList[781]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[225]" "MiaRN.placeHolderList[777]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[225]" "MiaRN.placeHolderList[782]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[226]" "MiaRN.placeHolderList[778]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[226]" "MiaRN.placeHolderList[783]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[227]" "MiaRN.placeHolderList[779]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[227]" "MiaRN.placeHolderList[784]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[228]" "MiaRN.placeHolderList[780]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[228]" "MiaRN.placeHolderList[785]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[229]" "MiaRN.placeHolderList[781]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[229]" "MiaRN.placeHolderList[786]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[230]" "MiaRN.placeHolderList[782]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[230]" "MiaRN.placeHolderList[787]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[231]" "MiaRN.placeHolderList[783]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[231]" "MiaRN.placeHolderList[788]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[232]" "MiaRN.placeHolderList[784]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[232]" "MiaRN.placeHolderList[789]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[233]" "MiaRN.placeHolderList[785]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[233]" "MiaRN.placeHolderList[790]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[234]" "MiaRN.placeHolderList[786]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[234]" "MiaRN.placeHolderList[791]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[235]" "MiaRN.placeHolderList[787]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[235]" "MiaRN.placeHolderList[792]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[236]" "MiaRN.placeHolderList[788]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[236]" "MiaRN.placeHolderList[793]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[237]" "MiaRN.placeHolderList[789]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[237]" "MiaRN.placeHolderList[794]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[238]" "MiaRN.placeHolderList[790]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[238]" "MiaRN.placeHolderList[795]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[239]" "MiaRN.placeHolderList[791]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[239]" "MiaRN.placeHolderList[796]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[240]" "MiaRN.placeHolderList[792]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[240]" "MiaRN.placeHolderList[797]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[241]" "MiaRN.placeHolderList[793]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[241]" "MiaRN.placeHolderList[798]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[242]" "MiaRN.placeHolderList[794]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[242]" "MiaRN.placeHolderList[799]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[243]" "MiaRN.placeHolderList[795]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[243]" "MiaRN.placeHolderList[800]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[244]" "MiaRN.placeHolderList[796]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[244]" "MiaRN.placeHolderList[801]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[245]" "MiaRN.placeHolderList[797]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[245]" "MiaRN.placeHolderList[802]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[246]" "MiaRN.placeHolderList[798]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[246]" "MiaRN.placeHolderList[803]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[247]" "MiaRN.placeHolderList[799]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[247]" "MiaRN.placeHolderList[804]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[248]" "MiaRN.placeHolderList[800]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[248]" "MiaRN.placeHolderList[805]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[249]" "MiaRN.placeHolderList[801]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[249]" "MiaRN.placeHolderList[806]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[250]" "MiaRN.placeHolderList[802]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[250]" "MiaRN.placeHolderList[807]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[251]" "MiaRN.placeHolderList[803]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[251]" "MiaRN.placeHolderList[808]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[252]" "MiaRN.placeHolderList[804]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[252]" "MiaRN.placeHolderList[809]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[253]" "MiaRN.placeHolderList[805]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[253]" "MiaRN.placeHolderList[810]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[254]" "MiaRN.placeHolderList[806]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[254]" "MiaRN.placeHolderList[811]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[255]" "MiaRN.placeHolderList[807]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[255]" "MiaRN.placeHolderList[812]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[256]" "MiaRN.placeHolderList[808]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[256]" "MiaRN.placeHolderList[813]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[257]" "MiaRN.placeHolderList[809]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[257]" "MiaRN.placeHolderList[814]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[258]" "MiaRN.placeHolderList[810]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[258]" "MiaRN.placeHolderList[815]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[259]" "MiaRN.placeHolderList[811]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[259]" "MiaRN.placeHolderList[816]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[260]" "MiaRN.placeHolderList[812]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[260]" "MiaRN.placeHolderList[817]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[261]" "MiaRN.placeHolderList[813]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[261]" "MiaRN.placeHolderList[818]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[262]" "MiaRN.placeHolderList[814]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[262]" "MiaRN.placeHolderList[819]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[263]" "MiaRN.placeHolderList[815]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[263]" "MiaRN.placeHolderList[820]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[264]" "MiaRN.placeHolderList[816]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[264]" "MiaRN.placeHolderList[821]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[265]" "MiaRN.placeHolderList[817]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[265]" "MiaRN.placeHolderList[822]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[266]" "MiaRN.placeHolderList[818]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[266]" "MiaRN.placeHolderList[823]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[267]" "MiaRN.placeHolderList[819]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[267]" "MiaRN.placeHolderList[824]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[268]" "MiaRN.placeHolderList[820]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[268]" "MiaRN.placeHolderList[825]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[269]" "MiaRN.placeHolderList[821]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[269]" "MiaRN.placeHolderList[826]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[270]" "MiaRN.placeHolderList[822]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[270]" "MiaRN.placeHolderList[827]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[271]" "MiaRN.placeHolderList[823]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[271]" "MiaRN.placeHolderList[828]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[272]" "MiaRN.placeHolderList[824]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[272]" "MiaRN.placeHolderList[829]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[273]" "MiaRN.placeHolderList[825]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[273]" "MiaRN.placeHolderList[830]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[274]" "MiaRN.placeHolderList[826]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[274]" "MiaRN.placeHolderList[831]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[275]" "MiaRN.placeHolderList[827]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[275]" "MiaRN.placeHolderList[832]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[276]" "MiaRN.placeHolderList[828]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[276]" "MiaRN.placeHolderList[833]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[277]" "MiaRN.placeHolderList[829]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[277]" "MiaRN.placeHolderList[834]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[278]" "MiaRN.placeHolderList[830]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[278]" "MiaRN.placeHolderList[835]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[279]" "MiaRN.placeHolderList[831]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[279]" "MiaRN.placeHolderList[836]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[280]" "MiaRN.placeHolderList[832]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[280]" "MiaRN.placeHolderList[837]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[281]" "MiaRN.placeHolderList[833]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[281]" "MiaRN.placeHolderList[838]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[282]" "MiaRN.placeHolderList[834]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[282]" "MiaRN.placeHolderList[839]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[283]" "MiaRN.placeHolderList[835]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[283]" "MiaRN.placeHolderList[840]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[284]" "MiaRN.placeHolderList[836]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[284]" "MiaRN.placeHolderList[841]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[285]" "MiaRN.placeHolderList[837]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[285]" "MiaRN.placeHolderList[842]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[286]" "MiaRN.placeHolderList[838]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[286]" "MiaRN.placeHolderList[843]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[287]" "MiaRN.placeHolderList[839]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[287]" "MiaRN.placeHolderList[844]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[288]" "MiaRN.placeHolderList[840]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[288]" "MiaRN.placeHolderList[845]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[289]" "MiaRN.placeHolderList[841]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[289]" "MiaRN.placeHolderList[846]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[290]" "MiaRN.placeHolderList[842]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[290]" "MiaRN.placeHolderList[847]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[291]" "MiaRN.placeHolderList[843]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[291]" "MiaRN.placeHolderList[848]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[292]" "MiaRN.placeHolderList[844]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[292]" "MiaRN.placeHolderList[849]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[293]" "MiaRN.placeHolderList[845]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[293]" "MiaRN.placeHolderList[850]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[294]" "MiaRN.placeHolderList[846]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[294]" "MiaRN.placeHolderList[851]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[406]" "MiaRN.placeHolderList[847]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[406]" "MiaRN.placeHolderList[852]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[407]" "MiaRN.placeHolderList[848]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[407]" "MiaRN.placeHolderList[853]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[408]" "MiaRN.placeHolderList[849]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[408]" "MiaRN.placeHolderList[854]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[409]" "MiaRN.placeHolderList[850]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[409]" "MiaRN.placeHolderList[855]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[410]" "MiaRN.placeHolderList[851]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[410]" "MiaRN.placeHolderList[856]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[411]" "MiaRN.placeHolderList[852]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[411]" "MiaRN.placeHolderList[857]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[412]" "MiaRN.placeHolderList[853]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[412]" "MiaRN.placeHolderList[858]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[413]" "MiaRN.placeHolderList[854]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[413]" "MiaRN.placeHolderList[859]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[414]" "MiaRN.placeHolderList[855]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[414]" "MiaRN.placeHolderList[860]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[415]" "MiaRN.placeHolderList[856]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[415]" "MiaRN.placeHolderList[861]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[416]" "MiaRN.placeHolderList[857]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[416]" "MiaRN.placeHolderList[862]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[417]" "MiaRN.placeHolderList[858]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[417]" "MiaRN.placeHolderList[863]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[418]" "MiaRN.placeHolderList[859]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[418]" "MiaRN.placeHolderList[864]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[419]" "MiaRN.placeHolderList[860]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[419]" "MiaRN.placeHolderList[865]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[420]" "MiaRN.placeHolderList[861]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[420]" "MiaRN.placeHolderList[866]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[421]" "MiaRN.placeHolderList[862]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[421]" "MiaRN.placeHolderList[867]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[422]" "MiaRN.placeHolderList[863]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[422]" "MiaRN.placeHolderList[868]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[423]" "MiaRN.placeHolderList[864]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[423]" "MiaRN.placeHolderList[869]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[424]" "MiaRN.placeHolderList[865]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[424]" "MiaRN.placeHolderList[870]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[425]" "MiaRN.placeHolderList[866]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[425]" "MiaRN.placeHolderList[871]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[426]" "MiaRN.placeHolderList[867]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[426]" "MiaRN.placeHolderList[872]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[427]" "MiaRN.placeHolderList[868]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[427]" "MiaRN.placeHolderList[873]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[428]" "MiaRN.placeHolderList[869]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[428]" "MiaRN.placeHolderList[874]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[429]" "MiaRN.placeHolderList[870]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[429]" "MiaRN.placeHolderList[875]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[430]" "MiaRN.placeHolderList[871]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[430]" "MiaRN.placeHolderList[876]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[431]" "MiaRN.placeHolderList[872]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[431]" "MiaRN.placeHolderList[877]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[432]" "MiaRN.placeHolderList[873]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[432]" "MiaRN.placeHolderList[878]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[433]" "MiaRN.placeHolderList[874]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[433]" "MiaRN.placeHolderList[879]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[434]" "MiaRN.placeHolderList[875]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[434]" "MiaRN.placeHolderList[880]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[435]" "MiaRN.placeHolderList[876]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[435]" "MiaRN.placeHolderList[881]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[436]" "MiaRN.placeHolderList[877]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[436]" "MiaRN.placeHolderList[882]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[437]" "MiaRN.placeHolderList[878]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[437]" "MiaRN.placeHolderList[883]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[438]" "MiaRN.placeHolderList[879]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[438]" "MiaRN.placeHolderList[884]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[439]" "MiaRN.placeHolderList[880]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[439]" "MiaRN.placeHolderList[885]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[440]" "MiaRN.placeHolderList[881]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[440]" "MiaRN.placeHolderList[886]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[441]" "MiaRN.placeHolderList[882]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[441]" "MiaRN.placeHolderList[887]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[442]" "MiaRN.placeHolderList[883]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[442]" "MiaRN.placeHolderList[888]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[443]" "MiaRN.placeHolderList[884]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[443]" "MiaRN.placeHolderList[889]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[444]" "MiaRN.placeHolderList[885]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[444]" "MiaRN.placeHolderList[890]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[445]" "MiaRN.placeHolderList[886]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[445]" "MiaRN.placeHolderList[891]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[446]" "MiaRN.placeHolderList[887]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[446]" "MiaRN.placeHolderList[892]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[447]" "MiaRN.placeHolderList[888]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[447]" "MiaRN.placeHolderList[893]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[448]" "MiaRN.placeHolderList[889]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[448]" "MiaRN.placeHolderList[894]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[449]" "MiaRN.placeHolderList[890]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[449]" "MiaRN.placeHolderList[895]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[450]" "MiaRN.placeHolderList[891]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[450]" "MiaRN.placeHolderList[896]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[451]" "MiaRN.placeHolderList[892]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[451]" "MiaRN.placeHolderList[897]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[452]" "MiaRN.placeHolderList[893]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[452]" "MiaRN.placeHolderList[898]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[453]" "MiaRN.placeHolderList[894]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[453]" "MiaRN.placeHolderList[899]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[454]" "MiaRN.placeHolderList[895]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[454]" "MiaRN.placeHolderList[900]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[455]" "MiaRN.placeHolderList[896]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[455]" "MiaRN.placeHolderList[901]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[456]" "MiaRN.placeHolderList[897]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[456]" "MiaRN.placeHolderList[902]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[457]" "MiaRN.placeHolderList[898]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[457]" "MiaRN.placeHolderList[903]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[458]" "MiaRN.placeHolderList[899]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[458]" "MiaRN.placeHolderList[904]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[459]" "MiaRN.placeHolderList[900]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[459]" "MiaRN.placeHolderList[905]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[466]" "MiaRN.placeHolderList[901]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[466]" "MiaRN.placeHolderList[906]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[467]" "MiaRN.placeHolderList[902]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[467]" "MiaRN.placeHolderList[907]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.linearValues[468]" "MiaRN.placeHolderList[903]" 
+		5 4 "MiaRN" "Mia:All_Controls.linearValues[468]" "MiaRN.placeHolderList[908]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[1]" "MiaRN.placeHolderList[904]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[1]" "MiaRN.placeHolderList[909]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[2]" "MiaRN.placeHolderList[905]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[2]" "MiaRN.placeHolderList[910]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[3]" "MiaRN.placeHolderList[906]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[3]" "MiaRN.placeHolderList[911]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[4]" "MiaRN.placeHolderList[907]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[4]" "MiaRN.placeHolderList[912]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[5]" "MiaRN.placeHolderList[908]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[5]" "MiaRN.placeHolderList[913]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[6]" "MiaRN.placeHolderList[909]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[6]" "MiaRN.placeHolderList[914]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[7]" "MiaRN.placeHolderList[910]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[7]" "MiaRN.placeHolderList[915]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[8]" "MiaRN.placeHolderList[911]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[8]" "MiaRN.placeHolderList[916]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[9]" "MiaRN.placeHolderList[912]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[9]" "MiaRN.placeHolderList[917]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[10]" "MiaRN.placeHolderList[913]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[10]" "MiaRN.placeHolderList[918]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[11]" "MiaRN.placeHolderList[914]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[11]" "MiaRN.placeHolderList[919]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[12]" "MiaRN.placeHolderList[915]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[12]" "MiaRN.placeHolderList[920]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[13]" "MiaRN.placeHolderList[916]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[13]" "MiaRN.placeHolderList[921]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[14]" "MiaRN.placeHolderList[917]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[14]" "MiaRN.placeHolderList[922]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[15]" "MiaRN.placeHolderList[918]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[15]" "MiaRN.placeHolderList[923]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[16]" "MiaRN.placeHolderList[919]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[16]" "MiaRN.placeHolderList[924]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[17]" "MiaRN.placeHolderList[920]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[17]" "MiaRN.placeHolderList[925]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[18]" "MiaRN.placeHolderList[921]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[18]" "MiaRN.placeHolderList[926]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[19]" "MiaRN.placeHolderList[922]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[19]" "MiaRN.placeHolderList[927]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[20]" "MiaRN.placeHolderList[923]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[20]" "MiaRN.placeHolderList[928]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[21]" "MiaRN.placeHolderList[924]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[21]" "MiaRN.placeHolderList[929]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[22]" "MiaRN.placeHolderList[925]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[22]" "MiaRN.placeHolderList[930]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[23]" "MiaRN.placeHolderList[926]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[23]" "MiaRN.placeHolderList[931]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[24]" "MiaRN.placeHolderList[927]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[24]" "MiaRN.placeHolderList[932]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[25]" "MiaRN.placeHolderList[928]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[25]" "MiaRN.placeHolderList[933]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[26]" "MiaRN.placeHolderList[929]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[26]" "MiaRN.placeHolderList[934]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[27]" "MiaRN.placeHolderList[930]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[27]" "MiaRN.placeHolderList[935]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[28]" "MiaRN.placeHolderList[931]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[28]" "MiaRN.placeHolderList[936]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[29]" "MiaRN.placeHolderList[932]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[29]" "MiaRN.placeHolderList[937]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[30]" "MiaRN.placeHolderList[933]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[30]" "MiaRN.placeHolderList[938]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[31]" "MiaRN.placeHolderList[934]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[31]" "MiaRN.placeHolderList[939]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[32]" "MiaRN.placeHolderList[935]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[32]" "MiaRN.placeHolderList[940]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[33]" "MiaRN.placeHolderList[936]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[33]" "MiaRN.placeHolderList[941]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[34]" "MiaRN.placeHolderList[937]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[34]" "MiaRN.placeHolderList[942]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[35]" "MiaRN.placeHolderList[938]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[35]" "MiaRN.placeHolderList[943]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[36]" "MiaRN.placeHolderList[939]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[36]" "MiaRN.placeHolderList[944]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[37]" "MiaRN.placeHolderList[940]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[37]" "MiaRN.placeHolderList[945]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[38]" "MiaRN.placeHolderList[941]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[38]" "MiaRN.placeHolderList[946]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[39]" "MiaRN.placeHolderList[942]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[39]" "MiaRN.placeHolderList[947]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[40]" "MiaRN.placeHolderList[943]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[40]" "MiaRN.placeHolderList[948]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[41]" "MiaRN.placeHolderList[944]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[41]" "MiaRN.placeHolderList[949]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[42]" "MiaRN.placeHolderList[945]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[42]" "MiaRN.placeHolderList[950]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[43]" "MiaRN.placeHolderList[946]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[43]" "MiaRN.placeHolderList[951]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[44]" "MiaRN.placeHolderList[947]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[44]" "MiaRN.placeHolderList[952]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[45]" "MiaRN.placeHolderList[948]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[45]" "MiaRN.placeHolderList[953]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[46]" "MiaRN.placeHolderList[949]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[46]" "MiaRN.placeHolderList[954]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[47]" "MiaRN.placeHolderList[950]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[47]" "MiaRN.placeHolderList[955]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[48]" "MiaRN.placeHolderList[951]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[48]" "MiaRN.placeHolderList[956]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[49]" "MiaRN.placeHolderList[952]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[49]" "MiaRN.placeHolderList[957]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[50]" "MiaRN.placeHolderList[953]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[50]" "MiaRN.placeHolderList[958]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[51]" "MiaRN.placeHolderList[954]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[51]" "MiaRN.placeHolderList[959]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[52]" "MiaRN.placeHolderList[955]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[52]" "MiaRN.placeHolderList[960]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[53]" "MiaRN.placeHolderList[956]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[53]" "MiaRN.placeHolderList[961]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[54]" "MiaRN.placeHolderList[957]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[54]" "MiaRN.placeHolderList[962]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[55]" "MiaRN.placeHolderList[958]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[55]" "MiaRN.placeHolderList[963]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[56]" "MiaRN.placeHolderList[959]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[56]" "MiaRN.placeHolderList[964]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[57]" "MiaRN.placeHolderList[960]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[57]" "MiaRN.placeHolderList[965]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[58]" "MiaRN.placeHolderList[961]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[58]" "MiaRN.placeHolderList[966]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[59]" "MiaRN.placeHolderList[962]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[59]" "MiaRN.placeHolderList[967]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[60]" "MiaRN.placeHolderList[963]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[60]" "MiaRN.placeHolderList[968]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[61]" "MiaRN.placeHolderList[964]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[61]" "MiaRN.placeHolderList[969]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[62]" "MiaRN.placeHolderList[965]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[62]" "MiaRN.placeHolderList[970]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[63]" "MiaRN.placeHolderList[966]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[63]" "MiaRN.placeHolderList[971]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[64]" "MiaRN.placeHolderList[967]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[64]" "MiaRN.placeHolderList[972]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[65]" "MiaRN.placeHolderList[968]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[65]" "MiaRN.placeHolderList[973]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[66]" "MiaRN.placeHolderList[969]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[66]" "MiaRN.placeHolderList[974]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[67]" "MiaRN.placeHolderList[970]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[67]" "MiaRN.placeHolderList[975]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[68]" "MiaRN.placeHolderList[971]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[68]" "MiaRN.placeHolderList[976]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[69]" "MiaRN.placeHolderList[972]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[69]" "MiaRN.placeHolderList[977]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[70]" "MiaRN.placeHolderList[973]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[70]" "MiaRN.placeHolderList[978]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[71]" "MiaRN.placeHolderList[974]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[71]" "MiaRN.placeHolderList[979]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[72]" "MiaRN.placeHolderList[975]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[72]" "MiaRN.placeHolderList[980]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[73]" "MiaRN.placeHolderList[976]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[73]" "MiaRN.placeHolderList[981]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[74]" "MiaRN.placeHolderList[977]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[74]" "MiaRN.placeHolderList[982]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[75]" "MiaRN.placeHolderList[978]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[75]" "MiaRN.placeHolderList[983]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[76]" "MiaRN.placeHolderList[979]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[76]" "MiaRN.placeHolderList[984]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[77]" "MiaRN.placeHolderList[980]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[77]" "MiaRN.placeHolderList[985]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[78]" "MiaRN.placeHolderList[981]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[78]" "MiaRN.placeHolderList[986]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[79]" "MiaRN.placeHolderList[982]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[79]" "MiaRN.placeHolderList[987]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[80]" "MiaRN.placeHolderList[983]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[80]" "MiaRN.placeHolderList[988]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[81]" "MiaRN.placeHolderList[984]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[81]" "MiaRN.placeHolderList[989]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[82]" "MiaRN.placeHolderList[985]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[82]" "MiaRN.placeHolderList[990]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[83]" "MiaRN.placeHolderList[986]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[83]" "MiaRN.placeHolderList[991]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[84]" "MiaRN.placeHolderList[987]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[84]" "MiaRN.placeHolderList[992]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[85]" "MiaRN.placeHolderList[988]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[85]" "MiaRN.placeHolderList[993]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[86]" "MiaRN.placeHolderList[989]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[86]" "MiaRN.placeHolderList[994]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[87]" "MiaRN.placeHolderList[990]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[87]" "MiaRN.placeHolderList[995]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[88]" "MiaRN.placeHolderList[991]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[88]" "MiaRN.placeHolderList[996]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[89]" "MiaRN.placeHolderList[992]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[89]" "MiaRN.placeHolderList[997]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[90]" "MiaRN.placeHolderList[993]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[90]" "MiaRN.placeHolderList[998]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[91]" "MiaRN.placeHolderList[994]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[91]" "MiaRN.placeHolderList[999]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[92]" "MiaRN.placeHolderList[995]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[92]" "MiaRN.placeHolderList[1000]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[93]" "MiaRN.placeHolderList[996]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[93]" "MiaRN.placeHolderList[1001]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[94]" "MiaRN.placeHolderList[997]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[94]" "MiaRN.placeHolderList[1002]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[95]" "MiaRN.placeHolderList[998]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[95]" "MiaRN.placeHolderList[1003]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[96]" "MiaRN.placeHolderList[999]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[96]" "MiaRN.placeHolderList[1004]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[97]" "MiaRN.placeHolderList[1000]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[97]" "MiaRN.placeHolderList[1005]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[98]" "MiaRN.placeHolderList[1001]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[98]" "MiaRN.placeHolderList[1006]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[99]" "MiaRN.placeHolderList[1002]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[99]" "MiaRN.placeHolderList[1007]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[100]" "MiaRN.placeHolderList[1003]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[100]" "MiaRN.placeHolderList[1008]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[101]" "MiaRN.placeHolderList[1004]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[101]" "MiaRN.placeHolderList[1009]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[102]" "MiaRN.placeHolderList[1005]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[102]" "MiaRN.placeHolderList[1010]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[103]" "MiaRN.placeHolderList[1006]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[103]" "MiaRN.placeHolderList[1011]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[104]" "MiaRN.placeHolderList[1007]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[104]" "MiaRN.placeHolderList[1012]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[105]" "MiaRN.placeHolderList[1008]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[105]" "MiaRN.placeHolderList[1013]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[106]" "MiaRN.placeHolderList[1009]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[106]" "MiaRN.placeHolderList[1014]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[107]" "MiaRN.placeHolderList[1010]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[107]" "MiaRN.placeHolderList[1015]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[108]" "MiaRN.placeHolderList[1011]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[108]" "MiaRN.placeHolderList[1016]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[109]" "MiaRN.placeHolderList[1012]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[109]" "MiaRN.placeHolderList[1017]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[110]" "MiaRN.placeHolderList[1013]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[110]" "MiaRN.placeHolderList[1018]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[111]" "MiaRN.placeHolderList[1014]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[111]" "MiaRN.placeHolderList[1019]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[112]" "MiaRN.placeHolderList[1015]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[112]" "MiaRN.placeHolderList[1020]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[113]" "MiaRN.placeHolderList[1016]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[113]" "MiaRN.placeHolderList[1021]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[114]" "MiaRN.placeHolderList[1017]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[114]" "MiaRN.placeHolderList[1022]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[115]" "MiaRN.placeHolderList[1018]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[115]" "MiaRN.placeHolderList[1023]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[116]" "MiaRN.placeHolderList[1019]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[116]" "MiaRN.placeHolderList[1024]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[117]" "MiaRN.placeHolderList[1020]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[117]" "MiaRN.placeHolderList[1025]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[118]" "MiaRN.placeHolderList[1021]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[118]" "MiaRN.placeHolderList[1026]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[119]" "MiaRN.placeHolderList[1022]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[119]" "MiaRN.placeHolderList[1027]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[120]" "MiaRN.placeHolderList[1023]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[120]" "MiaRN.placeHolderList[1028]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[121]" "MiaRN.placeHolderList[1024]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[121]" "MiaRN.placeHolderList[1029]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[122]" "MiaRN.placeHolderList[1025]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[122]" "MiaRN.placeHolderList[1030]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[123]" "MiaRN.placeHolderList[1026]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[123]" "MiaRN.placeHolderList[1031]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[124]" "MiaRN.placeHolderList[1027]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[124]" "MiaRN.placeHolderList[1032]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[125]" "MiaRN.placeHolderList[1028]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[125]" "MiaRN.placeHolderList[1033]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[126]" "MiaRN.placeHolderList[1029]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[126]" "MiaRN.placeHolderList[1034]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[127]" "MiaRN.placeHolderList[1030]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[127]" "MiaRN.placeHolderList[1035]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[128]" "MiaRN.placeHolderList[1031]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[128]" "MiaRN.placeHolderList[1036]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[129]" "MiaRN.placeHolderList[1032]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[129]" "MiaRN.placeHolderList[1037]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[130]" "MiaRN.placeHolderList[1033]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[130]" "MiaRN.placeHolderList[1038]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[131]" "MiaRN.placeHolderList[1034]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[131]" "MiaRN.placeHolderList[1039]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[132]" "MiaRN.placeHolderList[1035]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[132]" "MiaRN.placeHolderList[1040]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[133]" "MiaRN.placeHolderList[1036]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[133]" "MiaRN.placeHolderList[1041]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[134]" "MiaRN.placeHolderList[1037]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[134]" "MiaRN.placeHolderList[1042]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[135]" "MiaRN.placeHolderList[1038]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[135]" "MiaRN.placeHolderList[1043]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[136]" "MiaRN.placeHolderList[1039]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[136]" "MiaRN.placeHolderList[1044]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[137]" "MiaRN.placeHolderList[1040]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[137]" "MiaRN.placeHolderList[1045]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[138]" "MiaRN.placeHolderList[1041]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[138]" "MiaRN.placeHolderList[1046]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[139]" "MiaRN.placeHolderList[1042]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[139]" "MiaRN.placeHolderList[1047]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[140]" "MiaRN.placeHolderList[1043]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[140]" "MiaRN.placeHolderList[1048]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[141]" "MiaRN.placeHolderList[1044]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[141]" "MiaRN.placeHolderList[1049]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[142]" "MiaRN.placeHolderList[1045]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[142]" "MiaRN.placeHolderList[1050]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[143]" "MiaRN.placeHolderList[1046]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[143]" "MiaRN.placeHolderList[1051]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[144]" "MiaRN.placeHolderList[1047]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[144]" "MiaRN.placeHolderList[1052]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[145]" "MiaRN.placeHolderList[1048]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[145]" "MiaRN.placeHolderList[1053]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[146]" "MiaRN.placeHolderList[1049]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[146]" "MiaRN.placeHolderList[1054]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[147]" "MiaRN.placeHolderList[1050]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[147]" "MiaRN.placeHolderList[1055]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[148]" "MiaRN.placeHolderList[1051]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[148]" "MiaRN.placeHolderList[1056]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[149]" "MiaRN.placeHolderList[1052]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[149]" "MiaRN.placeHolderList[1057]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[150]" "MiaRN.placeHolderList[1053]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[150]" "MiaRN.placeHolderList[1058]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[151]" "MiaRN.placeHolderList[1054]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[151]" "MiaRN.placeHolderList[1059]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[152]" "MiaRN.placeHolderList[1055]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[152]" "MiaRN.placeHolderList[1060]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[153]" "MiaRN.placeHolderList[1056]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[153]" "MiaRN.placeHolderList[1061]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[154]" "MiaRN.placeHolderList[1057]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[154]" "MiaRN.placeHolderList[1062]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[155]" "MiaRN.placeHolderList[1058]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[155]" "MiaRN.placeHolderList[1063]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[156]" "MiaRN.placeHolderList[1059]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[156]" "MiaRN.placeHolderList[1064]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[157]" "MiaRN.placeHolderList[1060]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[157]" "MiaRN.placeHolderList[1065]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[158]" "MiaRN.placeHolderList[1061]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[158]" "MiaRN.placeHolderList[1066]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[159]" "MiaRN.placeHolderList[1062]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[159]" "MiaRN.placeHolderList[1067]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[160]" "MiaRN.placeHolderList[1063]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[160]" "MiaRN.placeHolderList[1068]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[161]" "MiaRN.placeHolderList[1064]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[161]" "MiaRN.placeHolderList[1069]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[162]" "MiaRN.placeHolderList[1065]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[162]" "MiaRN.placeHolderList[1070]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[163]" "MiaRN.placeHolderList[1066]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[163]" "MiaRN.placeHolderList[1071]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[164]" "MiaRN.placeHolderList[1067]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[164]" "MiaRN.placeHolderList[1072]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[165]" "MiaRN.placeHolderList[1068]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[165]" "MiaRN.placeHolderList[1073]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[166]" "MiaRN.placeHolderList[1069]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[166]" "MiaRN.placeHolderList[1074]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[167]" "MiaRN.placeHolderList[1070]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[167]" "MiaRN.placeHolderList[1075]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[168]" "MiaRN.placeHolderList[1071]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[168]" "MiaRN.placeHolderList[1076]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[169]" "MiaRN.placeHolderList[1072]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[169]" "MiaRN.placeHolderList[1077]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[170]" "MiaRN.placeHolderList[1073]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[170]" "MiaRN.placeHolderList[1078]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[171]" "MiaRN.placeHolderList[1074]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[171]" "MiaRN.placeHolderList[1079]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[172]" "MiaRN.placeHolderList[1075]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[172]" "MiaRN.placeHolderList[1080]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[173]" "MiaRN.placeHolderList[1076]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[173]" "MiaRN.placeHolderList[1081]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[174]" "MiaRN.placeHolderList[1077]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[174]" "MiaRN.placeHolderList[1082]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[184]" "MiaRN.placeHolderList[1078]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[184]" "MiaRN.placeHolderList[1083]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[185]" "MiaRN.placeHolderList[1079]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[185]" "MiaRN.placeHolderList[1084]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[186]" "MiaRN.placeHolderList[1080]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[186]" "MiaRN.placeHolderList[1085]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[187]" "MiaRN.placeHolderList[1081]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[187]" "MiaRN.placeHolderList[1086]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[188]" "MiaRN.placeHolderList[1082]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[188]" "MiaRN.placeHolderList[1087]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[189]" "MiaRN.placeHolderList[1083]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[189]" "MiaRN.placeHolderList[1088]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[190]" "MiaRN.placeHolderList[1084]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[190]" "MiaRN.placeHolderList[1089]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[191]" "MiaRN.placeHolderList[1085]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[191]" "MiaRN.placeHolderList[1090]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[192]" "MiaRN.placeHolderList[1086]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[192]" "MiaRN.placeHolderList[1091]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[193]" "MiaRN.placeHolderList[1087]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[193]" "MiaRN.placeHolderList[1092]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[194]" "MiaRN.placeHolderList[1088]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[194]" "MiaRN.placeHolderList[1093]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[195]" "MiaRN.placeHolderList[1089]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[195]" "MiaRN.placeHolderList[1094]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[196]" "MiaRN.placeHolderList[1090]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[196]" "MiaRN.placeHolderList[1095]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[197]" "MiaRN.placeHolderList[1091]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[197]" "MiaRN.placeHolderList[1096]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[198]" "MiaRN.placeHolderList[1092]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[198]" "MiaRN.placeHolderList[1097]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[199]" "MiaRN.placeHolderList[1093]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[199]" "MiaRN.placeHolderList[1098]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[200]" "MiaRN.placeHolderList[1094]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[200]" "MiaRN.placeHolderList[1099]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[201]" "MiaRN.placeHolderList[1095]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[201]" "MiaRN.placeHolderList[1100]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[202]" "MiaRN.placeHolderList[1096]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[202]" "MiaRN.placeHolderList[1101]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[203]" "MiaRN.placeHolderList[1097]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[203]" "MiaRN.placeHolderList[1102]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[204]" "MiaRN.placeHolderList[1098]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[204]" "MiaRN.placeHolderList[1103]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[205]" "MiaRN.placeHolderList[1099]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[205]" "MiaRN.placeHolderList[1104]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[206]" "MiaRN.placeHolderList[1100]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[206]" "MiaRN.placeHolderList[1105]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[207]" "MiaRN.placeHolderList[1101]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[207]" "MiaRN.placeHolderList[1106]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[208]" "MiaRN.placeHolderList[1102]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[208]" "MiaRN.placeHolderList[1107]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[209]" "MiaRN.placeHolderList[1103]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[209]" "MiaRN.placeHolderList[1108]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[210]" "MiaRN.placeHolderList[1104]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[210]" "MiaRN.placeHolderList[1109]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[211]" "MiaRN.placeHolderList[1105]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[211]" "MiaRN.placeHolderList[1110]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[212]" "MiaRN.placeHolderList[1106]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[212]" "MiaRN.placeHolderList[1111]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[213]" "MiaRN.placeHolderList[1107]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[213]" "MiaRN.placeHolderList[1112]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[214]" "MiaRN.placeHolderList[1108]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[214]" "MiaRN.placeHolderList[1113]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[215]" "MiaRN.placeHolderList[1109]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[215]" "MiaRN.placeHolderList[1114]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[216]" "MiaRN.placeHolderList[1110]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[216]" "MiaRN.placeHolderList[1115]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[217]" "MiaRN.placeHolderList[1111]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[217]" "MiaRN.placeHolderList[1116]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[218]" "MiaRN.placeHolderList[1112]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[218]" "MiaRN.placeHolderList[1117]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[219]" "MiaRN.placeHolderList[1113]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[219]" "MiaRN.placeHolderList[1118]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[220]" "MiaRN.placeHolderList[1114]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[220]" "MiaRN.placeHolderList[1119]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[221]" "MiaRN.placeHolderList[1115]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[221]" "MiaRN.placeHolderList[1120]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[222]" "MiaRN.placeHolderList[1116]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[222]" "MiaRN.placeHolderList[1121]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[223]" "MiaRN.placeHolderList[1117]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[223]" "MiaRN.placeHolderList[1122]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[224]" "MiaRN.placeHolderList[1118]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[224]" "MiaRN.placeHolderList[1123]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[225]" "MiaRN.placeHolderList[1119]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[225]" "MiaRN.placeHolderList[1124]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[226]" "MiaRN.placeHolderList[1120]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[226]" "MiaRN.placeHolderList[1125]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[227]" "MiaRN.placeHolderList[1121]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[227]" "MiaRN.placeHolderList[1126]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[228]" "MiaRN.placeHolderList[1122]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[228]" "MiaRN.placeHolderList[1127]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[229]" "MiaRN.placeHolderList[1123]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[229]" "MiaRN.placeHolderList[1128]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[230]" "MiaRN.placeHolderList[1124]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[230]" "MiaRN.placeHolderList[1129]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[231]" "MiaRN.placeHolderList[1125]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[231]" "MiaRN.placeHolderList[1130]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[232]" "MiaRN.placeHolderList[1126]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[232]" "MiaRN.placeHolderList[1131]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[233]" "MiaRN.placeHolderList[1127]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[233]" "MiaRN.placeHolderList[1132]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[234]" "MiaRN.placeHolderList[1128]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[234]" "MiaRN.placeHolderList[1133]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[235]" "MiaRN.placeHolderList[1129]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[235]" "MiaRN.placeHolderList[1134]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[236]" "MiaRN.placeHolderList[1130]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[236]" "MiaRN.placeHolderList[1135]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[237]" "MiaRN.placeHolderList[1131]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[237]" "MiaRN.placeHolderList[1136]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[238]" "MiaRN.placeHolderList[1132]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[238]" "MiaRN.placeHolderList[1137]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[239]" "MiaRN.placeHolderList[1133]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[239]" "MiaRN.placeHolderList[1138]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[240]" "MiaRN.placeHolderList[1134]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[240]" "MiaRN.placeHolderList[1139]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[241]" "MiaRN.placeHolderList[1135]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[241]" "MiaRN.placeHolderList[1140]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[242]" "MiaRN.placeHolderList[1136]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[242]" "MiaRN.placeHolderList[1141]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[243]" "MiaRN.placeHolderList[1137]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[243]" "MiaRN.placeHolderList[1142]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[244]" "MiaRN.placeHolderList[1138]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[244]" "MiaRN.placeHolderList[1143]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[245]" "MiaRN.placeHolderList[1139]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[245]" "MiaRN.placeHolderList[1144]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[246]" "MiaRN.placeHolderList[1140]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[246]" "MiaRN.placeHolderList[1145]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[247]" "MiaRN.placeHolderList[1141]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[247]" "MiaRN.placeHolderList[1146]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[248]" "MiaRN.placeHolderList[1142]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[248]" "MiaRN.placeHolderList[1147]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[249]" "MiaRN.placeHolderList[1143]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[249]" "MiaRN.placeHolderList[1148]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[250]" "MiaRN.placeHolderList[1144]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[250]" "MiaRN.placeHolderList[1149]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[251]" "MiaRN.placeHolderList[1145]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[251]" "MiaRN.placeHolderList[1150]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[252]" "MiaRN.placeHolderList[1146]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[252]" "MiaRN.placeHolderList[1151]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[253]" "MiaRN.placeHolderList[1147]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[253]" "MiaRN.placeHolderList[1152]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[254]" "MiaRN.placeHolderList[1148]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[254]" "MiaRN.placeHolderList[1153]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[255]" "MiaRN.placeHolderList[1149]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[255]" "MiaRN.placeHolderList[1154]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[256]" "MiaRN.placeHolderList[1150]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[256]" "MiaRN.placeHolderList[1155]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[257]" "MiaRN.placeHolderList[1151]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[257]" "MiaRN.placeHolderList[1156]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[258]" "MiaRN.placeHolderList[1152]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[258]" "MiaRN.placeHolderList[1157]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[259]" "MiaRN.placeHolderList[1153]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[259]" "MiaRN.placeHolderList[1158]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[260]" "MiaRN.placeHolderList[1154]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[260]" "MiaRN.placeHolderList[1159]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[261]" "MiaRN.placeHolderList[1155]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[261]" "MiaRN.placeHolderList[1160]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[262]" "MiaRN.placeHolderList[1156]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[262]" "MiaRN.placeHolderList[1161]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[263]" "MiaRN.placeHolderList[1157]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[263]" "MiaRN.placeHolderList[1162]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[264]" "MiaRN.placeHolderList[1158]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[264]" "MiaRN.placeHolderList[1163]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[265]" "MiaRN.placeHolderList[1159]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[265]" "MiaRN.placeHolderList[1164]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[266]" "MiaRN.placeHolderList[1160]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[266]" "MiaRN.placeHolderList[1165]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[267]" "MiaRN.placeHolderList[1161]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[267]" "MiaRN.placeHolderList[1166]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[268]" "MiaRN.placeHolderList[1162]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[268]" "MiaRN.placeHolderList[1167]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[269]" "MiaRN.placeHolderList[1163]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[269]" "MiaRN.placeHolderList[1168]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[270]" "MiaRN.placeHolderList[1164]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[270]" "MiaRN.placeHolderList[1169]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[271]" "MiaRN.placeHolderList[1165]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[271]" "MiaRN.placeHolderList[1170]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[272]" "MiaRN.placeHolderList[1166]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[272]" "MiaRN.placeHolderList[1171]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[273]" "MiaRN.placeHolderList[1167]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[273]" "MiaRN.placeHolderList[1172]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[274]" "MiaRN.placeHolderList[1168]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[274]" "MiaRN.placeHolderList[1173]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[275]" "MiaRN.placeHolderList[1169]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[275]" "MiaRN.placeHolderList[1174]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[276]" "MiaRN.placeHolderList[1170]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[276]" "MiaRN.placeHolderList[1175]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[277]" "MiaRN.placeHolderList[1171]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[277]" "MiaRN.placeHolderList[1176]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[278]" "MiaRN.placeHolderList[1172]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[278]" "MiaRN.placeHolderList[1177]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[279]" "MiaRN.placeHolderList[1173]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[279]" "MiaRN.placeHolderList[1178]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[280]" "MiaRN.placeHolderList[1174]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[280]" "MiaRN.placeHolderList[1179]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[281]" "MiaRN.placeHolderList[1175]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[281]" "MiaRN.placeHolderList[1180]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[282]" "MiaRN.placeHolderList[1176]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[282]" "MiaRN.placeHolderList[1181]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[283]" "MiaRN.placeHolderList[1177]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[283]" "MiaRN.placeHolderList[1182]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[284]" "MiaRN.placeHolderList[1178]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[284]" "MiaRN.placeHolderList[1183]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[285]" "MiaRN.placeHolderList[1179]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[285]" "MiaRN.placeHolderList[1184]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[286]" "MiaRN.placeHolderList[1180]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[286]" "MiaRN.placeHolderList[1185]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[287]" "MiaRN.placeHolderList[1181]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[287]" "MiaRN.placeHolderList[1186]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[288]" "MiaRN.placeHolderList[1182]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[288]" "MiaRN.placeHolderList[1187]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[289]" "MiaRN.placeHolderList[1183]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[289]" "MiaRN.placeHolderList[1188]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[290]" "MiaRN.placeHolderList[1184]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[290]" "MiaRN.placeHolderList[1189]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[291]" "MiaRN.placeHolderList[1185]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[291]" "MiaRN.placeHolderList[1190]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[292]" "MiaRN.placeHolderList[1186]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[292]" "MiaRN.placeHolderList[1191]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[293]" "MiaRN.placeHolderList[1187]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[293]" "MiaRN.placeHolderList[1192]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[294]" "MiaRN.placeHolderList[1188]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[294]" "MiaRN.placeHolderList[1193]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[406]" "MiaRN.placeHolderList[1189]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[406]" "MiaRN.placeHolderList[1194]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[407]" "MiaRN.placeHolderList[1190]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[407]" "MiaRN.placeHolderList[1195]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[408]" "MiaRN.placeHolderList[1191]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[408]" "MiaRN.placeHolderList[1196]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[409]" "MiaRN.placeHolderList[1192]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[409]" "MiaRN.placeHolderList[1197]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[410]" "MiaRN.placeHolderList[1193]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[410]" "MiaRN.placeHolderList[1198]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[411]" "MiaRN.placeHolderList[1194]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[411]" "MiaRN.placeHolderList[1199]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[412]" "MiaRN.placeHolderList[1195]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[412]" "MiaRN.placeHolderList[1200]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[413]" "MiaRN.placeHolderList[1196]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[413]" "MiaRN.placeHolderList[1201]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[414]" "MiaRN.placeHolderList[1197]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[414]" "MiaRN.placeHolderList[1202]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[415]" "MiaRN.placeHolderList[1198]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[415]" "MiaRN.placeHolderList[1203]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[416]" "MiaRN.placeHolderList[1199]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[416]" "MiaRN.placeHolderList[1204]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[417]" "MiaRN.placeHolderList[1200]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[417]" "MiaRN.placeHolderList[1205]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[418]" "MiaRN.placeHolderList[1201]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[418]" "MiaRN.placeHolderList[1206]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[419]" "MiaRN.placeHolderList[1202]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[419]" "MiaRN.placeHolderList[1207]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[420]" "MiaRN.placeHolderList[1203]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[420]" "MiaRN.placeHolderList[1208]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[421]" "MiaRN.placeHolderList[1204]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[421]" "MiaRN.placeHolderList[1209]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[422]" "MiaRN.placeHolderList[1205]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[422]" "MiaRN.placeHolderList[1210]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[423]" "MiaRN.placeHolderList[1206]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[423]" "MiaRN.placeHolderList[1211]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[424]" "MiaRN.placeHolderList[1207]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[424]" "MiaRN.placeHolderList[1212]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[425]" "MiaRN.placeHolderList[1208]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[425]" "MiaRN.placeHolderList[1213]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[426]" "MiaRN.placeHolderList[1209]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[426]" "MiaRN.placeHolderList[1214]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[427]" "MiaRN.placeHolderList[1210]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[427]" "MiaRN.placeHolderList[1215]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[428]" "MiaRN.placeHolderList[1211]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[428]" "MiaRN.placeHolderList[1216]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[429]" "MiaRN.placeHolderList[1212]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[429]" "MiaRN.placeHolderList[1217]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[430]" "MiaRN.placeHolderList[1213]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[430]" "MiaRN.placeHolderList[1218]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[431]" "MiaRN.placeHolderList[1214]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[431]" "MiaRN.placeHolderList[1219]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[432]" "MiaRN.placeHolderList[1215]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[432]" "MiaRN.placeHolderList[1220]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[433]" "MiaRN.placeHolderList[1216]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[433]" "MiaRN.placeHolderList[1221]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[434]" "MiaRN.placeHolderList[1217]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[434]" "MiaRN.placeHolderList[1222]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[435]" "MiaRN.placeHolderList[1218]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[435]" "MiaRN.placeHolderList[1223]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[436]" "MiaRN.placeHolderList[1219]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[436]" "MiaRN.placeHolderList[1224]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[437]" "MiaRN.placeHolderList[1220]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[437]" "MiaRN.placeHolderList[1225]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[438]" "MiaRN.placeHolderList[1221]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[438]" "MiaRN.placeHolderList[1226]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[439]" "MiaRN.placeHolderList[1222]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[439]" "MiaRN.placeHolderList[1227]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[440]" "MiaRN.placeHolderList[1223]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[440]" "MiaRN.placeHolderList[1228]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[441]" "MiaRN.placeHolderList[1224]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[441]" "MiaRN.placeHolderList[1229]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[442]" "MiaRN.placeHolderList[1225]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[442]" "MiaRN.placeHolderList[1230]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[443]" "MiaRN.placeHolderList[1226]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[443]" "MiaRN.placeHolderList[1231]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[444]" "MiaRN.placeHolderList[1227]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[444]" "MiaRN.placeHolderList[1232]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[445]" "MiaRN.placeHolderList[1228]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[445]" "MiaRN.placeHolderList[1233]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[446]" "MiaRN.placeHolderList[1229]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[446]" "MiaRN.placeHolderList[1234]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[447]" "MiaRN.placeHolderList[1230]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[447]" "MiaRN.placeHolderList[1235]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[448]" "MiaRN.placeHolderList[1231]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[448]" "MiaRN.placeHolderList[1236]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[449]" "MiaRN.placeHolderList[1232]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[449]" "MiaRN.placeHolderList[1237]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[450]" "MiaRN.placeHolderList[1233]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[450]" "MiaRN.placeHolderList[1238]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[451]" "MiaRN.placeHolderList[1234]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[451]" "MiaRN.placeHolderList[1239]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[452]" "MiaRN.placeHolderList[1235]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[452]" "MiaRN.placeHolderList[1240]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[453]" "MiaRN.placeHolderList[1236]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[453]" "MiaRN.placeHolderList[1241]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[454]" "MiaRN.placeHolderList[1237]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[454]" "MiaRN.placeHolderList[1242]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[455]" "MiaRN.placeHolderList[1238]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[455]" "MiaRN.placeHolderList[1243]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[456]" "MiaRN.placeHolderList[1239]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[456]" "MiaRN.placeHolderList[1244]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[457]" "MiaRN.placeHolderList[1240]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[457]" "MiaRN.placeHolderList[1245]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[458]" "MiaRN.placeHolderList[1241]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[458]" "MiaRN.placeHolderList[1246]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[459]" "MiaRN.placeHolderList[1242]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[459]" "MiaRN.placeHolderList[1247]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[466]" "MiaRN.placeHolderList[1243]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[466]" "MiaRN.placeHolderList[1248]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[467]" "MiaRN.placeHolderList[1244]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[467]" "MiaRN.placeHolderList[1249]" 
 		""
-		5 4 "MiaRN" "Mia:All_Controls.angularValues[468]" "MiaRN.placeHolderList[1245]" 
+		5 4 "MiaRN" "Mia:All_Controls.angularValues[468]" "MiaRN.placeHolderList[1250]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -7970,7 +7932,7 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|tiktok_camera|tiktok_cameraShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n"
 		+ "            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n"
-		+ "            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 245\n            -height 705\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side|sideShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n"
@@ -7980,7 +7942,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp|perspShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1073\n            -height 705\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1276\n            -height 705\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
 		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n"
 		+ "            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n"
@@ -7995,25 +7957,25 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
 		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
-		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n"
-		+ "                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp|perspShape\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n"
-		+ "                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n"
-		+ "                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n"
-		+ "\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1073\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1073\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n"
+		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
+		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
+		+ "                -extendToShapes 1\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp|perspShape\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
+		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
+		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
+		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n"
+		+ "                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1276\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1276\\n    -height 705\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 10 -size 36 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "B89EFDB1-40B4-E454-7879-EB82B46F9B39";
-	setAttr ".b" -type "string" "playbackOptions -min 3 -max 800 -ast 1 -aet 800 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 344 -ast 1 -aet 800 ";
 	setAttr ".st" 6;
 createNode reference -n "sharedReferenceNode";
 	rename -uid "83D821D8-4674-357C-23D1-7BAE41E623E1";
@@ -8050,7 +8012,7 @@ createNode renderLayer -n "books_and_boxes_props:defaultRenderLayer";
 createNode reference -n "books_and_boxes_propsRN";
 	rename -uid "5C6EBC52-4305-B3AE-539F-AA9001A938CA";
 	setAttr ".fn[0]" -type "string" "C:/Users/caris/Desktop/Junior-Projects/Maya//books and boxes props.ma";
-	setAttr -s 231 ".phl";
+	setAttr -s 80 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -8131,157 +8093,6 @@ createNode reference -n "books_and_boxes_propsRN";
 	setAttr ".phl[78]" 0;
 	setAttr ".phl[79]" 0;
 	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
-	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
-	setAttr ".phl[200]" 0;
-	setAttr ".phl[201]" 0;
-	setAttr ".phl[202]" 0;
-	setAttr ".phl[203]" 0;
-	setAttr ".phl[204]" 0;
-	setAttr ".phl[205]" 0;
-	setAttr ".phl[206]" 0;
-	setAttr ".phl[207]" 0;
-	setAttr ".phl[208]" 0;
-	setAttr ".phl[209]" 0;
-	setAttr ".phl[210]" 0;
-	setAttr ".phl[211]" 0;
-	setAttr ".phl[212]" 0;
-	setAttr ".phl[213]" 0;
-	setAttr ".phl[214]" 0;
-	setAttr ".phl[215]" 0;
-	setAttr ".phl[216]" 0;
-	setAttr ".phl[217]" 0;
-	setAttr ".phl[218]" 0;
-	setAttr ".phl[219]" 0;
-	setAttr ".phl[220]" 0;
-	setAttr ".phl[221]" 0;
-	setAttr ".phl[222]" 0;
-	setAttr ".phl[223]" 0;
-	setAttr ".phl[224]" 0;
-	setAttr ".phl[225]" 0;
-	setAttr ".phl[226]" 0;
-	setAttr ".phl[227]" 0;
-	setAttr ".phl[228]" 0;
-	setAttr ".phl[229]" 0;
-	setAttr ".phl[230]" 0;
-	setAttr ".phl[231]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"books_and_boxes_propsRN"
 		"books_and_boxes_propsRN" 9
@@ -8303,45 +8114,39 @@ createNode reference -n "books_and_boxes_propsRN";
 		"FollowTranslate" " -av -k 1 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_5_ctrl_grp|books_and_boxes_props1:book_5_offset_ctrl_grp7|books_and_boxes_props1:book_5_ctrl" 
 		"FollowRotate" " -av -k 1 1"
-		"books_and_boxes_propsRN" 259
+		"books_and_boxes_propsRN" 108
 		0 "|books_and_boxes_propsRNfosterParent1|MASTER_ctrl_grp_parentConstraint1" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp" 
 		"-s -r "
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes" "visibility" " 1"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"translateX" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"translateY" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"translateZ" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"rotateX" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"rotateY" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl" 
-		"rotateZ" " -av"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:Auto_FK_bounce_ctrl_grp|books_and_boxes_props1:Auto_FK_bounce_ctrl" 
-		"AutoFK" " -av -k 1 1"
+		"AutoFK" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_offset_ctrl_grp6|books_and_boxes_props1:box_1_ctrl" 
+		"FollowTranslate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_offset_ctrl_grp6|books_and_boxes_props1:box_1_ctrl" 
+		"FollowRotate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_offset_ctrl_grp6|books_and_boxes_props1:box_1_ctrl" 
+		"AutoFK" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_offset_ctrl_grp1|books_and_boxes_props1:box_2_ctrl" 
+		"FollowTranslate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_offset_ctrl_grp1|books_and_boxes_props1:box_2_ctrl" 
+		"FollowRotate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_offset_ctrl_grp2|books_and_boxes_props1:book_1_ctrl" 
+		"FollowTranslate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_offset_ctrl_grp2|books_and_boxes_props1:book_1_ctrl" 
+		"FollowRotate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp|books_and_boxes_props1:book_2_ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"FollowTranslate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp|books_and_boxes_props1:book_2_ctrl" 
-		"rotateZ" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp|books_and_boxes_props1:book_2_ctrl" 
-		"rotateY" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp|books_and_boxes_props1:book_2_ctrl" 
-		"rotateX" " -av"
+		"FollowRotate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_offset_ctrl_grp4|books_and_boxes_props1:book_3_ctrl" 
+		"FollowTranslate" " -k 1"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_offset_ctrl_grp4|books_and_boxes_props1:book_3_ctrl" 
+		"FollowRotate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5|books_and_boxes_props1:book_4_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"FollowTranslate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5|books_and_boxes_props1:book_4_ctrl" 
-		"translateX" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5|books_and_boxes_props1:book_4_ctrl" 
-		"translateY" " -av"
-		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5|books_and_boxes_props1:book_4_ctrl" 
-		"translateZ" " -av"
+		"FollowRotate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl" 
@@ -8350,10 +8155,15 @@ createNode reference -n "books_and_boxes_propsRN";
 		"FollowTranslate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl" 
 		"FollowRotate" " -k 1"
-		2 "books_and_boxes_props1:AllControls" "lv[1:33]" " -s 33 0 0 0 0 0 0 13.60254092519868507 -99.41880335221881637 76.58461482170136492 7.42519035252785198 14.19482171682187577 -4.27163095240438651 -1.77180094847316272 -0.78038701674967448 0 0.7163411268534513 -3.90128034937834478 -0.72756710206289987 0 0 0 0 0.70912830546923533 0 0 -0.87854738347000361 0 0 1.33215602040279979 0 0 0 0"
+		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl" 
+		"FollowAutoFK" " -k 1"
+		2 "books_and_boxes_props1:AllControls" "uv[1:60]" " -s 60 1 1 1 1 1 1 1 1 4.16795529172351742 4.16795529172351742 4.16795529172351742 1 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+		
+		2 "books_and_boxes_props1:AllControls" "unitlessValues" " -s 60"
+		2 "books_and_boxes_props1:AllControls" "lv[1:33]" " -s 33 0 0 0 0 0 0 -3.36781889732406725 -97.29053956027176753 88.14100744262015041 0 -6.20155217741114129 -4.27163095240438651 0 -0.78038701674967736 0 0.10144908642796019 -4.7612483218867574 -0.10040922249580236 0 0 0 0 0.70912830546923533 0 0 -0.87854738347000361 0 0 1.33215602040279979 0 0 0 0"
 		
 		2 "books_and_boxes_props1:AllControls" "linearValues" " -s 33"
-		2 "books_and_boxes_props1:AllControls" "av[1:33]" " -s 33 0 0 0 0 0 0 13.26702317929752262 -1.62158100657587578 1.6349516545010685 0 0 66.9325375293812499 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "books_and_boxes_props1:AllControls" "av[1:33]" " -s 33 0 0 0 0 0 0 -9.23972560327217529 0 0 0 0 0 0 0 0 -1.06880792178742956 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "books_and_boxes_props1:AllControls" "angularValues" " -s 33"
 		2 "books_and_boxes_props1:AllControls" "referenceMapping" (" -type \"characterMapping\" 126 \"books_and_boxes_props1:L_hand_ctrl.scaleZ\" 0 1 \"books_and_boxes_props1:L_hand_ctrl.scaleY\" 0 2 \"books_and_boxes_props1:L_hand_ctrl.scaleX\" 0 3 \"books_and_boxes_props1:L_hand_ctrl.rotateZ\" 2 1 \"books_and_boxes_props1:L_hand_ctrl.rotateY\" 2 2 \"books_and_boxes_props1:L_hand_ctrl.rotateX\" 2 3 \"books_and_boxes_props1:L_hand_ctrl.translateZ\" 1 1 \"books_and_boxes_props1:L_hand_ctrl.translateY\" 1 2 \"books_and_boxes_props1:L_hand_ctrl.translateX\" 1 3 \"books_and_boxes_props1:L_hand_ctrl.visibility\" 0 4 \"books_and_boxes_props1:R_hand_ctrl.scaleZ\" 0 5 \"books_and_boxes_props1:R_hand_ctrl.scaleY\" 0 6 \"books_and_boxes_props1:R_hand_ctrl.scaleX\" 0 7 \"books_and_boxes_props1:R_hand_ctrl.rotateZ\" 2 4 \"books_and_boxes_props1:R_hand_ctrl.rotateY\" 2 5 \"books_and_boxes_props1:R_hand_ctrl.rotateX\" 2 6 \"books_and_boxes_props1:R_hand_ctrl.translateZ\" 1 4 \"books_and_boxes_props1:R_hand_ctrl.translateY\" 1 5 \"books_and_boxes_props1:R_hand_ctrl.translateX\" 1 6 \"books_and_boxes_props1:R_hand_ctrl.visibility\" "
@@ -8376,468 +8186,166 @@ createNode reference -n "books_and_boxes_propsRN";
 		""
 		3 "books_and_boxes_props1:AllControls.angularValues[7]" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateZ" 
 		""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes.message" 
-		"books_and_boxes_propsRN.placeHolderList[1]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo.message" 
-		"books_and_boxes_propsRN.placeHolderList[2]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_1.message" 
-		"books_and_boxes_propsRN.placeHolderList[3]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_1|books_and_boxes_props1:box_Shape1.message" 
-		"books_and_boxes_propsRN.placeHolderList[4]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_1|books_and_boxes_props1:box_1_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[5]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_1|books_and_boxes_props1:box_1_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[6]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_2.message" 
-		"books_and_boxes_propsRN.placeHolderList[7]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_2|books_and_boxes_props1:box_Shape2.message" 
-		"books_and_boxes_propsRN.placeHolderList[8]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_2|books_and_boxes_props1:box_2_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[9]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:box_2|books_and_boxes_props1:box_2_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[10]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_4.message" 
-		"books_and_boxes_propsRN.placeHolderList[11]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_4|books_and_boxes_props1:book_4Shape.message" 
-		"books_and_boxes_propsRN.placeHolderList[12]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_4|books_and_boxes_props1:book_4_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[13]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_4|books_and_boxes_props1:book_4_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[14]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_2.message" 
-		"books_and_boxes_propsRN.placeHolderList[15]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_2|books_and_boxes_props1:book_Shape2.message" 
-		"books_and_boxes_propsRN.placeHolderList[16]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_2|books_and_boxes_props1:book_2_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[17]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_2|books_and_boxes_props1:book_2_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[18]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_1.message" 
-		"books_and_boxes_propsRN.placeHolderList[19]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_1|books_and_boxes_props1:book_Shape1.message" 
-		"books_and_boxes_propsRN.placeHolderList[20]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_1|books_and_boxes_props1:polySurfaceShape2.message" 
-		"books_and_boxes_propsRN.placeHolderList[21]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_1|books_and_boxes_props1:book_1_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[22]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_1|books_and_boxes_props1:book_1_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[23]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_3.message" 
-		"books_and_boxes_propsRN.placeHolderList[24]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_3|books_and_boxes_props1:book_Shape3.message" 
-		"books_and_boxes_propsRN.placeHolderList[25]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_3|books_and_boxes_props1:polySurfaceShape1.message" 
-		"books_and_boxes_propsRN.placeHolderList[26]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_3|books_and_boxes_props1:book_3_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[27]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_3|books_and_boxes_props1:book_3_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[28]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_5.message" 
-		"books_and_boxes_propsRN.placeHolderList[29]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_5|books_and_boxes_props1:book_5Shape.message" 
-		"books_and_boxes_propsRN.placeHolderList[30]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_5|books_and_boxes_props1:book_5_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[31]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_5|books_and_boxes_props1:book_5_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[32]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls.message" 
-		"books_and_boxes_propsRN.placeHolderList[33]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateX" 
-		"books_and_boxes_propsRN.placeHolderList[34]" ""
+		"books_and_boxes_propsRN.placeHolderList[1]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateY" 
-		"books_and_boxes_propsRN.placeHolderList[35]" ""
+		"books_and_boxes_propsRN.placeHolderList[2]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateZ" 
-		"books_and_boxes_propsRN.placeHolderList[36]" ""
+		"books_and_boxes_propsRN.placeHolderList[3]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateX" 
-		"books_and_boxes_propsRN.placeHolderList[37]" ""
+		"books_and_boxes_propsRN.placeHolderList[4]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateY" 
-		"books_and_boxes_propsRN.placeHolderList[38]" ""
+		"books_and_boxes_propsRN.placeHolderList[5]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateZ" 
-		"books_and_boxes_propsRN.placeHolderList[39]" ""
+		"books_and_boxes_propsRN.placeHolderList[6]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateOrder" 
-		"books_and_boxes_propsRN.placeHolderList[40]" ""
+		"books_and_boxes_propsRN.placeHolderList[7]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.parentInverseMatrix" 
-		"books_and_boxes_propsRN.placeHolderList[41]" ""
+		"books_and_boxes_propsRN.placeHolderList[8]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotatePivot" 
-		"books_and_boxes_propsRN.placeHolderList[42]" ""
+		"books_and_boxes_propsRN.placeHolderList[9]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotatePivotTranslate" 
-		"books_and_boxes_propsRN.placeHolderList[43]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[44]" ""
+		"books_and_boxes_propsRN.placeHolderList[10]" ""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[7]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateZ" 
-		"books_and_boxes_propsRN.placeHolderList[45]" "books_and_boxes_propsRN.placeHolderList[46]" 
+		"books_and_boxes_propsRN.placeHolderList[11]" "books_and_boxes_propsRN.placeHolderList[12]" 
 		"books_and_boxes_props1:MASTER_ctrl.tz"
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[8]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateY" 
-		"books_and_boxes_propsRN.placeHolderList[47]" "books_and_boxes_propsRN.placeHolderList[48]" 
+		"books_and_boxes_propsRN.placeHolderList[13]" "books_and_boxes_propsRN.placeHolderList[14]" 
 		"books_and_boxes_props1:MASTER_ctrl.ty"
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[9]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateX" 
-		"books_and_boxes_propsRN.placeHolderList[49]" "books_and_boxes_propsRN.placeHolderList[50]" 
+		"books_and_boxes_propsRN.placeHolderList[15]" "books_and_boxes_propsRN.placeHolderList[16]" 
 		"books_and_boxes_props1:MASTER_ctrl.tx"
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[7]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateZ" 
-		"books_and_boxes_propsRN.placeHolderList[51]" "books_and_boxes_propsRN.placeHolderList[52]" 
+		"books_and_boxes_propsRN.placeHolderList[17]" "books_and_boxes_propsRN.placeHolderList[18]" 
 		"books_and_boxes_props1:MASTER_ctrl.rz"
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[8]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateY" 
-		"books_and_boxes_propsRN.placeHolderList[53]" "books_and_boxes_propsRN.placeHolderList[54]" 
+		"books_and_boxes_propsRN.placeHolderList[19]" "books_and_boxes_propsRN.placeHolderList[20]" 
 		"books_and_boxes_props1:MASTER_ctrl.ry"
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[9]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateX" 
-		"books_and_boxes_propsRN.placeHolderList[55]" "books_and_boxes_propsRN.placeHolderList[56]" 
+		"books_and_boxes_propsRN.placeHolderList[21]" "books_and_boxes_propsRN.placeHolderList[22]" 
 		"books_and_boxes_props1:MASTER_ctrl.rx"
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[57]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:MASTER_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[58]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[59]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.translate" 
-		"books_and_boxes_propsRN.placeHolderList[60]" ""
+		"books_and_boxes_propsRN.placeHolderList[23]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotate" 
-		"books_and_boxes_propsRN.placeHolderList[61]" ""
+		"books_and_boxes_propsRN.placeHolderList[24]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.scale" 
-		"books_and_boxes_propsRN.placeHolderList[62]" ""
+		"books_and_boxes_propsRN.placeHolderList[25]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.parentMatrix" 
-		"books_and_boxes_propsRN.placeHolderList[63]" ""
+		"books_and_boxes_propsRN.placeHolderList[26]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotatePivot" 
-		"books_and_boxes_propsRN.placeHolderList[64]" ""
+		"books_and_boxes_propsRN.placeHolderList[27]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotatePivotTranslate" 
-		"books_and_boxes_propsRN.placeHolderList[65]" ""
+		"books_and_boxes_propsRN.placeHolderList[28]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotateOrder" 
-		"books_and_boxes_propsRN.placeHolderList[66]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[67]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl|books_and_boxes_props1:L_hand_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[68]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[69]" ""
+		"books_and_boxes_propsRN.placeHolderList[29]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.translate" 
-		"books_and_boxes_propsRN.placeHolderList[70]" ""
+		"books_and_boxes_propsRN.placeHolderList[30]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotate" 
-		"books_and_boxes_propsRN.placeHolderList[71]" ""
+		"books_and_boxes_propsRN.placeHolderList[31]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.scale" 
-		"books_and_boxes_propsRN.placeHolderList[72]" ""
+		"books_and_boxes_propsRN.placeHolderList[32]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.parentMatrix" 
-		"books_and_boxes_propsRN.placeHolderList[73]" ""
+		"books_and_boxes_propsRN.placeHolderList[33]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotatePivot" 
-		"books_and_boxes_propsRN.placeHolderList[74]" ""
+		"books_and_boxes_propsRN.placeHolderList[34]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotatePivotTranslate" 
-		"books_and_boxes_propsRN.placeHolderList[75]" ""
+		"books_and_boxes_propsRN.placeHolderList[35]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotateOrder" 
-		"books_and_boxes_propsRN.placeHolderList[76]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[77]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl|books_and_boxes_props1:R_hand_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[78]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:Auto_FK_bounce_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[79]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:Auto_FK_bounce_ctrl_grp|books_and_boxes_props1:Auto_FK_bounce_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[80]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:Auto_FK_bounce_ctrl_grp|books_and_boxes_props1:Auto_FK_bounce_ctrl|books_and_boxes_props1:Auto_FK_bounce_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[81]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[82]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_offset_ctrl_grp6.message" 
-		"books_and_boxes_propsRN.placeHolderList[83]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_offset_ctrl_grp6|books_and_boxes_props1:box_1_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[84]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_offset_ctrl_grp6|books_and_boxes_props1:box_1_ctrl|books_and_boxes_props1:box_1_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[85]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_ctrl_grp_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[86]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[87]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_1_ctrl_grp|books_and_boxes_props1:box_1_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[88]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[89]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_offset_ctrl_grp1.message" 
-		"books_and_boxes_propsRN.placeHolderList[90]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_offset_ctrl_grp1|books_and_boxes_props1:box_2_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[91]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_offset_ctrl_grp1|books_and_boxes_props1:box_2_ctrl|books_and_boxes_props1:box_2_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[92]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_ctrl_grp_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[93]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[94]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:box_2_ctrl_grp|books_and_boxes_props1:box_2_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[95]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[96]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_offset_ctrl_grp2.message" 
-		"books_and_boxes_propsRN.placeHolderList[97]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_offset_ctrl_grp2|books_and_boxes_props1:book_1_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[98]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_offset_ctrl_grp2|books_and_boxes_props1:book_1_ctrl|books_and_boxes_props1:book_1_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[99]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_ctrl_grp_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[100]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[101]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_1_ctrl_grp|books_and_boxes_props1:book_1_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[102]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[103]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[104]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp|books_and_boxes_props1:book_2_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[105]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_offset_ctrl_grp|books_and_boxes_props1:book_2_ctrl|books_and_boxes_props1:book_2_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[106]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:offset_ctrl_grp3.message" 
-		"books_and_boxes_propsRN.placeHolderList[107]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[108]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_2_ctrl_grp|books_and_boxes_props1:book_2_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[109]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[110]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_offset_ctrl_grp4.message" 
-		"books_and_boxes_propsRN.placeHolderList[111]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_offset_ctrl_grp4|books_and_boxes_props1:book_3_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[112]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_offset_ctrl_grp4|books_and_boxes_props1:book_3_ctrl|books_and_boxes_props1:book_3_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[113]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_ctrl_grp_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[114]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[115]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_3_ctrl_grp|books_and_boxes_props1:book_3_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[116]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[117]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5.message" 
-		"books_and_boxes_propsRN.placeHolderList[118]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5|books_and_boxes_props1:book_4_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[119]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_offset_ctrl_grp5|books_and_boxes_props1:book_4_ctrl|books_and_boxes_props1:book_4_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[120]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_ctrl_grp_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[121]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[122]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:book_4_ctrl_grp|books_and_boxes_props1:book_4_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[123]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp.message" 
-		"books_and_boxes_propsRN.placeHolderList[124]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7.message" 
-		"books_and_boxes_propsRN.placeHolderList[125]" ""
+		"books_and_boxes_propsRN.placeHolderList[36]" ""
 		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl.FollowAutoFK" 
-		"books_and_boxes_propsRN.placeHolderList[126]" ""
+		"books_and_boxes_propsRN.placeHolderList[37]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl.message" 
-		"books_and_boxes_propsRN.placeHolderList[127]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl|books_and_boxes_props1:detachable_book_ctrlShape.message" 
-		"books_and_boxes_propsRN.placeHolderList[128]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:book_5_ctrl_grp_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[129]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:book_5_ctrl_grp_parentConstraint2.message" 
-		"books_and_boxes_propsRN.placeHolderList[130]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:book_5_ctrl_grp_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[131]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig.message" 
-		"books_and_boxes_propsRN.placeHolderList[132]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER.message" 
-		"books_and_boxes_propsRN.placeHolderList[133]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[134]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[135]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[136]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[137]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[138]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_4_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[139]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_4_jnt|books_and_boxes_props1:detachable_book_jnt.message" 
-		"books_and_boxes_propsRN.placeHolderList[140]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_4_jnt|books_and_boxes_props1:detachable_book_jnt|books_and_boxes_props1:book_5_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[141]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_4_jnt|books_and_boxes_props1:detachable_book_jnt|books_and_boxes_props1:book_5_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[142]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_4_jnt|books_and_boxes_props1:book_4_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[143]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_4_jnt|books_and_boxes_props1:book_4_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[144]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_3_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[145]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_3_jnt|books_and_boxes_props1:book_3_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[146]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_2_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[147]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_2_jnt|books_and_boxes_props1:book_2_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[148]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_1_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[149]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:book_1_jnt|books_and_boxes_props1:book_1_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[150]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:box_2_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[151]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_2_jnt|books_and_boxes_props1:box_2_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[152]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_1_jnt_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[153]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:box_1_jnt|books_and_boxes_props1:box_1_jnt_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[154]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:COG_parentConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[155]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:rig|books_and_boxes_props1:MASTER|books_and_boxes_props1:COG_scaleConstraint1.message" 
-		"books_and_boxes_propsRN.placeHolderList[156]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:shapeEditorManager.message" 
-		"books_and_boxes_propsRN.placeHolderList[157]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:poseInterpolatorManager.message" 
-		"books_and_boxes_propsRN.placeHolderList[158]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:layerManager.message" 
-		"books_and_boxes_propsRN.placeHolderList[159]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:defaultLayer.message" 
-		"books_and_boxes_propsRN.placeHolderList[160]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:uiConfigurationScriptNode.message" 
-		"books_and_boxes_propsRN.placeHolderList[161]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:sceneConfigurationScriptNode.message" 
-		"books_and_boxes_propsRN.placeHolderList[162]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:makeNurbCircle1.message" 
-		"books_and_boxes_propsRN.placeHolderList[163]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:transformGeometry1.message" 
-		"books_and_boxes_propsRN.placeHolderList[164]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:multiplyDivideRotate.message" 
-		"books_and_boxes_propsRN.placeHolderList[165]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion1.message" 
-		"books_and_boxes_propsRN.placeHolderList[166]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:multiplyDivideTranslate.message" 
-		"books_and_boxes_propsRN.placeHolderList[167]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion2.message" 
-		"books_and_boxes_propsRN.placeHolderList[168]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion3.message" 
-		"books_and_boxes_propsRN.placeHolderList[169]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion4.message" 
-		"books_and_boxes_propsRN.placeHolderList[170]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion5.message" 
-		"books_and_boxes_propsRN.placeHolderList[171]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion6.message" 
-		"books_and_boxes_propsRN.placeHolderList[172]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion7.message" 
-		"books_and_boxes_propsRN.placeHolderList[173]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:pasted__multiplyDivideTranslate.message" 
-		"books_and_boxes_propsRN.placeHolderList[174]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:pasted__multiplyDivideRotate.message" 
-		"books_and_boxes_propsRN.placeHolderList[175]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion8.message" 
-		"books_and_boxes_propsRN.placeHolderList[176]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion9.message" 
-		"books_and_boxes_propsRN.placeHolderList[177]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion10.message" 
-		"books_and_boxes_propsRN.placeHolderList[178]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion11.message" 
-		"books_and_boxes_propsRN.placeHolderList[179]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion12.message" 
-		"books_and_boxes_propsRN.placeHolderList[180]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:multiplyDivide1.message" 
-		"books_and_boxes_propsRN.placeHolderList[181]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion14.message" 
-		"books_and_boxes_propsRN.placeHolderList[182]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion13.message" 
-		"books_and_boxes_propsRN.placeHolderList[183]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:makeNurbCircle2.message" 
-		"books_and_boxes_propsRN.placeHolderList[184]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion15.message" 
-		"books_and_boxes_propsRN.placeHolderList[185]" ""
+		"books_and_boxes_propsRN.placeHolderList[38]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[4]" 
-		"books_and_boxes_propsRN.placeHolderList[186]" ""
+		"books_and_boxes_propsRN.placeHolderList[39]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[5]" 
-		"books_and_boxes_propsRN.placeHolderList[187]" ""
+		"books_and_boxes_propsRN.placeHolderList[40]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[6]" 
-		"books_and_boxes_propsRN.placeHolderList[188]" ""
+		"books_and_boxes_propsRN.placeHolderList[41]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[7]" 
-		"books_and_boxes_propsRN.placeHolderList[189]" ""
+		"books_and_boxes_propsRN.placeHolderList[42]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[8]" 
-		"books_and_boxes_propsRN.placeHolderList[190]" ""
+		"books_and_boxes_propsRN.placeHolderList[43]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[9]" 
-		"books_and_boxes_propsRN.placeHolderList[191]" ""
+		"books_and_boxes_propsRN.placeHolderList[44]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[10]" 
-		"books_and_boxes_propsRN.placeHolderList[192]" ""
+		"books_and_boxes_propsRN.placeHolderList[45]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[11]" 
-		"books_and_boxes_propsRN.placeHolderList[193]" ""
+		"books_and_boxes_propsRN.placeHolderList[46]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[12]" 
-		"books_and_boxes_propsRN.placeHolderList[194]" ""
+		"books_and_boxes_propsRN.placeHolderList[47]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[13]" 
-		"books_and_boxes_propsRN.placeHolderList[195]" ""
+		"books_and_boxes_propsRN.placeHolderList[48]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[14]" 
-		"books_and_boxes_propsRN.placeHolderList[196]" ""
+		"books_and_boxes_propsRN.placeHolderList[49]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[15]" 
-		"books_and_boxes_propsRN.placeHolderList[197]" ""
+		"books_and_boxes_propsRN.placeHolderList[50]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[16]" 
-		"books_and_boxes_propsRN.placeHolderList[198]" ""
+		"books_and_boxes_propsRN.placeHolderList[51]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[17]" 
-		"books_and_boxes_propsRN.placeHolderList[199]" ""
+		"books_and_boxes_propsRN.placeHolderList[52]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[18]" 
-		"books_and_boxes_propsRN.placeHolderList[200]" ""
+		"books_and_boxes_propsRN.placeHolderList[53]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[22]" 
-		"books_and_boxes_propsRN.placeHolderList[201]" ""
+		"books_and_boxes_propsRN.placeHolderList[54]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[23]" 
-		"books_and_boxes_propsRN.placeHolderList[202]" ""
+		"books_and_boxes_propsRN.placeHolderList[55]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[24]" 
-		"books_and_boxes_propsRN.placeHolderList[203]" ""
+		"books_and_boxes_propsRN.placeHolderList[56]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[25]" 
-		"books_and_boxes_propsRN.placeHolderList[204]" ""
+		"books_and_boxes_propsRN.placeHolderList[57]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[26]" 
-		"books_and_boxes_propsRN.placeHolderList[205]" ""
+		"books_and_boxes_propsRN.placeHolderList[58]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[27]" 
-		"books_and_boxes_propsRN.placeHolderList[206]" ""
+		"books_and_boxes_propsRN.placeHolderList[59]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[28]" 
-		"books_and_boxes_propsRN.placeHolderList[207]" ""
+		"books_and_boxes_propsRN.placeHolderList[60]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[29]" 
-		"books_and_boxes_propsRN.placeHolderList[208]" ""
+		"books_and_boxes_propsRN.placeHolderList[61]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[30]" 
-		"books_and_boxes_propsRN.placeHolderList[209]" ""
+		"books_and_boxes_propsRN.placeHolderList[62]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[4]" 
-		"books_and_boxes_propsRN.placeHolderList[210]" ""
+		"books_and_boxes_propsRN.placeHolderList[63]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[5]" 
-		"books_and_boxes_propsRN.placeHolderList[211]" ""
+		"books_and_boxes_propsRN.placeHolderList[64]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[6]" 
-		"books_and_boxes_propsRN.placeHolderList[212]" ""
+		"books_and_boxes_propsRN.placeHolderList[65]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[7]" 
-		"books_and_boxes_propsRN.placeHolderList[213]" ""
+		"books_and_boxes_propsRN.placeHolderList[66]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[8]" 
-		"books_and_boxes_propsRN.placeHolderList[214]" ""
+		"books_and_boxes_propsRN.placeHolderList[67]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[9]" 
-		"books_and_boxes_propsRN.placeHolderList[215]" ""
+		"books_and_boxes_propsRN.placeHolderList[68]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[10]" 
-		"books_and_boxes_propsRN.placeHolderList[216]" ""
+		"books_and_boxes_propsRN.placeHolderList[69]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[11]" 
-		"books_and_boxes_propsRN.placeHolderList[217]" ""
+		"books_and_boxes_propsRN.placeHolderList[70]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[12]" 
-		"books_and_boxes_propsRN.placeHolderList[218]" ""
+		"books_and_boxes_propsRN.placeHolderList[71]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[16]" 
-		"books_and_boxes_propsRN.placeHolderList[219]" ""
+		"books_and_boxes_propsRN.placeHolderList[72]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[17]" 
-		"books_and_boxes_propsRN.placeHolderList[220]" ""
+		"books_and_boxes_propsRN.placeHolderList[73]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[18]" 
-		"books_and_boxes_propsRN.placeHolderList[221]" ""
+		"books_and_boxes_propsRN.placeHolderList[74]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[9]" 
-		"books_and_boxes_propsRN.placeHolderList[222]" ""
+		"books_and_boxes_propsRN.placeHolderList[75]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[10]" 
-		"books_and_boxes_propsRN.placeHolderList[223]" ""
+		"books_and_boxes_propsRN.placeHolderList[76]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[11]" 
-		"books_and_boxes_propsRN.placeHolderList[224]" ""
+		"books_and_boxes_propsRN.placeHolderList[77]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[12]" 
-		"books_and_boxes_propsRN.placeHolderList[225]" ""
+		"books_and_boxes_propsRN.placeHolderList[78]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[13]" 
-		"books_and_boxes_propsRN.placeHolderList[226]" ""
+		"books_and_boxes_propsRN.placeHolderList[79]" ""
 		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[14]" 
-		"books_and_boxes_propsRN.placeHolderList[227]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.message" 
-		"books_and_boxes_propsRN.placeHolderList[228]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:multiplyDivideautorotate.message" 
-		"books_and_boxes_propsRN.placeHolderList[229]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:unitConversion16.message" 
-		"books_and_boxes_propsRN.placeHolderList[230]" ""
-		5 3 "books_and_boxes_propsRN" "books_and_boxes_props1:multiplyDivideautoTranslate1.message" 
-		"books_and_boxes_propsRN.placeHolderList[231]" "";
+		"books_and_boxes_propsRN.placeHolderList[80]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode audio -n "Nintendo_Wii___Mii_Channel_Theme";
@@ -8959,89 +8467,90 @@ createNode animCurveTL -n "All_Controls_cog_ctrl_translateX";
 	rename -uid "F17656B9-47D1-88AA-09C6-7AB57AC7B337";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 34 ".ktv[0:33]"  1 0 33 0 37 0 50 0 62 0 101 0 140 0 200 -9.5513896529909835e-16
-		 204 -9.6598745725064325e-16 220 -1.2036266955170885 240 8.5810145337968056 260 10.589849842059053
-		 280 9.8039459016916357 300 8.9688736304241221 320 6.1488168134238697 340 24.17580101389332
-		 360 35.329077605083874 380 30.666812427899675 400 31.532337361269903 420 18.575569266739844
-		 460 19.372491844260693 480 27.107321784203101 500 28.477973522145927 520 24.017009359183131
-		 540 39.367877747385158 560 30.967857261328664 580 30.532458093107568 600 27.690714908332094
-		 620 40.12827535553771 640 34.78156492729557 660 28.625158649209766 680 15.940759833578751
-		 700 9.7490293518236779 720 -16.799699763081851;
-	setAttr -s 34 ".kit[0:33]"  18 18 18 18 18 18 18 18 
-		18 18 18 18 3 3 3 3 3 3 3 3 3 3 3 3 3 
-		3 3 3 3 3 3 3 3 3;
-	setAttr -s 34 ".kot[0:33]"  18 18 18 18 18 18 18 5 
+	setAttr -s 35 ".ktv[0:34]"  1 0 33 0 37 0 50 0 62 0 101 0 140 0 200 -9.5513896529909835e-16
+		 204 -9.6598745725064325e-16 220 -1.2036266955170885 230 -2.16059352036469 240 8.5810145337968056
+		 260 10.589849842059053 270 9.8039459016916357 290 8.9688736304241221 310 6.1488168134238697
+		 315 24.17580101389332 320 35.329077605083874 324 30.666812427899675 340 31.532337361269903
+		 350 18.575569266739844 390 19.372491844260693 400 27.107321784203101 410 28.477973522145927
+		 415 24.017009359183131 425 39.367877747385158 434 30.967857261328664 439 30.532458093107568
+		 449 27.690714908332094 454 40.12827535553771 459 34.78156492729557 464 28.625158649209766
+		 470 15.940759833578751 480 9.7490293518236779 485 -16.799699763081851;
+	setAttr -s 35 ".kit[0:34]"  18 18 18 18 18 18 18 18 
+		18 18 3 18 18 3 3 3 3 3 3 3 3 3 3 3 3 
+		3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 35 ".kot[0:34]"  18 18 18 18 18 18 18 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5;
+		5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_cog_ctrl_translateY";
 	rename -uid "EFE5C272-4A88-A471-2844-318DF8CC4687";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 41 ".ktv[0:40]"  1 -10.180032362659832 11 -19.136847990892552
+	setAttr -s 42 ".ktv[0:41]"  1 -10.180032362659832 11 -19.136847990892552
 		 19 -14.054058722004674 24 -19.136847990892552 32 -13.744849800437114 37 -19.136847990892552
 		 45 -14.50539562848882 50 -11.643349657521092 62 -11.686018594294273 101 -11.686018594294273
 		 111 -14.962995726474947 123 -7.4131973164613356 140 -11 162 -3.4939073052022707 200 -3.4939073052022707
-		 204 -3.4939073052022707 220 -0.93805664237513042 240 -7.1296413698027123 260 -6.7739263005743453
-		 280 -20.915625215720496 300 -27.610993679501249 320 -20.876024709866314 340 -29.780652255848089
-		 360 -27.544577643797869 380 -33.935038206106455 400 -28.261747418810131 420 -1.2162471415391165
-		 460 -15.073007354470167 480 -8.2231328385129991 500 -12.084764701960726 520 -14.695100415366698
-		 540 -12.323806856029128 560 -11.797503640473254 580 -6.0474311640503728 600 -6.7480351406413517
-		 620 -14.403905270156425 640 -17.109444745756473 660 -16.713846556741327 680 -15.89877279884605
-		 700 -16.033484141871607 720 -19.488369224112244;
-	setAttr -s 41 ".kit[0:40]"  2 18 2 18 2 18 2 18 
-		18 18 18 18 18 18 18 18 18 18 18 3 3 3 3 3 3 
-		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 41 ".kot[0:40]"  2 18 2 18 2 18 2 18 
+		 204 -3.4939073052022707 220 -0.93805664237513042 230 -5.6122395196556161 240 -7.1296413698027123
+		 260 -6.7739263005743453 270 -20.915625215720496 290 -27.610993679501249 310 -20.876024709866314
+		 315 -29.780652255848089 320 -27.544577643797869 324 -33.935038206106455 340 -28.261747418810131
+		 350 -1.2162471415391165 390 -15.073007354470167 400 -8.2231328385129991 410 -12.084764701960726
+		 415 -14.695100415366698 425 -12.323806856029128 434 -11.797503640473254 439 -6.0474311640503728
+		 449 -6.7480351406413517 454 -14.403905270156425 459 -17.109444745756473 464 -16.713846556741327
+		 470 -15.89877279884605 480 -16.033484141871607 485 -19.488369224112244;
+	setAttr -s 42 ".kit[0:41]"  2 18 2 18 2 18 2 18 
+		18 18 18 18 18 18 18 18 18 3 18 18 3 3 3 3 3 
+		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 42 ".kot[0:41]"  2 18 2 18 2 18 2 18 
 		18 18 18 18 18 18 5 5 5 5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
-	setAttr -s 41 ".ktl[0:40]" no no no no no no no no yes yes yes yes 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 42 ".ktl[0:41]" no no no no no no no no yes yes yes yes 
 		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
-		yes yes yes yes yes yes yes yes;
+		yes yes yes yes yes yes yes yes yes;
 createNode animCurveTA -n "All_Controls_cog_ctrl_rotateX";
 	rename -uid "276EE96C-43FE-C441-7190-A6B84F026A12";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 28 ".ktv[0:27]"  1 0 50 0 53 0 200 0 220 -10.715060212393373
-		 240 -10.715060212393373 260 -185.92118451800383 280 -186.70512998571041 300 -209.20302366625569
-		 340 -330.97159776321911 360 -330.02973951311264 380 -355.49861288741221 400 -342.71277762381243
-		 420 0 440 -12.241326534657963 460 -35.256562384911973 500 -26.082246007472659 520 -26.082246007472659
-		 540 -35.992940388253253 560 -25.313633658721596 580 -16.02520963075926 600 -27.957041907583044
-		 620 -45.552625692239545 640 -225.613895288615 660 -207.31612918017618 680 -207.65953243550038
-		 700 -187.49926709713338 720 -188.42835493695114;
-	setAttr -s 28 ".kit[0:27]"  18 18 18 18 18 18 18 3 
+	setAttr -s 29 ".ktv[0:28]"  1 0 50 0 53 0 200 0 220 -10.715060212393373
+		 230 -14.511609111234419 240 -10.715060212393373 260 -185.92118451800383 270 -186.70512998571041
+		 290 -209.20302366625569 315 -330.97159776321911 320 -330.02973951311264 324 -355.49861288741221
+		 340 -342.71277762381243 350 0 370 -12.241326534657963 390 -35.256562384911973 410 -26.082246007472659
+		 415 -26.082246007472659 425 -35.992940388253253 434 -25.313633658721596 439 -16.02520963075926
+		 449 -27.957041907583044 454 -45.552625692239545 459 -225.613895288615 464 -207.31612918017618
+		 470 -207.65953243550038 480 -187.49926709713338 485 -188.42835493695114;
+	setAttr -s 29 ".kit[0:28]"  18 18 18 18 18 3 18 18 
 		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-		3 3 3;
-	setAttr -s 28 ".kot[0:27]"  18 18 18 5 5 5 5 5 
+		3 3 3 3;
+	setAttr -s 29 ".kot[0:28]"  18 18 18 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-		5 5 5;
+		5 5 5 5;
 createNode animCurveTA -n "All_Controls_cog_ctrl_rotateY";
 	rename -uid "02C95D6F-4A61-7E48-411D-72896C027075";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1 0 50 0 53 -179.99999999999994 200 -179.99999999999994
-		 220 -151.04746913182328 240 -151.04746913182328 260 -131.2502196990429 280 -115.11982911568809
-		 300 -118.88154242912495 340 -119.78332437784648 360 -120.09019559957414 380 -115.82772612128771
-		 420 -109.68807032414651 460 -13.643938726237097 500 -13.64393872623711 520 -13.64393872623711
-		 540 2.7641190019191879 600 29.826934656993284 620 55.270526720559772 640 70.954756248561594
-		 660 28.832280510266134 680 -1.92579639175428 700 3.9024483187601406 720 -0.58851791179020962;
-	setAttr -s 24 ".kit[0:23]"  18 18 18 18 18 18 18 3 
-		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 24 ".kot[0:23]"  18 18 18 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 25 ".ktv[0:24]"  1 0 50 0 53 -179.99999999999994 200 -179.99999999999994
+		 220 -151.04746913182328 230 -152.63511101947216 240 -151.04746913182328 260 -131.2502196990429
+		 270 -115.11982911568809 290 -118.88154242912495 315 -119.78332437784648 320 -120.09019559957414
+		 324 -115.82772612128771 350 -109.68807032414651 390 -13.643938726237097 410 -13.64393872623711
+		 415 -13.64393872623711 425 2.7641190019191879 449 29.826934656993284 454 55.270526720559772
+		 459 70.954756248561594 464 28.832280510266134 470 -1.92579639175428 480 3.9024483187601406
+		 485 -0.58851791179020962;
+	setAttr -s 25 ".kit[0:24]"  18 18 18 18 18 3 18 18 
+		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 25 ".kot[0:24]"  18 18 18 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_cog_ctrl_rotateZ";
 	rename -uid "27E76415-4332-424F-9575-6EBB4B58383E";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  1 0 50 0 53 0 200 0 220 -6.3368102280861454
-		 240 0 260 184.22376128706583 280 173.81508131114677 300 198.96899196401733 340 313.85309142810189
-		 360 312.76623115851743 380 341.45013355864268 420 0 460 9.3642424389227923 500 9.3642424389227834
-		 520 9.3642424389227834 540 12.098400312837468 600 13.981479862587289 620 -11.188960700677573
-		 640 -198.00966450232812 660 -183.67665580799391 680 -182.39504830282505 700 -162.80494890790547
-		 720 -194.10943873576875;
-	setAttr -s 24 ".kit[0:23]"  18 18 18 18 18 18 18 3 
-		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 24 ".kot[0:23]"  18 18 18 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 25 ".ktv[0:24]"  1 0 50 0 53 0 200 0 220 -6.3368102280861454
+		 230 1.6971485806886679 240 0 260 184.22376128706583 270 173.81508131114677 290 198.96899196401733
+		 315 313.85309142810189 320 312.76623115851743 324 341.45013355864268 350 0 390 9.3642424389227923
+		 410 9.3642424389227834 415 9.3642424389227834 425 12.098400312837468 449 13.981479862587289
+		 454 -11.188960700677573 459 -198.00966450232812 464 -183.67665580799391 470 -182.39504830282505
+		 480 -162.80494890790547 485 -194.10943873576875;
+	setAttr -s 25 ".kit[0:24]"  18 18 18 18 18 3 18 18 
+		3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 25 ".kot[0:24]"  18 18 18 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_cog_ctrl_scaleX";
 	rename -uid "3AEE8C48-4413-8533-CD95-5898EAFE6F91";
 	setAttr ".tan" 18;
@@ -9090,23 +8599,23 @@ createNode animCurveTA -n "All_Controls_pelvis_jnt_ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 -9.1556711872139225 100 -9.1556711872139225
 		 200 -9.1556711872139225 220 -9.1556711872139225 240 -9.1556711872139225 260 -9.1556711872139225
-		 340 -12.28708605956556 360 0 460 10.668892639851881 640 0;
+		 315 -12.28708605956556 320 0 390 10.668892639851881 459 0;
 	setAttr -s 10 ".kit[6:9]"  3 3 3 3;
 	setAttr -s 10 ".kot[2:9]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_pelvis_jnt_ctrl_rotateY";
 	rename -uid "7BDC0485-4A70-A634-614F-0EA09F684B24";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 100 0 200 0 220 0 240 0 260 0 340 -5.5796471265961616
-		 360 0 640 0;
+	setAttr -s 9 ".ktv[0:8]"  1 0 100 0 200 0 220 0 240 0 260 0 315 -5.5796471265961616
+		 320 0 459 0;
 	setAttr -s 9 ".kit[6:8]"  3 3 3;
 	setAttr -s 9 ".kot[2:8]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_pelvis_jnt_ctrl_rotateZ";
 	rename -uid "3B7955B5-4FB5-E8C9-99F6-2BBABC9B9F21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 100 0 200 0 220 0 240 0 260 0 340 12.367744380522737
-		 360 0 640 0;
+	setAttr -s 9 ".ktv[0:8]"  1 0 100 0 200 0 220 0 240 0 260 0 315 12.367744380522737
+		 320 0 459 0;
 	setAttr -s 9 ".kit[6:8]"  3 3 3;
 	setAttr -s 9 ".kot[2:8]"  5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_pelvis_jnt_ctrl_scaleX";
@@ -9635,9 +9144,9 @@ createNode animCurveTA -n "All_Controls_spine_jnt_01_ctrl_rotateX";
 	rename -uid "8DB477C7-4FC7-5737-4B08-EFB105AEDA52";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  1 0 200 0 220 0 240 0 260 0 300 0 320 3.9993525582888338e-16
-		 340 3.9993525582888338e-16 360 3.9993525582888338e-16 380 0 400 0 480 -1.1954060064651069
-		 580 -1.1845189911616558 620 -1.0930829201720023 640 0;
+	setAttr -s 15 ".ktv[0:14]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0
+		 315 0 320 0 324 0 340 0 400 -1.1954060064651069 439 -1.1845189911616558 454 -1.0930829201720023
+		 459 0;
 	setAttr -s 15 ".kit[0:14]"  18 18 18 18 18 3 3 3 
 		3 3 3 3 3 3 3;
 	setAttr -s 15 ".kot[0:14]"  18 5 5 5 5 5 5 5 
@@ -9646,9 +9155,9 @@ createNode animCurveTA -n "All_Controls_spine_jnt_01_ctrl_rotateY";
 	rename -uid "DEDA8AD6-4BF4-5AB6-39DA-CFA3773BF12B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  1 0 200 0 220 0 240 0 260 0 300 0 320 -6.2352978387033478
-		 340 0 360 0 380 0 400 0 480 13.375261919408263 540 5.772477674607237 580 -2.6369776783315233
-		 620 13.943985342043879 640 0;
+	setAttr -s 16 ".ktv[0:15]"  1 0 200 0 220 0 240 0 260 0 290 0 310 -6.2352978387033478
+		 315 0 320 0 324 0 340 0 400 13.375261919408263 425 5.772477674607237 439 -2.6369776783315233
+		 454 13.943985342043879 459 0;
 	setAttr -s 16 ".kit[0:15]"  18 18 18 18 18 3 3 3 
 		3 3 3 3 3 3 3 3;
 	setAttr -s 16 ".kot[0:15]"  18 5 5 5 5 5 5 5 
@@ -9658,9 +9167,9 @@ createNode animCurveTA -n "All_Controls_spine_jnt_01_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  1 -34.289729059846231 200 -34.289729059846231
-		 220 -34.289729059846231 240 -34.289729059846231 260 -34.289729059846231 300 -34.289729059846231
-		 320 -34.289729059846209 340 0 360 0 380 -8.27610753280638 400 0 480 1.7713006949499766
-		 580 1.9957605184313181 620 2.2592765772091625 640 0;
+		 220 -34.289729059846231 240 -34.289729059846231 260 -34.289729059846231 290 -34.289729059846231
+		 310 -34.289729059846209 315 0 320 0 324 -8.27610753280638 340 0 400 1.7713006949499766
+		 439 1.9957605184313181 454 2.2592765772091625 459 0;
 	setAttr -s 15 ".kit[0:14]"  18 18 18 18 18 3 3 3 
 		3 3 3 3 3 3 3;
 	setAttr -s 15 ".kot[0:14]"  18 5 5 5 5 5 5 5 
@@ -9711,8 +9220,8 @@ createNode animCurveTA -n "All_Controls_spine_jnt_02_ctrl_rotateX";
 	rename -uid "81BBB3EE-4DFE-504F-26A1-94A565C7490D";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 0 100 0 200 0 220 0 240 0 260 0 280 -3.2234905988969147
-		 300 -3.3651850984018883 320 -3.3651850984018883 340 -17.857560593987863 360 0;
+	setAttr -s 11 ".ktv[0:10]"  1 0 100 0 200 0 220 0 240 0 260 0 270 -3.2234905988969147
+		 290 -3.3651850984018883 310 -3.3651850984018883 315 -17.857560593987863 320 0;
 	setAttr -s 11 ".kit[0:10]"  18 18 18 18 18 18 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 18 5 5 5 5 5 5 
@@ -9721,9 +9230,9 @@ createNode animCurveTA -n "All_Controls_spine_jnt_02_ctrl_rotateY";
 	rename -uid "731A5C20-4DF4-65AD-628B-78856AB7CA41";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  1 0 100 0 200 0 220 0 240 0 260 0 280 0.25138132097293114
-		 300 16.678513988230371 320 16.678513988230371 340 -0.08587829659016899 360 0 620 7.3003337347275954
-		 640 0;
+	setAttr -s 13 ".ktv[0:12]"  1 0 100 0 200 0 220 0 240 0 260 0 270 0.25138132097293114
+		 290 16.678513988230371 310 16.678513988230371 315 -0.08587829659016899 320 0 454 7.3003337347275954
+		 459 0;
 	setAttr -s 13 ".kit[0:12]"  18 18 18 18 18 18 3 3 
 		3 3 3 3 3;
 	setAttr -s 13 ".kot[0:12]"  18 18 5 5 5 5 5 5 
@@ -9734,8 +9243,8 @@ createNode animCurveTA -n "All_Controls_spine_jnt_02_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 -3.9688798351190688 100 -3.9688798351190688
 		 200 -3.9688798351190688 220 -3.9688798351190688 240 -3.9688798351190688 260 -3.9688798351190688
-		 280 -12.624478174898094 300 -13.577153304651393 320 -13.577153304651393 340 -10.42198927124084
-		 360 0;
+		 270 -12.624478174898094 290 -13.577153304651393 310 -13.577153304651393 315 -10.42198927124084
+		 320 0;
 	setAttr -s 11 ".kit[0:10]"  18 18 18 18 18 18 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 18 5 5 5 5 5 5 
@@ -9786,16 +9295,16 @@ createNode animCurveTA -n "All_Controls_spine_jnt_03_ctrl_rotateX";
 	rename -uid "1E5FDD62-4F0F-38BE-FD05-12A2E4D6DC2C";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0
-		 340 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0
+		 315 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_spine_jnt_03_ctrl_rotateY";
 	rename -uid "7473D8EA-4EFA-CE42-C35E-C3933F0C1C16";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0
-		 340 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0
+		 315 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_spine_jnt_03_ctrl_rotateZ";
@@ -9803,8 +9312,8 @@ createNode animCurveTA -n "All_Controls_spine_jnt_03_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -1.6358695921482069 200 -1.6358695921482069
-		 220 -1.6358695921482069 240 -1.6358695921482069 260 -1.6358695921482069 280 16.593111089491028
-		 300 16.593111089491028 320 16.593111089491028 340 0;
+		 220 -1.6358695921482069 240 -1.6358695921482069 260 -1.6358695921482069 270 16.593111089491028
+		 290 16.593111089491028 310 16.593111089491028 315 0;
 	setAttr -s 9 ".kit[0:8]"  18 18 18 18 18 3 3 3 
 		3;
 	setAttr -s 9 ".kot[0:8]"  18 5 5 5 5 5 5 5 
@@ -9844,22 +9353,22 @@ createNode animCurveTL -n "All_Controls_spine_jnt_04_ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 4.5796699765787707e-16 200 4.5796699765787707e-16
-		 220 4.5796699765787707e-16 240 4.5796699765787707e-16 260 4.5796699765787707e-16;
+		 220 4.5796699765787707e-16 240 0 260 4.5796699765787707e-16;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTL -n "All_Controls_spine_jnt_04_ctrl_translateZ";
 	rename -uid "4AE8C314-42BF-6722-311D-04965F5D4EA2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -3.749306637726435e-17 200 -3.749306637726435e-17
-		 220 -3.749306637726435e-17 240 -3.749306637726435e-17 260 -3.749306637726435e-17;
+		 220 -3.749306637726435e-17 240 0 260 -3.749306637726435e-17;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTA -n "All_Controls_spine_jnt_04_ctrl_rotateX";
 	rename -uid "E45407A4-49A3-D52B-EA89-8C901E9ED336";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 0 100 0 200 0 220 0 240 9.7763735393076789
-		 260 9.7763735393076789 280 -8.9455424768276846 300 -9.3996910401067542 320 -9.3996910401067542
-		 340 0;
+		 260 9.7763735393076789 270 -8.9455424768276846 290 -9.3996910401067542 310 -9.3996910401067542
+		 315 0;
 	setAttr -s 10 ".kit[6:9]"  3 3 3 3;
 	setAttr -s 10 ".kot[2:9]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_spine_jnt_04_ctrl_rotateY";
@@ -9867,8 +9376,8 @@ createNode animCurveTA -n "All_Controls_spine_jnt_04_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 0 100 0 200 0 220 0 240 -13.888886268889753
-		 260 -13.888886268889753 280 11.239723532061218 300 20.960501978678391 320 20.960501978678391
-		 340 0;
+		 260 -13.888886268889753 270 11.239723532061218 290 20.960501978678391 310 20.960501978678391
+		 315 0;
 	setAttr -s 10 ".kit[6:9]"  3 3 3 3;
 	setAttr -s 10 ".kot[2:9]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_spine_jnt_04_ctrl_rotateZ";
@@ -9877,8 +9386,8 @@ createNode animCurveTA -n "All_Controls_spine_jnt_04_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 4.5182393272456052 100 4.5182393272456052
 		 145 19.117769861537646 200 19.117769861537646 220 19.117769861537646 240 24.255672632276696
-		 260 24.255672632276696 280 4.7748687687491254 300 3.143205273699579 320 3.143205273699579
-		 340 0;
+		 260 24.255672632276696 270 4.7748687687491254 290 3.143205273699579 310 3.143205273699579
+		 315 0;
 	setAttr -s 11 ".kit[7:10]"  3 3 3 3;
 	setAttr -s 11 ".kot[3:10]"  5 5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_spine_jnt_04_ctrl_scaleX";
@@ -9909,24 +9418,24 @@ createNode animCurveTL -n "All_Controls_neck_jnt_01_ctrl_translateX";
 	rename -uid "8F2668D1-4BF9-46B7-8E34-588EBA3FDE92";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0
-		 460 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0
+		 390 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_neck_jnt_01_ctrl_translateY";
 	rename -uid "08EB5D75-4908-A927-776D-359798D93206";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0
-		 460 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0
+		 390 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_neck_jnt_01_ctrl_translateZ";
 	rename -uid "FD8642D0-446F-3577-9F68-E997B5A1F6ED";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0
-		 460 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0
+		 390 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_neck_jnt_01_ctrl_rotateX";
@@ -9934,8 +9443,8 @@ createNode animCurveTA -n "All_Controls_neck_jnt_01_ctrl_rotateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 200 0 220 3.6005060845893313 240 3.6005060845893313
-		 260 -12.356940254191205 280 4.5803868703987991 300 0 320 0 340 0 460 0 480 16.511597607079171
-		 680 0;
+		 260 -12.356940254191205 270 4.5803868703987991 290 0 310 0 315 0 390 0 400 16.511597607079171
+		 470 0;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 18 18 3 3 3 
 		3 3 3 3;
 	setAttr -s 12 ".kot[0:11]"  18 5 5 5 5 5 5 5 
@@ -9945,8 +9454,8 @@ createNode animCurveTA -n "All_Controls_neck_jnt_01_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 3.0284221838449286 200 -10.298759725165169
-		 220 -7.47002004187308 240 -7.47002004187308 260 0 300 0 320 -28.101647584372078 340 0
-		 440 -21.359056098551289 460 -21.359056098551289 480 0.8903819701742669 680 0;
+		 220 -7.47002004187308 240 -7.47002004187308 260 0 290 0 310 -28.101647584372078 315 0
+		 370 -21.359056098551289 390 -21.359056098551289 400 0.8903819701742669 470 0;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 18 18 3 3 3 
 		3 3 3 3;
 	setAttr -s 12 ".kot[0:11]"  18 5 5 5 5 5 5 5 
@@ -9956,7 +9465,7 @@ createNode animCurveTA -n "All_Controls_neck_jnt_01_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 0 200 0 220 -5.2221974141933432 240 -5.2221974141933432
-		 260 0 300 0 320 0 340 0 460 0 480 -17.348781455234271 680 0;
+		 260 0 290 0 310 0 315 0 390 0 400 -17.348781455234271 470 0;
 	setAttr -s 11 ".kit[0:10]"  18 18 18 18 18 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 5 5 5 5 5 5 
@@ -9989,21 +9498,21 @@ createNode animCurveTL -n "All_Controls_neck_jnt_02_ctrl_translateX";
 	rename -uid "1BE5E179-4B1A-4E58-4001-F993F6ECB826";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 280 0 320 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 270 0 310 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_neck_jnt_02_ctrl_translateY";
 	rename -uid "3853074E-4F74-6C69-783F-F887FE66CDF6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 280 0 320 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 270 0 310 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_neck_jnt_02_ctrl_translateZ";
 	rename -uid "FE674455-4CBC-82A3-D562-DA84C8154354";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 280 0 320 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 270 0 310 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_neck_jnt_02_ctrl_rotateX";
@@ -10011,8 +9520,8 @@ createNode animCurveTA -n "All_Controls_neck_jnt_02_ctrl_rotateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  1 0 60 0 100 0 200 0 220 10.706429056644984
-		 240 10.706429056644984 260 -30.305959665774797 300 0 340 0 380 0 440 2.2662258139512916
-		 460 -19.345165438522471 600 -8.280312449944649 680 0;
+		 240 10.706429056644984 260 -30.305959665774797 290 0 315 0 324 0 370 2.2662258139512916
+		 390 -19.345165438522471 449 -8.280312449944649 470 0;
 	setAttr -s 14 ".kit[0:13]"  18 18 18 18 18 18 18 3 
 		3 3 3 3 3 3;
 	setAttr -s 14 ".kot[0:13]"  18 18 18 5 5 5 5 5 
@@ -10023,8 +9532,8 @@ createNode animCurveTA -n "All_Controls_neck_jnt_02_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  1 14.598436226614483 60 22.418048636676779
 		 100 9.1938799941133773 200 9.1938799941133773 220 -12.179516815681383 240 -12.179516815681383
-		 260 0 340 0 380 0 440 22.148063246267455 460 6.471934257282232 600 19.541834662571905
-		 680 0;
+		 260 0 315 0 324 0 370 22.148063246267455 390 6.471934257282232 449 19.541834662571905
+		 470 0;
 	setAttr -s 13 ".kit[7:12]"  3 3 3 3 3 3;
 	setAttr -s 13 ".kot[3:12]"  5 5 5 5 5 5 5 5 
 		5 5;
@@ -10033,8 +9542,8 @@ createNode animCurveTA -n "All_Controls_neck_jnt_02_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  1 0 60 0 100 0 200 0 220 1.0643621645547561
-		 240 1.0643621645547561 260 0 340 13.259231358921065 380 0 440 5.9923790500254768
-		 460 -2.0880374410717546 600 -3.9846024938810745 680 0;
+		 240 1.0643621645547561 260 0 315 13.259231358921065 324 0 370 5.9923790500254768
+		 390 -2.0880374410717546 449 -3.9846024938810745 470 0;
 	setAttr -s 13 ".kit[7:12]"  3 3 3 3 3 3;
 	setAttr -s 13 ".kot[3:12]"  5 5 5 5 5 5 5 5 
 		5 5;
@@ -10068,8 +9577,8 @@ createNode animCurveTL -n "All_Controls_head_jnt_01_ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  1 0.033461120483028843 60 0.033461120483028843
 		 100 -0.83582158692549369 200 -0.83582158692549369 220 -0.83582158692549369 240 -0.83582158692549369
-		 260 -0.83582158692549369 280 -0.83582158692549369 300 -1.4527640457603859 320 -1.4527640457603859
-		 340 0 360 0 380 0;
+		 260 -0.83582158692549369 270 -0.83582158692549369 290 -1.4527640457603859 310 -1.4527640457603859
+		 315 0 320 0 324 0;
 	setAttr -s 13 ".kit[7:12]"  3 3 3 3 3 3;
 	setAttr -s 13 ".kot[3:12]"  5 5 5 5 5 5 5 5 
 		5 5;
@@ -10079,8 +9588,8 @@ createNode animCurveTL -n "All_Controls_head_jnt_01_ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  1 5.7313630795771549e-17 60 5.7313630795771549e-17
 		 100 -4.9743737774721186e-15 200 -4.9743737774721186e-15 220 -4.9743737774721186e-15
-		 240 -4.9743737774721186e-15 260 -4.9743737774721186e-15 280 -4.9743737774721186e-15
-		 300 -0.65227070363963302 320 -0.65227070363963302 340 0 360 0 380 0;
+		 240 0 260 -4.9743737774721186e-15 270 0 290 -0.65227070363963302 310 -0.65227070363963302
+		 315 0 320 0 324 0;
 	setAttr -s 13 ".kit[7:12]"  3 3 3 3 3 3;
 	setAttr -s 13 ".kot[3:12]"  5 5 5 5 5 5 5 5 
 		5 5;
@@ -10090,8 +9599,8 @@ createNode animCurveTL -n "All_Controls_head_jnt_01_ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  1 2.0710473709882549 60 2.0710473709882549
 		 100 0.59237023183911519 200 0.59237023183911519 220 0.59237023183911519 240 0.59237023183911519
-		 260 0.59237023183911519 280 0.59237023183911519 300 0.19580270325967514 320 0.19580270325967514
-		 340 0 360 0 380 0;
+		 260 0.59237023183911519 270 0.59237023183911519 290 0.19580270325967514 310 0.19580270325967514
+		 315 0 320 0 324 0;
 	setAttr -s 13 ".kit[7:12]"  3 3 3 3 3 3;
 	setAttr -s 13 ".kot[3:12]"  5 5 5 5 5 5 5 5 
 		5 5;
@@ -10100,9 +9609,9 @@ createNode animCurveTA -n "All_Controls_head_jnt_01_ctrl_rotateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  1 0 60 0 100 33.541817993932959 200 33.541817993932959
-		 220 55.724611920356494 240 55.724611920356494 260 -31.187923219753255 280 -31.187923219753255
-		 300 0.61540247516416324 320 0.61540247516416324 340 0 360 0 380 0 420 0 440 58.459465382284222
-		 460 -30.780821883994541 680 0;
+		 220 55.724611920356494 240 55.724611920356494 260 -31.187923219753255 270 -31.187923219753255
+		 290 0.61540247516416324 310 0.61540247516416324 315 0 320 0 324 0 350 0 370 58.459465382284222
+		 390 -30.780821883994541 470 0;
 	setAttr -s 17 ".kit[0:16]"  18 18 18 18 18 18 18 3 
 		3 3 3 3 3 3 3 3 3;
 	setAttr -s 17 ".kot[0:16]"  18 18 18 5 5 5 5 5 
@@ -10113,8 +9622,8 @@ createNode animCurveTA -n "All_Controls_head_jnt_01_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  1 6.4803350568134483 60 12.218515726294255
 		 100 37.620322369363087 200 37.620322369363087 220 39.728174707805159 240 39.728174707805159
-		 260 46.388868132918759 280 46.388868132918759 300 28.244454984374237 320 28.244454984374237
-		 340 0 360 0 380 0 400 35.397184928233479 420 0 440 21.044523734248617 680 28.378592043281866;
+		 260 46.388868132918759 270 46.388868132918759 290 28.244454984374237 310 28.244454984374237
+		 315 0 320 0 324 0 340 35.397184928233479 350 0 370 21.044523734248617 470 28.378592043281866;
 	setAttr -s 17 ".kit[0:16]"  18 18 18 18 18 18 18 3 
 		3 3 3 3 3 3 3 3 3;
 	setAttr -s 17 ".kot[0:16]"  18 18 18 5 5 5 5 5 
@@ -10124,9 +9633,9 @@ createNode animCurveTA -n "All_Controls_head_jnt_01_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  1 0 60 0 100 12.467055396600946 200 12.467055396600946
-		 220 43.971724695887858 240 43.971724695887858 260 -14.349520783197146 280 -14.349520783197146
-		 300 28.884310087707565 320 28.884310087707565 340 0 360 0 380 0 420 0 440 17.718342820520061
-		 460 0 680 0;
+		 220 43.971724695887858 240 43.971724695887858 260 -14.349520783197146 270 -14.349520783197146
+		 290 28.884310087707565 310 28.884310087707565 315 0 320 0 324 0 350 0 370 17.718342820520061
+		 390 0 470 0;
 	setAttr -s 17 ".kit[0:16]"  18 18 18 18 18 18 18 3 
 		3 3 3 3 3 3 3 3 3;
 	setAttr -s 17 ".kot[0:16]"  18 18 18 5 5 5 5 5 
@@ -10159,33 +9668,33 @@ createNode animCurveTL -n "All_Controls_lower_jaw_ctrl_translateX";
 	rename -uid "A86A9625-4F8C-282D-26E7-F09463466E15";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 280 0 320 0
-		 340 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 270 0 310 0
+		 315 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_lower_jaw_ctrl_translateY";
 	rename -uid "F13C891C-4DB2-4324-046D-9488A3F0ACF0";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 280 0 320 0
-		 340 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 270 0 310 0
+		 315 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_lower_jaw_ctrl_translateZ";
 	rename -uid "9A6BE9B3-4DAD-CF1B-731D-B1B1E3A02D10";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 280 0 320 0
-		 340 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 200 0 220 0 240 0 260 0 270 0 310 0
+		 315 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_lower_jaw_ctrl_rotateX";
 	rename -uid "56A10AAD-408B-0DCC-E964-D7806B06B724";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  1 0 200 0 220 0 240 0 260 0 280 0 300 6.676053660682685
-		 320 6.676053660682685 340 14.330915217172963 360 5.5554556493595575 380 0.7312666223965899
-		 420 0;
+	setAttr -s 12 ".ktv[0:11]"  1 0 200 0 220 0 240 0 260 0 270 0 290 6.676053660682685
+		 310 6.676053660682685 315 14.330915217172963 320 5.5554556493595575 324 0.7312666223965899
+		 350 0;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 18 18 3 3 3 
 		3 3 3 3;
 	setAttr -s 12 ".kot[0:11]"  18 5 5 5 5 5 5 5 
@@ -10194,8 +9703,8 @@ createNode animCurveTA -n "All_Controls_lower_jaw_ctrl_rotateY";
 	rename -uid "33CF4775-4935-5801-6CC1-E0B624F3A58F";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 200 0 220 0 240 0 260 0 280 0 300 0
-		 320 0 340 0 380 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 200 0 220 0 240 0 260 0 270 0 290 0
+		 310 0 315 0 324 0;
 	setAttr -s 10 ".kit[0:9]"  18 18 18 18 18 3 3 3 
 		3 3;
 	setAttr -s 10 ".kot[0:9]"  18 5 5 5 5 5 5 5 
@@ -10204,8 +9713,8 @@ createNode animCurveTA -n "All_Controls_lower_jaw_ctrl_rotateZ";
 	rename -uid "92D39A97-45F0-BF14-4517-EFBBA5B4649D";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  1 0 200 0 220 0 240 0 260 0 280 0 300 0
-		 320 0 340 0 380 0;
+	setAttr -s 10 ".ktv[0:9]"  1 0 200 0 220 0 240 0 260 0 270 0 290 0
+		 310 0 315 0 324 0;
 	setAttr -s 10 ".kit[0:9]"  18 18 18 18 18 3 3 3 
 		3 3;
 	setAttr -s 10 ".kot[0:9]"  18 5 5 5 5 5 5 5 
@@ -12158,21 +11667,21 @@ createNode animCurveTL -n "All_Controls_base_hair__1_ctrl_translateX";
 	rename -uid "45DDB541-49E5-5A3A-7039-E9BEF25F02AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_base_hair__1_ctrl_translateY";
 	rename -uid "83DD6AC3-4B56-2BA2-CCB6-6AAAE6AFA6F2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_base_hair__1_ctrl_translateZ";
 	rename -uid "0D070476-4C13-D540-59BB-2A91C954DB62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 0 320 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 0 310 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_base_hair__1_ctrl_rotateX";
@@ -12181,7 +11690,7 @@ createNode animCurveTA -n "All_Controls_base_hair__1_ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 62 0 100 -0.85964772603051898 162 -0.88939651149755938
 		 200 -0.88939651149755938 220 -0.88939651149755938 240 -0.88939651149755938 260 -0.85305066742400015
-		 280 -0.85305066742400015 320 -0.85305066742400015 340 5.2910177319523886 360 0;
+		 270 -0.85305066742400015 310 -0.85305066742400015 315 5.2910177319523886 320 0;
 	setAttr -s 12 ".kit[8:11]"  3 3 3 3;
 	setAttr -s 12 ".kot[4:11]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_base_hair__1_ctrl_rotateY";
@@ -12190,7 +11699,7 @@ createNode animCurveTA -n "All_Controls_base_hair__1_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 62 0 100 -11.708616744474433 162 -18.836725051471017
 		 200 -18.836725051471017 220 -18.836725051471017 240 -18.836725051471017 260 -9.332351935813433
-		 280 -9.332351935813433 320 -9.332351935813433 340 14.766933463472085 360 0;
+		 270 -9.332351935813433 310 -9.332351935813433 315 14.766933463472085 320 0;
 	setAttr -s 12 ".kit[8:11]"  3 3 3 3;
 	setAttr -s 12 ".kot[4:11]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_base_hair__1_ctrl_rotateZ";
@@ -12199,7 +11708,7 @@ createNode animCurveTA -n "All_Controls_base_hair__1_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 62 0 100 5.3887445167197594 162 5.5014619856485085
 		 200 5.5014619856485085 220 5.5014619856485085 240 5.5014619856485085 260 5.3526212529991604
-		 280 5.3526212529991604 320 5.3526212529991604 340 19.967743617655049 360 0;
+		 270 5.3526212529991604 310 5.3526212529991604 315 19.967743617655049 320 0;
 	setAttr -s 12 ".kit[8:11]"  3 3 3 3;
 	setAttr -s 12 ".kot[4:11]"  5 5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_base_hair__1_ctrl_scaleX";
@@ -12419,21 +11928,21 @@ createNode animCurveTL -n "All_Controls_L_clavicle_ctrl_translateX";
 	rename -uid "BEC9B68F-428B-C818-EE17-DCAF5D07E877";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 340 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 315 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_clavicle_ctrl_translateY";
 	rename -uid "FF5BC757-4C8A-E3FB-86DB-CAB95A3E4B2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 340 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 315 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_clavicle_ctrl_translateZ";
 	rename -uid "A8DE3582-40BD-05E5-B0A9-799702EB4CAF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 340 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 315 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_clavicle_ctrl_rotateX";
@@ -12441,7 +11950,7 @@ createNode animCurveTA -n "All_Controls_L_clavicle_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 4.2 100 4.2 200 4.2 220 -4.1583992300352079
-		 240 -4.1583992300352079 260 -4.1583992300352079 280 11.236315149772434 340 0;
+		 240 -4.1583992300352079 260 -4.1583992300352079 270 11.236315149772434 315 0;
 	setAttr -s 8 ".kit[6:7]"  3 3;
 	setAttr -s 8 ".kot[2:7]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_clavicle_ctrl_rotateY";
@@ -12450,7 +11959,7 @@ createNode animCurveTA -n "All_Controls_L_clavicle_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 -22.493795479199999 100 -22.493795479199999
 		 200 -22.493795479199999 220 -16.069177809884803 240 -16.069177809884803 260 -16.069177809884803
-		 280 -0.69803666777743845 340 0;
+		 270 -0.69803666777743845 315 0;
 	setAttr -s 8 ".kit[6:7]"  3 3;
 	setAttr -s 8 ".kot[2:7]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_clavicle_ctrl_rotateZ";
@@ -12459,7 +11968,7 @@ createNode animCurveTA -n "All_Controls_L_clavicle_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 -11.300000000000002 100 -11.300000000000002
 		 200 -11.300000000000002 220 11.383587337627484 240 11.383587337627484 260 11.383587337627484
-		 280 6.7243658103642696 340 0;
+		 270 6.7243658103642696 315 0;
 	setAttr -s 8 ".kit[6:7]"  3 3;
 	setAttr -s 8 ".kot[2:7]"  5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_L_clavicle_ctrl_scaleX";
@@ -12513,7 +12022,7 @@ createNode animCurveTA -n "All_Controls_L_shoulder_ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -13.025327335438575 100 -13.025327335438575
 		 146 -13.025327335438575 162 -21.544606310623216 200 -21.544606310623216 220 -21.544606310623216
-		 240 -21.544606310623216 260 -21.544606310623216 300 -13.309559629486412;
+		 240 -21.544606310623216 260 -21.544606310623216 290 -13.309559629486412;
 	setAttr -s 9 ".kit[8]"  3;
 	setAttr -s 9 ".kot[4:8]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_shoulder_ctrl_rotateY";
@@ -12522,7 +12031,7 @@ createNode animCurveTA -n "All_Controls_L_shoulder_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 -15.90245212440756 100 -15.90245212440756
 		 146 -15.90245212440756 162 -20.261978814709035 200 -20.261978814709035 220 -20.261978814709035
-		 240 -20.261978814709035 260 -20.261978814709035 300 -26.277775173170578;
+		 240 -20.261978814709035 260 -20.261978814709035 290 -26.277775173170578;
 	setAttr -s 9 ".kit[8]"  3;
 	setAttr -s 9 ".kot[4:8]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_shoulder_ctrl_rotateZ";
@@ -12531,7 +12040,7 @@ createNode animCurveTA -n "All_Controls_L_shoulder_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  1 1.8405812582739696 100 1.8405812582739696
 		 146 1.8405812582739696 162 6.5480685641562664 200 6.5480685641562664 220 6.5480685641562664
-		 240 6.5480685641562664 260 6.5480685641562664 300 -14.078350453137647;
+		 240 6.5480685641562664 260 6.5480685641562664 290 -14.078350453137647;
 	setAttr -s 9 ".kit[8]"  3;
 	setAttr -s 9 ".kot[4:8]"  5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_L_shoulder_ctrl_scaleX";
@@ -12626,21 +12135,21 @@ createNode animCurveTL -n "All_Controls_L_wrist_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -1.4210854715202004e-14 200 -1.4210854715202004e-14
-		 220 -1.4210854715202004e-14 240 -1.4210854715202004e-14 260 -1.4210854715202004e-14;
+		 220 -1.4210854715202004e-14 240 0 260 -1.4210854715202004e-14;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_wrist_ctrl_translateY";
 	rename -uid "ED66CC4A-468D-F2B1-AB21-18B0FCDD4E26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 4.2632564145606011e-14 200 4.2632564145606011e-14
-		 220 4.2632564145606011e-14 240 4.2632564145606011e-14 260 4.2632564145606011e-14;
+		 220 4.2632564145606011e-14 240 0 260 4.2632564145606011e-14;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_wrist_ctrl_translateZ";
 	rename -uid "D8A2BD83-492B-6555-B6AF-119BD7168BFE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 3.5527136788005009e-15 200 3.5527136788005009e-15
-		 220 3.5527136788005009e-15 240 3.5527136788005009e-15 260 3.5527136788005009e-15;
+		 220 3.5527136788005009e-15 240 0 260 3.5527136788005009e-15;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_wrist_ctrl_rotateX";
 	rename -uid "74D8B306-4C36-3640-D95C-9690853DC5C0";
@@ -12694,21 +12203,21 @@ createNode animCurveTL -n "All_Controls_R_clavicle_ctrl_translateX";
 	rename -uid "ED4DE0E0-4291-3E26-816A-A1B4A1CD6E2D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 340 0 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 315 0 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_clavicle_ctrl_translateY";
 	rename -uid "3609C745-425E-C1E2-256A-35AE1B7EAE76";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 340 0 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 315 0 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_clavicle_ctrl_translateZ";
 	rename -uid "587227C8-4052-53F6-AF34-E7B687557E46";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 340 0 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 315 0 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_clavicle_ctrl_rotateX";
@@ -12716,7 +12225,7 @@ createNode animCurveTA -n "All_Controls_R_clavicle_ctrl_rotateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 4.1583992300352079 200 0 220 0 240 0 260 0
-		 280 15.394714379807644 300 15.394714379807644 320 0 340 0 460 0;
+		 270 15.394714379807644 290 15.394714379807644 310 0 315 0 390 0;
 	setAttr -s 10 ".kit[0:9]"  18 18 18 18 18 3 3 3 
 		3 3;
 	setAttr -s 10 ".kot[0:9]"  18 5 5 5 5 5 5 5 
@@ -12726,8 +12235,8 @@ createNode animCurveTA -n "All_Controls_R_clavicle_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 -22.666021605662049 200 -24.66854583131601
-		 220 -14.241403936335924 240 -14.241403936335924 260 -14.241403936335924 280 1.129737205771439
-		 300 1.129737205771439 320 0 340 0 460 0;
+		 220 -14.241403936335924 240 -14.241403936335924 260 -14.241403936335924 270 1.129737205771439
+		 290 1.129737205771439 310 0 315 0 390 0;
 	setAttr -s 10 ".kit[0:9]"  18 18 18 18 18 3 3 3 
 		3 3;
 	setAttr -s 10 ".kot[0:9]"  18 5 5 5 5 5 5 5 
@@ -12737,7 +12246,7 @@ createNode animCurveTA -n "All_Controls_R_clavicle_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 -11.383587337627484 200 0 220 0 240 0
-		 260 0 280 -4.6592215272632131 300 -4.6592215272632131 320 0 340 0 460 0 480 -18.468215262618887;
+		 260 0 270 -4.6592215272632131 290 -4.6592215272632131 310 0 315 0 390 0 400 -18.468215262618887;
 	setAttr -s 11 ".kit[0:10]"  18 18 18 18 18 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 5 5 5 5 5 5 
@@ -12793,7 +12302,7 @@ createNode animCurveTA -n "All_Controls_R_shoulder_ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 -31.880471807057862 100 -31.880471807057862
 		 146 -31.880471807057862 162 -33.779643995670241 200 -33.779643995670241 220 -33.779643995670241
-		 240 -33.779643995670241 260 -33.779643995670241 280 -33.781127422942561 300 -29.263093286278398;
+		 240 -33.779643995670241 260 -33.779643995670241 270 -33.781127422942561 290 -29.263093286278398;
 	setAttr -s 10 ".kit[8:9]"  3 3;
 	setAttr -s 10 ".kot[4:9]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_shoulder_ctrl_rotateY";
@@ -12802,7 +12311,7 @@ createNode animCurveTA -n "All_Controls_R_shoulder_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 -15.600627137554552 100 -15.600627137554552
 		 146 -15.600627137554552 162 -23.806677524118868 200 -23.806677524118868 220 -23.806677524118868
-		 240 -23.806677524118868 260 -23.806677524118868 280 2.637901388373828 300 17.872014318790136;
+		 240 -23.806677524118868 260 -23.806677524118868 270 2.637901388373828 290 17.872014318790136;
 	setAttr -s 10 ".kit[8:9]"  3 3;
 	setAttr -s 10 ".kot[4:9]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_shoulder_ctrl_rotateZ";
@@ -12811,7 +12320,7 @@ createNode animCurveTA -n "All_Controls_R_shoulder_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  1 4.1894232109200322 100 4.1894232109200322
 		 146 4.1894232109200322 162 9.8039339140314059 200 9.8039339140314059 220 9.8039339140314059
-		 240 9.8039339140314059 260 9.8039339140314059 280 25.417433331316207 300 50.191337206288495;
+		 240 9.8039339140314059 260 9.8039339140314059 270 25.417433331316207 290 50.191337206288495;
 	setAttr -s 10 ".kit[8:9]"  3 3;
 	setAttr -s 10 ".kot[4:9]"  5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_shoulder_ctrl_scaleX";
@@ -12842,21 +12351,21 @@ createNode animCurveTL -n "All_Controls_R_elbow_ctrl_translateX";
 	rename -uid "3B70D534-4789-89A3-B4E2-67AB8AE7DEEF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 300 -0.75985834914031658;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 290 -0.75985834914031658;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_elbow_ctrl_translateY";
 	rename -uid "BCE222C5-49CD-6484-CFB1-40B3BF9C148A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 300 0.019313022076330916;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 290 0.019313022076330916;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_elbow_ctrl_translateZ";
 	rename -uid "30867523-4C2C-06D6-A134-388BF97CC4F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 300 0.38255676825193929;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 290 0.38255676825193929;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_elbow_ctrl_rotateX";
@@ -12865,7 +12374,7 @@ createNode animCurveTA -n "All_Controls_R_elbow_ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 2.8629077689979048 100 2.8629077689979048
 		 200 2.8629077689979048 220 2.8629077689979048 240 2.8629077689979048 260 2.8629077689979048
-		 280 7.780632601174081;
+		 270 7.780632601174081;
 	setAttr -s 7 ".kit[6]"  3;
 	setAttr -s 7 ".kot[2:6]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_elbow_ctrl_rotateY";
@@ -12874,7 +12383,7 @@ createNode animCurveTA -n "All_Controls_R_elbow_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 14.821209269172172 100 14.821209269172172
 		 200 14.821209269172172 220 14.821209269172172 240 14.821209269172172 260 14.821209269172172
-		 280 26.715904983115067;
+		 270 26.715904983115067;
 	setAttr -s 7 ".kit[6]"  3;
 	setAttr -s 7 ".kot[2:6]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_elbow_ctrl_rotateZ";
@@ -12883,7 +12392,7 @@ createNode animCurveTA -n "All_Controls_R_elbow_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 -20.770995749769245 100 -20.770995749769245
 		 200 -20.770995749769245 220 -20.770995749769245 240 -20.770995749769245 260 -20.770995749769245
-		 280 -1.4559509263982835;
+		 270 -1.4559509263982835;
 	setAttr -s 7 ".kit[6]"  3;
 	setAttr -s 7 ".kot[2:6]"  5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_elbow_ctrl_scaleX";
@@ -12914,21 +12423,21 @@ createNode animCurveTL -n "All_Controls_R_wrist_ctrl_translateX";
 	rename -uid "6CEDDEB2-45CA-E69A-FEE3-80A9F49F14AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 300 -0.73728291808012481;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 290 -0.73728291808012481;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_wrist_ctrl_translateY";
 	rename -uid "714AE2C9-44F7-4A44-56FB-E5A6F544F66E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 300 -0.16433008316091963;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 290 -0.16433008316091963;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_wrist_ctrl_translateZ";
 	rename -uid "EB03D4F1-4B00-95E5-4A5D-F1B0DD149139";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 300 -0.39181233644554547;
+	setAttr -s 6 ".ktv[0:5]"  1 0 200 0 220 0 240 0 260 0 290 -0.39181233644554547;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_wrist_ctrl_rotateX";
@@ -12937,7 +12446,7 @@ createNode animCurveTA -n "All_Controls_R_wrist_ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 5.8434271550422103 100 5.8434271550422103
 		 200 5.8434271550422103 220 5.8434271550422103 240 5.8434271550422103 260 5.8434271550422103
-		 280 25.01828675900175;
+		 270 25.01828675900175;
 	setAttr -s 7 ".kit[6]"  3;
 	setAttr -s 7 ".kot[2:6]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_wrist_ctrl_rotateY";
@@ -12946,7 +12455,7 @@ createNode animCurveTA -n "All_Controls_R_wrist_ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 -2.0333812147574779 100 -2.0333812147574779
 		 200 -2.0333812147574779 220 -2.0333812147574779 240 -2.0333812147574779 260 -2.0333812147574779
-		 280 -27.415748005467162;
+		 270 -27.415748005467162;
 	setAttr -s 7 ".kit[6]"  3;
 	setAttr -s 7 ".kot[2:6]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_wrist_ctrl_rotateZ";
@@ -12955,7 +12464,7 @@ createNode animCurveTA -n "All_Controls_R_wrist_ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 -8.0212509828627816 100 -8.0212509828627816
 		 200 -8.0212509828627816 220 -8.0212509828627816 240 -8.0212509828627816 260 -8.0212509828627816
-		 280 12.565047710382725;
+		 270 12.565047710382725;
 	setAttr -s 7 ".kit[6]"  3;
 	setAttr -s 7 ".kot[2:6]"  5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_wrist_ctrl_scaleX";
@@ -13714,7 +13223,7 @@ createNode animCurveTL -n "All_Controls_L_finger_3_knuckle_03_ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -4.2632564145606011e-14 200 -4.2632564145606011e-14
-		 220 -4.2632564145606011e-14 240 -4.2632564145606011e-14 260 -4.2632564145606011e-14;
+		 220 -4.2632564145606011e-14 240 0 260 -4.2632564145606011e-14;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_finger_3_knuckle_03_ctrl_translateY";
 	rename -uid "D7092605-4A6D-C42C-E7C4-34B419EA9BD8";
@@ -13727,28 +13236,28 @@ createNode animCurveTL -n "All_Controls_L_finger_3_knuckle_03_ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 1.0658141036401503e-14 200 1.0658141036401503e-14
-		 220 1.0658141036401503e-14 240 1.0658141036401503e-14 260 1.0658141036401503e-14;
+		 220 1.0658141036401503e-14 240 0 260 1.0658141036401503e-14;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_finger_3_knuckle_03_ctrl_rotateX";
 	rename -uid "E86F8EA6-4E48-1039-5585-32B31E44AE52";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -7.1348942115789866e-15 200 -7.1348942115789866e-15
-		 220 -7.1348942115789866e-15 240 -7.1348942115789866e-15 260 -7.1348942115789866e-15;
+		 220 -7.1348942115789866e-15 240 0 260 -7.1348942115789866e-15;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_finger_3_knuckle_03_ctrl_rotateY";
 	rename -uid "E0A364E8-4FD2-723C-EA56-558A00926E36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 1.4383012209654772e-14 200 1.4383012209654772e-14
-		 220 1.4383012209654772e-14 240 1.4383012209654772e-14 260 1.4383012209654772e-14;
+		 220 1.4383012209654772e-14 240 0 260 1.4383012209654772e-14;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_finger_3_knuckle_03_ctrl_rotateZ";
 	rename -uid "511BD5C5-40EF-6C8C-30DE-BE87683DE4A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -1.5679140656277182e-14 200 -1.5679140656277182e-14
-		 220 -1.5679140656277182e-14 240 -1.5679140656277182e-14 260 -1.5679140656277182e-14;
+		 220 -1.5679140656277182e-14 240 0 260 -1.5679140656277182e-14;
 	setAttr -s 5 ".kot[1:4]"  5 5 5 5;
 createNode animCurveTU -n "All_Controls_L_finger_3_knuckle_03_ctrl_scaleX";
 	rename -uid "9DE276C3-413E-FBA6-FDA0-6AADF4173096";
@@ -14093,7 +13602,7 @@ createNode animCurveTA -n "All_Controls_R_thumb_01_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 7.2771771656646758 200 7.2771771656646758
-		 220 7.2771771656646758 240 7.2771771656646758 260 7.2771771656646758 280 0 460 -3.7259377765788355;
+		 220 7.2771771656646758 240 7.2771771656646758 260 7.2771771656646758 270 0 390 -3.7259377765788355;
 	setAttr -s 7 ".kit[5:6]"  3 18;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 18;
 createNode animCurveTA -n "All_Controls_R_thumb_01_ctrl_rotateY";
@@ -14101,8 +13610,8 @@ createNode animCurveTA -n "All_Controls_R_thumb_01_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 -26.103576418470787 200 -26.103576418470787
-		 220 -26.103576418470787 240 -26.103576418470787 260 -26.103576418470787 280 0 300 -9.0609065948499516
-		 460 -8.2652207533011151;
+		 220 -26.103576418470787 240 -26.103576418470787 260 -26.103576418470787 270 0 290 -9.0609065948499516
+		 390 -8.2652207533011151;
 	setAttr -s 8 ".kit[5:7]"  3 3 18;
 	setAttr -s 8 ".kot[1:7]"  5 5 5 5 5 5 18;
 createNode animCurveTA -n "All_Controls_R_thumb_01_ctrl_rotateZ";
@@ -14110,7 +13619,7 @@ createNode animCurveTA -n "All_Controls_R_thumb_01_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 21.410295113296133 200 21.410295113296133
-		 220 21.410295113296133 240 21.410295113296133 260 21.410295113296133 280 0 460 24.370676732506219;
+		 220 21.410295113296133 240 21.410295113296133 260 21.410295113296133 270 0 390 24.370676732506219;
 	setAttr -s 7 ".kit[5:6]"  3 18;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 18;
 createNode animCurveTU -n "All_Controls_R_thumb_01_ctrl_scaleX";
@@ -14232,7 +13741,7 @@ createNode animCurveTA -n "All_Controls_R_thumb_03_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 4.4361799336392274 200 4.4361799336392274
-		 220 4.4361799336392274 240 4.4361799336392274 260 4.4361799336392274 280 0;
+		 220 4.4361799336392274 240 4.4361799336392274 260 4.4361799336392274 270 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_thumb_03_ctrl_scaleX";
@@ -14282,8 +13791,8 @@ createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_01_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 1.0053874098056444e-16 200 1.0053874098056444e-16
-		 220 1.0053874098056444e-16 240 1.0053874098056444e-16 260 1.0053874098056444e-16
-		 300 -14.944815181029204 460 0;
+		 220 1.0053874098056444e-16 240 0 260 1.0053874098056444e-16 290 -14.944815181029204
+		 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_01_ctrl_rotateY";
@@ -14291,8 +13800,8 @@ createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_01_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 8.6607180314588046 200 8.6607180314588046
-		 220 8.6607180314588046 240 8.6607180314588046 260 8.6607180314588046 280 0 300 -17.417368929123256
-		 460 -11.239207280499588;
+		 220 8.6607180314588046 240 8.6607180314588046 260 8.6607180314588046 270 0 290 -17.417368929123256
+		 390 -11.239207280499588;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_01_ctrl_rotateZ";
@@ -14300,8 +13809,8 @@ createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_01_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 7.5129329207431148 200 7.5129329207431148
-		 220 7.5129329207431148 240 7.5129329207431148 260 7.5129329207431148 280 0 300 8.4561844335828305
-		 460 0;
+		 220 7.5129329207431148 240 7.5129329207431148 260 7.5129329207431148 270 0 290 8.4561844335828305
+		 390 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_finger_1_knuckle_01_ctrl_scaleX";
@@ -14357,8 +13866,8 @@ createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_02_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 34.137879098436358 200 34.137879098436358
-		 220 34.137879098436358 240 34.137879098436358 260 34.137879098436358 280 0 300 -14.671109145125017
-		 460 30.161581983591304;
+		 220 34.137879098436358 240 34.137879098436358 260 34.137879098436358 270 0 290 -14.671109145125017
+		 390 30.161581983591304;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_02_ctrl_rotateZ";
@@ -14420,7 +13929,7 @@ createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_03_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -8.0033563963932846 200 -8.0033563963932846
-		 220 -8.0033563963932846 240 -8.0033563963932846 260 -8.0033563963932846 280 0;
+		 220 -8.0033563963932846 240 -8.0033563963932846 260 -8.0033563963932846 270 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_1_knuckle_03_ctrl_rotateZ";
@@ -14475,8 +13984,8 @@ createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_01_ctrl_rotateX";
 	rename -uid "81F6D7B4-4B44-F35E-DA35-308AAF64BB91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 -14.944815181029204
-		 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 -14.944815181029204
+		 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_01_ctrl_rotateY";
@@ -14484,16 +13993,16 @@ createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_01_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 27.780529238490551 200 27.780529238490551
-		 220 27.780529238490551 240 27.780529238490551 260 27.780529238490551 280 0 300 -17.417368929123256
-		 460 35.768412134608973;
+		 220 27.780529238490551 240 27.780529238490551 260 27.780529238490551 270 0 290 -17.417368929123256
+		 390 35.768412134608973;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_01_ctrl_rotateZ";
 	rename -uid "5F4CFC90-40C8-6F85-F862-80995844DEB2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 8.4561844335828305
-		 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 8.4561844335828305
+		 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_finger_2_knuckle_01_ctrl_scaleX";
@@ -14549,7 +14058,7 @@ createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_02ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 14.310982476019706 200 14.310982476019706
-		 220 14.310982476019706 240 14.310982476019706 260 14.310982476019706 280 0 300 -14.671109145125017;
+		 220 14.310982476019706 240 14.310982476019706 260 14.310982476019706 270 0 290 -14.671109145125017;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_02ctrl_rotateZ";
@@ -14611,7 +14120,7 @@ createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_03ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -20.371171307960445 200 -20.371171307960445
-		 220 -20.371171307960445 240 -20.371171307960445 260 -20.371171307960445 280 0;
+		 220 -20.371171307960445 240 -20.371171307960445 260 -20.371171307960445 270 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_2_knuckle_03ctrl_rotateZ";
@@ -14670,8 +14179,8 @@ createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_01_ctrl_rotateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 -0.073490035365639306 200 -0.073490035365639306
-		 220 -0.073490035365639306 240 -0.073490035365639306 260 -0.073490035365639306 280 0
-		 300 -14.944815181029204 460 0;
+		 220 -0.073490035365639306 240 -0.073490035365639306 260 -0.073490035365639306 270 0
+		 290 -14.944815181029204 390 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_01_ctrl_rotateY";
@@ -14679,8 +14188,8 @@ createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_01_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 40.187461035318464 200 40.187461035318464
-		 220 40.187461035318464 240 40.187461035318464 260 40.187461035318464 280 0 300 -17.417368929123256
-		 460 35.768412134608973;
+		 220 40.187461035318464 240 40.187461035318464 260 40.187461035318464 270 0 290 -17.417368929123256
+		 390 35.768412134608973;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_01_ctrl_rotateZ";
@@ -14688,8 +14197,8 @@ createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_01_ctrl_rotateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 -0.058561467057894404 200 -0.058561467057894404
-		 220 -0.058561467057894404 240 -0.058561467057894404 260 -0.058561467057894404 280 0
-		 300 8.4561844335828305 460 0;
+		 220 -0.058561467057894404 240 -0.058561467057894404 260 -0.058561467057894404 270 0
+		 290 8.4561844335828305 390 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_finger_3_knuckle_01_ctrl_scaleX";
@@ -14748,7 +14257,7 @@ createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_02_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 5.9399708381323197 200 5.9399708381323197
-		 220 5.9399708381323197 240 5.9399708381323197 260 5.9399708381323197 280 0 300 -14.671109145125017;
+		 220 5.9399708381323197 240 5.9399708381323197 260 5.9399708381323197 270 0 290 -14.671109145125017;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_02_ctrl_rotateZ";
@@ -14810,7 +14319,7 @@ createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_03_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -32.082306142460077 200 -32.082306142460077
-		 220 -32.082306142460077 240 -32.082306142460077 260 -32.082306142460077 280 0;
+		 220 -32.082306142460077 240 -32.082306142460077 260 -32.082306142460077 270 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_3_knuckle_03_ctrl_rotateZ";
@@ -14925,8 +14434,8 @@ createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_02_ctrl_rotateX";
 	rename -uid "B0BF6FC7-4587-0A8C-00D0-6ABE1872F825";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 -14.944815181029204
-		 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 -14.944815181029204
+		 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_02_ctrl_rotateY";
@@ -14934,16 +14443,16 @@ createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_02_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 48.404905237853534 200 48.404905237853534
-		 220 48.404905237853534 240 48.404905237853534 260 48.404905237853534 280 0 300 -17.417368929123256
-		 460 35.768412134608973;
+		 220 48.404905237853534 240 48.404905237853534 260 48.404905237853534 270 0 290 -17.417368929123256
+		 390 35.768412134608973;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_02_ctrl_rotateZ";
 	rename -uid "07207EBF-4E9F-5AF1-8A06-E182F6E610F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 300 8.4561844335828305
-		 460 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 200 0 220 0 240 0 260 0 290 8.4561844335828305
+		 390 0;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_finger_4_knuckle_02_ctrl_scaleX";
@@ -14999,7 +14508,7 @@ createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_03_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 9.0372057909269294 200 9.0372057909269294
-		 220 9.0372057909269294 240 9.0372057909269294 260 9.0372057909269294 280 0 300 -14.671109145125017;
+		 220 9.0372057909269294 240 9.0372057909269294 260 9.0372057909269294 270 0 290 -14.671109145125017;
 	setAttr -s 7 ".kit[5:6]"  3 3;
 	setAttr -s 7 ".kot[1:6]"  5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_03_ctrl_rotateZ";
@@ -15061,7 +14570,7 @@ createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_04_ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  1 -20.831124533028177 200 -20.831124533028177
-		 220 -20.831124533028177 240 -20.831124533028177 260 -20.831124533028177 280 0;
+		 220 -20.831124533028177 240 -20.831124533028177 260 -20.831124533028177 270 0;
 	setAttr -s 6 ".kit[5]"  3;
 	setAttr -s 6 ".kot[1:5]"  5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_finger_4_knuckle_04_ctrl_rotateZ";
@@ -15320,52 +14829,52 @@ createNode animCurveTL -n "All_Controls_L_Arm_IK_ctrl_translateX";
 	rename -uid "E7B538ED-4273-B908-BF2C-8D8F5C74FCCB";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 -12.558374411625152 260 -10.888101495609735
-		 280 -10.430571912832484 300 -12.789010541835923 320 -13.619889732230044 340 -12.981086217576614
-		 360 -13.013586659488224;
-	setAttr -s 7 ".kit[0:6]"  18 3 3 3 3 3 3;
-	setAttr -s 7 ".kot[0:6]"  18 5 5 5 5 5 5;
+	setAttr -s 8 ".ktv[0:7]"  1 -12.558374411625152 250 -12.558374411625152
+		 260 -10.888101495609735 270 -10.430571912832484 290 -12.789010541835923 310 -13.619889732230044
+		 315 -12.981086217576614 320 -13.013586659488224;
+	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
+	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_Arm_IK_ctrl_translateY";
 	rename -uid "AAA2EA40-488B-4840-6D7C-3CAFAAA5B0A8";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 3.1553778543643856 260 -0.38440516467423441
-		 280 1.2190649721025002 300 1.1333036769080951 320 0.81877610849496962 340 2.0318482172630365
-		 360 2.8514143941485495;
-	setAttr -s 7 ".kit[0:6]"  18 3 3 3 3 3 3;
-	setAttr -s 7 ".kot[0:6]"  18 5 5 5 5 5 5;
+	setAttr -s 8 ".ktv[0:7]"  1 3.1553778543643856 250 3.1553778543643856
+		 260 -0.38440516467423441 270 1.2190649721025002 290 1.1333036769080951 310 0.81877610849496962
+		 315 2.0318482172630365 320 2.8514143941485495;
+	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
+	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_L_Arm_IK_ctrl_translateZ";
 	rename -uid "D94A0178-453B-8B97-F0A4-EF8747A2A779";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 20.81781444779719 260 18.069291500395611
-		 280 4.5970640234670022 300 1.703118939913973 320 2.606227970320742 340 9.6771492832627981
-		 360 15.194309574457;
-	setAttr -s 7 ".kit[0:6]"  18 3 3 3 3 3 3;
+	setAttr -s 8 ".ktv[0:7]"  1 20.81781444779719 250 20.81781444779719
+		 260 18.069291500395611 270 4.5970640234670022 290 1.703118939913973 310 2.606227970320742
+		 315 9.6771492832627981 320 15.194309574457;
+	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
 createNode animCurveTA -n "All_Controls_L_Arm_IK_ctrl_rotateX";
 	rename -uid "95F3C1D9-45D7-8982-54BD-A686833CA1CF";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -27.68465362341772 260 -27.68465362341772
-		 280 -27.68465362341772 300 -27.68465362341772 320 -27.68465362341772;
-	setAttr -s 5 ".kit[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kot[0:4]"  18 5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 -27.68465362341772 250 -27.68465362341772
+		 260 -27.68465362341772 270 -27.68465362341772 290 -27.68465362341772 310 -27.68465362341772;
+	setAttr -s 6 ".kit[0:5]"  18 3 3 3 3 3;
+	setAttr -s 6 ".kot[0:5]"  18 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_Arm_IK_ctrl_rotateY";
 	rename -uid "851E1F2C-4E6E-41DE-8156-979CFD561329";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -15.739814268202551 260 -15.739814268202551
-		 280 -15.739814268202551 300 -15.739814268202551 320 -15.739814268202551;
-	setAttr -s 5 ".kit[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kot[0:4]"  18 5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 -15.739814268202551 250 -15.739814268202551
+		 260 -15.739814268202551 270 -15.739814268202551 290 -15.739814268202551 310 -15.739814268202551;
+	setAttr -s 6 ".kit[0:5]"  18 3 3 3 3 3;
+	setAttr -s 6 ".kot[0:5]"  18 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_Arm_IK_ctrl_rotateZ";
 	rename -uid "CB85A70C-4712-4F7B-8A2A-05B451B37744";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -41.980299799373633 260 -41.980299799373633
-		 280 -41.980299799373633 300 -41.980299799373633 320 -41.980299799373633;
-	setAttr -s 5 ".kit[0:4]"  18 3 3 3 3;
-	setAttr -s 5 ".kot[0:4]"  18 5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 -41.980299799373633 250 -41.980299799373633
+		 260 -41.980299799373633 270 -41.980299799373633 290 -41.980299799373633 310 -41.980299799373633;
+	setAttr -s 6 ".kit[0:5]"  18 3 3 3 3 3;
+	setAttr -s 6 ".kot[0:5]"  18 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_L_Arm_IK_ctrl_scaleX";
 	rename -uid "5E68C7D8-4EA8-DF16-E7AB-9CBFADBA3B02";
 	setAttr ".tan" 18;
@@ -15451,22 +14960,21 @@ createNode animCurveTL -n "All_Controls_L_Arm_PV_ctrl_translateX";
 	rename -uid "3D3C5F28-4BD2-1CE7-F106-1F9C86419D02";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 320 18.944409646813444 340 19.136371553571443;
+	setAttr -s 3 ".ktv[0:2]"  1 0 310 18.944409646813444 315 19.136371553571443;
 	setAttr -s 3 ".kit[1:2]"  3 3;
 	setAttr -s 3 ".kot[1:2]"  5 5;
 createNode animCurveTL -n "All_Controls_L_Arm_PV_ctrl_translateY";
 	rename -uid "9FD798E5-4785-D967-18C2-30A23C9A6E38";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 320 5.7976791220544317e-14 340 5.8564264548977008e-14
-		 640 10.932887924687007;
+	setAttr -s 4 ".ktv[0:3]"  1 0 310 0 315 0 459 10.932887924687007;
 	setAttr -s 4 ".kit[0:3]"  18 3 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 5 5 5;
 createNode animCurveTL -n "All_Controls_L_Arm_PV_ctrl_translateZ";
 	rename -uid "D561F777-4F17-70B9-0901-629EC6373EAC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 320 22.183228724089336 340 22.408009277472331;
+	setAttr -s 3 ".ktv[0:2]"  1 0 310 22.183228724089336 315 22.408009277472331;
 	setAttr -s 3 ".kit[1:2]"  3 3;
 	setAttr -s 3 ".kot[1:2]"  5 5;
 createNode animCurveTA -n "All_Controls_L_Arm_PV_ctrl_rotateX";
@@ -15510,8 +15018,8 @@ createNode animCurveTL -n "All_Controls_R_Arm_IK_ctrl_translateX";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 13.886289952539121 220 13.886289952539121
-		 280 -14.567657764810402 300 -27.123305479117189 320 -20.959688059102984 340 -8.7057512434355608
-		 360 10.002423220089238 460 10.918284933545783;
+		 270 -14.567657764810402 290 -27.123305479117189 310 -20.959688059102984 315 -8.7057512434355608
+		 320 10.002423220089238 390 10.918284933545783;
 	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_Arm_IK_ctrl_translateY";
@@ -15519,8 +15027,8 @@ createNode animCurveTL -n "All_Controls_R_Arm_IK_ctrl_translateY";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 2.5251835712960258 220 2.5251835712960258
-		 280 -21.316198665499655 300 -26.548706069712793 320 -6.6518478914179253 340 30.108353412764778
-		 360 -3.5940569454867943 460 4.6824282376896278;
+		 270 -21.316198665499655 290 -26.548706069712793 310 -6.6518478914179253 315 30.108353412764778
+		 320 -3.5940569454867943 390 4.6824282376896278;
 	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_Arm_IK_ctrl_translateZ";
@@ -15528,8 +15036,8 @@ createNode animCurveTL -n "All_Controls_R_Arm_IK_ctrl_translateZ";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 8 ".ktv[0:7]"  1 19.935753102431107 220 19.935753102431107
-		 280 -24.116095688457349 300 -24.116095688457346 320 -2.4397567832320761 340 -5.5167324413943462
-		 360 15.662427572051856 460 24.797937529084162;
+		 270 -24.116095688457349 290 -24.116095688457346 310 -2.4397567832320761 315 -5.5167324413943462
+		 320 15.662427572051856 390 24.797937529084162;
 	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
 	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_Arm_IK_ctrl_rotateX";
@@ -15537,9 +15045,9 @@ createNode animCurveTA -n "All_Controls_R_Arm_IK_ctrl_rotateX";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 -36.337074443838709 220 -36.337074443838709
-		 240 -36.337074443838709 260 -36.337074443838709 280 29.072452485258683 300 33.947967659847777
-		 320 -15.671589729577963 340 -96.011266887231216 360 -70.532362021086357 440 -17.361074891805576
-		 460 -19.076683728346662;
+		 240 -36.337074443838709 260 -36.337074443838709 270 29.072452485258683 290 33.947967659847777
+		 310 -15.671589729577963 315 -96.011266887231216 320 -70.532362021086357 370 -17.361074891805576
+		 390 -19.076683728346662;
 	setAttr -s 11 ".kit[0:10]"  18 3 3 3 3 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 5 5 5 5 5 5 
@@ -15549,8 +15057,8 @@ createNode animCurveTA -n "All_Controls_R_Arm_IK_ctrl_rotateY";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 16.166407347984482 220 16.166407347984482
-		 240 16.166407347984482 260 16.166407347984482 280 -7.9513867036587939e-16 300 -7.9513867036587899e-16
-		 320 -3.975693351829396e-16 340 0 360 45.947502760956823 440 50.948256150845594 460 19.004867950242307;
+		 240 16.166407347984482 260 16.166407347984482 270 0 290 0 310 0 315 0 320 45.947502760956823
+		 370 50.948256150845594 390 19.004867950242307;
 	setAttr -s 11 ".kit[0:10]"  18 3 3 3 3 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 5 5 5 5 5 5 
@@ -15560,9 +15068,9 @@ createNode animCurveTA -n "All_Controls_R_Arm_IK_ctrl_rotateZ";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 32.785734518016859 220 32.785734518016859
-		 240 32.785734518016859 260 32.785734518016859 280 -17.211853289719439 300 -17.211853289719446
-		 320 -17.211853289719414 340 -17.211853289719414 360 26.92486242960975 440 43.927824779680257
-		 460 46.773711917236916;
+		 240 32.785734518016859 260 32.785734518016859 270 -17.211853289719439 290 -17.211853289719446
+		 310 -17.211853289719414 315 -17.211853289719414 320 26.92486242960975 370 43.927824779680257
+		 390 46.773711917236916;
 	setAttr -s 11 ".kit[0:10]"  18 3 3 3 3 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 5 5 5 5 5 5 
@@ -15652,24 +15160,24 @@ createNode animCurveTL -n "All_Controls_R_Arm_PV_ctrl_translateX";
 	rename -uid "ABEEB473-4AC2-DF17-B57C-768CD2A3A418";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 260 -22.633555151922373 280 52.053985509398643
-		 320 11.563183663347989 340 11.563183663347942 460 -7.5733910178224875;
+	setAttr -s 6 ".ktv[0:5]"  1 0 260 -22.633555151922373 270 52.053985509398643
+		 310 11.563183663347989 315 11.563183663347942 390 -7.5733910178224875;
 	setAttr -s 6 ".kit[0:5]"  18 3 3 3 3 3;
 	setAttr -s 6 ".kot[0:5]"  18 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_Arm_PV_ctrl_translateY";
 	rename -uid "6066BB35-41A0-CD37-4FE3-8EB85009113F";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 260 -8.4048438288472944 320 -33.092549312706964
-		 340 -6.9677990435971733 460 -0.51948777144223257;
+	setAttr -s 5 ".ktv[0:4]"  1 0 260 -8.4048438288472944 310 -33.092549312706964
+		 315 -6.9677990435971733 390 -0.51948777144223257;
 	setAttr -s 5 ".kit[0:4]"  18 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_Arm_PV_ctrl_translateZ";
 	rename -uid "D397DAC0-45A6-135F-2A28-F9AB365C2B60";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 260 8.2723246540735129 320 8.2723246540735147
-		 340 -9.7998814888746928;
+	setAttr -s 4 ".ktv[0:3]"  1 0 260 8.2723246540735129 310 8.2723246540735147
+		 315 -9.7998814888746928;
 	setAttr -s 4 ".kit[0:3]"  18 3 3 3;
 	setAttr -s 4 ".kot[0:3]"  18 5 5 5;
 createNode animCurveTA -n "All_Controls_R_Arm_PV_ctrl_rotateX";
@@ -15717,9 +15225,9 @@ createNode animCurveTL -n "All_Controls_L_Leg_IK_ctrl_translateX";
 		 46 -20.282607231157794 101 -20.282607231157794 113 -20.282607231157794 122 -20.292843701406902
 		 130 -20.303290869574514 145 -20.303290869574464 154 -20.415235812775421 162 -20.381626794925452
 		 200 -20.381626794925452 220 -17.076977224649728 240 -17.076977224649728 260 -9.9726168816113141
-		 280 -0.48702593401386807 300 -0.48702593401386807 320 -0.48702593401386807 340 -0.48702593401386807
-		 360 9.8719141338393612 460 43.61377552078045 520 41.366483765343673 580 39.568688138032634
-		 720 -53.561852129363857;
+		 270 -0.48702593401386807 290 -0.48702593401386807 310 -0.48702593401386807 315 -0.48702593401386807
+		 320 9.8719141338393612 390 43.61377552078045 415 41.366483765343673 439 39.568688138032634
+		 485 -53.561852129363857;
 	setAttr -s 28 ".kit[19:27]"  3 3 3 3 3 3 3 3 
 		3;
 	setAttr -s 28 ".kot[15:27]"  5 5 5 5 5 5 5 5 
@@ -15732,7 +15240,7 @@ createNode animCurveTL -n "All_Controls_L_Leg_IK_ctrl_translateY";
 		 36 -0.11377241171341268 42 29.917818812108504 45 1.222142539164917 46 -0.073546561619473039
 		 101 -0.073546561619473039 113 -0.073546561619473039 122 9.9058275312456345 130 0.11963964699275209
 		 145 0.11963964699271479 154 6.3092860947338076 162 0.3 200 0.3 220 0.3 240 0.3 260 0.3
-		 300 0.3 320 0.3 340 0.3 360 0.3 520 -0.40011818679136368 580 0.10820097811756568;
+		 290 0.3 310 0.3 315 0.3 320 0.3 415 -0.40011818679136368 439 0.10820097811756568;
 	setAttr -s 25 ".kit[19:24]"  3 3 3 3 3 3;
 	setAttr -s 25 ".kot[15:24]"  5 5 5 5 5 5 5 5 
 		5 5;
@@ -15744,9 +15252,9 @@ createNode animCurveTL -n "All_Controls_L_Leg_IK_ctrl_translateZ";
 		 45 255.12316438123517 46 266.78804521783775 101 266.78804521783775 113 266.78804521783775
 		 122 185.74367778798461 130 138.02419371183564 145 138.02419371183564 154 148.38594688150516
 		 162 156.74290727742243 200 156.74290727742243 220 147.29347571670368 240 168.85857475111345
-		 260 189.06939496407463 300 189.06939496407463 320 189.06939496407463 340 189.06939496407463
-		 360 82.601060135627108 460 78.651930595189839 520 114.40910216209099 580 143.01423833654022
-		 720 152.95533139364602;
+		 260 189.06939496407463 290 189.06939496407463 310 189.06939496407463 315 189.06939496407463
+		 320 82.601060135627108 390 78.651930595189839 415 114.40910216209099 439 143.01423833654022
+		 485 152.95533139364602;
 	setAttr -s 25 ".kit[8:24]"  1 18 18 18 18 18 18 18 
 		18 3 3 3 3 3 3 3 3;
 	setAttr -s 25 ".kot[8:24]"  1 18 18 18 18 5 5 5 
@@ -15848,9 +15356,9 @@ createNode animCurveTL -n "All_Controls_L_Leg_PV_ctrl_translateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 -4.2717565595928875e-17 220 1.5904298338822938
-		 240 -0.61044279528851841 260 -0.61044279528851841 280 -0.61044279528851841 300 -0.61044279528851841
-		 320 -0.61044279528851841 340 -0.61044279528850409 360 -0.61044279528850409 380 -0.61044279528850298
-		 400 -0.61044279528850298 560 -0.61044279528850298;
+		 240 -0.61044279528851841 260 -0.61044279528851841 270 -0.61044279528851841 290 -0.61044279528851841
+		 310 -0.61044279528851841 315 -0.61044279528850409 320 -0.61044279528850409 324 -0.61044279528850298
+		 340 -0.61044279528850298 434 -0.61044279528850298;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 3 3 3 3 3 
 		3 3 3 3;
 createNode animCurveTL -n "All_Controls_L_Leg_PV_ctrl_translateY";
@@ -15858,10 +15366,10 @@ createNode animCurveTL -n "All_Controls_L_Leg_PV_ctrl_translateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  1 3.2474023470285829e-15 220 11.04052252881516
-		 240 4.9918594361248374 260 4.9918594361248374 280 4.9918594361248374 300 4.9918594361248374
-		 320 4.9918594361248374 340 18.769271909657306 360 18.769271909657306 380 6.290381670437867
-		 400 6.290381670437867 420 13.388867242272761 440 27.695748278045425 560 1.5862322075600215
-		 580 -5.7629441515835182 640 -67.071085706025713 720 50.739491463574275;
+		 240 4.9918594361248374 260 4.9918594361248374 270 4.9918594361248374 290 4.9918594361248374
+		 310 4.9918594361248374 315 18.769271909657306 320 18.769271909657306 324 6.290381670437867
+		 340 6.290381670437867 350 13.388867242272761 370 27.695748278045425 434 1.5862322075600215
+		 439 -5.7629441515835182 459 -67.071085706025713 485 50.739491463574275;
 	setAttr -s 17 ".kit[0:16]"  18 18 18 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3;
 createNode animCurveTL -n "All_Controls_L_Leg_PV_ctrl_translateZ";
@@ -15869,28 +15377,28 @@ createNode animCurveTL -n "All_Controls_L_Leg_PV_ctrl_translateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  1 0 220 11.628235537317268 240 -8.6219102569785999
-		 260 -8.6219102569785999 280 -8.6219102569785999 300 -8.6219102569785999 320 -8.6219102569785999
-		 340 -8.6219102569785893 360 -8.6219102569785893 380 12.012800446931402 400 12.012800446931402
-		 560 12.012800446931402;
+		 260 -8.6219102569785999 270 -8.6219102569785999 290 -8.6219102569785999 310 -8.6219102569785999
+		 315 -8.6219102569785893 320 -8.6219102569785893 324 12.012800446931402 340 12.012800446931402
+		 434 12.012800446931402;
 	setAttr -s 12 ".kit[0:11]"  18 18 18 3 3 3 3 3 
 		3 3 3 3;
 createNode animCurveTA -n "All_Controls_L_Leg_PV_ctrl_rotateX";
 	rename -uid "716CDFCD-44A7-94CC-A787-49832C6D56FC";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 220 0 240 0 400 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 220 0 240 0 340 0;
 	setAttr -s 4 ".kit[0:3]"  18 18 18 3;
 createNode animCurveTA -n "All_Controls_L_Leg_PV_ctrl_rotateY";
 	rename -uid "BCF8C7B7-49D5-B121-3532-0EB60273960B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 220 0 240 0 400 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 220 0 240 0 340 0;
 	setAttr -s 4 ".kit[0:3]"  18 18 18 3;
 createNode animCurveTA -n "All_Controls_L_Leg_PV_ctrl_rotateZ";
 	rename -uid "3F485D81-4A69-D965-B945-9D9FB853A02D";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 220 0 240 0 400 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 220 0 240 0 340 0;
 	setAttr -s 4 ".kit[0:3]"  18 18 18 3;
 createNode animCurveTU -n "All_Controls_L_Leg_PV_ctrl_scaleX";
 	rename -uid "ABA9AA32-4371-9391-4F2F-E1BA2E1E0053";
@@ -15981,8 +15489,8 @@ createNode animCurveTL -n "All_Controls_R_Leg_PV_ctrl_translateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 0 220 0.59514556927641626 240 0.59514556927641171
-		 260 0.59514556927641171 280 0.59514556927641171 300 0.59514556927642082 320 0.59514556927642082
-		 340 0.59514556927644202 360 0.59514556927644202 380 0.59514556927644202 400 0.59514556927644202;
+		 260 0.59514556927641171 270 0.59514556927641171 290 0.59514556927642082 310 0.59514556927642082
+		 315 0.59514556927644202 320 0.59514556927644202 324 0.59514556927644202 340 0.59514556927644202;
 	setAttr -s 11 ".kit[0:10]"  18 18 18 3 3 3 3 3 
 		3 3 3;
 createNode animCurveTL -n "All_Controls_R_Leg_PV_ctrl_translateY";
@@ -15990,9 +15498,9 @@ createNode animCurveTL -n "All_Controls_R_Leg_PV_ctrl_translateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 13 ".ktv[0:12]"  1 0 220 -9.2545310111338388 240 -16.689884583684034
-		 260 -16.689884583684034 280 -16.689884583684034 300 -49.261544516076874 320 -49.261544516076874
-		 340 10.020395698109887 360 10.020395698109887 380 10.020395698109887 400 10.020395698109887
-		 420 -5.0853837790650376 480 -6.9569146683183547;
+		 260 -16.689884583684034 270 -16.689884583684034 290 -49.261544516076874 310 -49.261544516076874
+		 315 10.020395698109887 320 10.020395698109887 324 10.020395698109887 340 10.020395698109887
+		 350 -5.0853837790650376 400 -6.9569146683183547;
 	setAttr -s 13 ".kit[0:12]"  18 18 18 3 3 3 3 3 
 		3 3 3 3 3;
 createNode animCurveTL -n "All_Controls_R_Leg_PV_ctrl_translateZ";
@@ -16000,27 +15508,27 @@ createNode animCurveTL -n "All_Controls_R_Leg_PV_ctrl_translateZ";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  1 0 220 -11.957864416820648 240 -11.957864416820644
-		 260 -11.957864416820644 280 -11.957864416820644 300 -11.957864416820641 320 -11.957864416820641
-		 340 -11.957864416820595 360 -11.957864416820595 380 -11.957864416820595 400 -11.957864416820595;
+		 260 -11.957864416820644 270 -11.957864416820644 290 -11.957864416820641 310 -11.957864416820641
+		 315 -11.957864416820595 320 -11.957864416820595 324 -11.957864416820595 340 -11.957864416820595;
 	setAttr -s 11 ".kit[0:10]"  18 18 18 3 3 3 3 3 
 		3 3 3;
 createNode animCurveTA -n "All_Controls_R_Leg_PV_ctrl_rotateX";
 	rename -uid "82524BB6-4C14-9FBE-3C64-AB9CD2D5AD44";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 220 0 240 0 360 0 380 0 400 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 220 0 240 0 320 0 324 0 340 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 3 3 3;
 createNode animCurveTA -n "All_Controls_R_Leg_PV_ctrl_rotateY";
 	rename -uid "321B2F9A-4C60-14E3-0CC3-A6915CF45471";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 220 0 240 0 360 0 380 0 400 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 220 0 240 0 320 0 324 0 340 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 3 3 3;
 createNode animCurveTA -n "All_Controls_R_Leg_PV_ctrl_rotateZ";
 	rename -uid "5E11B6CA-4C7F-9CE1-6D41-00937CA670B8";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 220 0 240 0 360 0 380 0 400 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 220 0 240 0 320 0 324 0 340 0;
 	setAttr -s 6 ".kit[0:5]"  18 18 18 3 3 3;
 createNode animCurveTU -n "All_Controls_R_Leg_PV_ctrl_scaleX";
 	rename -uid "4D950215-43FF-2813-12D3-679DB342AF36";
@@ -16044,24 +15552,24 @@ createNode animCurveTL -n "All_Controls_cog_ctrl_translateZ";
 	rename -uid "A4E317B3-48F9-7ACA-6179-209DC79D537A";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 33 ".ktv[0:32]"  1 0 50 260.78255517035109 62 259.93682852310479
+	setAttr -s 34 ".ktv[0:33]"  1 0 50 260.78255517035109 62 259.93682852310479
 		 101 259.93682852310479 140 142.49369772993691 162 139.84161718952549 200 139.84161718952549
-		 204 139.84161718952549 220 147.32648753349338 240 152.12306193422128 260 157.46137932575758
-		 280 158.90629913679672 300 160.54242547492288 320 151.24488957247243 340 116.80740828239945
-		 360 95.406840516452945 380 101.70139744126605 400 76.070413991419585 420 62.965803849513094
-		 460 78.346706126389279 480 91.58442445722936 500 88.601532664433492 520 108.48411273538423
-		 540 129.46009971022397 560 131.25943877637317 580 146.95602547662804 600 148.13076452905887
-		 620 157.61833270462674 640 161.55543382241078 660 158.15941301548673 680 151.16239554207218
-		 700 127.21279902950573 720 126.01311276647854;
-	setAttr -s 33 ".kit[0:32]"  2 2 18 2 10 18 18 18 
-		18 18 18 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-		3 3 3 3 3 3 3 3;
-	setAttr -s 33 ".kot[0:32]"  2 2 18 2 10 18 5 5 
+		 204 139.84161718952549 220 147.32648753349338 230 146.53979884288543 240 152.12306193422128
+		 260 157.46137932575758 270 158.90629913679672 290 160.54242547492288 310 151.24488957247243
+		 315 116.80740828239945 320 95.406840516452945 324 101.70139744126605 340 76.070413991419585
+		 350 62.965803849513094 390 78.346706126389279 400 91.58442445722936 410 88.601532664433492
+		 415 108.48411273538423 425 129.46009971022397 434 131.25943877637317 439 146.95602547662804
+		 449 148.13076452905887 454 157.61833270462674 459 161.55543382241078 464 158.15941301548673
+		 470 151.16239554207218 480 127.21279902950573 485 126.01311276647854;
+	setAttr -s 34 ".kit[0:33]"  2 2 18 2 10 18 18 18 
+		18 3 18 18 3 3 3 3 3 3 3 3 3 3 3 3 3 
+		3 3 3 3 3 3 3 3 3;
+	setAttr -s 34 ".kot[0:33]"  2 2 18 2 10 18 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5;
-	setAttr -s 33 ".ktl[0:32]" no no yes yes yes yes yes yes yes yes yes 
+		5 5 5 5 5 5 5 5 5;
+	setAttr -s 34 ".ktl[0:33]" no no yes yes yes yes yes yes yes yes yes 
 		yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes yes 
-		yes;
+		yes yes;
 createNode animCurveTA -n "R_hand_LOC_rotateX";
 	rename -uid "7C5D13A1-4473-6028-A020-D3826944C7FD";
 	setAttr ".tan" 18;
@@ -16218,10 +15726,10 @@ createNode animCurveTL -n "AllControls_MASTER_ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 21 ".ktv[0:20]"  1 91.030514200740654 11 92.703414520263891
 		 19 89.270124450341015 220 89.270124450341015 240 88.14100744262015 260 88.14100744262025
-		 280 88.14100744262025 300 88.14100744262025 320 94.033569865903701 340 103.43386259602053
-		 360 102.47718167701545 380 87.332541356690399 400 80.577816045058569 420 86.656315822978954
-		 440 82.105351988501099 460 79.369671130028166 480 76.584614821701365 600 72.136649807417513
-		 620 79.499449565753565 640 79.065499527780815 680 78.897731565374514;
+		 270 88.14100744262025 290 88.14100744262025 310 94.033569865903701 315 103.43386259602053
+		 320 102.47718167701545 324 87.332541356690399 340 80.577816045058569 350 86.656315822978954
+		 370 82.105351988501099 390 79.369671130028166 400 76.584614821701365 449 72.136649807417513
+		 454 79.499449565753565 459 79.065499527780815 470 78.897731565374514;
 	setAttr -s 21 ".kit[0:20]"  9 9 9 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3 3 3 3 3;
 	setAttr -s 21 ".kot[0:20]"  9 9 9 5 5 5 5 5 
@@ -16232,10 +15740,10 @@ createNode animCurveTL -n "AllControls_MASTER_ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 21 ".ktv[0:20]"  1 -97.631923347269321 11 -97.837479488480298
 		 19 -97.416210844930248 220 -97.416210844930248 240 -97.290539560271768 260 -97.290539560271739
-		 280 -97.290539560271739 300 -97.290539560271739 320 -96.67603698355461 340 -83.281507723971814
-		 360 -87.423647985110364 380 -94.473942051593212 400 -95.430001593036778 420 -87.751670709974945
-		 440 -92.330312192752103 460 -97.936354350774025 480 -99.418803352218816 600 -100.41715972019173
-		 620 -99.167060036567761 640 -99.143500804076652 680 -98.434527618044413;
+		 270 -97.290539560271739 290 -97.290539560271739 310 -96.67603698355461 315 -83.281507723971814
+		 320 -87.423647985110364 324 -94.473942051593212 340 -95.430001593036778 350 -87.751670709974945
+		 370 -92.330312192752103 390 -97.936354350774025 400 -99.418803352218816 449 -100.41715972019173
+		 454 -99.167060036567761 459 -99.143500804076652 470 -98.434527618044413;
 	setAttr -s 21 ".kit[0:20]"  9 9 9 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3 3 3 3 3;
 	setAttr -s 21 ".kot[0:20]"  9 9 9 5 5 5 5 5 
@@ -16246,10 +15754,10 @@ createNode animCurveTL -n "AllControls_MASTER_ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 21 ".ktv[0:20]"  1 2.4516405948164678e-13 11 -0.017194430844495751
 		 19 -0.017194430844495737 220 -0.017194430844495737 240 -3.3678188973240673 260 3.2958232421553384
-		 280 3.2958232421553384 300 3.2958232421553384 320 14.321810971025242 340 -25.217864015645898
-		 360 -21.939820409859305 380 -20.388838539972632 400 -18.143301393703393 420 -7.7319614456780723
-		 440 -7.0035420889324156 460 8.7923345927247709 480 13.602540925198685 600 12.426744500960181
-		 620 15.023185931451646 640 10.717285292510722 680 10.738072065193579;
+		 270 3.2958232421553384 290 3.2958232421553384 310 14.321810971025242 315 -25.217864015645898
+		 320 -21.939820409859305 324 -20.388838539972632 340 -18.143301393703393 350 -7.7319614456780723
+		 370 -7.0035420889324156 390 8.7923345927247709 400 13.602540925198685 449 12.426744500960181
+		 454 15.023185931451646 459 10.717285292510722 470 10.738072065193579;
 	setAttr -s 21 ".kit[0:20]"  9 9 9 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3 3 3 3 3;
 	setAttr -s 21 ".kot[0:20]"  9 9 9 5 5 5 5 5 
@@ -16264,10 +15772,10 @@ createNode animCurveTA -n "AllControls_MASTER_ctrl_rotateX";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  1 0 220 0 240 0 260 -8.0156467843364929
-		 300 8.2705033813989797 320 6.6018553340671398 340 -17.216235285925972 360 -16.520201308237322
-		 380 -15.268100286150574 400 -7.3378192136480012 420 -7.3274855669243291 460 1.6549096484162793
-		 480 1.6349516545010685 560 1.6447507212156445 580 1.6494268631080491 600 1.6878520248657023
-		 620 1.6419272603836901;
+		 290 8.2705033813989797 310 6.6018553340671398 315 -17.216235285925972 320 -16.520201308237322
+		 324 -15.268100286150574 340 -7.3378192136480012 350 -7.3274855669243291 390 1.6549096484162793
+		 400 1.6349516545010685 434 1.6447507212156445 439 1.6494268631080491 449 1.6878520248657023
+		 454 1.6419272603836901;
 	setAttr -s 17 ".kit[0:16]"  9 3 3 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3;
 	setAttr -s 17 ".kot[0:16]"  9 5 5 5 5 5 5 5 
@@ -16276,10 +15784,10 @@ createNode animCurveTA -n "AllControls_MASTER_ctrl_rotateY";
 	rename -uid "863C92A5-4FA1-86AA-9C61-A0AD550FF34C";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  1 0 220 0 240 0 260 0 300 -9.9392333795734924e-17
-		 320 6.0879501430346359 340 -27.797709988637589 360 -22.961812579603755 380 -6.1454854647795845
-		 400 -3.6467402213248845 420 2.0260136500355421 460 -9.0513366916776601 480 -1.6215810065758758
-		 560 -6.4624908475683478 580 -7.765436025222014 600 -14.469934780366049 620 5.5251933619141305;
+	setAttr -s 17 ".ktv[0:16]"  1 0 220 0 240 0 260 0 290 0 310 6.0879501430346359
+		 315 -27.797709988637589 320 -22.961812579603755 324 -6.1454854647795845 340 -3.6467402213248845
+		 350 2.0260136500355421 390 -9.0513366916776601 400 -1.6215810065758758 434 -6.4624908475683478
+		 439 -7.765436025222014 449 -14.469934780366049 454 5.5251933619141305;
 	setAttr -s 17 ".kit[0:16]"  9 3 3 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3;
 	setAttr -s 17 ".kot[0:16]"  9 5 5 5 5 5 5 5 
@@ -16289,10 +15797,10 @@ createNode animCurveTA -n "AllControls_MASTER_ctrl_rotateZ";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  1 -6.9514579008296238 220 -2.0739170755235912
-		 240 -9.2397256032721753 260 -9.2397256032721824 300 -9.2397256032721788 320 -10.100299972213627
-		 340 1.160590600372793 360 -0.46178543772693742 380 -5.3881515610397983 400 3.5449978892320622
-		 420 2.8152502064322493 460 13.052881870992604 480 13.267023179297523 560 13.128130415720708
-		 580 13.090374324029062 600 12.891440548858942 620 13.471435107850629;
+		 240 -9.2397256032721753 260 -9.2397256032721824 290 -9.2397256032721788 310 -10.100299972213627
+		 315 1.160590600372793 320 -0.46178543772693742 324 -5.3881515610397983 340 3.5449978892320622
+		 350 2.8152502064322493 390 13.052881870992604 400 13.267023179297523 434 13.128130415720708
+		 439 13.090374324029062 449 12.891440548858942 454 13.471435107850629;
 	setAttr -s 17 ".kit[0:16]"  9 3 3 3 3 3 3 3 
 		3 3 3 3 3 3 3 3 3;
 	setAttr -s 17 ".kot[0:16]"  9 5 5 5 5 5 5 5 
@@ -16316,70 +15824,64 @@ createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateX";
 	rename -uid "4248BF31-403D-5883-4B58-828F902FBED5";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  1 0 11 0.18789877919237163 19 -0.040843832491326143
-		 24 0.43574277117623977 32 -0.040843832491256532 101 0 111 -0.040843832491227777 220 -0.10040922249578224
-		 240 -0.10040922249580236 260 -0.059171946920835591 280 -0.10040922249572244 300 -0.10040922249570565
-		 320 -0.10040922249572133 340 -0.40371576290554323 360 -0.72756710206288044 380 -0.72756710206289987
-		 440 -0.72756710206289987 460 -0.72756710206289987;
-	setAttr -s 18 ".kit[0:17]"  18 18 18 18 18 3 3 3 
-		3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 18 ".kot[0:17]"  18 18 18 18 18 5 5 5 
-		5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 17 ".ktv[0:16]"  1 0 11 0.18789877919237163 19 -0.040843832491326143
+		 24 0.43574277117623977 32 -0.040843832491256532 101 -0.040843832491256532 220 -0.10040922249578224
+		 240 -0.10040922249580236 260 -0.059171946920835591 270 -0.10040922249572244 290 -0.10040922249570565
+		 310 -0.10040922249572133 315 -0.40371576290554323 320 -0.72756710206288044 324 -0.72756710206289987
+		 370 -0.72756710206289987 390 -0.72756710206289987;
+	setAttr -s 17 ".kit[0:16]"  18 18 18 18 18 3 3 3 
+		3 3 3 3 3 3 3 3 3;
+	setAttr -s 17 ".kot[0:16]"  18 18 18 18 18 5 5 5 
+		5 5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateY";
 	rename -uid "E3661FB7-41C6-060E-05F3-5C93640605AB";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  1 0 11 -3.3820113392010471 19 -2.614312891008538
-		 24 -2.7552425807569678 32 -2.9593803302868587 101 -1.5684860804749432 111 -1.5684860804749432
-		 220 -4.7612483218867503 240 -4.7612483218867574 260 -2.5508906563942122 280 -2.0750908839386359
-		 300 -2.0750908839386275 320 -2.0750908839386275 340 -2.0694322814482886 360 -2.0633903873572814
-		 380 -2.0633903873572734 440 -2.0633903873572734 460 -2.0633903873572734 480 -3.9012803493783448
-		 580 -0.56694316937181899;
-	setAttr -s 20 ".kit[0:19]"  18 18 18 18 18 3 3 3 
-		3 3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 20 ".kot[0:19]"  18 18 18 18 18 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 19 ".ktv[0:18]"  1 0 11 -3.3820113392010471 19 -2.614312891008538
+		 24 -2.7552425807569678 32 -2.9593803302868587 101 -2.9593803302868587 220 -4.7612483218867503
+		 240 -4.7612483218867574 260 -2.5508906563942122 270 -2.0750908839386359 290 -2.0750908839386275
+		 310 -2.0750908839386275 315 -2.0694322814482886 320 -2.0633903873572814 324 -2.0633903873572734
+		 370 -2.0633903873572734 390 -2.0633903873572734 400 -3.9012803493783448 439 -0.56694316937181899;
+	setAttr -s 19 ".kit[0:18]"  18 18 18 18 18 3 3 3 
+		3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 19 ".kot[0:18]"  18 18 18 18 18 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateZ";
 	rename -uid "5156D3B4-4DD8-71E1-46AE-FBAE9CA28821";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  1 9.8607613152626476e-29 11 -5.7347651772109231e-18
+	setAttr -s 17 ".ktv[0:16]"  1 9.8607613152626476e-29 11 -5.7347651772109231e-18
 		 19 2.4313778713990378e-17 24 -1.0907531135246095e-17 32 -5.7876479277103948e-18 101 -5.7876479277103948e-18
-		 111 -5.7876479277103948e-18 220 -1.8184162325274167 240 0.10144908642796019 260 3.5392378325571761
-		 280 -2.9492619959669732 300 -6.1206547255080137 320 -9.6665764011971689 340 -3.9484714360713866
-		 360 5.5652814766581926 380 0.7163411268534513 440 0.7163411268534513 460 0.7163411268534513;
-	setAttr -s 18 ".kit[0:17]"  18 3 18 18 18 3 3 3 
-		3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 18 ".kot[0:17]"  18 5 18 18 18 5 5 5 
-		5 5 5 5 5 5 5 5 5 5;
+		 220 -1.8184162325274167 240 0.10144908642796019 260 3.5392378325571761 270 -2.9492619959669732
+		 290 -6.1206547255080137 310 -9.6665764011971689 315 -3.9484714360713866 320 5.5652814766581926
+		 324 0.7163411268534513 370 0.7163411268534513 390 0.7163411268534513;
+	setAttr -s 17 ".kit[0:16]"  18 3 18 18 18 3 3 3 
+		3 3 3 3 3 3 3 3 3;
+	setAttr -s 17 ".kot[0:16]"  18 5 18 18 18 5 5 5 
+		5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "AllControls_Auto_FK_bounce_ctrl_rotateX";
 	rename -uid "C2CEF086-45B6-4E98-1432-EB912A504A0C";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  1 0 101 0 111 0 220 0 300 0 320 3.1099177688249041e-18
-		 340 0 380 0;
-	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
-	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  1 0 101 0 220 0 290 0 310 0 315 0 324 0;
+	setAttr -s 7 ".kit[0:6]"  18 3 3 3 3 3 3;
+	setAttr -s 7 ".kot[0:6]"  18 5 5 5 5 5 5;
 createNode animCurveTA -n "AllControls_Auto_FK_bounce_ctrl_rotateY";
 	rename -uid "55C1604E-42EA-15B5-CA1C-AABE93D045F1";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 101 0 111 0 220 0 300 0 320 2.872427878895162
-		 340 -1.9499537442559445 360 0 380 0;
-	setAttr -s 9 ".kit[0:8]"  18 3 3 3 3 3 3 3 
-		3;
-	setAttr -s 9 ".kot[0:8]"  18 5 5 5 5 5 5 5 
-		5;
+	setAttr -s 8 ".ktv[0:7]"  1 0 101 0 220 0 290 0 310 2.872427878895162
+		 315 -1.9499537442559445 320 0 324 0;
+	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
+	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTA -n "AllControls_Auto_FK_bounce_ctrl_rotateZ";
 	rename -uid "530DA3C6-4C6E-2F92-7694-B09F75D68303";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  1 0 101 0 111 0 220 -1.0688079217874296
-		 300 -1.0688079217874296 320 -1.0688079217874296 340 -1.0688079217874324 360 0 380 0;
-	setAttr -s 9 ".kit[0:8]"  18 3 3 3 3 3 3 3 
-		3;
-	setAttr -s 9 ".kot[0:8]"  18 5 5 5 5 5 5 5 
-		5;
+	setAttr -s 8 ".ktv[0:7]"  1 0 101 0 220 -1.0688079217874296 290 -1.0688079217874296
+		 310 -1.0688079217874296 315 -1.0688079217874324 320 0 324 0;
+	setAttr -s 8 ".kit[0:7]"  18 3 3 3 3 3 3 3;
+	setAttr -s 8 ".kot[0:7]"  18 5 5 5 5 5 5 5;
 createNode animCurveTU -n "All_Controls_R_Leg_IK_ctrl_visibility";
 	rename -uid "F5AFB571-49CC-F68C-5B4C-DAAD0331819E";
 	setAttr ".tan" 5;
@@ -16408,59 +15910,59 @@ createNode animCurveTL -n "All_Controls_R_Leg_IK_ctrl_translateZ";
 	rename -uid "DFC043FD-461A-2B98-1D28-79A25AED87C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 34 ".ktv[0:33]"  1 0 9 69.62065158003918 21 69.62065158003918
+	setAttr -s 35 ".ktv[0:34]"  1 0 9 69.62065158003918 21 69.62065158003918
 		 29 126.71128799675682 34 211.62437143553205 43 211.62437143553205 46 265.52589346580794
 		 101 265.52589346580794 112 188.30344309647043 130 188.30344309647043 138 159.62489397559887
-		 146 128.44726012153981 200 128.44726012153981 220 101.12347285806219 240 136.66446336824438
-		 260 138.08104795314989 300 137.21302631611633 320 137.21302631611633 340 137.21302631611633
-		 360 137.21302631611633 380 137.21302631611633 400 137.21302631611633 420 59.833966911719244
-		 440 59.833966911719244 460 55.078938414868674 480 134.58216714382115 500 103.60040291368796
-		 540 177.1592329310966 560 149.22972962143518 600 191.69779142974582 640 171.8048113267154
-		 660 135.56137212870638 680 98.694958395036977 700 93.617087801244594;
-	setAttr -s 34 ".kit[16:33]"  3 3 3 3 3 3 3 3 
-		3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 34 ".kot[12:33]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+		 146 128.44726012153981 200 128.44726012153981 220 101.12347285806219 230 136.66446336824438
+		 240 136.66446336824438 260 138.08104795314989 290 137.21302631611633 310 137.21302631611633
+		 315 137.21302631611633 320 137.21302631611633 324 137.21302631611633 340 137.21302631611633
+		 350 59.833966911719244 370 59.833966911719244 390 55.078938414868674 400 134.58216714382115
+		 410 103.60040291368796 425 177.1592329310966 434 149.22972962143518 449 191.69779142974582
+		 459 171.8048113267154 464 135.56137212870638 470 98.694958395036977 480 93.617087801244594;
+	setAttr -s 35 ".kit[14:34]"  3 18 18 3 3 3 3 3 
+		3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 35 ".kot[12:34]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_Leg_IK_ctrl_translateX";
 	rename -uid "270CEE65-467A-B8B1-C275-45A492DCFAF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 35 ".ktv[0:34]"  1 3.5527136788005009e-15 9 0.49544603103719898
+	setAttr -s 36 ".ktv[0:35]"  1 3.5527136788005009e-15 9 0.49544603103719898
 		 21 0.49544603103719898 29 0.75919142902023595 34 1.6121346464467601 43 1.6121346464467601
 		 46 21.648158174870193 101 21.648158174870193 112 21.648158174870222 130 21.648158174870222
 		 138 21.648158174870336 146 27.959585945439517 200 27.959585945439517 220 14.716851046382931
-		 240 35.299596081212158 260 28.366297052299306 280 28.366297052299306 300 28.366297052299306
-		 320 28.366297052299306 340 28.366297052299306 360 28.366297052299306 380 28.366297052299306
-		 400 28.366297052299306 420 40.343293133076962 440 40.343293133076962 460 21.193323376291691
-		 480 7.6808008750592425 500 7.4113884281841926 540 24.072958845312332 600 40.158186970583316
-		 620 84.844826262388892 640 101.05883125799653 660 88.545444067840378 680 67.525352109506855
-		 700 15.781172986196539;
-	setAttr -s 35 ".kit[16:34]"  3 3 3 3 3 3 3 3 
-		3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 35 ".kot[12:34]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+		 230 35.299596081212158 240 35.299596081212158 260 28.366297052299306 270 28.366297052299306
+		 290 28.366297052299306 310 28.366297052299306 315 28.366297052299306 320 28.366297052299306
+		 324 28.366297052299306 340 28.366297052299306 350 40.343293133076962 370 40.343293133076962
+		 390 21.193323376291691 400 7.6808008750592425 410 7.4113884281841926 425 24.072958845312332
+		 449 40.158186970583316 454 84.844826262388892 459 101.05883125799653 464 88.545444067840378
+		 470 67.525352109506855 480 15.781172986196539;
+	setAttr -s 36 ".kit[14:35]"  3 18 18 3 3 3 3 3 
+		3 3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 36 ".kot[12:35]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_R_Leg_IK_ctrl_translateY";
 	rename -uid "CBBDB020-4A63-D6F6-9398-AF9D80E15CEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 31 ".ktv[0:30]"  1 0 9 -0.26597768827956436 21 -0.26597768827956436
+	setAttr -s 32 ".ktv[0:31]"  1 0 9 -0.26597768827956436 21 -0.26597768827956436
 		 29 13.794188385420206 34 0.13119997400198802 43 0.13119997400198802 46 0 101 0 112 0
 		 130 -1.7763568394002505e-15 138 9.8744625847006908 146 0.33524750745436371 200 0.33524750745436371
-		 220 11.145648554886664 240 0.43879044485341145 260 0.3 300 0.30000000000003729 320 0.30000000000003729
-		 340 0.30000000000003729 360 0.30000000000003729 380 0.30000000000003729 400 0.30000000000003729
-		 420 0.024970141204669893 440 0.024970141204669893 480 6.506057376122877 500 0.041098370760733971
-		 540 1.4100269625331485 560 -0.28001352771548405 660 0.098015641138740506 680 14.877011252135556
-		 700 0.16943735034066232;
-	setAttr -s 31 ".kit[16:30]"  3 3 3 3 3 3 3 3 
-		3 3 3 3 3 3 3;
-	setAttr -s 31 ".kot[12:30]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5;
+		 220 11.145648554886664 230 0.43879044485341145 240 0.43879044485341145 260 0.3 290 0.30000000000003729
+		 310 0.30000000000003729 315 0.30000000000003729 320 0.30000000000003729 324 0.30000000000003729
+		 340 0.30000000000003729 350 0.024970141204669893 370 0.024970141204669893 400 6.506057376122877
+		 410 0.041098370760733971 425 1.4100269625331485 434 -0.28001352771548405 464 0.098015641138740506
+		 470 14.877011252135556 480 0.16943735034066232;
+	setAttr -s 32 ".kit[14:31]"  3 18 18 3 3 3 3 3 
+		3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 32 ".kot[12:31]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_Leg_IK_ctrl_rotateX";
 	rename -uid "04E58253-4CAA-1A6D-DF65-01B6E49489E6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  50 0 53 0 200 0 220 0 240 0 260 0 320 0
-		 340 -60.982300048096803 360 0 520 0;
+	setAttr -s 10 ".ktv[0:9]"  50 0 53 0 200 0 220 0 240 0 260 0 310 0
+		 315 -60.982300048096803 320 0 415 0;
 	setAttr -s 10 ".kit[6:9]"  3 3 3 3;
 	setAttr -s 10 ".kot[2:9]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_L_Leg_IK_ctrl_rotateY";
@@ -16468,9 +15970,9 @@ createNode animCurveTA -n "All_Controls_L_Leg_IK_ctrl_rotateY";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  50 0 53 180 200 180 220 200.37213589352521
-		 240 210.7363719544916 260 297.44105687144605 320 297.44105687144605 340 305.60075268389716
-		 360 -82.479127668860627 460 -3.5962352518590941 520 -3.5962352518590941 580 35.752221876060737
-		 600 25.664785268982513 660 50.719442635015092 680 106.16052556709846 700 186.09288886949554;
+		 240 210.7363719544916 260 297.44105687144605 310 297.44105687144605 315 305.60075268389716
+		 320 -82.479127668860627 390 -3.5962352518590941 415 -3.5962352518590941 439 35.752221876060737
+		 449 25.664785268982513 464 50.719442635015092 470 106.16052556709846 480 186.09288886949554;
 	setAttr -s 16 ".kit[0:15]"  18 18 18 18 18 18 3 3 
 		3 3 3 3 3 3 3 3;
 	setAttr -s 16 ".kot[0:15]"  18 18 5 5 5 5 5 5 
@@ -16479,83 +15981,81 @@ createNode animCurveTA -n "All_Controls_L_Leg_IK_ctrl_rotateZ";
 	rename -uid "B0984144-4223-DED0-5B5D-7FA9141DFB19";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  50 0 53 0 200 0 220 0 240 0 260 0 320 0
-		 340 73.581945560320847 360 0 520 0;
+	setAttr -s 10 ".ktv[0:9]"  50 0 53 0 200 0 220 0 240 0 260 0 310 0
+		 315 73.581945560320847 320 0 415 0;
 	setAttr -s 10 ".kit[6:9]"  3 3 3 3;
 	setAttr -s 10 ".kot[2:9]"  5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_Leg_IK_ctrl_rotateX";
 	rename -uid "597507AB-4E8E-12F2-D3D9-8A94BCEAC598";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  50 0 53 0 101 0 112 0 200 0 220 36.398265339613026
-		 240 0 260 0 320 0 340 0 360 0 380 0 400 -87.051739777727136 420 0 440 0 480 22.719019260355655
-		 500 0 540 6.1576888001685512 560 0 680 -23.478088494786718 700 0;
-	setAttr -s 21 ".kit[0:20]"  18 18 18 18 18 3 3 18 
-		3 3 3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 21 ".kot[0:20]"  18 18 18 18 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 22 ".ktv[0:21]"  50 0 53 0 101 0 112 0 200 0 220 36.398265339613026
+		 230 0 240 0 260 0 310 0 315 0 320 0 324 0 340 -87.051739777727136 350 0 370 0 400 22.719019260355655
+		 410 0 425 6.1576888001685512 434 0 470 -23.478088494786718 480 0;
+	setAttr -s 22 ".kit[0:21]"  18 18 18 18 18 3 3 3 
+		18 3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 22 ".kot[0:21]"  18 18 18 18 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_Leg_IK_ctrl_rotateY";
 	rename -uid "03620173-4D45-7620-2440-669E8F4B7D1B";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  50 0 53 180 101 180 112 180 200 180 220 211.70726567480219
-		 240 180 260 272.36258397852436 320 272.36258397852436 340 272.36258397852436 360 272.36258397852436
-		 380 272.36258397852436 400 323.27119561299958 420 -95.658538097225403 440 -95.658538097225403
-		 460 -24.836646869985039 480 -1.6497961536687995 500 0 560 0 640 71.807080172116372
-		 660 117.77103381714383 700 156.93925458757761;
-	setAttr -s 22 ".kit[0:21]"  18 18 18 18 18 3 3 18 
-		3 3 3 3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 22 ".kot[0:21]"  18 18 18 18 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 23 ".ktv[0:22]"  50 0 53 180 101 180 112 180 200 180 220 211.70726567480219
+		 230 180 240 180 260 272.36258397852436 310 272.36258397852436 315 272.36258397852436
+		 320 272.36258397852436 324 272.36258397852436 340 323.27119561299958 350 -95.658538097225403
+		 370 -95.658538097225403 390 -24.836646869985039 400 -1.6497961536687995 410 0 434 0
+		 459 71.807080172116372 464 117.77103381714383 480 156.93925458757761;
+	setAttr -s 23 ".kit[0:22]"  18 18 18 18 18 3 3 3 
+		18 3 3 3 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 23 ".kot[0:22]"  18 18 18 18 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_R_Leg_IK_ctrl_rotateZ";
 	rename -uid "A35F9B57-4EEC-3654-8061-2EA03DB8F7D5";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 19 ".ktv[0:18]"  50 0 53 0 101 0 112 0 200 0 220 9.739576520504091
-		 240 0 260 0 320 0 340 0 360 0 380 0 400 88.235857290349145 420 0 440 0 480 -10.06682420609355
-		 500 0 560 0 700 0;
-	setAttr -s 19 ".kit[0:18]"  18 18 18 18 18 3 3 18 
-		3 3 3 3 3 3 3 3 3 3 3;
-	setAttr -s 19 ".kot[0:18]"  18 18 18 18 5 5 5 5 
-		5 5 5 5 5 5 5 5 5 5 5;
+	setAttr -s 20 ".ktv[0:19]"  50 0 53 0 101 0 112 0 200 0 220 9.739576520504091
+		 230 0 240 0 260 0 310 0 315 0 320 0 324 0 340 88.235857290349145 350 0 370 0 400 -10.06682420609355
+		 410 0 434 0 480 0;
+	setAttr -s 20 ".kit[0:19]"  18 18 18 18 18 3 3 3 
+		18 3 3 3 3 3 3 3 3 3 3 3;
+	setAttr -s 20 ".kot[0:19]"  18 18 18 18 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "AllControls_box_2_ctrl_translateX";
 	rename -uid "15BA11F0-405E-93B3-29CA-D89F756B97D4";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -2.7255975254547593e-14 320 -2.7255975254547593e-14
-		 340 -2.6589841439772499e-14;
+	setAttr -s 3 ".ktv[0:2]"  1 -2.7255975254547593e-14 310 0 315 0;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "AllControls_box_2_ctrl_translateY";
 	rename -uid "360FCE27-46B4-0135-9AAA-F0AAE4F8DCE3";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -0.78038701674967736 320 -0.78038701674967736
-		 340 -0.78038701674967448;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.78038701674967736 310 -0.78038701674967736
+		 315 -0.78038701674967448;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "AllControls_box_2_ctrl_translateZ";
 	rename -uid "B5535006-4FEB-A3CE-2AF0-B08FE575E2E0";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -4.5359502050208179e-30 320 -4.5359502050208179e-30
-		 340 -1.7718009484731627;
+	setAttr -s 3 ".ktv[0:2]"  1 -4.5359502050208179e-30 310 0 315 -1.7718009484731627;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "AllControls_book_1_ctrl_translateX";
 	rename -uid "B421FE25-4A11-850C-2707-D19BCCB8F0E7";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 -1.0047518372857667e-14 360 -1.0047518372857667e-14;
+	setAttr -s 2 ".ktv[0:1]"  1 -1.0047518372857667e-14 320 0;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "AllControls_book_1_ctrl_translateY";
 	rename -uid "E0B9D4AA-408B-920F-9272-509419C48305";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0.70912830546923533 360 0.70912830546923533;
+	setAttr -s 2 ".ktv[0:1]"  1 0.70912830546923533 320 0.70912830546923533;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "AllControls_book_1_ctrl_translateZ";
 	rename -uid "0D5FEBE6-41A9-35A2-E70F-0F98171FDF2A";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 2.8891546514255022e-17 360 2.8891546514255022e-17;
+	setAttr -s 2 ".ktv[0:1]"  1 2.8891546514255022e-17 320 0;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "AllControls_book_2_ctrl_translateX";
 	rename -uid "BFD215D1-48A3-D58F-5452-DE9CEA362AF1";
@@ -16597,18 +16097,18 @@ createNode animCurveTL -n "AllControls_detachable_book_ctrl_translateX";
 	rename -uid "B8AF6957-4D8C-CBA8-1AF9-E1812E02CCD1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 3.3695268797373501e-14 23 3.7969627442180354e-14
-		 24 33.947517398085182 32 -4.2716309524043865 460 -4.2716309524043865;
+	setAttr -s 5 ".ktv[0:4]"  1 6.0229599085914742e-14 23 3.7969627442180354e-14
+		 24 33.947517398085182 32 -4.2716309524043865 390 -4.2716309524043865;
 	setAttr -s 5 ".kit[1:4]"  3 18 18 3;
 	setAttr -s 5 ".kot[1:4]"  5 18 18 5;
 createNode animCurveTL -n "AllControls_detachable_book_ctrl_translateY";
 	rename -uid "19E7BCAA-474E-99F9-742D-6D9376A37214";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 -1.06076375720412 23 -2.0856290507762849
-		 24 -0.71807368180095321 32 -6.2015521774111413 460 -6.2015521774111413 480 4.6802092524226229
-		 540 14.194821716821876 600 16.646242317546406 620 15.582238023879736 640 7.012809386366655
-		 660 -4.4113288582640342;
+	setAttr -s 11 ".ktv[0:10]"  1 -2.4611304381984134 23 -2.0856290507762849
+		 24 -0.71807368180095321 32 -6.2015521774111413 390 -6.2015521774111413 400 4.6802092524226229
+		 425 14.194821716821876 449 16.646242317546406 454 15.582238023879736 459 7.012809386366655
+		 464 -4.4113288582640342;
 	setAttr -s 11 ".kit[0:10]"  18 3 18 18 3 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 18 18 5 5 5 5 
@@ -16617,10 +16117,10 @@ createNode animCurveTL -n "AllControls_detachable_book_ctrl_translateZ";
 	rename -uid "04958375-46D9-B4C7-9681-15970127CC28";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 11 ".ktv[0:10]"  1 1.2855259379095511e-20 23 5.9212629340834089e-21
-		 24 3.4504142179488111e-18 32 -1.6188451004375323e-13 460 -1.6188451004375323e-13
-		 480 3.1761772950633236 540 7.425190352527852 600 10.035623638544902 620 20.923059882961891
-		 640 25.42491043373542 660 24.308455478606586;
+	setAttr -s 11 ".ktv[0:10]"  1 1.823168295987001e-20 23 5.9212629340834089e-21
+		 24 3.4504142179488111e-18 32 -1.6188451004375323e-13 390 0 400 3.1761772950633236
+		 425 7.425190352527852 449 10.035623638544902 454 20.923059882961891 459 25.42491043373542
+		 464 24.308455478606586;
 	setAttr -s 11 ".kit[0:10]"  18 3 18 18 3 3 3 3 
 		3 3 3;
 	setAttr -s 11 ".kot[0:10]"  18 5 18 18 5 5 5 5 
@@ -16650,555 +16150,24 @@ createNode animCurveTA -n "AllControls_detachable_book_ctrl_rotateX";
 	rename -uid "B576516E-41A1-7D70-5AB1-B3B367E32046";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  32 0 460 0 480 22.816247605026419 540 66.93253752938125
-		 600 95.581661183089793;
+	setAttr -s 5 ".ktv[0:4]"  32 0 390 0 400 22.816247605026419 425 66.93253752938125
+		 449 95.581661183089793;
 	setAttr -s 5 ".kit[0:4]"  18 3 3 3 3;
 	setAttr -s 5 ".kot[0:4]"  18 5 5 5 5;
 createNode animCurveTA -n "AllControls_detachable_book_ctrl_rotateY";
 	rename -uid "A987D948-47F5-46B5-E3B4-B39568A79CDB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  32 0 460 0;
+	setAttr -s 2 ".ktv[0:1]"  32 0 390 0;
 	setAttr -s 2 ".kit[1]"  3;
 	setAttr -s 2 ".kot[1]"  5;
 createNode animCurveTA -n "AllControls_detachable_book_ctrl_rotateZ";
 	rename -uid "144405FF-45D7-3621-4B1B-5584B819AA43";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  32 0 460 0;
+	setAttr -s 2 ".ktv[0:1]"  32 0 390 0;
 	setAttr -s 2 ".kit[1]"  3;
 	setAttr -s 2 ".kot[1]"  5;
-createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "06256FF4-4204-6985-C22A-CFA6A43894B8";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -57.142854872204104 -15.476189861221945 ;
-	setAttr ".tgi[0].vh" -type "double2" 57.142854872204104 15.476189861221945 ;
-	setAttr -s 175 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[0].y" -6368.5712890625;
-	setAttr ".tgi[0].ni[0].nvs" 18304;
-	setAttr ".tgi[0].ni[1].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[1].y" 3775.71435546875;
-	setAttr ".tgi[0].ni[1].nvs" 18304;
-	setAttr ".tgi[0].ni[2].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[2].y" 3837.142822265625;
-	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[3].y" 3714.28564453125;
-	setAttr ".tgi[0].ni[3].nvs" 18304;
-	setAttr ".tgi[0].ni[4].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[4].y" -6217.14306640625;
-	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[5].y" -6065.71435546875;
-	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[6].y" 3591.428466796875;
-	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[7].y" 3468.571533203125;
-	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[8].y" -2995.71435546875;
-	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[9].y" 3182.857177734375;
-	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[10].y" -5914.28564453125;
-	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[11].y" 3548.571533203125;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[12].y" 3002.857177734375;
-	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[13].y" 2855.71435546875;
-	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[14].y" 2727.142822265625;
-	setAttr ".tgi[0].ni[14].nvs" 18304;
-	setAttr ".tgi[0].ni[15].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[15].y" 2897.142822265625;
-	setAttr ".tgi[0].ni[15].nvs" 18304;
-	setAttr ".tgi[0].ni[16].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[16].y" 3568.571533203125;
-	setAttr ".tgi[0].ni[16].nvs" 18304;
-	setAttr ".tgi[0].ni[17].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[17].y" 147.14285278320312;
-	setAttr ".tgi[0].ni[17].nvs" 18304;
-	setAttr ".tgi[0].ni[18].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[18].y" -5762.85693359375;
-	setAttr ".tgi[0].ni[18].nvs" 18304;
-	setAttr ".tgi[0].ni[19].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[19].y" -5611.4287109375;
-	setAttr ".tgi[0].ni[19].nvs" 18304;
-	setAttr ".tgi[0].ni[20].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[20].y" 2592.857177734375;
-	setAttr ".tgi[0].ni[20].nvs" 18304;
-	setAttr ".tgi[0].ni[21].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[21].y" -1371.4285888671875;
-	setAttr ".tgi[0].ni[21].nvs" 18304;
-	setAttr ".tgi[0].ni[22].x" -1941.4285888671875;
-	setAttr ".tgi[0].ni[22].y" 1858.5714111328125;
-	setAttr ".tgi[0].ni[22].nvs" 18304;
-	setAttr ".tgi[0].ni[23].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[23].y" -5460;
-	setAttr ".tgi[0].ni[23].nvs" 18304;
-	setAttr ".tgi[0].ni[24].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[24].y" -5308.5712890625;
-	setAttr ".tgi[0].ni[24].nvs" 18304;
-	setAttr ".tgi[0].ni[25].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[25].y" 2470;
-	setAttr ".tgi[0].ni[25].nvs" 18304;
-	setAttr ".tgi[0].ni[26].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[26].y" 2115.71435546875;
-	setAttr ".tgi[0].ni[26].nvs" 18304;
-	setAttr ".tgi[0].ni[27].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[27].y" 2532.857177734375;
-	setAttr ".tgi[0].ni[27].nvs" 18304;
-	setAttr ".tgi[0].ni[28].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[28].y" 2292.857177734375;
-	setAttr ".tgi[0].ni[28].nvs" 18304;
-	setAttr ".tgi[0].ni[29].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[29].y" 2291.428466796875;
-	setAttr ".tgi[0].ni[29].nvs" 18304;
-	setAttr ".tgi[0].ni[30].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[30].y" -5157.14306640625;
-	setAttr ".tgi[0].ni[30].nvs" 18304;
-	setAttr ".tgi[0].ni[31].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[31].y" 2144.28564453125;
-	setAttr ".tgi[0].ni[31].nvs" 18304;
-	setAttr ".tgi[0].ni[32].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[32].y" 2055.71435546875;
-	setAttr ".tgi[0].ni[32].nvs" 18304;
-	setAttr ".tgi[0].ni[33].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[33].y" -5005.71435546875;
-	setAttr ".tgi[0].ni[33].nvs" 18304;
-	setAttr ".tgi[0].ni[34].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[34].y" 2472.857177734375;
-	setAttr ".tgi[0].ni[34].nvs" 18304;
-	setAttr ".tgi[0].ni[35].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[35].y" 504.28570556640625;
-	setAttr ".tgi[0].ni[35].nvs" 18304;
-	setAttr ".tgi[0].ni[36].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[36].y" 1920;
-	setAttr ".tgi[0].ni[36].nvs" 18304;
-	setAttr ".tgi[0].ni[37].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[37].y" 2827.142822265625;
-	setAttr ".tgi[0].ni[37].nvs" 18304;
-	setAttr ".tgi[0].ni[38].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[38].y" 1797.142822265625;
-	setAttr ".tgi[0].ni[38].nvs" 18304;
-	setAttr ".tgi[0].ni[39].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[39].y" 3075.71435546875;
-	setAttr ".tgi[0].ni[39].nvs" 18304;
-	setAttr ".tgi[0].ni[40].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[40].y" -4854.28564453125;
-	setAttr ".tgi[0].ni[40].nvs" 18304;
-	setAttr ".tgi[0].ni[41].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[41].y" 1674.2857666015625;
-	setAttr ".tgi[0].ni[41].nvs" 18304;
-	setAttr ".tgi[0].ni[42].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[42].y" -4702.85693359375;
-	setAttr ".tgi[0].ni[42].nvs" 18304;
-	setAttr ".tgi[0].ni[43].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[43].y" 1410;
-	setAttr ".tgi[0].ni[43].nvs" 18304;
-	setAttr ".tgi[0].ni[44].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[44].y" 1421.4285888671875;
-	setAttr ".tgi[0].ni[44].nvs" 18304;
-	setAttr ".tgi[0].ni[45].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[45].y" 1298.5714111328125;
-	setAttr ".tgi[0].ni[45].nvs" 18304;
-	setAttr ".tgi[0].ni[46].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[46].y" 2650;
-	setAttr ".tgi[0].ni[46].nvs" 18304;
-	setAttr ".tgi[0].ni[47].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[47].y" 1281.4285888671875;
-	setAttr ".tgi[0].ni[47].nvs" 18304;
-	setAttr ".tgi[0].ni[48].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[48].y" 2952.857177734375;
-	setAttr ".tgi[0].ni[48].nvs" 18304;
-	setAttr ".tgi[0].ni[49].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[49].y" 1175.7142333984375;
-	setAttr ".tgi[0].ni[49].nvs" 18304;
-	setAttr ".tgi[0].ni[50].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[50].y" 982.85711669921875;
-	setAttr ".tgi[0].ni[50].nvs" 18304;
-	setAttr ".tgi[0].ni[51].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[51].y" -4551.4287109375;
-	setAttr ".tgi[0].ni[51].nvs" 18304;
-	setAttr ".tgi[0].ni[52].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[52].y" 1818.5714111328125;
-	setAttr ".tgi[0].ni[52].nvs" 18304;
-	setAttr ".tgi[0].ni[53].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[53].y" 1812.857177734375;
-	setAttr ".tgi[0].ni[53].nvs" 18304;
-	setAttr ".tgi[0].ni[54].x" -92.857139587402344;
-	setAttr ".tgi[0].ni[54].y" -31.428571701049805;
-	setAttr ".tgi[0].ni[54].nvs" 18304;
-	setAttr ".tgi[0].ni[55].x" -92.857139587402344;
-	setAttr ".tgi[0].ni[55].y" 120;
-	setAttr ".tgi[0].ni[55].nvs" 18304;
-	setAttr ".tgi[0].ni[56].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[56].y" 2254.28564453125;
-	setAttr ".tgi[0].ni[56].nvs" 18304;
-	setAttr ".tgi[0].ni[57].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[57].y" 2355.71435546875;
-	setAttr ".tgi[0].ni[57].nvs" 18304;
-	setAttr ".tgi[0].ni[58].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[58].y" -4400;
-	setAttr ".tgi[0].ni[58].nvs" 18304;
-	setAttr ".tgi[0].ni[59].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[59].y" 802.85711669921875;
-	setAttr ".tgi[0].ni[59].nvs" 18304;
-	setAttr ".tgi[0].ni[60].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[60].y" 864.28570556640625;
-	setAttr ".tgi[0].ni[60].nvs" 18304;
-	setAttr ".tgi[0].ni[61].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[61].y" 684.28570556640625;
-	setAttr ".tgi[0].ni[61].nvs" 18304;
-	setAttr ".tgi[0].ni[62].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[62].y" -4248.5712890625;
-	setAttr ".tgi[0].ni[62].nvs" 18304;
-	setAttr ".tgi[0].ni[63].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[63].y" -4097.14306640625;
-	setAttr ".tgi[0].ni[63].nvs" 18304;
-	setAttr ".tgi[0].ni[64].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[64].y" 784.28570556640625;
-	setAttr ".tgi[0].ni[64].nvs" 18304;
-	setAttr ".tgi[0].ni[65].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[65].y" 622.85711669921875;
-	setAttr ".tgi[0].ni[65].nvs" 18304;
-	setAttr ".tgi[0].ni[66].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[66].y" 442.85714721679688;
-	setAttr ".tgi[0].ni[66].nvs" 18304;
-	setAttr ".tgi[0].ni[67].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[67].y" 1042.857177734375;
-	setAttr ".tgi[0].ni[67].nvs" 18304;
-	setAttr ".tgi[0].ni[68].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[68].y" 604.28570556640625;
-	setAttr ".tgi[0].ni[68].nvs" 18304;
-	setAttr ".tgi[0].ni[69].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[69].y" -3945.71435546875;
-	setAttr ".tgi[0].ni[69].nvs" 18304;
-	setAttr ".tgi[0].ni[70].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[70].y" -3794.28564453125;
-	setAttr ".tgi[0].ni[70].nvs" 18304;
-	setAttr ".tgi[0].ni[71].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[71].y" -3642.857177734375;
-	setAttr ".tgi[0].ni[71].nvs" 18304;
-	setAttr ".tgi[0].ni[72].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[72].y" 230;
-	setAttr ".tgi[0].ni[72].nvs" 18304;
-	setAttr ".tgi[0].ni[73].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[73].y" 227.14285278320312;
-	setAttr ".tgi[0].ni[73].nvs" 18304;
-	setAttr ".tgi[0].ni[74].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[74].y" 28.571428298950195;
-	setAttr ".tgi[0].ni[74].nvs" 18304;
-	setAttr ".tgi[0].ni[75].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[75].y" 1950;
-	setAttr ".tgi[0].ni[75].nvs" 18304;
-	setAttr ".tgi[0].ni[76].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[76].y" -3491.428466796875;
-	setAttr ".tgi[0].ni[76].nvs" 18304;
-	setAttr ".tgi[0].ni[77].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[77].y" -3340;
-	setAttr ".tgi[0].ni[77].nvs" 18304;
-	setAttr ".tgi[0].ni[78].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[78].y" -3188.571533203125;
-	setAttr ".tgi[0].ni[78].nvs" 18304;
-	setAttr ".tgi[0].ni[79].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[79].y" 2352.857177734375;
-	setAttr ".tgi[0].ni[79].nvs" 18304;
-	setAttr ".tgi[0].ni[80].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[80].y" 1624.2857666015625;
-	setAttr ".tgi[0].ni[80].nvs" 18304;
-	setAttr ".tgi[0].ni[81].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[81].y" 1522.857177734375;
-	setAttr ".tgi[0].ni[81].nvs" 18304;
-	setAttr ".tgi[0].ni[82].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[82].y" 2152.857177734375;
-	setAttr ".tgi[0].ni[82].nvs" 18304;
-	setAttr ".tgi[0].ni[83].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[83].y" 2051.428466796875;
-	setAttr ".tgi[0].ni[83].nvs" 18304;
-	setAttr ".tgi[0].ni[84].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[84].y" 1827.142822265625;
-	setAttr ".tgi[0].ni[84].nvs" 18304;
-	setAttr ".tgi[0].ni[85].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[85].y" 1725.7142333984375;
-	setAttr ".tgi[0].ni[85].nvs" 18304;
-	setAttr ".tgi[0].ni[86].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[86].y" -94.285713195800781;
-	setAttr ".tgi[0].ni[86].nvs" 18304;
-	setAttr ".tgi[0].ni[87].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[87].y" -310;
-	setAttr ".tgi[0].ni[87].nvs" 18304;
-	setAttr ".tgi[0].ni[88].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[88].y" -432.85714721679688;
-	setAttr ".tgi[0].ni[88].nvs" 18304;
-	setAttr ".tgi[0].ni[89].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[89].y" -555.71429443359375;
-	setAttr ".tgi[0].ni[89].nvs" 18304;
-	setAttr ".tgi[0].ni[90].x" 1632.857177734375;
-	setAttr ".tgi[0].ni[90].y" -1825.7142333984375;
-	setAttr ".tgi[0].ni[90].nvs" 18304;
-	setAttr ".tgi[0].ni[91].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[91].y" -678.5714111328125;
-	setAttr ".tgi[0].ni[91].nvs" 18304;
-	setAttr ".tgi[0].ni[92].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[92].y" -801.4285888671875;
-	setAttr ".tgi[0].ni[92].nvs" 18304;
-	setAttr ".tgi[0].ni[93].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[93].y" -1362.857177734375;
-	setAttr ".tgi[0].ni[93].nvs" 18304;
-	setAttr ".tgi[0].ni[94].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[94].y" -924.28570556640625;
-	setAttr ".tgi[0].ni[94].nvs" 18304;
-	setAttr ".tgi[0].ni[95].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[95].y" -3037.142822265625;
-	setAttr ".tgi[0].ni[95].nvs" 18304;
-	setAttr ".tgi[0].ni[96].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[96].y" -1674.2857666015625;
-	setAttr ".tgi[0].ni[96].nvs" 18304;
-	setAttr ".tgi[0].ni[97].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[97].y" -2885.71435546875;
-	setAttr ".tgi[0].ni[97].nvs" 18304;
-	setAttr ".tgi[0].ni[98].x" -1634.2857666015625;
-	setAttr ".tgi[0].ni[98].y" 1590;
-	setAttr ".tgi[0].ni[98].nvs" 18304;
-	setAttr ".tgi[0].ni[99].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[99].y" -1047.142822265625;
-	setAttr ".tgi[0].ni[99].nvs" 18304;
-	setAttr ".tgi[0].ni[100].x" 1345.7142333984375;
-	setAttr ".tgi[0].ni[100].y" -1674.2857666015625;
-	setAttr ".tgi[0].ni[100].nvs" 18304;
-	setAttr ".tgi[0].ni[101].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[101].y" -1371.4285888671875;
-	setAttr ".tgi[0].ni[101].nvs" 18304;
-	setAttr ".tgi[0].ni[102].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[102].y" -1170;
-	setAttr ".tgi[0].ni[102].nvs" 18304;
-	setAttr ".tgi[0].ni[103].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[103].y" -2734.28564453125;
-	setAttr ".tgi[0].ni[103].nvs" 18304;
-	setAttr ".tgi[0].ni[104].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[104].y" -1292.857177734375;
-	setAttr ".tgi[0].ni[104].nvs" 18304;
-	setAttr ".tgi[0].ni[105].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[105].y" -1415.7142333984375;
-	setAttr ".tgi[0].ni[105].nvs" 18304;
-	setAttr ".tgi[0].ni[106].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[106].y" -1538.5714111328125;
-	setAttr ".tgi[0].ni[106].nvs" 18304;
-	setAttr ".tgi[0].ni[107].x" 1345.7142333984375;
-	setAttr ".tgi[0].ni[107].y" -1371.4285888671875;
-	setAttr ".tgi[0].ni[107].nvs" 18304;
-	setAttr ".tgi[0].ni[108].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[108].y" -1661.4285888671875;
-	setAttr ".tgi[0].ni[108].nvs" 18304;
-	setAttr ".tgi[0].ni[109].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[109].y" -1784.2857666015625;
-	setAttr ".tgi[0].ni[109].nvs" 18304;
-	setAttr ".tgi[0].ni[110].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[110].y" -1121.4285888671875;
-	setAttr ".tgi[0].ni[110].nvs" 18304;
-	setAttr ".tgi[0].ni[111].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[111].y" -1907.142822265625;
-	setAttr ".tgi[0].ni[111].nvs" 18304;
-	setAttr ".tgi[0].ni[112].x" 720;
-	setAttr ".tgi[0].ni[112].y" 1101.4285888671875;
-	setAttr ".tgi[0].ni[112].nvs" 18304;
-	setAttr ".tgi[0].ni[113].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[113].y" 1044.2857666015625;
-	setAttr ".tgi[0].ni[113].nvs" 18304;
-	setAttr ".tgi[0].ni[114].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[114].y" -1758.5714111328125;
-	setAttr ".tgi[0].ni[114].nvs" 18304;
-	setAttr ".tgi[0].ni[115].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[115].y" 1287.142822265625;
-	setAttr ".tgi[0].ni[115].nvs" 18304;
-	setAttr ".tgi[0].ni[116].x" 1345.7142333984375;
-	setAttr ".tgi[0].ni[116].y" -1522.857177734375;
-	setAttr ".tgi[0].ni[116].nvs" 18304;
-	setAttr ".tgi[0].ni[117].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[117].y" -2030;
-	setAttr ".tgi[0].ni[117].nvs" 18304;
-	setAttr ".tgi[0].ni[118].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[118].y" -2152.857177734375;
-	setAttr ".tgi[0].ni[118].nvs" 18304;
-	setAttr ".tgi[0].ni[119].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[119].y" 1404.2857666015625;
-	setAttr ".tgi[0].ni[119].nvs" 18304;
-	setAttr ".tgi[0].ni[120].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[120].y" -2275.71435546875;
-	setAttr ".tgi[0].ni[120].nvs" 18304;
-	setAttr ".tgi[0].ni[121].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[121].y" -2398.571533203125;
-	setAttr ".tgi[0].ni[121].nvs" 18304;
-	setAttr ".tgi[0].ni[122].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[122].y" 3064.28564453125;
-	setAttr ".tgi[0].ni[122].nvs" 18304;
-	setAttr ".tgi[0].ni[123].x" 412.85714721679688;
-	setAttr ".tgi[0].ni[123].y" 1282.857177734375;
-	setAttr ".tgi[0].ni[123].nvs" 18304;
-	setAttr ".tgi[0].ni[124].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[124].y" -2521.428466796875;
-	setAttr ".tgi[0].ni[124].nvs" 18304;
-	setAttr ".tgi[0].ni[125].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[125].y" 3244.28564453125;
-	setAttr ".tgi[0].ni[125].nvs" 18304;
-	setAttr ".tgi[0].ni[126].x" 720;
-	setAttr ".tgi[0].ni[126].y" 1485.7142333984375;
-	setAttr ".tgi[0].ni[126].nvs" 18304;
-	setAttr ".tgi[0].ni[127].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[127].y" -2121.428466796875;
-	setAttr ".tgi[0].ni[127].nvs" 18304;
-	setAttr ".tgi[0].ni[128].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[128].y" 1935.7142333984375;
-	setAttr ".tgi[0].ni[128].nvs" 18304;
-	setAttr ".tgi[0].ni[129].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[129].y" -2244.28564453125;
-	setAttr ".tgi[0].ni[129].nvs" 18304;
-	setAttr ".tgi[0].ni[130].x" -201.42857360839844;
-	setAttr ".tgi[0].ni[130].y" 1498.5714111328125;
-	setAttr ".tgi[0].ni[130].nvs" 18304;
-	setAttr ".tgi[0].ni[131].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[131].y" -2644.28564453125;
-	setAttr ".tgi[0].ni[131].nvs" 18304;
-	setAttr ".tgi[0].ni[132].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[132].y" -2767.142822265625;
-	setAttr ".tgi[0].ni[132].nvs" 18304;
-	setAttr ".tgi[0].ni[133].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[133].y" -2582.857177734375;
-	setAttr ".tgi[0].ni[133].nvs" 18304;
-	setAttr ".tgi[0].ni[134].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[134].y" -2431.428466796875;
-	setAttr ".tgi[0].ni[134].nvs" 18304;
-	setAttr ".tgi[0].ni[135].x" -201.42857360839844;
-	setAttr ".tgi[0].ni[135].y" 1318.5714111328125;
-	setAttr ".tgi[0].ni[135].nvs" 18304;
-	setAttr ".tgi[0].ni[136].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[136].y" 210;
-	setAttr ".tgi[0].ni[136].nvs" 18304;
-	setAttr ".tgi[0].ni[137].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[137].y" -2280;
-	setAttr ".tgi[0].ni[137].nvs" 18304;
-	setAttr ".tgi[0].ni[138].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[138].y" -2592.857177734375;
-	setAttr ".tgi[0].ni[138].nvs" 18304;
-	setAttr ".tgi[0].ni[139].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[139].y" -2890;
-	setAttr ".tgi[0].ni[139].nvs" 18304;
-	setAttr ".tgi[0].ni[140].x" 105.71428680419922;
-	setAttr ".tgi[0].ni[140].y" 948.5714111328125;
-	setAttr ".tgi[0].ni[140].nvs" 18304;
-	setAttr ".tgi[0].ni[141].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[141].y" -3012.857177734375;
-	setAttr ".tgi[0].ni[141].nvs" 18304;
-	setAttr ".tgi[0].ni[142].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[142].y" -3135.71435546875;
-	setAttr ".tgi[0].ni[142].nvs" 18304;
-	setAttr ".tgi[0].ni[143].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[143].y" -3118.571533203125;
-	setAttr ".tgi[0].ni[143].nvs" 18304;
-	setAttr ".tgi[0].ni[144].x" 1038.5714111328125;
-	setAttr ".tgi[0].ni[144].y" -2715.71435546875;
-	setAttr ".tgi[0].ni[144].nvs" 18304;
-	setAttr ".tgi[0].ni[145].x" -1327.142822265625;
-	setAttr ".tgi[0].ni[145].y" 1257.142822265625;
-	setAttr ".tgi[0].ni[145].nvs" 18304;
-	setAttr ".tgi[0].ni[146].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[146].y" -3258.571533203125;
-	setAttr ".tgi[0].ni[146].nvs" 18304;
-	setAttr ".tgi[0].ni[147].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[147].y" 2830;
-	setAttr ".tgi[0].ni[147].nvs" 18304;
-	setAttr ".tgi[0].ni[148].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[148].y" -755.71429443359375;
-	setAttr ".tgi[0].ni[148].nvs" 18304;
-	setAttr ".tgi[0].ni[149].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[149].y" -3381.428466796875;
-	setAttr ".tgi[0].ni[149].nvs" 18304;
-	setAttr ".tgi[0].ni[150].x" -1020;
-	setAttr ".tgi[0].ni[150].y" 1741.4285888671875;
-	setAttr ".tgi[0].ni[150].nvs" 18304;
-	setAttr ".tgi[0].ni[151].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[151].y" -3504.28564453125;
-	setAttr ".tgi[0].ni[151].nvs" 18304;
-	setAttr ".tgi[0].ni[152].x" 412.85714721679688;
-	setAttr ".tgi[0].ni[152].y" 500;
-	setAttr ".tgi[0].ni[152].nvs" 18304;
-	setAttr ".tgi[0].ni[153].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[153].y" -495.71429443359375;
-	setAttr ".tgi[0].ni[153].nvs" 18304;
-	setAttr ".tgi[0].ni[154].x" 720;
-	setAttr ".tgi[0].ni[154].y" 215.71427917480469;
-	setAttr ".tgi[0].ni[154].nvs" 18304;
-	setAttr ".tgi[0].ni[155].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[155].y" -3627.142822265625;
-	setAttr ".tgi[0].ni[155].nvs" 18304;
-	setAttr ".tgi[0].ni[156].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[156].y" 1421.4285888671875;
-	setAttr ".tgi[0].ni[156].nvs" 18304;
-	setAttr ".tgi[0].ni[157].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[157].y" -2128.571533203125;
-	setAttr ".tgi[0].ni[157].nvs" 18304;
-	setAttr ".tgi[0].ni[158].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[158].y" -1977.142822265625;
-	setAttr ".tgi[0].ni[158].nvs" 18304;
-	setAttr ".tgi[0].ni[159].x" 1652.857177734375;
-	setAttr ".tgi[0].ni[159].y" -1522.857177734375;
-	setAttr ".tgi[0].ni[159].nvs" 18304;
-	setAttr ".tgi[0].ni[160].x" 1392.857177734375;
-	setAttr ".tgi[0].ni[160].y" 87.142860412597656;
-	setAttr ".tgi[0].ni[160].nvs" 18304;
-	setAttr ".tgi[0].ni[161].x" 105.71428680419922;
-	setAttr ".tgi[0].ni[161].y" 1590;
-	setAttr ".tgi[0].ni[161].nvs" 18304;
-	setAttr ".tgi[0].ni[162].x" 1707.142822265625;
-	setAttr ".tgi[0].ni[162].y" -3750;
-	setAttr ".tgi[0].ni[162].nvs" 18304;
-	setAttr ".tgi[0].ni[163].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[163].y" 1320;
-	setAttr ".tgi[0].ni[163].nvs" 18304;
-	setAttr ".tgi[0].ni[164].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[164].y" 1218.5714111328125;
-	setAttr ".tgi[0].ni[164].nvs" 18304;
-	setAttr ".tgi[0].ni[165].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[165].y" 1117.142822265625;
-	setAttr ".tgi[0].ni[165].nvs" 18304;
-	setAttr ".tgi[0].ni[166].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[166].y" 1015.7142944335938;
-	setAttr ".tgi[0].ni[166].nvs" 18304;
-	setAttr ".tgi[0].ni[167].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[167].y" 914.28570556640625;
-	setAttr ".tgi[0].ni[167].nvs" 18304;
-	setAttr ".tgi[0].ni[168].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[168].y" 812.85711669921875;
-	setAttr ".tgi[0].ni[168].nvs" 18304;
-	setAttr ".tgi[0].ni[169].x" -1020;
-	setAttr ".tgi[0].ni[169].y" -495.71429443359375;
-	setAttr ".tgi[0].ni[169].nvs" 18304;
-	setAttr ".tgi[0].ni[170].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[170].y" 711.4285888671875;
-	setAttr ".tgi[0].ni[170].nvs" 18304;
-	setAttr ".tgi[0].ni[171].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[171].y" 610;
-	setAttr ".tgi[0].ni[171].nvs" 18304;
-	setAttr ".tgi[0].ni[172].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[172].y" 508.57144165039062;
-	setAttr ".tgi[0].ni[172].nvs" 18304;
-	setAttr ".tgi[0].ni[173].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[173].y" 407.14285278320312;
-	setAttr ".tgi[0].ni[173].nvs" 18304;
-	setAttr ".tgi[0].ni[174].x" -657.14288330078125;
-	setAttr ".tgi[0].ni[174].y" 305.71429443359375;
-	setAttr ".tgi[0].ni[174].nvs" 18304;
 createNode animCurveTL -n "AllControls_R_hand_ctrl_translateX";
 	rename -uid "4811D308-43A7-9CB1-2E86-58B5E5ED06B6";
 	setAttr ".tan" 3;
@@ -17241,9 +16210,9 @@ createNode animCurveTL -n "All_Controls_look_at__ctrl_translateX1";
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  1 -2.8200532187216952e-14 100 -2.8200532187216952e-14
 		 160 -3.4417781125117791e-14 200 -3.4417781125117791e-14 220 -3.4417781125117791e-14
-		 240 -5.9208751609516153 260 -7.3193457887427709 280 -20.407485695628292 300 -52.047153984399422
-		 320 1.4049960853042895 340 1.4049960853042895 360 1.4049960853042895 380 1.4049960853042895
-		 400 1.4049960853042895 440 -1.4819417318979824;
+		 240 -5.9208751609516153 260 -7.3193457887427709 270 -20.407485695628292 290 -52.047153984399422
+		 310 1.4049960853042895 315 1.4049960853042895 320 1.4049960853042895 324 1.4049960853042895
+		 340 1.4049960853042895 370 -1.4819417318979824;
 	setAttr -s 15 ".kot[0:14]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_look_at__ctrl_translateY1";
@@ -17252,9 +16221,9 @@ createNode animCurveTL -n "All_Controls_look_at__ctrl_translateY1";
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  1 -15.006613696132511 100 -15.006613696132511
 		 160 -30.81542268579318 200 -30.81542268579318 220 -30.81542268579318 240 -24.245995620910161
-		 260 -32.001432814772564 280 -39.658601908249999 300 -39.390888353758648 320 -16.444173824850733
-		 340 -16.444173824850733 360 -16.444173824850733 380 -16.444173824850733 400 -16.444173824850733
-		 420 0.25283449311639694 440 -36.942305679861668;
+		 260 -32.001432814772564 270 -39.658601908249999 290 -39.390888353758648 310 -16.444173824850733
+		 315 -16.444173824850733 320 -16.444173824850733 324 -16.444173824850733 340 -16.444173824850733
+		 350 0.25283449311639694 370 -36.942305679861668;
 	setAttr -s 16 ".kot[0:15]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5;
 createNode animCurveTL -n "All_Controls_look_at__ctrl_translateZ1";
@@ -17263,8 +16232,8 @@ createNode animCurveTL -n "All_Controls_look_at__ctrl_translateZ1";
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  1 31.215378125021665 100 31.215378125021665
 		 160 31.21537812502169 200 31.21537812502169 220 31.21537812502169 240 31.215378125021786
-		 260 31.215378125021786 280 31.215378125021761 300 31.215378125021711 320 31.215378125021701
-		 340 31.215378125021701 360 31.215378125021701 380 31.215378125021701 400 31.215378125021701;
+		 260 31.215378125021786 270 31.215378125021761 290 31.215378125021711 310 31.215378125021701
+		 315 31.215378125021701 320 31.215378125021701 324 31.215378125021701 340 31.215378125021701;
 	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_look_at__ctrl_rotateX1";
@@ -17272,7 +16241,7 @@ createNode animCurveTA -n "All_Controls_look_at__ctrl_rotateX1";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  1 0 100 0 160 0 200 0 220 0 240 0 260 0
-		 280 0 300 0 320 0 340 0 360 0 380 0 400 0;
+		 270 0 290 0 310 0 315 0 320 0 324 0 340 0;
 	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_look_at__ctrl_rotateY1";
@@ -17280,7 +16249,7 @@ createNode animCurveTA -n "All_Controls_look_at__ctrl_rotateY1";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  1 0 100 0 160 0 200 0 220 0 240 0 260 0
-		 280 0 300 0 320 0 340 0 360 0 380 0 400 0;
+		 270 0 290 0 310 0 315 0 320 0 324 0 340 0;
 	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5;
 createNode animCurveTA -n "All_Controls_look_at__ctrl_rotateZ1";
@@ -17288,12 +16257,78 @@ createNode animCurveTA -n "All_Controls_look_at__ctrl_rotateZ1";
 	setAttr ".tan" 3;
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  1 0 100 0 160 0 200 0 220 0 240 0 260 0
-		 280 0 300 0 320 0 340 0 360 0 380 0 400 0;
+		 270 0 290 0 310 0 315 0 320 0 324 0 340 0;
 	setAttr -s 14 ".kot[0:13]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5;
+createNode animCurveTL -n "nurbsCircle1_translateX";
+	rename -uid "A775E7DF-489C-3E68-14FA-798AE17AA1AF";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 2.4980018054066022e-16;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "nurbsCircle1_translateY";
+	rename -uid "DAAD38C6-4329-68D9-B04F-40A306B968EA";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "nurbsCircle1_translateZ";
+	rename -uid "E79A8059-4C6E-D1B6-3B01-4E9AF60F4485";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 5.8564264548977008e-15;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "nurbsCircle1_rotateX";
+	rename -uid "79993B6B-4A88-31F0-E115-98B9A68758AE";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "nurbsCircle1_rotateY";
+	rename -uid "9278B4A4-47BE-E481-3C6F-4DB03D2798A3";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTA -n "nurbsCircle1_rotateZ";
+	rename -uid "30E388A5-4BDF-5F1C-3AB9-8091628A1E44";
+	setAttr ".tan" 3;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "CC2D9FFA-41E5-0FC1-99F6-B8AD569704BD";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -1925.4574946643995 -907.69137568217479 ;
+	setAttr ".tgi[0].vh" -type "double2" 1549.1216570958768 185.65017128340125 ;
+	setAttr -s 8 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -220;
+	setAttr ".tgi[0].ni[0].y" -18.571428298950195;
+	setAttr ".tgi[0].ni[0].nvs" 18306;
+	setAttr ".tgi[0].ni[1].x" 96.100021362304688;
+	setAttr ".tgi[0].ni[1].y" 27.228395462036133;
+	setAttr ".tgi[0].ni[1].nvs" 18306;
+	setAttr ".tgi[0].ni[2].x" -1167.142822265625;
+	setAttr ".tgi[0].ni[2].y" -460;
+	setAttr ".tgi[0].ni[2].nvs" 18304;
+	setAttr ".tgi[0].ni[3].x" -1167.142822265625;
+	setAttr ".tgi[0].ni[3].y" -330;
+	setAttr ".tgi[0].ni[3].nvs" 18304;
+	setAttr ".tgi[0].ni[4].x" -1167.142822265625;
+	setAttr ".tgi[0].ni[4].y" -200;
+	setAttr ".tgi[0].ni[4].nvs" 18304;
+	setAttr ".tgi[0].ni[5].x" 828.5714111328125;
+	setAttr ".tgi[0].ni[5].y" -200;
+	setAttr ".tgi[0].ni[5].nvs" 18304;
+	setAttr ".tgi[0].ni[6].x" 828.5714111328125;
+	setAttr ".tgi[0].ni[6].y" -330;
+	setAttr ".tgi[0].ni[6].nvs" 18304;
+	setAttr ".tgi[0].ni[7].x" 828.5714111328125;
+	setAttr ".tgi[0].ni[7].y" -460;
+	setAttr ".tgi[0].ni[7].nvs" 18304;
 select -ne :time1;
-	setAttr ".o" 552;
-	setAttr ".unw" 552;
+	setAttr ".o" 253;
+	setAttr ".unw" 253;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -17374,1836 +16409,1539 @@ connectAttr "MiaRN.phl[60]" "MiaRN.phl[61]";
 connectAttr "base_hair__5_ctrl_rotateX.o" "MiaRN.phl[62]";
 connectAttr "base_hair__5_ctrl_rotateY.o" "MiaRN.phl[63]";
 connectAttr "base_hair__5_ctrl_rotateZ.o" "MiaRN.phl[64]";
-connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.ctx" "MiaRN.phl[65]";
-connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.cty" "MiaRN.phl[66]";
-connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.ctz" "MiaRN.phl[67]";
-connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.crx" "MiaRN.phl[68]";
-connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.cry" "MiaRN.phl[69]";
-connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.crz" "MiaRN.phl[70]";
-connectAttr "MiaRN.phl[71]" "L_Arm_IK_ctrl_grp_parentConstraint1.cro";
-connectAttr "MiaRN.phl[72]" "L_Arm_IK_ctrl_grp_parentConstraint1.cpim";
-connectAttr "MiaRN.phl[73]" "L_Arm_IK_ctrl_grp_parentConstraint1.crp";
-connectAttr "MiaRN.phl[74]" "L_Arm_IK_ctrl_grp_parentConstraint1.crt";
-connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.ctx" "MiaRN.phl[75]";
-connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.cty" "MiaRN.phl[76]";
-connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.ctz" "MiaRN.phl[77]";
-connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.crx" "MiaRN.phl[78]";
-connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.cry" "MiaRN.phl[79]";
-connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.crz" "MiaRN.phl[80]";
-connectAttr "MiaRN.phl[81]" "R_Arm_IK_ctrl_grp_parentConstraint1.cro";
-connectAttr "MiaRN.phl[82]" "R_Arm_IK_ctrl_grp_parentConstraint1.cpim";
-connectAttr "MiaRN.phl[83]" "R_Arm_IK_ctrl_grp_parentConstraint1.crp";
-connectAttr "MiaRN.phl[84]" "R_Arm_IK_ctrl_grp_parentConstraint1.crt";
-connectAttr "MiaRN.phl[85]" "MiaRN.phl[86]";
-connectAttr "MiaRN.phl[87]" "MiaRN.phl[88]";
-connectAttr "MiaRN.phl[89]" "MiaRN.phl[90]";
+connectAttr "nurbsCircle1_translateY.o" "MiaRN.phl[65]";
+connectAttr "nurbsCircle1_translateX.o" "MiaRN.phl[66]";
+connectAttr "nurbsCircle1_translateZ.o" "MiaRN.phl[67]";
+connectAttr "nurbsCircle1_rotateX.o" "MiaRN.phl[68]";
+connectAttr "nurbsCircle1_rotateY.o" "MiaRN.phl[69]";
+connectAttr "nurbsCircle1_rotateZ.o" "MiaRN.phl[70]";
+connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.ctx" "MiaRN.phl[71]";
+connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.cty" "MiaRN.phl[72]";
+connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.ctz" "MiaRN.phl[73]";
+connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.crx" "MiaRN.phl[74]";
+connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.cry" "MiaRN.phl[75]";
+connectAttr "L_Arm_IK_ctrl_grp_parentConstraint1.crz" "MiaRN.phl[76]";
+connectAttr "MiaRN.phl[77]" "L_Arm_IK_ctrl_grp_parentConstraint1.cro";
+connectAttr "MiaRN.phl[78]" "L_Arm_IK_ctrl_grp_parentConstraint1.cpim";
+connectAttr "MiaRN.phl[79]" "L_Arm_IK_ctrl_grp_parentConstraint1.crp";
+connectAttr "MiaRN.phl[80]" "L_Arm_IK_ctrl_grp_parentConstraint1.crt";
+connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.ctx" "MiaRN.phl[81]";
+connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.cty" "MiaRN.phl[82]";
+connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.ctz" "MiaRN.phl[83]";
+connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.crx" "MiaRN.phl[84]";
+connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.cry" "MiaRN.phl[85]";
+connectAttr "R_Arm_IK_ctrl_grp_parentConstraint1.crz" "MiaRN.phl[86]";
+connectAttr "MiaRN.phl[87]" "R_Arm_IK_ctrl_grp_parentConstraint1.cro";
+connectAttr "MiaRN.phl[88]" "R_Arm_IK_ctrl_grp_parentConstraint1.cpim";
+connectAttr "MiaRN.phl[89]" "R_Arm_IK_ctrl_grp_parentConstraint1.crp";
+connectAttr "MiaRN.phl[90]" "R_Arm_IK_ctrl_grp_parentConstraint1.crt";
 connectAttr "MiaRN.phl[91]" "MiaRN.phl[92]";
 connectAttr "MiaRN.phl[93]" "MiaRN.phl[94]";
 connectAttr "MiaRN.phl[95]" "MiaRN.phl[96]";
-connectAttr "MiaRN.phl[97]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[54].dn";
-connectAttr "MiaRN.phl[98]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[55].dn";
-connectAttr "MiaRN.phl[99]" "placeholder_boxes_parentConstraint1.tg[0].tr";
-connectAttr "R_hand_LOC_rotateX.o" "MiaRN.phl[100]";
-connectAttr "R_hand_LOC_rotateY.o" "MiaRN.phl[101]";
-connectAttr "R_hand_LOC_rotateZ.o" "MiaRN.phl[102]";
-connectAttr "MiaRN.phl[103]" "placeholder_boxes_parentConstraint1.tg[0].tpm";
-connectAttr "MiaRN.phl[104]" "placeholder_boxes_parentConstraint1.tg[0].tt";
-connectAttr "MiaRN.phl[105]" "placeholder_boxes_parentConstraint1.tg[0].trp";
-connectAttr "MiaRN.phl[106]" "placeholder_boxes_parentConstraint1.tg[0].trt";
-connectAttr "MiaRN.phl[107]" "placeholder_boxes_parentConstraint1.tg[0].tro";
-connectAttr "MiaRN.phl[108]" "placeholder_boxes_parentConstraint1.tg[0].ts";
-connectAttr "All_Controls_R_Leg_PV_ctrl_scaleZ.o" "MiaRN.phl[109]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_scaleY.o" "MiaRN.phl[110]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_scaleX.o" "MiaRN.phl[111]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_visibility.o" "MiaRN.phl[112]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[113]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_scaleY.o" "MiaRN.phl[114]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_scaleX.o" "MiaRN.phl[115]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_visibility.o" "MiaRN.phl[116]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_scaleZ.o" "MiaRN.phl[117]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_scaleY.o" "MiaRN.phl[118]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_scaleX.o" "MiaRN.phl[119]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_visibility.o" "MiaRN.phl[120]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_scaleZ.o" "MiaRN.phl[121]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_scaleY.o" "MiaRN.phl[122]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_scaleX.o" "MiaRN.phl[123]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_visibility.o" "MiaRN.phl[124]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[125]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_scaleY.o" "MiaRN.phl[126]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_scaleX.o" "MiaRN.phl[127]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_visibility.o" "MiaRN.phl[128]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_scaleZ.o" "MiaRN.phl[129]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_scaleY.o" "MiaRN.phl[130]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_scaleX.o" "MiaRN.phl[131]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_visibility.o" "MiaRN.phl[132]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_scaleZ.o" "MiaRN.phl[133]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_scaleY.o" "MiaRN.phl[134]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_scaleX.o" "MiaRN.phl[135]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_visibility.o" "MiaRN.phl[136]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[137]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_scaleY.o" "MiaRN.phl[138]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_scaleX.o" "MiaRN.phl[139]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_visibility.o" "MiaRN.phl[140]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_scaleZ.o" "MiaRN.phl[141]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_scaleY.o" "MiaRN.phl[142]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_scaleX.o" "MiaRN.phl[143]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_visibility.o" "MiaRN.phl[144]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_scaleZ.o" "MiaRN.phl[145]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_scaleY.o" "MiaRN.phl[146]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_scaleX.o" "MiaRN.phl[147]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_visibility.o" "MiaRN.phl[148]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[149]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_scaleY.o" "MiaRN.phl[150]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_scaleX.o" "MiaRN.phl[151]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_visibility.o" "MiaRN.phl[152]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_scaleZ.o" "MiaRN.phl[153]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_scaleY.o" "MiaRN.phl[154]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_scaleX.o" "MiaRN.phl[155]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_visibility.o" "MiaRN.phl[156]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_scaleZ.o" "MiaRN.phl[157]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_scaleY.o" "MiaRN.phl[158]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_scaleX.o" "MiaRN.phl[159]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_visibility.o" "MiaRN.phl[160]";
-connectAttr "All_Controls_R_foot_ctrl_scaleZ.o" "MiaRN.phl[161]";
-connectAttr "All_Controls_R_foot_ctrl_scaleY.o" "MiaRN.phl[162]";
-connectAttr "All_Controls_R_foot_ctrl_scaleX.o" "MiaRN.phl[163]";
-connectAttr "All_Controls_R_foot_ctrl_visibility.o" "MiaRN.phl[164]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_scaleZ.o" "MiaRN.phl[165]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_scaleY.o" "MiaRN.phl[166]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_scaleX.o" "MiaRN.phl[167]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_visibility.o" "MiaRN.phl[168]";
-connectAttr "All_Controls_L_foot_ctrl_scaleZ.o" "MiaRN.phl[169]";
-connectAttr "All_Controls_L_foot_ctrl_scaleY.o" "MiaRN.phl[170]";
-connectAttr "All_Controls_L_foot_ctrl_scaleX.o" "MiaRN.phl[171]";
-connectAttr "All_Controls_L_foot_ctrl_visibility.o" "MiaRN.phl[172]";
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_scaleZ.o" "MiaRN.phl[173]";
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_scaleY.o" "MiaRN.phl[174]";
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_scaleX.o" "MiaRN.phl[175]";
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_visibility.o" "MiaRN.phl[176]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[177]";
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[178]";
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[179]";
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_visibility.o" "MiaRN.phl[180]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[181]";
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[182]";
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[183]";
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_visibility.o" "MiaRN.phl[184]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[185]";
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[186]";
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[187]";
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_visibility.o" "MiaRN.phl[188]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[189]";
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[190]";
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[191]";
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_visibility.o" "MiaRN.phl[192]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[193]";
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[194]";
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[195]";
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_visibility.o" "MiaRN.phl[196]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[197]";
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[198]";
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[199]";
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_visibility.o" "MiaRN.phl[200]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_scaleZ.o" "MiaRN.phl[201]";
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_scaleY.o" "MiaRN.phl[202]";
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_scaleX.o" "MiaRN.phl[203]";
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_visibility.o" "MiaRN.phl[204]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_scaleZ.o" "MiaRN.phl[205]";
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_scaleY.o" "MiaRN.phl[206]";
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_scaleX.o" "MiaRN.phl[207]";
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_visibility.o" "MiaRN.phl[208]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[209]";
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[210]";
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[211]";
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_visibility.o" "MiaRN.phl[212]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[213]";
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[214]";
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[215]";
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_visibility.o" "MiaRN.phl[216]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[217]";
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[218]";
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[219]";
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_visibility.o" "MiaRN.phl[220]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[221]";
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[222]";
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[223]";
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_visibility.o" "MiaRN.phl[224]"
-		;
-connectAttr "All_Controls_R_thumb_03_ctrl_scaleZ.o" "MiaRN.phl[225]";
-connectAttr "All_Controls_R_thumb_03_ctrl_scaleY.o" "MiaRN.phl[226]";
-connectAttr "All_Controls_R_thumb_03_ctrl_scaleX.o" "MiaRN.phl[227]";
-connectAttr "All_Controls_R_thumb_03_ctrl_visibility.o" "MiaRN.phl[228]";
-connectAttr "All_Controls_R_thumb_02_ctrl_scaleZ.o" "MiaRN.phl[229]";
-connectAttr "All_Controls_R_thumb_02_ctrl_scaleY.o" "MiaRN.phl[230]";
-connectAttr "All_Controls_R_thumb_02_ctrl_scaleX.o" "MiaRN.phl[231]";
-connectAttr "All_Controls_R_thumb_02_ctrl_visibility.o" "MiaRN.phl[232]";
-connectAttr "All_Controls_R_thumb_01_ctrl_scaleZ.o" "MiaRN.phl[233]";
-connectAttr "All_Controls_R_thumb_01_ctrl_scaleY.o" "MiaRN.phl[234]";
-connectAttr "All_Controls_R_thumb_01_ctrl_scaleX.o" "MiaRN.phl[235]";
-connectAttr "All_Controls_R_thumb_01_ctrl_visibility.o" "MiaRN.phl[236]";
-connectAttr "All_Controls_R_hand_ctrl_scaleZ.o" "MiaRN.phl[237]";
-connectAttr "All_Controls_R_hand_ctrl_scaleY.o" "MiaRN.phl[238]";
-connectAttr "All_Controls_R_hand_ctrl_scaleX.o" "MiaRN.phl[239]";
-connectAttr "All_Controls_R_hand_ctrl_visibility.o" "MiaRN.phl[240]";
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_scaleZ.o" "MiaRN.phl[241]";
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_scaleY.o" "MiaRN.phl[242]";
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_scaleX.o" "MiaRN.phl[243]";
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_visibility.o" "MiaRN.phl[244]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[245]";
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[246]";
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[247]";
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_visibility.o" "MiaRN.phl[248]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[249]";
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[250]";
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[251]";
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_visibility.o" "MiaRN.phl[252]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[253]";
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[254]";
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[255]";
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_visibility.o" "MiaRN.phl[256]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[257]";
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[258]";
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[259]";
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_visibility.o" "MiaRN.phl[260]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[261]";
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[262]";
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[263]";
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_visibility.o" "MiaRN.phl[264]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[265]";
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[266]";
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[267]";
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_visibility.o" "MiaRN.phl[268]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_scaleZ.o" "MiaRN.phl[269]";
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_scaleY.o" "MiaRN.phl[270]";
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_scaleX.o" "MiaRN.phl[271]";
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_visibility.o" "MiaRN.phl[272]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_scaleZ.o" "MiaRN.phl[273]";
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_scaleY.o" "MiaRN.phl[274]";
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_scaleX.o" "MiaRN.phl[275]";
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_visibility.o" "MiaRN.phl[276]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[277]";
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[278]";
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[279]";
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_visibility.o" "MiaRN.phl[280]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[281]";
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[282]";
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[283]";
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_visibility.o" "MiaRN.phl[284]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[285]";
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[286]";
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[287]";
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_visibility.o" "MiaRN.phl[288]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[289]";
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[290]";
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[291]";
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_visibility.o" "MiaRN.phl[292]"
-		;
-connectAttr "All_Controls_L_thumb_03_ctrl_scaleZ.o" "MiaRN.phl[293]";
-connectAttr "All_Controls_L_thumb_03_ctrl_scaleY.o" "MiaRN.phl[294]";
-connectAttr "All_Controls_L_thumb_03_ctrl_scaleX.o" "MiaRN.phl[295]";
-connectAttr "All_Controls_L_thumb_03_ctrl_visibility.o" "MiaRN.phl[296]";
-connectAttr "All_Controls_L_thumb_02_ctrl_scaleZ.o" "MiaRN.phl[297]";
-connectAttr "All_Controls_L_thumb_02_ctrl_scaleY.o" "MiaRN.phl[298]";
-connectAttr "All_Controls_L_thumb_02_ctrl_scaleX.o" "MiaRN.phl[299]";
-connectAttr "All_Controls_L_thumb_02_ctrl_visibility.o" "MiaRN.phl[300]";
-connectAttr "All_Controls_L_thumb_01_ctrl_scaleZ.o" "MiaRN.phl[301]";
-connectAttr "All_Controls_L_thumb_01_ctrl_scaleY.o" "MiaRN.phl[302]";
-connectAttr "All_Controls_L_thumb_01_ctrl_scaleX.o" "MiaRN.phl[303]";
-connectAttr "All_Controls_L_thumb_01_ctrl_visibility.o" "MiaRN.phl[304]";
-connectAttr "All_Controls_L_hand_ctrl_scaleZ.o" "MiaRN.phl[305]";
-connectAttr "All_Controls_L_hand_ctrl_scaleY.o" "MiaRN.phl[306]";
-connectAttr "All_Controls_L_hand_ctrl_scaleX.o" "MiaRN.phl[307]";
-connectAttr "All_Controls_L_hand_ctrl_visibility.o" "MiaRN.phl[308]";
-connectAttr "All_Controls_R_wrist_ctrl_scaleZ.o" "MiaRN.phl[309]";
-connectAttr "All_Controls_R_wrist_ctrl_scaleY.o" "MiaRN.phl[310]";
-connectAttr "All_Controls_R_wrist_ctrl_scaleX.o" "MiaRN.phl[311]";
-connectAttr "All_Controls_R_wrist_ctrl_visibility.o" "MiaRN.phl[312]";
-connectAttr "All_Controls_R_elbow_ctrl_scaleZ.o" "MiaRN.phl[313]";
-connectAttr "All_Controls_R_elbow_ctrl_scaleY.o" "MiaRN.phl[314]";
-connectAttr "All_Controls_R_elbow_ctrl_scaleX.o" "MiaRN.phl[315]";
-connectAttr "All_Controls_R_elbow_ctrl_visibility.o" "MiaRN.phl[316]";
-connectAttr "All_Controls_R_shoulder_ctrl_scaleZ.o" "MiaRN.phl[317]";
-connectAttr "All_Controls_R_shoulder_ctrl_scaleY.o" "MiaRN.phl[318]";
-connectAttr "All_Controls_R_shoulder_ctrl_scaleX.o" "MiaRN.phl[319]";
-connectAttr "All_Controls_R_shoulder_ctrl_visibility.o" "MiaRN.phl[320]";
-connectAttr "All_Controls_R_clavicle_ctrl_scaleZ.o" "MiaRN.phl[321]";
-connectAttr "All_Controls_R_clavicle_ctrl_scaleY.o" "MiaRN.phl[322]";
-connectAttr "All_Controls_R_clavicle_ctrl_scaleX.o" "MiaRN.phl[323]";
-connectAttr "All_Controls_R_clavicle_ctrl_visibility.o" "MiaRN.phl[324]";
-connectAttr "All_Controls_L_wrist_ctrl_scaleZ.o" "MiaRN.phl[325]";
-connectAttr "All_Controls_L_wrist_ctrl_scaleY.o" "MiaRN.phl[326]";
-connectAttr "All_Controls_L_wrist_ctrl_scaleX.o" "MiaRN.phl[327]";
-connectAttr "All_Controls_L_wrist_ctrl_visibility.o" "MiaRN.phl[328]";
-connectAttr "All_Controls_L_elbow_ctrl_scaleZ.o" "MiaRN.phl[329]";
-connectAttr "All_Controls_L_elbow_ctrl_scaleY.o" "MiaRN.phl[330]";
-connectAttr "All_Controls_L_elbow_ctrl_scaleX.o" "MiaRN.phl[331]";
-connectAttr "All_Controls_L_elbow_ctrl_visibility.o" "MiaRN.phl[332]";
-connectAttr "All_Controls_L_shoulder_ctrl_scaleZ.o" "MiaRN.phl[333]";
-connectAttr "All_Controls_L_shoulder_ctrl_scaleY.o" "MiaRN.phl[334]";
-connectAttr "All_Controls_L_shoulder_ctrl_scaleX.o" "MiaRN.phl[335]";
-connectAttr "All_Controls_L_shoulder_ctrl_visibility.o" "MiaRN.phl[336]";
-connectAttr "All_Controls_L_clavicle_ctrl_scaleZ.o" "MiaRN.phl[337]";
-connectAttr "All_Controls_L_clavicle_ctrl_scaleY.o" "MiaRN.phl[338]";
-connectAttr "All_Controls_L_clavicle_ctrl_scaleX.o" "MiaRN.phl[339]";
-connectAttr "All_Controls_L_clavicle_ctrl_visibility.o" "MiaRN.phl[340]";
-connectAttr "All_Controls_base_hair__4_ctrl_scaleZ.o" "MiaRN.phl[341]";
-connectAttr "All_Controls_base_hair__4_ctrl_scaleY.o" "MiaRN.phl[342]";
-connectAttr "All_Controls_base_hair__4_ctrl_scaleX.o" "MiaRN.phl[343]";
-connectAttr "All_Controls_base_hair__4_ctrl_visibility.o" "MiaRN.phl[344]";
-connectAttr "All_Controls_base_hair__3_ctrl_scaleZ.o" "MiaRN.phl[345]";
-connectAttr "All_Controls_base_hair__3_ctrl_scaleY.o" "MiaRN.phl[346]";
-connectAttr "All_Controls_base_hair__3_ctrl_scaleX.o" "MiaRN.phl[347]";
-connectAttr "All_Controls_base_hair__3_ctrl_visibility.o" "MiaRN.phl[348]";
-connectAttr "All_Controls_base_hair__2_ctrl_scaleZ.o" "MiaRN.phl[349]";
-connectAttr "All_Controls_base_hair__2_ctrl_scaleY.o" "MiaRN.phl[350]";
-connectAttr "All_Controls_base_hair__2_ctrl_scaleX.o" "MiaRN.phl[351]";
-connectAttr "All_Controls_base_hair__2_ctrl_visibility.o" "MiaRN.phl[352]";
-connectAttr "All_Controls_base_hair__1_ctrl_scaleZ.o" "MiaRN.phl[353]";
-connectAttr "All_Controls_base_hair__1_ctrl_scaleY.o" "MiaRN.phl[354]";
-connectAttr "All_Controls_base_hair__1_ctrl_scaleX.o" "MiaRN.phl[355]";
-connectAttr "All_Controls_base_hair__1_ctrl_visibility.o" "MiaRN.phl[356]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_scaleZ.o" "MiaRN.phl[357]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_scaleY.o" "MiaRN.phl[358]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_scaleX.o" "MiaRN.phl[359]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_visibility.o" "MiaRN.phl[360]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_scaleZ.o" "MiaRN.phl[361]";
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_scaleY.o" "MiaRN.phl[362]";
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_scaleX.o" "MiaRN.phl[363]";
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_visibility.o" "MiaRN.phl[364]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_scaleZ.o" "MiaRN.phl[365]";
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_scaleY.o" "MiaRN.phl[366]";
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_scaleX.o" "MiaRN.phl[367]";
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_visibility.o" "MiaRN.phl[368]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_scaleZ.o" "MiaRN.phl[369]";
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_scaleY.o" "MiaRN.phl[370]";
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_scaleX.o" "MiaRN.phl[371]";
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_visibility.o" "MiaRN.phl[372]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_scaleZ.o" "MiaRN.phl[373]";
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_scaleY.o" "MiaRN.phl[374]";
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_scaleX.o" "MiaRN.phl[375]";
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_visibility.o" "MiaRN.phl[376]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_scaleZ.o" "MiaRN.phl[377]";
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_scaleY.o" "MiaRN.phl[378]";
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_scaleX.o" "MiaRN.phl[379]";
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_visibility.o" "MiaRN.phl[380]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_scaleZ.o" "MiaRN.phl[381]";
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_scaleY.o" "MiaRN.phl[382]";
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_scaleX.o" "MiaRN.phl[383]";
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_visibility.o" "MiaRN.phl[384]"
-		;
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_scaleZ.o" "MiaRN.phl[385]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_scaleY.o" "MiaRN.phl[386]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_scaleX.o" "MiaRN.phl[387]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_visibility.o" "MiaRN.phl[388]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_scaleZ.o" "MiaRN.phl[389]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_scaleY.o" "MiaRN.phl[390]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_scaleX.o" "MiaRN.phl[391]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_visibility.o" "MiaRN.phl[392]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_scaleZ.o" "MiaRN.phl[393]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_scaleY.o" "MiaRN.phl[394]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_scaleX.o" "MiaRN.phl[395]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_visibility.o" "MiaRN.phl[396]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_scaleZ.o" "MiaRN.phl[397]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_scaleY.o" "MiaRN.phl[398]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_scaleX.o" "MiaRN.phl[399]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_visibility.o" "MiaRN.phl[400]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_scaleZ.o" "MiaRN.phl[401]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_scaleY.o" "MiaRN.phl[402]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_scaleX.o" "MiaRN.phl[403]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_visibility.o" "MiaRN.phl[404]";
-connectAttr "All_Controls_C_back_curl4_ctrl_scaleZ.o" "MiaRN.phl[405]";
-connectAttr "All_Controls_C_back_curl4_ctrl_scaleY.o" "MiaRN.phl[406]";
-connectAttr "All_Controls_C_back_curl4_ctrl_scaleX.o" "MiaRN.phl[407]";
-connectAttr "All_Controls_C_back_curl4_ctrl_visibility.o" "MiaRN.phl[408]";
-connectAttr "All_Controls_C_back_curl3_ctrl_scaleZ.o" "MiaRN.phl[409]";
-connectAttr "All_Controls_C_back_curl3_ctrl_scaleY.o" "MiaRN.phl[410]";
-connectAttr "All_Controls_C_back_curl3_ctrl_scaleX.o" "MiaRN.phl[411]";
-connectAttr "All_Controls_C_back_curl3_ctrl_visibility.o" "MiaRN.phl[412]";
-connectAttr "All_Controls_C_back_curl2_ctrl_scaleZ.o" "MiaRN.phl[413]";
-connectAttr "All_Controls_C_back_curl2_ctrl_scaleY.o" "MiaRN.phl[414]";
-connectAttr "All_Controls_C_back_curl2_ctrl_scaleX.o" "MiaRN.phl[415]";
-connectAttr "All_Controls_C_back_curl2_ctrl_visibility.o" "MiaRN.phl[416]";
-connectAttr "All_Controls_C_back_curl1_ctrl_scaleZ.o" "MiaRN.phl[417]";
-connectAttr "All_Controls_C_back_curl1_ctrl_scaleY.o" "MiaRN.phl[418]";
-connectAttr "All_Controls_C_back_curl1_ctrl_scaleX.o" "MiaRN.phl[419]";
-connectAttr "All_Controls_C_back_curl1_ctrl_visibility.o" "MiaRN.phl[420]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_scaleZ.o" "MiaRN.phl[421]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_scaleY.o" "MiaRN.phl[422]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_scaleX.o" "MiaRN.phl[423]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_visibility.o" "MiaRN.phl[424]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_scaleZ.o" "MiaRN.phl[425]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_scaleY.o" "MiaRN.phl[426]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_scaleX.o" "MiaRN.phl[427]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_visibility.o" "MiaRN.phl[428]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_scaleZ.o" "MiaRN.phl[429]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_scaleY.o" "MiaRN.phl[430]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_scaleX.o" "MiaRN.phl[431]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_visibility.o" "MiaRN.phl[432]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_scaleZ.o" "MiaRN.phl[433]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_scaleY.o" "MiaRN.phl[434]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_scaleX.o" "MiaRN.phl[435]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_visibility.o" "MiaRN.phl[436]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_scaleZ.o" "MiaRN.phl[437]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_scaleY.o" "MiaRN.phl[438]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_scaleX.o" "MiaRN.phl[439]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_visibility.o" "MiaRN.phl[440]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_scaleZ.o" "MiaRN.phl[441]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_scaleY.o" "MiaRN.phl[442]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_scaleX.o" "MiaRN.phl[443]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_visibility.o" "MiaRN.phl[444]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_scaleZ.o" "MiaRN.phl[445]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_scaleY.o" "MiaRN.phl[446]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_scaleX.o" "MiaRN.phl[447]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_visibility.o" "MiaRN.phl[448]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_scaleZ.o" "MiaRN.phl[449]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_scaleY.o" "MiaRN.phl[450]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_scaleX.o" "MiaRN.phl[451]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_visibility.o" "MiaRN.phl[452]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_scaleZ.o" "MiaRN.phl[453]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_scaleY.o" "MiaRN.phl[454]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_scaleX.o" "MiaRN.phl[455]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_visibility.o" "MiaRN.phl[456]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_scaleZ.o" "MiaRN.phl[457]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_scaleY.o" "MiaRN.phl[458]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_scaleX.o" "MiaRN.phl[459]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_visibility.o" "MiaRN.phl[460]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_scaleZ.o" "MiaRN.phl[461]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_scaleY.o" "MiaRN.phl[462]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_scaleX.o" "MiaRN.phl[463]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_visibility.o" "MiaRN.phl[464]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_scaleZ.o" "MiaRN.phl[465]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_scaleY.o" "MiaRN.phl[466]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_scaleX.o" "MiaRN.phl[467]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_visibility.o" "MiaRN.phl[468]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_scaleZ.o" "MiaRN.phl[469]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_scaleY.o" "MiaRN.phl[470]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_scaleX.o" "MiaRN.phl[471]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_visibility.o" "MiaRN.phl[472]";
-connectAttr "All_Controls_tongue3_ctrl_scaleZ.o" "MiaRN.phl[473]";
-connectAttr "All_Controls_tongue3_ctrl_scaleY.o" "MiaRN.phl[474]";
-connectAttr "All_Controls_tongue3_ctrl_scaleX.o" "MiaRN.phl[475]";
-connectAttr "All_Controls_tongue3_ctrl_visibility.o" "MiaRN.phl[476]";
-connectAttr "All_Controls_tongue2_ctrl_scaleZ.o" "MiaRN.phl[477]";
-connectAttr "All_Controls_tongue2_ctrl_scaleY.o" "MiaRN.phl[478]";
-connectAttr "All_Controls_tongue2_ctrl_scaleX.o" "MiaRN.phl[479]";
-connectAttr "All_Controls_tongue2_ctrl_visibility.o" "MiaRN.phl[480]";
-connectAttr "All_Controls_tongue1_ctrl_scaleZ.o" "MiaRN.phl[481]";
-connectAttr "All_Controls_tongue1_ctrl_scaleY.o" "MiaRN.phl[482]";
-connectAttr "All_Controls_tongue1_ctrl_scaleX.o" "MiaRN.phl[483]";
-connectAttr "All_Controls_tongue1_ctrl_visibility.o" "MiaRN.phl[484]";
-connectAttr "All_Controls_lower_jaw_ctrl_scaleZ.o" "MiaRN.phl[485]";
-connectAttr "All_Controls_lower_jaw_ctrl_scaleY.o" "MiaRN.phl[486]";
-connectAttr "All_Controls_lower_jaw_ctrl_scaleX.o" "MiaRN.phl[487]";
-connectAttr "All_Controls_lower_jaw_ctrl_visibility.o" "MiaRN.phl[488]";
-connectAttr "All_Controls_head_jnt_01_ctrl_scaleZ.o" "MiaRN.phl[489]";
-connectAttr "All_Controls_head_jnt_01_ctrl_scaleY.o" "MiaRN.phl[490]";
-connectAttr "All_Controls_head_jnt_01_ctrl_scaleX.o" "MiaRN.phl[491]";
-connectAttr "All_Controls_head_jnt_01_ctrl_visibility.o" "MiaRN.phl[492]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_scaleZ.o" "MiaRN.phl[493]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_scaleY.o" "MiaRN.phl[494]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_scaleX.o" "MiaRN.phl[495]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_visibility.o" "MiaRN.phl[496]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_scaleZ.o" "MiaRN.phl[497]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_scaleY.o" "MiaRN.phl[498]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_scaleX.o" "MiaRN.phl[499]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_visibility.o" "MiaRN.phl[500]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_scaleZ.o" "MiaRN.phl[501]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_scaleY.o" "MiaRN.phl[502]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_scaleX.o" "MiaRN.phl[503]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_visibility.o" "MiaRN.phl[504]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_scaleZ.o" "MiaRN.phl[505]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_scaleY.o" "MiaRN.phl[506]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_scaleX.o" "MiaRN.phl[507]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_visibility.o" "MiaRN.phl[508]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_scaleZ.o" "MiaRN.phl[509]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_scaleY.o" "MiaRN.phl[510]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_scaleX.o" "MiaRN.phl[511]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_visibility.o" "MiaRN.phl[512]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_scaleZ.o" "MiaRN.phl[513]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_scaleY.o" "MiaRN.phl[514]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_scaleX.o" "MiaRN.phl[515]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_visibility.o" "MiaRN.phl[516]";
-connectAttr "All_Controls_R_ankle_ctrl_scaleZ.o" "MiaRN.phl[517]";
-connectAttr "All_Controls_R_ankle_ctrl_scaleY.o" "MiaRN.phl[518]";
-connectAttr "All_Controls_R_ankle_ctrl_scaleX.o" "MiaRN.phl[519]";
-connectAttr "All_Controls_R_ankle_ctrl_visibility.o" "MiaRN.phl[520]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_scaleZ.o" "MiaRN.phl[521]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_scaleY.o" "MiaRN.phl[522]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_scaleX.o" "MiaRN.phl[523]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_visibility.o" "MiaRN.phl[524]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_scaleZ.o" "MiaRN.phl[525]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_scaleY.o" "MiaRN.phl[526]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_scaleX.o" "MiaRN.phl[527]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_visibility.o" "MiaRN.phl[528]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_scaleZ.o" "MiaRN.phl[529]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_scaleY.o" "MiaRN.phl[530]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_scaleX.o" "MiaRN.phl[531]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_visibility.o" "MiaRN.phl[532]"
-		;
-connectAttr "All_Controls_L_ankle_ctrl_scaleZ.o" "MiaRN.phl[533]";
-connectAttr "All_Controls_L_ankle_ctrl_scaleY.o" "MiaRN.phl[534]";
-connectAttr "All_Controls_L_ankle_ctrl_scaleX.o" "MiaRN.phl[535]";
-connectAttr "All_Controls_L_ankle_ctrl_visibility.o" "MiaRN.phl[536]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_scaleZ.o" "MiaRN.phl[537]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_scaleY.o" "MiaRN.phl[538]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_scaleX.o" "MiaRN.phl[539]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_visibility.o" "MiaRN.phl[540]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_scaleZ.o" "MiaRN.phl[541]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_scaleY.o" "MiaRN.phl[542]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_scaleX.o" "MiaRN.phl[543]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_visibility.o" "MiaRN.phl[544]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_scaleZ.o" "MiaRN.phl[545]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_scaleY.o" "MiaRN.phl[546]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_scaleX.o" "MiaRN.phl[547]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_visibility.o" "MiaRN.phl[548]"
-		;
-connectAttr "All_Controls_pelvis_jnt_ctrl_scaleZ.o" "MiaRN.phl[549]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_scaleY.o" "MiaRN.phl[550]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_scaleX.o" "MiaRN.phl[551]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_visibility.o" "MiaRN.phl[552]";
-connectAttr "All_Controls_cog_ctrl_scaleZ.o" "MiaRN.phl[553]";
-connectAttr "All_Controls_cog_ctrl_scaleY.o" "MiaRN.phl[554]";
-connectAttr "All_Controls_cog_ctrl_scaleX.o" "MiaRN.phl[555]";
-connectAttr "All_Controls_cog_ctrl_visibility.o" "MiaRN.phl[556]";
-connectAttr "All_Controls_transform_ctrl_R_Leg_IKFK.o" "MiaRN.phl[557]";
-connectAttr "All_Controls_transform_ctrl_L_Leg_IKFK.o" "MiaRN.phl[558]";
-connectAttr "All_Controls_transform_ctrl_R_Arm_IKFK.o" "MiaRN.phl[559]";
-connectAttr "All_Controls_transform_ctrl_L_Arm_IKFK.o" "MiaRN.phl[560]";
-connectAttr "All_Controls_transform_ctrl_visibility.o" "MiaRN.phl[561]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_translateZ.o" "MiaRN.phl[562]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_translateY.o" "MiaRN.phl[563]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_translateX.o" "MiaRN.phl[564]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_translateZ.o" "MiaRN.phl[565]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_translateY.o" "MiaRN.phl[566]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_translateX.o" "MiaRN.phl[567]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_translateZ.o" "MiaRN.phl[568]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_translateY.o" "MiaRN.phl[569]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_translateX.o" "MiaRN.phl[570]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_translateZ.o" "MiaRN.phl[571]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_translateY.o" "MiaRN.phl[572]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_translateX.o" "MiaRN.phl[573]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_translateZ.o" "MiaRN.phl[574]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_translateY.o" "MiaRN.phl[575]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_translateX.o" "MiaRN.phl[576]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_translateZ.o" "MiaRN.phl[577]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_translateY.o" "MiaRN.phl[578]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_translateX.o" "MiaRN.phl[579]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_translateZ.o" "MiaRN.phl[580]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_translateY.o" "MiaRN.phl[581]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_translateX.o" "MiaRN.phl[582]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_translateZ.o" "MiaRN.phl[583]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_translateY.o" "MiaRN.phl[584]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_translateX.o" "MiaRN.phl[585]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_translateZ.o" "MiaRN.phl[586]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_translateY.o" "MiaRN.phl[587]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_translateX.o" "MiaRN.phl[588]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_translateZ.o" "MiaRN.phl[589]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_translateY.o" "MiaRN.phl[590]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_translateX.o" "MiaRN.phl[591]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_translateZ.o" "MiaRN.phl[592]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_translateY.o" "MiaRN.phl[593]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_translateX.o" "MiaRN.phl[594]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_translateZ.o" "MiaRN.phl[595]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_translateY.o" "MiaRN.phl[596]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_translateX.o" "MiaRN.phl[597]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_translateZ.o" "MiaRN.phl[598]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_translateY.o" "MiaRN.phl[599]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_translateX.o" "MiaRN.phl[600]";
-connectAttr "All_Controls_R_foot_ctrl_translateZ.o" "MiaRN.phl[601]";
-connectAttr "All_Controls_R_foot_ctrl_translateY.o" "MiaRN.phl[602]";
-connectAttr "All_Controls_R_foot_ctrl_translateX.o" "MiaRN.phl[603]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_translateZ.o" "MiaRN.phl[604]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_translateY.o" "MiaRN.phl[605]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_translateX.o" "MiaRN.phl[606]";
-connectAttr "All_Controls_L_foot_ctrl_translateZ.o" "MiaRN.phl[607]";
-connectAttr "All_Controls_L_foot_ctrl_translateY.o" "MiaRN.phl[608]";
-connectAttr "All_Controls_L_foot_ctrl_translateX.o" "MiaRN.phl[609]";
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_translateZ.o" "MiaRN.phl[610]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_translateY.o" "MiaRN.phl[611]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_translateX.o" "MiaRN.phl[612]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[613]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_translateY.o" "MiaRN.phl[614]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_translateX.o" "MiaRN.phl[615]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[616]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_translateY.o" "MiaRN.phl[617]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_translateX.o" "MiaRN.phl[618]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[619]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_translateY.o" "MiaRN.phl[620]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_translateX.o" "MiaRN.phl[621]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[622]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_translateY.o" "MiaRN.phl[623]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_translateX.o" "MiaRN.phl[624]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[625]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_translateY.o" "MiaRN.phl[626]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_translateX.o" "MiaRN.phl[627]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[628]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_translateY.o" "MiaRN.phl[629]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_translateX.o" "MiaRN.phl[630]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_translateZ.o" "MiaRN.phl[631]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_translateY.o" "MiaRN.phl[632]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_translateX.o" "MiaRN.phl[633]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_translateZ.o" "MiaRN.phl[634]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_translateY.o" "MiaRN.phl[635]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_translateX.o" "MiaRN.phl[636]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[637]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_translateY.o" "MiaRN.phl[638]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_translateX.o" "MiaRN.phl[639]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[640]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_translateY.o" "MiaRN.phl[641]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_translateX.o" "MiaRN.phl[642]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[643]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_translateY.o" "MiaRN.phl[644]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_translateX.o" "MiaRN.phl[645]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[646]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_translateY.o" "MiaRN.phl[647]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_translateX.o" "MiaRN.phl[648]"
-		;
-connectAttr "All_Controls_R_thumb_03_ctrl_translateZ.o" "MiaRN.phl[649]";
-connectAttr "All_Controls_R_thumb_03_ctrl_translateY.o" "MiaRN.phl[650]";
-connectAttr "All_Controls_R_thumb_03_ctrl_translateX.o" "MiaRN.phl[651]";
-connectAttr "All_Controls_R_thumb_02_ctrl_translateZ.o" "MiaRN.phl[652]";
-connectAttr "All_Controls_R_thumb_02_ctrl_translateY.o" "MiaRN.phl[653]";
-connectAttr "All_Controls_R_thumb_02_ctrl_translateX.o" "MiaRN.phl[654]";
-connectAttr "All_Controls_R_thumb_01_ctrl_translateZ.o" "MiaRN.phl[655]";
-connectAttr "All_Controls_R_thumb_01_ctrl_translateY.o" "MiaRN.phl[656]";
-connectAttr "All_Controls_R_thumb_01_ctrl_translateX.o" "MiaRN.phl[657]";
-connectAttr "All_Controls_R_hand_ctrl_translateZ.o" "MiaRN.phl[658]";
-connectAttr "All_Controls_R_hand_ctrl_translateY.o" "MiaRN.phl[659]";
-connectAttr "All_Controls_R_hand_ctrl_translateX.o" "MiaRN.phl[660]";
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_translateZ.o" "MiaRN.phl[661]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_translateY.o" "MiaRN.phl[662]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_translateX.o" "MiaRN.phl[663]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[664]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_translateY.o" "MiaRN.phl[665]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_translateX.o" "MiaRN.phl[666]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[667]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_translateY.o" "MiaRN.phl[668]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_translateX.o" "MiaRN.phl[669]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[670]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_translateY.o" "MiaRN.phl[671]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_translateX.o" "MiaRN.phl[672]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[673]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_translateY.o" "MiaRN.phl[674]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_translateX.o" "MiaRN.phl[675]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[676]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_translateY.o" "MiaRN.phl[677]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_translateX.o" "MiaRN.phl[678]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[679]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_translateY.o" "MiaRN.phl[680]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_translateX.o" "MiaRN.phl[681]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_translateZ.o" "MiaRN.phl[682]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_translateY.o" "MiaRN.phl[683]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_translateX.o" "MiaRN.phl[684]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_translateZ.o" "MiaRN.phl[685]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_translateY.o" "MiaRN.phl[686]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_translateX.o" "MiaRN.phl[687]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[688]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_translateY.o" "MiaRN.phl[689]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_translateX.o" "MiaRN.phl[690]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[691]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_translateY.o" "MiaRN.phl[692]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_translateX.o" "MiaRN.phl[693]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[694]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_translateY.o" "MiaRN.phl[695]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_translateX.o" "MiaRN.phl[696]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[697]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_translateY.o" "MiaRN.phl[698]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_translateX.o" "MiaRN.phl[699]"
-		;
-connectAttr "All_Controls_L_thumb_03_ctrl_translateZ.o" "MiaRN.phl[700]";
-connectAttr "All_Controls_L_thumb_03_ctrl_translateY.o" "MiaRN.phl[701]";
-connectAttr "All_Controls_L_thumb_03_ctrl_translateX.o" "MiaRN.phl[702]";
-connectAttr "All_Controls_L_thumb_02_ctrl_translateZ.o" "MiaRN.phl[703]";
-connectAttr "All_Controls_L_thumb_02_ctrl_translateY.o" "MiaRN.phl[704]";
-connectAttr "All_Controls_L_thumb_02_ctrl_translateX.o" "MiaRN.phl[705]";
-connectAttr "All_Controls_L_thumb_01_ctrl_translateZ.o" "MiaRN.phl[706]";
-connectAttr "All_Controls_L_thumb_01_ctrl_translateY.o" "MiaRN.phl[707]";
-connectAttr "All_Controls_L_thumb_01_ctrl_translateX.o" "MiaRN.phl[708]";
-connectAttr "All_Controls_L_hand_ctrl_translateZ.o" "MiaRN.phl[709]";
-connectAttr "All_Controls_L_hand_ctrl_translateY.o" "MiaRN.phl[710]";
-connectAttr "All_Controls_L_hand_ctrl_translateX.o" "MiaRN.phl[711]";
-connectAttr "All_Controls_R_wrist_ctrl_translateZ.o" "MiaRN.phl[712]";
-connectAttr "All_Controls_R_wrist_ctrl_translateY.o" "MiaRN.phl[713]";
-connectAttr "All_Controls_R_wrist_ctrl_translateX.o" "MiaRN.phl[714]";
-connectAttr "All_Controls_R_elbow_ctrl_translateZ.o" "MiaRN.phl[715]";
-connectAttr "All_Controls_R_elbow_ctrl_translateY.o" "MiaRN.phl[716]";
-connectAttr "All_Controls_R_elbow_ctrl_translateX.o" "MiaRN.phl[717]";
-connectAttr "All_Controls_R_shoulder_ctrl_translateZ.o" "MiaRN.phl[718]";
-connectAttr "All_Controls_R_shoulder_ctrl_translateY.o" "MiaRN.phl[719]";
-connectAttr "All_Controls_R_shoulder_ctrl_translateX.o" "MiaRN.phl[720]";
-connectAttr "All_Controls_R_clavicle_ctrl_translateZ.o" "MiaRN.phl[721]";
-connectAttr "All_Controls_R_clavicle_ctrl_translateY.o" "MiaRN.phl[722]";
-connectAttr "All_Controls_R_clavicle_ctrl_translateX.o" "MiaRN.phl[723]";
-connectAttr "All_Controls_L_wrist_ctrl_translateZ.o" "MiaRN.phl[724]";
-connectAttr "All_Controls_L_wrist_ctrl_translateY.o" "MiaRN.phl[725]";
-connectAttr "All_Controls_L_wrist_ctrl_translateX.o" "MiaRN.phl[726]";
-connectAttr "All_Controls_L_elbow_ctrl_translateZ.o" "MiaRN.phl[727]";
-connectAttr "All_Controls_L_elbow_ctrl_translateY.o" "MiaRN.phl[728]";
-connectAttr "All_Controls_L_elbow_ctrl_translateX.o" "MiaRN.phl[729]";
-connectAttr "All_Controls_L_shoulder_ctrl_translateZ.o" "MiaRN.phl[730]";
-connectAttr "All_Controls_L_shoulder_ctrl_translateY.o" "MiaRN.phl[731]";
-connectAttr "All_Controls_L_shoulder_ctrl_translateX.o" "MiaRN.phl[732]";
-connectAttr "All_Controls_L_clavicle_ctrl_translateZ.o" "MiaRN.phl[733]";
-connectAttr "All_Controls_L_clavicle_ctrl_translateY.o" "MiaRN.phl[734]";
-connectAttr "All_Controls_L_clavicle_ctrl_translateX.o" "MiaRN.phl[735]";
-connectAttr "All_Controls_base_hair__4_ctrl_translateZ.o" "MiaRN.phl[736]";
-connectAttr "All_Controls_base_hair__4_ctrl_translateY.o" "MiaRN.phl[737]";
-connectAttr "All_Controls_base_hair__4_ctrl_translateX.o" "MiaRN.phl[738]";
-connectAttr "All_Controls_base_hair__3_ctrl_translateZ.o" "MiaRN.phl[739]";
-connectAttr "All_Controls_base_hair__3_ctrl_translateY.o" "MiaRN.phl[740]";
-connectAttr "All_Controls_base_hair__3_ctrl_translateX.o" "MiaRN.phl[741]";
-connectAttr "All_Controls_base_hair__2_ctrl_translateZ.o" "MiaRN.phl[742]";
-connectAttr "All_Controls_base_hair__2_ctrl_translateY.o" "MiaRN.phl[743]";
-connectAttr "All_Controls_base_hair__2_ctrl_translateX.o" "MiaRN.phl[744]";
-connectAttr "All_Controls_base_hair__1_ctrl_translateZ.o" "MiaRN.phl[745]";
-connectAttr "All_Controls_base_hair__1_ctrl_translateY.o" "MiaRN.phl[746]";
-connectAttr "All_Controls_base_hair__1_ctrl_translateX.o" "MiaRN.phl[747]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_translateZ.o" "MiaRN.phl[748]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_translateY.o" "MiaRN.phl[749]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_translateX.o" "MiaRN.phl[750]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_translateZ.o" "MiaRN.phl[751]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_translateY.o" "MiaRN.phl[752]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_translateX.o" "MiaRN.phl[753]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_translateZ.o" "MiaRN.phl[754]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_translateY.o" "MiaRN.phl[755]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_translateX.o" "MiaRN.phl[756]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_translateZ.o" "MiaRN.phl[757]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_translateY.o" "MiaRN.phl[758]"
-		;
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_translateX.o" "MiaRN.phl[759]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_translateZ.o" "MiaRN.phl[760]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_translateY.o" "MiaRN.phl[761]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_translateX.o" "MiaRN.phl[762]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_translateZ.o" "MiaRN.phl[763]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_translateY.o" "MiaRN.phl[764]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_translateX.o" "MiaRN.phl[765]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_translateZ.o" "MiaRN.phl[766]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_translateY.o" "MiaRN.phl[767]"
-		;
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_translateX.o" "MiaRN.phl[768]"
-		;
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_translateZ.o" "MiaRN.phl[769]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_translateY.o" "MiaRN.phl[770]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_translateX.o" "MiaRN.phl[771]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_translateZ.o" "MiaRN.phl[772]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_translateY.o" "MiaRN.phl[773]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_translateX.o" "MiaRN.phl[774]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_translateZ.o" "MiaRN.phl[775]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_translateY.o" "MiaRN.phl[776]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_translateX.o" "MiaRN.phl[777]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_translateZ.o" "MiaRN.phl[778]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_translateY.o" "MiaRN.phl[779]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_translateX.o" "MiaRN.phl[780]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_translateZ.o" "MiaRN.phl[781]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_translateY.o" "MiaRN.phl[782]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_translateX.o" "MiaRN.phl[783]";
-connectAttr "All_Controls_C_back_curl4_ctrl_translateZ.o" "MiaRN.phl[784]";
-connectAttr "All_Controls_C_back_curl4_ctrl_translateY.o" "MiaRN.phl[785]";
-connectAttr "All_Controls_C_back_curl4_ctrl_translateX.o" "MiaRN.phl[786]";
-connectAttr "All_Controls_C_back_curl3_ctrl_translateZ.o" "MiaRN.phl[787]";
-connectAttr "All_Controls_C_back_curl3_ctrl_translateY.o" "MiaRN.phl[788]";
-connectAttr "All_Controls_C_back_curl3_ctrl_translateX.o" "MiaRN.phl[789]";
-connectAttr "All_Controls_C_back_curl2_ctrl_translateZ.o" "MiaRN.phl[790]";
-connectAttr "All_Controls_C_back_curl2_ctrl_translateY.o" "MiaRN.phl[791]";
-connectAttr "All_Controls_C_back_curl2_ctrl_translateX.o" "MiaRN.phl[792]";
-connectAttr "All_Controls_C_back_curl1_ctrl_translateZ.o" "MiaRN.phl[793]";
-connectAttr "All_Controls_C_back_curl1_ctrl_translateY.o" "MiaRN.phl[794]";
-connectAttr "All_Controls_C_back_curl1_ctrl_translateX.o" "MiaRN.phl[795]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_translateZ.o" "MiaRN.phl[796]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_translateY.o" "MiaRN.phl[797]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_translateX.o" "MiaRN.phl[798]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_translateZ.o" "MiaRN.phl[799]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_translateY.o" "MiaRN.phl[800]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_translateX.o" "MiaRN.phl[801]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_translateZ.o" "MiaRN.phl[802]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_translateY.o" "MiaRN.phl[803]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_translateX.o" "MiaRN.phl[804]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_translateZ.o" "MiaRN.phl[805]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_translateY.o" "MiaRN.phl[806]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_translateX.o" "MiaRN.phl[807]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_translateZ.o" "MiaRN.phl[808]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_translateY.o" "MiaRN.phl[809]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_translateX.o" "MiaRN.phl[810]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_translateZ.o" "MiaRN.phl[811]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_translateY.o" "MiaRN.phl[812]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_translateX.o" "MiaRN.phl[813]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_translateZ.o" "MiaRN.phl[814]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_translateY.o" "MiaRN.phl[815]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_translateX.o" "MiaRN.phl[816]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_translateZ.o" "MiaRN.phl[817]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_translateY.o" "MiaRN.phl[818]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_translateX.o" "MiaRN.phl[819]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_translateZ.o" "MiaRN.phl[820]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_translateY.o" "MiaRN.phl[821]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_translateX.o" "MiaRN.phl[822]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_translateZ.o" "MiaRN.phl[823]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_translateY.o" "MiaRN.phl[824]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_translateX.o" "MiaRN.phl[825]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_translateZ.o" "MiaRN.phl[826]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_translateY.o" "MiaRN.phl[827]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_translateX.o" "MiaRN.phl[828]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_translateZ.o" "MiaRN.phl[829]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_translateY.o" "MiaRN.phl[830]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_translateX.o" "MiaRN.phl[831]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_translateZ.o" "MiaRN.phl[832]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_translateY.o" "MiaRN.phl[833]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_translateX.o" "MiaRN.phl[834]";
-connectAttr "All_Controls_tongue3_ctrl_translateZ.o" "MiaRN.phl[835]";
-connectAttr "All_Controls_tongue3_ctrl_translateY.o" "MiaRN.phl[836]";
-connectAttr "All_Controls_tongue3_ctrl_translateX.o" "MiaRN.phl[837]";
-connectAttr "All_Controls_tongue2_ctrl_translateZ.o" "MiaRN.phl[838]";
-connectAttr "All_Controls_tongue2_ctrl_translateY.o" "MiaRN.phl[839]";
-connectAttr "All_Controls_tongue2_ctrl_translateX.o" "MiaRN.phl[840]";
-connectAttr "All_Controls_tongue1_ctrl_translateZ.o" "MiaRN.phl[841]";
-connectAttr "All_Controls_tongue1_ctrl_translateY.o" "MiaRN.phl[842]";
-connectAttr "All_Controls_tongue1_ctrl_translateX.o" "MiaRN.phl[843]";
-connectAttr "All_Controls_lower_jaw_ctrl_translateZ.o" "MiaRN.phl[844]";
-connectAttr "All_Controls_lower_jaw_ctrl_translateY.o" "MiaRN.phl[845]";
-connectAttr "All_Controls_lower_jaw_ctrl_translateX.o" "MiaRN.phl[846]";
-connectAttr "All_Controls_head_jnt_01_ctrl_translateZ.o" "MiaRN.phl[847]";
-connectAttr "All_Controls_head_jnt_01_ctrl_translateY.o" "MiaRN.phl[848]";
-connectAttr "All_Controls_head_jnt_01_ctrl_translateX.o" "MiaRN.phl[849]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_translateZ.o" "MiaRN.phl[850]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_translateY.o" "MiaRN.phl[851]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_translateX.o" "MiaRN.phl[852]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_translateZ.o" "MiaRN.phl[853]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_translateY.o" "MiaRN.phl[854]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_translateX.o" "MiaRN.phl[855]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_translateZ.o" "MiaRN.phl[856]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_translateY.o" "MiaRN.phl[857]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_translateX.o" "MiaRN.phl[858]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_translateZ.o" "MiaRN.phl[859]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_translateY.o" "MiaRN.phl[860]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_translateX.o" "MiaRN.phl[861]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_translateZ.o" "MiaRN.phl[862]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_translateY.o" "MiaRN.phl[863]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_translateX.o" "MiaRN.phl[864]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_translateZ.o" "MiaRN.phl[865]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_translateY.o" "MiaRN.phl[866]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_translateX.o" "MiaRN.phl[867]";
-connectAttr "All_Controls_R_ankle_ctrl_translateZ.o" "MiaRN.phl[868]";
-connectAttr "All_Controls_R_ankle_ctrl_translateY.o" "MiaRN.phl[869]";
-connectAttr "All_Controls_R_ankle_ctrl_translateX.o" "MiaRN.phl[870]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_translateZ.o" "MiaRN.phl[871]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_translateY.o" "MiaRN.phl[872]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_translateX.o" "MiaRN.phl[873]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_translateZ.o" "MiaRN.phl[874]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_translateY.o" "MiaRN.phl[875]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_translateX.o" "MiaRN.phl[876]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_translateZ.o" "MiaRN.phl[877]"
-		;
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_translateY.o" "MiaRN.phl[878]"
-		;
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_translateX.o" "MiaRN.phl[879]"
-		;
-connectAttr "All_Controls_L_ankle_ctrl_translateZ.o" "MiaRN.phl[880]";
-connectAttr "All_Controls_L_ankle_ctrl_translateY.o" "MiaRN.phl[881]";
-connectAttr "All_Controls_L_ankle_ctrl_translateX.o" "MiaRN.phl[882]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_translateZ.o" "MiaRN.phl[883]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_translateY.o" "MiaRN.phl[884]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_translateX.o" "MiaRN.phl[885]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_translateZ.o" "MiaRN.phl[886]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_translateY.o" "MiaRN.phl[887]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_translateX.o" "MiaRN.phl[888]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_translateZ.o" "MiaRN.phl[889]"
-		;
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_translateY.o" "MiaRN.phl[890]"
-		;
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_translateX.o" "MiaRN.phl[891]"
-		;
-connectAttr "All_Controls_pelvis_jnt_ctrl_translateZ.o" "MiaRN.phl[892]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_translateY.o" "MiaRN.phl[893]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_translateX.o" "MiaRN.phl[894]";
-connectAttr "All_Controls_cog_ctrl_translateZ.o" "MiaRN.phl[895]";
-connectAttr "All_Controls_cog_ctrl_translateY.o" "MiaRN.phl[896]";
-connectAttr "All_Controls_cog_ctrl_translateX.o" "MiaRN.phl[897]";
-connectAttr "All_Controls_transform_ctrl_translateZ.o" "MiaRN.phl[898]";
-connectAttr "All_Controls_transform_ctrl_translateY.o" "MiaRN.phl[899]";
-connectAttr "All_Controls_transform_ctrl_translateX.o" "MiaRN.phl[900]";
-connectAttr "All_Controls_look_at__ctrl_translateZ1.o" "MiaRN.phl[901]";
-connectAttr "All_Controls_look_at__ctrl_translateY1.o" "MiaRN.phl[902]";
-connectAttr "All_Controls_look_at__ctrl_translateX1.o" "MiaRN.phl[903]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_rotateZ.o" "MiaRN.phl[904]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_rotateY.o" "MiaRN.phl[905]";
-connectAttr "All_Controls_R_Leg_PV_ctrl_rotateX.o" "MiaRN.phl[906]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[907]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_rotateY.o" "MiaRN.phl[908]";
-connectAttr "All_Controls_R_Leg_IK_Base_ctrl_rotateX.o" "MiaRN.phl[909]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_rotateZ.o" "MiaRN.phl[910]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_rotateY.o" "MiaRN.phl[911]";
-connectAttr "All_Controls_R_Leg_IK_ctrl_rotateX.o" "MiaRN.phl[912]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_rotateZ.o" "MiaRN.phl[913]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_rotateY.o" "MiaRN.phl[914]";
-connectAttr "All_Controls_L_Leg_PV_ctrl_rotateX.o" "MiaRN.phl[915]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[916]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_rotateY.o" "MiaRN.phl[917]";
-connectAttr "All_Controls_L_Leg_IK_Base_ctrl_rotateX.o" "MiaRN.phl[918]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_rotateZ.o" "MiaRN.phl[919]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_rotateY.o" "MiaRN.phl[920]";
-connectAttr "All_Controls_L_Leg_IK_ctrl_rotateX.o" "MiaRN.phl[921]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_rotateZ.o" "MiaRN.phl[922]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_rotateY.o" "MiaRN.phl[923]";
-connectAttr "All_Controls_R_Arm_PV_ctrl_rotateX.o" "MiaRN.phl[924]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[925]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_rotateY.o" "MiaRN.phl[926]";
-connectAttr "All_Controls_R_Arm_IK_Base_ctrl_rotateX.o" "MiaRN.phl[927]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_rotateZ.o" "MiaRN.phl[928]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_rotateY.o" "MiaRN.phl[929]";
-connectAttr "All_Controls_R_Arm_IK_ctrl_rotateX.o" "MiaRN.phl[930]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_rotateZ.o" "MiaRN.phl[931]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_rotateY.o" "MiaRN.phl[932]";
-connectAttr "All_Controls_L_Arm_PV_ctrl_rotateX.o" "MiaRN.phl[933]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[934]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_rotateY.o" "MiaRN.phl[935]";
-connectAttr "All_Controls_L_Arm_IK_Base_ctrl_rotateX.o" "MiaRN.phl[936]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_rotateZ.o" "MiaRN.phl[937]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_rotateY.o" "MiaRN.phl[938]";
-connectAttr "All_Controls_L_Arm_IK_ctrl_rotateX.o" "MiaRN.phl[939]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_rotateZ.o" "MiaRN.phl[940]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_rotateY.o" "MiaRN.phl[941]";
-connectAttr "All_Controls_R_ball_jnt_ctrl_rotateX.o" "MiaRN.phl[942]";
-connectAttr "All_Controls_R_foot_ctrl_rotateZ.o" "MiaRN.phl[943]";
-connectAttr "All_Controls_R_foot_ctrl_rotateY.o" "MiaRN.phl[944]";
-connectAttr "All_Controls_R_foot_ctrl_rotateX.o" "MiaRN.phl[945]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_rotateZ.o" "MiaRN.phl[946]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_rotateY.o" "MiaRN.phl[947]";
-connectAttr "All_Controls_L_ball_jnt_ctrl_rotateX.o" "MiaRN.phl[948]";
-connectAttr "All_Controls_L_foot_ctrl_rotateZ.o" "MiaRN.phl[949]";
-connectAttr "All_Controls_L_foot_ctrl_rotateY.o" "MiaRN.phl[950]";
-connectAttr "All_Controls_L_foot_ctrl_rotateX.o" "MiaRN.phl[951]";
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_rotateZ.o" "MiaRN.phl[952]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_rotateY.o" "MiaRN.phl[953]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_rotateX.o" "MiaRN.phl[954]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[955]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[956]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[957]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[958]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[959]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[960]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[961]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[962]"
-		;
-connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[963]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[964]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[965]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[966]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[967]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[968]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[969]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[970]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[971]"
-		;
-connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[972]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_rotateZ.o" "MiaRN.phl[973]";
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_rotateY.o" "MiaRN.phl[974]";
-connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_rotateX.o" "MiaRN.phl[975]";
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_rotateZ.o" "MiaRN.phl[976]";
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_rotateY.o" "MiaRN.phl[977]";
-connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_rotateX.o" "MiaRN.phl[978]";
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[979]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[980]"
-		;
-connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[981]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[982]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[983]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[984]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[985]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[986]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[987]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[988]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[989]"
-		;
-connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[990]"
-		;
-connectAttr "All_Controls_R_thumb_03_ctrl_rotateZ.o" "MiaRN.phl[991]";
-connectAttr "All_Controls_R_thumb_03_ctrl_rotateY.o" "MiaRN.phl[992]";
-connectAttr "All_Controls_R_thumb_03_ctrl_rotateX.o" "MiaRN.phl[993]";
-connectAttr "All_Controls_R_thumb_02_ctrl_rotateZ.o" "MiaRN.phl[994]";
-connectAttr "All_Controls_R_thumb_02_ctrl_rotateY.o" "MiaRN.phl[995]";
-connectAttr "All_Controls_R_thumb_02_ctrl_rotateX.o" "MiaRN.phl[996]";
-connectAttr "All_Controls_R_thumb_01_ctrl_rotateZ.o" "MiaRN.phl[997]";
-connectAttr "All_Controls_R_thumb_01_ctrl_rotateY.o" "MiaRN.phl[998]";
-connectAttr "All_Controls_R_thumb_01_ctrl_rotateX.o" "MiaRN.phl[999]";
-connectAttr "All_Controls_R_hand_ctrl_rotateZ.o" "MiaRN.phl[1000]";
-connectAttr "All_Controls_R_hand_ctrl_rotateY.o" "MiaRN.phl[1001]";
-connectAttr "All_Controls_R_hand_ctrl_rotateX.o" "MiaRN.phl[1002]";
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_rotateZ.o" "MiaRN.phl[1003]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_rotateY.o" "MiaRN.phl[1004]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_rotateX.o" "MiaRN.phl[1005]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[1006]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[1007]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[1008]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[1009]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[1010]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[1011]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1012]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1013]"
-		;
-connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1014]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[1015]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[1016]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[1017]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[1018]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[1019]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[1020]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1021]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1022]"
-		;
-connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1023]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_rotateZ.o" "MiaRN.phl[1024]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_rotateY.o" "MiaRN.phl[1025]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_rotateX.o" "MiaRN.phl[1026]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_rotateZ.o" "MiaRN.phl[1027]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_rotateY.o" "MiaRN.phl[1028]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_rotateX.o" "MiaRN.phl[1029]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1030]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1031]"
-		;
-connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1032]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[1033]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[1034]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[1035]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[1036]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[1037]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[1038]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1039]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1040]"
-		;
-connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1041]"
-		;
-connectAttr "All_Controls_L_thumb_03_ctrl_rotateZ.o" "MiaRN.phl[1042]";
-connectAttr "All_Controls_L_thumb_03_ctrl_rotateY.o" "MiaRN.phl[1043]";
-connectAttr "All_Controls_L_thumb_03_ctrl_rotateX.o" "MiaRN.phl[1044]";
-connectAttr "All_Controls_L_thumb_02_ctrl_rotateZ.o" "MiaRN.phl[1045]";
-connectAttr "All_Controls_L_thumb_02_ctrl_rotateY.o" "MiaRN.phl[1046]";
-connectAttr "All_Controls_L_thumb_02_ctrl_rotateX.o" "MiaRN.phl[1047]";
-connectAttr "All_Controls_L_thumb_01_ctrl_rotateZ.o" "MiaRN.phl[1048]";
-connectAttr "All_Controls_L_thumb_01_ctrl_rotateY.o" "MiaRN.phl[1049]";
-connectAttr "All_Controls_L_thumb_01_ctrl_rotateX.o" "MiaRN.phl[1050]";
-connectAttr "All_Controls_L_hand_ctrl_rotateZ.o" "MiaRN.phl[1051]";
-connectAttr "All_Controls_L_hand_ctrl_rotateY.o" "MiaRN.phl[1052]";
-connectAttr "All_Controls_L_hand_ctrl_rotateX.o" "MiaRN.phl[1053]";
-connectAttr "All_Controls_R_wrist_ctrl_rotateZ.o" "MiaRN.phl[1054]";
-connectAttr "All_Controls_R_wrist_ctrl_rotateY.o" "MiaRN.phl[1055]";
-connectAttr "All_Controls_R_wrist_ctrl_rotateX.o" "MiaRN.phl[1056]";
-connectAttr "All_Controls_R_elbow_ctrl_rotateZ.o" "MiaRN.phl[1057]";
-connectAttr "All_Controls_R_elbow_ctrl_rotateY.o" "MiaRN.phl[1058]";
-connectAttr "All_Controls_R_elbow_ctrl_rotateX.o" "MiaRN.phl[1059]";
-connectAttr "All_Controls_R_shoulder_ctrl_rotateZ.o" "MiaRN.phl[1060]";
-connectAttr "All_Controls_R_shoulder_ctrl_rotateY.o" "MiaRN.phl[1061]";
-connectAttr "All_Controls_R_shoulder_ctrl_rotateX.o" "MiaRN.phl[1062]";
-connectAttr "All_Controls_R_clavicle_ctrl_rotateZ.o" "MiaRN.phl[1063]";
-connectAttr "All_Controls_R_clavicle_ctrl_rotateY.o" "MiaRN.phl[1064]";
-connectAttr "All_Controls_R_clavicle_ctrl_rotateX.o" "MiaRN.phl[1065]";
-connectAttr "All_Controls_L_wrist_ctrl_rotateZ.o" "MiaRN.phl[1066]";
-connectAttr "All_Controls_L_wrist_ctrl_rotateY.o" "MiaRN.phl[1067]";
-connectAttr "All_Controls_L_wrist_ctrl_rotateX.o" "MiaRN.phl[1068]";
-connectAttr "All_Controls_L_elbow_ctrl_rotateZ.o" "MiaRN.phl[1069]";
-connectAttr "All_Controls_L_elbow_ctrl_rotateY.o" "MiaRN.phl[1070]";
-connectAttr "All_Controls_L_elbow_ctrl_rotateX.o" "MiaRN.phl[1071]";
-connectAttr "All_Controls_L_shoulder_ctrl_rotateZ.o" "MiaRN.phl[1072]";
-connectAttr "All_Controls_L_shoulder_ctrl_rotateY.o" "MiaRN.phl[1073]";
-connectAttr "All_Controls_L_shoulder_ctrl_rotateX.o" "MiaRN.phl[1074]";
-connectAttr "All_Controls_L_clavicle_ctrl_rotateZ.o" "MiaRN.phl[1075]";
-connectAttr "All_Controls_L_clavicle_ctrl_rotateY.o" "MiaRN.phl[1076]";
-connectAttr "All_Controls_L_clavicle_ctrl_rotateX.o" "MiaRN.phl[1077]";
-connectAttr "All_Controls_base_hair__4_ctrl_rotateZ.o" "MiaRN.phl[1078]";
-connectAttr "All_Controls_base_hair__4_ctrl_rotateY.o" "MiaRN.phl[1079]";
-connectAttr "All_Controls_base_hair__4_ctrl_rotateX.o" "MiaRN.phl[1080]";
-connectAttr "All_Controls_base_hair__3_ctrl_rotateZ.o" "MiaRN.phl[1081]";
-connectAttr "All_Controls_base_hair__3_ctrl_rotateY.o" "MiaRN.phl[1082]";
-connectAttr "All_Controls_base_hair__3_ctrl_rotateX.o" "MiaRN.phl[1083]";
-connectAttr "All_Controls_base_hair__2_ctrl_rotateZ.o" "MiaRN.phl[1084]";
-connectAttr "All_Controls_base_hair__2_ctrl_rotateY.o" "MiaRN.phl[1085]";
-connectAttr "All_Controls_base_hair__2_ctrl_rotateX.o" "MiaRN.phl[1086]";
-connectAttr "All_Controls_base_hair__1_ctrl_rotateZ.o" "MiaRN.phl[1087]";
-connectAttr "All_Controls_base_hair__1_ctrl_rotateY.o" "MiaRN.phl[1088]";
-connectAttr "All_Controls_base_hair__1_ctrl_rotateX.o" "MiaRN.phl[1089]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_rotateZ.o" "MiaRN.phl[1090]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_rotateY.o" "MiaRN.phl[1091]";
-connectAttr "All_Controls_C_front_hair_wisp4_ctrl_rotateX.o" "MiaRN.phl[1092]";
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1093]";
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_rotateY.o" "MiaRN.phl[1094]";
-connectAttr "All_Controls_C_front_hair_wisp3_ctrl_rotateX.o" "MiaRN.phl[1095]";
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1096]";
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_rotateY.o" "MiaRN.phl[1097]";
-connectAttr "All_Controls_C_front_hair_wisp2_ctrl_rotateX.o" "MiaRN.phl[1098]";
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1099]";
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_rotateY.o" "MiaRN.phl[1100]";
-connectAttr "All_Controls_C_front_hair_wisp1_ctrl_rotateX.o" "MiaRN.phl[1101]";
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1102]";
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_rotateY.o" "MiaRN.phl[1103]";
-connectAttr "All_Controls_R_front_hair_wisp3_ctrl_rotateX.o" "MiaRN.phl[1104]";
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1105]";
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_rotateY.o" "MiaRN.phl[1106]";
-connectAttr "All_Controls_R_front_hair_wisp2_ctrl_rotateX.o" "MiaRN.phl[1107]";
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1108]";
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_rotateY.o" "MiaRN.phl[1109]";
-connectAttr "All_Controls_R_front_hair_wisp1_ctrl_rotateX.o" "MiaRN.phl[1110]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_rotateZ.o" "MiaRN.phl[1111]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_rotateY.o" "MiaRN.phl[1112]";
-connectAttr "All_Controls_L_sideburn_curl5_ctrl_rotateX.o" "MiaRN.phl[1113]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_rotateZ.o" "MiaRN.phl[1114]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_rotateY.o" "MiaRN.phl[1115]";
-connectAttr "All_Controls_L_sideburn_curl4_ctrl_rotateX.o" "MiaRN.phl[1116]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_rotateZ.o" "MiaRN.phl[1117]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_rotateY.o" "MiaRN.phl[1118]";
-connectAttr "All_Controls_L_sideburn_curl3_ctrl_rotateX.o" "MiaRN.phl[1119]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_rotateZ.o" "MiaRN.phl[1120]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_rotateY.o" "MiaRN.phl[1121]";
-connectAttr "All_Controls_L_sideburn_curl2_ctrl_rotateX.o" "MiaRN.phl[1122]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_rotateZ.o" "MiaRN.phl[1123]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_rotateY.o" "MiaRN.phl[1124]";
-connectAttr "All_Controls_L_sideburn_curl1_ctrl_rotateX.o" "MiaRN.phl[1125]";
-connectAttr "All_Controls_C_back_curl4_ctrl_rotateZ.o" "MiaRN.phl[1126]";
-connectAttr "All_Controls_C_back_curl4_ctrl_rotateY.o" "MiaRN.phl[1127]";
-connectAttr "All_Controls_C_back_curl4_ctrl_rotateX.o" "MiaRN.phl[1128]";
-connectAttr "All_Controls_C_back_curl3_ctrl_rotateZ.o" "MiaRN.phl[1129]";
-connectAttr "All_Controls_C_back_curl3_ctrl_rotateY.o" "MiaRN.phl[1130]";
-connectAttr "All_Controls_C_back_curl3_ctrl_rotateX.o" "MiaRN.phl[1131]";
-connectAttr "All_Controls_C_back_curl2_ctrl_rotateZ.o" "MiaRN.phl[1132]";
-connectAttr "All_Controls_C_back_curl2_ctrl_rotateY.o" "MiaRN.phl[1133]";
-connectAttr "All_Controls_C_back_curl2_ctrl_rotateX.o" "MiaRN.phl[1134]";
-connectAttr "All_Controls_C_back_curl1_ctrl_rotateZ.o" "MiaRN.phl[1135]";
-connectAttr "All_Controls_C_back_curl1_ctrl_rotateY.o" "MiaRN.phl[1136]";
-connectAttr "All_Controls_C_back_curl1_ctrl_rotateX.o" "MiaRN.phl[1137]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_rotateZ.o" "MiaRN.phl[1138]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_rotateY.o" "MiaRN.phl[1139]";
-connectAttr "All_Controls_R_sideburn_curl5_ctrl_rotateX.o" "MiaRN.phl[1140]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_rotateZ.o" "MiaRN.phl[1141]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_rotateY.o" "MiaRN.phl[1142]";
-connectAttr "All_Controls_R_sideburn_curl4_ctrl_rotateX.o" "MiaRN.phl[1143]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_rotateZ.o" "MiaRN.phl[1144]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_rotateY.o" "MiaRN.phl[1145]";
-connectAttr "All_Controls_R_sideburn_curl3_ctrl_rotateX.o" "MiaRN.phl[1146]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_rotateZ.o" "MiaRN.phl[1147]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_rotateY.o" "MiaRN.phl[1148]";
-connectAttr "All_Controls_R_sideburn_curl2_ctrl_rotateX.o" "MiaRN.phl[1149]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_rotateZ.o" "MiaRN.phl[1150]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_rotateY.o" "MiaRN.phl[1151]";
-connectAttr "All_Controls_R_sideburn_curl1_ctrl_rotateX.o" "MiaRN.phl[1152]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1153]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_rotateY.o" "MiaRN.phl[1154]";
-connectAttr "All_Controls_R_top_wisp3_ctrl_rotateX.o" "MiaRN.phl[1155]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1156]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_rotateY.o" "MiaRN.phl[1157]";
-connectAttr "All_Controls_R_top_wisp2_ctrl_rotateX.o" "MiaRN.phl[1158]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1159]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_rotateY.o" "MiaRN.phl[1160]";
-connectAttr "All_Controls_R_top_wisp1_ctrl_rotateX.o" "MiaRN.phl[1161]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1162]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_rotateY.o" "MiaRN.phl[1163]";
-connectAttr "All_Controls_L_top_wisp2_ctrl_rotateX.o" "MiaRN.phl[1164]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1165]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_rotateY.o" "MiaRN.phl[1166]";
-connectAttr "All_Controls_L_top_wisp1_ctrl_rotateX.o" "MiaRN.phl[1167]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1168]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_rotateY.o" "MiaRN.phl[1169]";
-connectAttr "All_Controls_C_top_wisp3_ctrl_rotateX.o" "MiaRN.phl[1170]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1171]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_rotateY.o" "MiaRN.phl[1172]";
-connectAttr "All_Controls_C_top_wisp2_ctrl_rotateX.o" "MiaRN.phl[1173]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1174]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_rotateY.o" "MiaRN.phl[1175]";
-connectAttr "All_Controls_C_top_wisp1_ctrl_rotateX.o" "MiaRN.phl[1176]";
-connectAttr "All_Controls_tongue3_ctrl_rotateZ.o" "MiaRN.phl[1177]";
-connectAttr "All_Controls_tongue3_ctrl_rotateY.o" "MiaRN.phl[1178]";
-connectAttr "All_Controls_tongue3_ctrl_rotateX.o" "MiaRN.phl[1179]";
-connectAttr "All_Controls_tongue2_ctrl_rotateZ.o" "MiaRN.phl[1180]";
-connectAttr "All_Controls_tongue2_ctrl_rotateY.o" "MiaRN.phl[1181]";
-connectAttr "All_Controls_tongue2_ctrl_rotateX.o" "MiaRN.phl[1182]";
-connectAttr "All_Controls_tongue1_ctrl_rotateZ.o" "MiaRN.phl[1183]";
-connectAttr "All_Controls_tongue1_ctrl_rotateY.o" "MiaRN.phl[1184]";
-connectAttr "All_Controls_tongue1_ctrl_rotateX.o" "MiaRN.phl[1185]";
-connectAttr "All_Controls_lower_jaw_ctrl_rotateZ.o" "MiaRN.phl[1186]";
-connectAttr "All_Controls_lower_jaw_ctrl_rotateY.o" "MiaRN.phl[1187]";
-connectAttr "All_Controls_lower_jaw_ctrl_rotateX.o" "MiaRN.phl[1188]";
-connectAttr "All_Controls_head_jnt_01_ctrl_rotateZ.o" "MiaRN.phl[1189]";
-connectAttr "All_Controls_head_jnt_01_ctrl_rotateY.o" "MiaRN.phl[1190]";
-connectAttr "All_Controls_head_jnt_01_ctrl_rotateX.o" "MiaRN.phl[1191]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_rotateZ.o" "MiaRN.phl[1192]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_rotateY.o" "MiaRN.phl[1193]";
-connectAttr "All_Controls_neck_jnt_02_ctrl_rotateX.o" "MiaRN.phl[1194]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_rotateZ.o" "MiaRN.phl[1195]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_rotateY.o" "MiaRN.phl[1196]";
-connectAttr "All_Controls_neck_jnt_01_ctrl_rotateX.o" "MiaRN.phl[1197]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_rotateZ.o" "MiaRN.phl[1198]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_rotateY.o" "MiaRN.phl[1199]";
-connectAttr "All_Controls_spine_jnt_04_ctrl_rotateX.o" "MiaRN.phl[1200]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_rotateZ.o" "MiaRN.phl[1201]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_rotateY.o" "MiaRN.phl[1202]";
-connectAttr "All_Controls_spine_jnt_03_ctrl_rotateX.o" "MiaRN.phl[1203]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_rotateZ.o" "MiaRN.phl[1204]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_rotateY.o" "MiaRN.phl[1205]";
-connectAttr "All_Controls_spine_jnt_02_ctrl_rotateX.o" "MiaRN.phl[1206]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_rotateZ.o" "MiaRN.phl[1207]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_rotateY.o" "MiaRN.phl[1208]";
-connectAttr "All_Controls_spine_jnt_01_ctrl_rotateX.o" "MiaRN.phl[1209]";
-connectAttr "All_Controls_R_ankle_ctrl_rotateZ.o" "MiaRN.phl[1210]";
-connectAttr "All_Controls_R_ankle_ctrl_rotateY.o" "MiaRN.phl[1211]";
-connectAttr "All_Controls_R_ankle_ctrl_rotateX.o" "MiaRN.phl[1212]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_rotateZ.o" "MiaRN.phl[1213]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_rotateY.o" "MiaRN.phl[1214]";
-connectAttr "All_Controls_R_knee_jnt_ctrl_rotateX.o" "MiaRN.phl[1215]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_rotateZ.o" "MiaRN.phl[1216]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_rotateY.o" "MiaRN.phl[1217]";
-connectAttr "All_Controls_R_hip_jnt_ctrl_rotateX.o" "MiaRN.phl[1218]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_rotateZ.o" "MiaRN.phl[1219]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_rotateY.o" "MiaRN.phl[1220]";
-connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_rotateX.o" "MiaRN.phl[1221]";
-connectAttr "All_Controls_L_ankle_ctrl_rotateZ.o" "MiaRN.phl[1222]";
-connectAttr "All_Controls_L_ankle_ctrl_rotateY.o" "MiaRN.phl[1223]";
-connectAttr "All_Controls_L_ankle_ctrl_rotateX.o" "MiaRN.phl[1224]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_rotateZ.o" "MiaRN.phl[1225]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_rotateY.o" "MiaRN.phl[1226]";
-connectAttr "All_Controls_L_knee_jnt_ctrl_rotateX.o" "MiaRN.phl[1227]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_rotateZ.o" "MiaRN.phl[1228]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_rotateY.o" "MiaRN.phl[1229]";
-connectAttr "All_Controls_L_hip_jnt_ctrl_rotateX.o" "MiaRN.phl[1230]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_rotateZ.o" "MiaRN.phl[1231]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_rotateY.o" "MiaRN.phl[1232]";
-connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_rotateX.o" "MiaRN.phl[1233]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_rotateZ.o" "MiaRN.phl[1234]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_rotateY.o" "MiaRN.phl[1235]";
-connectAttr "All_Controls_pelvis_jnt_ctrl_rotateX.o" "MiaRN.phl[1236]";
-connectAttr "All_Controls_cog_ctrl_rotateZ.o" "MiaRN.phl[1237]";
-connectAttr "All_Controls_cog_ctrl_rotateY.o" "MiaRN.phl[1238]";
-connectAttr "All_Controls_cog_ctrl_rotateX.o" "MiaRN.phl[1239]";
-connectAttr "All_Controls_transform_ctrl_rotateZ.o" "MiaRN.phl[1240]";
-connectAttr "All_Controls_transform_ctrl_rotateY.o" "MiaRN.phl[1241]";
-connectAttr "All_Controls_transform_ctrl_rotateX.o" "MiaRN.phl[1242]";
-connectAttr "All_Controls_look_at__ctrl_rotateZ1.o" "MiaRN.phl[1243]";
-connectAttr "All_Controls_look_at__ctrl_rotateY1.o" "MiaRN.phl[1244]";
-connectAttr "All_Controls_look_at__ctrl_rotateX1.o" "MiaRN.phl[1245]";
-connectAttr "books_and_boxes_propsRN.phl[1]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[77].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[2]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[78].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[3]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[79].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[4]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[76].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[5]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[6]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[28].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[7]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[8]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[30].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[9]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[10]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[11]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[12]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[33].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[13]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[34].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[14]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[15]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[35].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[16]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[24].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[17]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[68].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[18]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[66].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[19]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[60].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[20]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[58].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[21]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[69].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[22]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[67].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[23]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[59].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[24]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[61].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[25]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[62].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[26]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[63].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[27]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[64].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[28]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[65].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[29]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[30]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[31]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[32]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[33]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.ctx" "books_and_boxes_propsRN.phl[34]"
-		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.cty" "books_and_boxes_propsRN.phl[35]"
-		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.ctz" "books_and_boxes_propsRN.phl[36]"
-		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.crx" "books_and_boxes_propsRN.phl[37]"
-		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.cry" "books_and_boxes_propsRN.phl[38]"
-		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.crz" "books_and_boxes_propsRN.phl[39]"
-		;
-connectAttr "books_and_boxes_propsRN.phl[40]" "MASTER_ctrl_grp_parentConstraint1.cro"
-		;
-connectAttr "books_and_boxes_propsRN.phl[41]" "MASTER_ctrl_grp_parentConstraint1.cpim"
-		;
-connectAttr "books_and_boxes_propsRN.phl[42]" "MASTER_ctrl_grp_parentConstraint1.crp"
-		;
-connectAttr "books_and_boxes_propsRN.phl[43]" "MASTER_ctrl_grp_parentConstraint1.crt"
-		;
-connectAttr "books_and_boxes_propsRN.phl[44]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[45]" "books_and_boxes_propsRN.phl[46]";
-connectAttr "books_and_boxes_propsRN.phl[47]" "books_and_boxes_propsRN.phl[48]";
-connectAttr "books_and_boxes_propsRN.phl[49]" "books_and_boxes_propsRN.phl[50]";
-connectAttr "books_and_boxes_propsRN.phl[51]" "books_and_boxes_propsRN.phl[52]";
-connectAttr "books_and_boxes_propsRN.phl[53]" "books_and_boxes_propsRN.phl[54]";
-connectAttr "books_and_boxes_propsRN.phl[55]" "books_and_boxes_propsRN.phl[56]";
-connectAttr "books_and_boxes_propsRN.phl[57]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[58]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[59]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[60]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "books_and_boxes_propsRN.phl[61]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "books_and_boxes_propsRN.phl[62]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "books_and_boxes_propsRN.phl[63]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "books_and_boxes_propsRN.phl[64]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "books_and_boxes_propsRN.phl[65]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "books_and_boxes_propsRN.phl[66]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "books_and_boxes_propsRN.phl[67]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[68]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[69]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[70]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
-		;
-connectAttr "books_and_boxes_propsRN.phl[71]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
-		;
-connectAttr "books_and_boxes_propsRN.phl[72]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
-		;
-connectAttr "books_and_boxes_propsRN.phl[73]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "books_and_boxes_propsRN.phl[74]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
-		;
-connectAttr "books_and_boxes_propsRN.phl[75]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
-		;
-connectAttr "books_and_boxes_propsRN.phl[76]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
-		;
-connectAttr "books_and_boxes_propsRN.phl[77]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[162].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[78]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[157].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[79]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[158].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[80]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[161].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[81]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[159].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[82]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[160].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[83]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[70].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[84]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[75].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[85]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[71].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[86]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[72].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[87]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[73].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[88]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[74].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[89]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[90]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[45].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[91]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[46].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[92]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[42].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[93]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[43].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[94]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[44].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[95]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[49].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[96]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[53].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[97]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[50].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[98]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[48].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[99]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[51].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[100]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[52].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[101]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[41].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[102]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[103]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[37].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[104]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[38].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[105]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[106]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[107]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[108]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[109]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[110]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[111]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[112]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[113]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[114]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[115]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[116]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[117]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[118]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[119]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[148].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[120]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[137].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[121]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[138].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[122]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[146].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[123]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[155].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[124]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[143].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[125]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[139].dn"
-		;
-connectAttr "detachable_book_ctrl_FollowAutoFK.o" "books_and_boxes_propsRN.phl[126]"
-		;
-connectAttr "books_and_boxes_propsRN.phl[127]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[153].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[128]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[134].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[129]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[144].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[130]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[149].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[131]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[151].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[132]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[133].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[133]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[145].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[134]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[150].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[135]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[147].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[136]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[135].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[137]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[140].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[138]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[152].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[139]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[154].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[140]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[136].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[141]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[131].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[142]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[132].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[143]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[141].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[144]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[142].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[145]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[92].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[146]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[108].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[147]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[94].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[148]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[104].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[149]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[109].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[150]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[102].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[151]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[89].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[152]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[88].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[153]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[106].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[154]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[105].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[155]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[98].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[156]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[99].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[157]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[103].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[158]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[95].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[159]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[100].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[160]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[96].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[161]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[97].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[162]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[90].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[163]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[101].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[164]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[107].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[165]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[93].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[166]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[110].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[167]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[86].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[168]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[87].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[169]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[91].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[170]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[124].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[171]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[120].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[172]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[111].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[173]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[117].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[174]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[115].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[175]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[112].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[176]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[121].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[177]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[128].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[178]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[125].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[179]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[113].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[180]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[122].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[181]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[126].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[182]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[118].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[183]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[123].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[184]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[116].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[185]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[119].dn"
-		;
-connectAttr "AllControls_R_hand_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[186]"
-		;
-connectAttr "AllControls_R_hand_ctrl_translateY.o" "books_and_boxes_propsRN.phl[187]"
-		;
-connectAttr "AllControls_R_hand_ctrl_translateX.o" "books_and_boxes_propsRN.phl[188]"
-		;
-connectAttr "AllControls_MASTER_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[189]"
-		;
-connectAttr "AllControls_MASTER_ctrl_translateY.o" "books_and_boxes_propsRN.phl[190]"
-		;
-connectAttr "AllControls_MASTER_ctrl_translateX.o" "books_and_boxes_propsRN.phl[191]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[192]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_translateY.o" "books_and_boxes_propsRN.phl[193]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_translateX.o" "books_and_boxes_propsRN.phl[194]"
-		;
-connectAttr "AllControls_box_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[195]"
-		;
-connectAttr "AllControls_box_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[196]"
-		;
-connectAttr "AllControls_box_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[197]"
-		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[198]"
-		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_translateY.o" "books_and_boxes_propsRN.phl[199]"
-		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_translateX.o" "books_and_boxes_propsRN.phl[200]"
-		;
-connectAttr "AllControls_book_1_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[201]"
-		;
-connectAttr "AllControls_book_1_ctrl_translateY.o" "books_and_boxes_propsRN.phl[202]"
-		;
-connectAttr "AllControls_book_1_ctrl_translateX.o" "books_and_boxes_propsRN.phl[203]"
-		;
-connectAttr "AllControls_book_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[204]"
-		;
-connectAttr "AllControls_book_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[205]"
-		;
-connectAttr "AllControls_book_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[206]"
-		;
-connectAttr "AllControls_book_3_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[207]"
-		;
-connectAttr "AllControls_book_3_ctrl_translateY.o" "books_and_boxes_propsRN.phl[208]"
-		;
-connectAttr "AllControls_book_3_ctrl_translateX.o" "books_and_boxes_propsRN.phl[209]"
-		;
-connectAttr "AllControls_R_hand_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[210]"
-		;
-connectAttr "AllControls_R_hand_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[211]"
-		;
-connectAttr "AllControls_R_hand_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[212]"
-		;
-connectAttr "AllControls_MASTER_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[213]"
-		;
-connectAttr "AllControls_MASTER_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[214]"
-		;
-connectAttr "AllControls_MASTER_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[215]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[216]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[217]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[218]"
-		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[219]"
-		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[220]"
-		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[221]"
-		;
-connectAttr "AllControls_MASTER_ctrl_scaleZ.o" "books_and_boxes_propsRN.phl[222]"
-		;
-connectAttr "AllControls_MASTER_ctrl_scaleY.o" "books_and_boxes_propsRN.phl[223]"
-		;
-connectAttr "AllControls_MASTER_ctrl_scaleX.o" "books_and_boxes_propsRN.phl[224]"
-		;
-connectAttr "AllControls_MASTER_ctrl_visibility.o" "books_and_boxes_propsRN.phl[225]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_FollowRotate.o" "books_and_boxes_propsRN.phl[226]"
-		;
-connectAttr "AllControls_detachable_book_ctrl_FollowTranslate.o" "books_and_boxes_propsRN.phl[227]"
-		;
-connectAttr "books_and_boxes_propsRN.phl[228]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[130].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[229]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[114].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[230]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[127].dn"
-		;
-connectAttr "books_and_boxes_propsRN.phl[231]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[129].dn"
+connectAttr "MiaRN.phl[97]" "MiaRN.phl[98]";
+connectAttr "MiaRN.phl[99]" "MiaRN.phl[100]";
+connectAttr "MiaRN.phl[101]" "MiaRN.phl[102]";
+connectAttr "MiaRN.phl[103]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
+connectAttr "MiaRN.phl[104]" "placeholder_boxes_parentConstraint1.tg[0].tr";
+connectAttr "R_hand_LOC_rotateX.o" "MiaRN.phl[105]";
+connectAttr "R_hand_LOC_rotateY.o" "MiaRN.phl[106]";
+connectAttr "R_hand_LOC_rotateZ.o" "MiaRN.phl[107]";
+connectAttr "MiaRN.phl[108]" "placeholder_boxes_parentConstraint1.tg[0].tpm";
+connectAttr "MiaRN.phl[109]" "placeholder_boxes_parentConstraint1.tg[0].tt";
+connectAttr "MiaRN.phl[110]" "placeholder_boxes_parentConstraint1.tg[0].trp";
+connectAttr "MiaRN.phl[111]" "placeholder_boxes_parentConstraint1.tg[0].trt";
+connectAttr "MiaRN.phl[112]" "placeholder_boxes_parentConstraint1.tg[0].tro";
+connectAttr "MiaRN.phl[113]" "placeholder_boxes_parentConstraint1.tg[0].ts";
+connectAttr "All_Controls_R_Leg_PV_ctrl_scaleZ.o" "MiaRN.phl[114]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_scaleY.o" "MiaRN.phl[115]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_scaleX.o" "MiaRN.phl[116]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_visibility.o" "MiaRN.phl[117]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[118]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_scaleY.o" "MiaRN.phl[119]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_scaleX.o" "MiaRN.phl[120]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_visibility.o" "MiaRN.phl[121]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_scaleZ.o" "MiaRN.phl[122]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_scaleY.o" "MiaRN.phl[123]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_scaleX.o" "MiaRN.phl[124]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_visibility.o" "MiaRN.phl[125]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_scaleZ.o" "MiaRN.phl[126]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_scaleY.o" "MiaRN.phl[127]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_scaleX.o" "MiaRN.phl[128]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_visibility.o" "MiaRN.phl[129]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[130]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_scaleY.o" "MiaRN.phl[131]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_scaleX.o" "MiaRN.phl[132]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_visibility.o" "MiaRN.phl[133]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_scaleZ.o" "MiaRN.phl[134]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_scaleY.o" "MiaRN.phl[135]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_scaleX.o" "MiaRN.phl[136]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_visibility.o" "MiaRN.phl[137]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_scaleZ.o" "MiaRN.phl[138]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_scaleY.o" "MiaRN.phl[139]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_scaleX.o" "MiaRN.phl[140]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_visibility.o" "MiaRN.phl[141]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[142]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_scaleY.o" "MiaRN.phl[143]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_scaleX.o" "MiaRN.phl[144]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_visibility.o" "MiaRN.phl[145]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_scaleZ.o" "MiaRN.phl[146]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_scaleY.o" "MiaRN.phl[147]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_scaleX.o" "MiaRN.phl[148]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_visibility.o" "MiaRN.phl[149]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_scaleZ.o" "MiaRN.phl[150]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_scaleY.o" "MiaRN.phl[151]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_scaleX.o" "MiaRN.phl[152]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_visibility.o" "MiaRN.phl[153]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_scaleZ.o" "MiaRN.phl[154]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_scaleY.o" "MiaRN.phl[155]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_scaleX.o" "MiaRN.phl[156]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_visibility.o" "MiaRN.phl[157]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_scaleZ.o" "MiaRN.phl[158]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_scaleY.o" "MiaRN.phl[159]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_scaleX.o" "MiaRN.phl[160]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_visibility.o" "MiaRN.phl[161]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_scaleZ.o" "MiaRN.phl[162]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_scaleY.o" "MiaRN.phl[163]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_scaleX.o" "MiaRN.phl[164]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_visibility.o" "MiaRN.phl[165]";
+connectAttr "All_Controls_R_foot_ctrl_scaleZ.o" "MiaRN.phl[166]";
+connectAttr "All_Controls_R_foot_ctrl_scaleY.o" "MiaRN.phl[167]";
+connectAttr "All_Controls_R_foot_ctrl_scaleX.o" "MiaRN.phl[168]";
+connectAttr "All_Controls_R_foot_ctrl_visibility.o" "MiaRN.phl[169]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_scaleZ.o" "MiaRN.phl[170]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_scaleY.o" "MiaRN.phl[171]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_scaleX.o" "MiaRN.phl[172]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_visibility.o" "MiaRN.phl[173]";
+connectAttr "All_Controls_L_foot_ctrl_scaleZ.o" "MiaRN.phl[174]";
+connectAttr "All_Controls_L_foot_ctrl_scaleY.o" "MiaRN.phl[175]";
+connectAttr "All_Controls_L_foot_ctrl_scaleX.o" "MiaRN.phl[176]";
+connectAttr "All_Controls_L_foot_ctrl_visibility.o" "MiaRN.phl[177]";
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_scaleZ.o" "MiaRN.phl[178]";
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_scaleY.o" "MiaRN.phl[179]";
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_scaleX.o" "MiaRN.phl[180]";
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_visibility.o" "MiaRN.phl[181]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[182]";
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[183]";
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[184]";
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_visibility.o" "MiaRN.phl[185]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[186]";
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[187]";
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[188]";
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_visibility.o" "MiaRN.phl[189]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[190]";
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[191]";
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[192]";
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_visibility.o" "MiaRN.phl[193]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[194]";
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[195]";
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[196]";
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_visibility.o" "MiaRN.phl[197]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[198]";
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[199]";
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[200]";
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_visibility.o" "MiaRN.phl[201]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[202]";
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[203]";
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[204]";
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_visibility.o" "MiaRN.phl[205]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_scaleZ.o" "MiaRN.phl[206]";
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_scaleY.o" "MiaRN.phl[207]";
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_scaleX.o" "MiaRN.phl[208]";
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_visibility.o" "MiaRN.phl[209]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_scaleZ.o" "MiaRN.phl[210]";
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_scaleY.o" "MiaRN.phl[211]";
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_scaleX.o" "MiaRN.phl[212]";
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_visibility.o" "MiaRN.phl[213]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[214]";
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[215]";
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[216]";
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_visibility.o" "MiaRN.phl[217]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[218]";
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[219]";
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[220]";
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_visibility.o" "MiaRN.phl[221]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[222]";
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[223]";
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[224]";
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_visibility.o" "MiaRN.phl[225]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[226]";
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[227]";
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[228]";
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_visibility.o" "MiaRN.phl[229]"
+		;
+connectAttr "All_Controls_R_thumb_03_ctrl_scaleZ.o" "MiaRN.phl[230]";
+connectAttr "All_Controls_R_thumb_03_ctrl_scaleY.o" "MiaRN.phl[231]";
+connectAttr "All_Controls_R_thumb_03_ctrl_scaleX.o" "MiaRN.phl[232]";
+connectAttr "All_Controls_R_thumb_03_ctrl_visibility.o" "MiaRN.phl[233]";
+connectAttr "All_Controls_R_thumb_02_ctrl_scaleZ.o" "MiaRN.phl[234]";
+connectAttr "All_Controls_R_thumb_02_ctrl_scaleY.o" "MiaRN.phl[235]";
+connectAttr "All_Controls_R_thumb_02_ctrl_scaleX.o" "MiaRN.phl[236]";
+connectAttr "All_Controls_R_thumb_02_ctrl_visibility.o" "MiaRN.phl[237]";
+connectAttr "All_Controls_R_thumb_01_ctrl_scaleZ.o" "MiaRN.phl[238]";
+connectAttr "All_Controls_R_thumb_01_ctrl_scaleY.o" "MiaRN.phl[239]";
+connectAttr "All_Controls_R_thumb_01_ctrl_scaleX.o" "MiaRN.phl[240]";
+connectAttr "All_Controls_R_thumb_01_ctrl_visibility.o" "MiaRN.phl[241]";
+connectAttr "All_Controls_R_hand_ctrl_scaleZ.o" "MiaRN.phl[242]";
+connectAttr "All_Controls_R_hand_ctrl_scaleY.o" "MiaRN.phl[243]";
+connectAttr "All_Controls_R_hand_ctrl_scaleX.o" "MiaRN.phl[244]";
+connectAttr "All_Controls_R_hand_ctrl_visibility.o" "MiaRN.phl[245]";
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_scaleZ.o" "MiaRN.phl[246]";
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_scaleY.o" "MiaRN.phl[247]";
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_scaleX.o" "MiaRN.phl[248]";
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_visibility.o" "MiaRN.phl[249]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[250]";
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[251]";
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[252]";
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_visibility.o" "MiaRN.phl[253]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[254]";
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[255]";
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[256]";
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_visibility.o" "MiaRN.phl[257]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[258]";
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[259]";
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[260]";
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_visibility.o" "MiaRN.phl[261]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[262]";
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[263]";
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[264]";
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_visibility.o" "MiaRN.phl[265]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[266]";
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[267]";
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[268]";
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_visibility.o" "MiaRN.phl[269]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[270]";
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[271]";
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[272]";
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_visibility.o" "MiaRN.phl[273]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_scaleZ.o" "MiaRN.phl[274]";
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_scaleY.o" "MiaRN.phl[275]";
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_scaleX.o" "MiaRN.phl[276]";
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_visibility.o" "MiaRN.phl[277]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_scaleZ.o" "MiaRN.phl[278]";
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_scaleY.o" "MiaRN.phl[279]";
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_scaleX.o" "MiaRN.phl[280]";
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_visibility.o" "MiaRN.phl[281]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[282]";
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[283]";
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[284]";
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_visibility.o" "MiaRN.phl[285]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_scaleZ.o" "MiaRN.phl[286]";
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_scaleY.o" "MiaRN.phl[287]";
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_scaleX.o" "MiaRN.phl[288]";
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_visibility.o" "MiaRN.phl[289]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_scaleZ.o" "MiaRN.phl[290]";
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_scaleY.o" "MiaRN.phl[291]";
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_scaleX.o" "MiaRN.phl[292]";
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_visibility.o" "MiaRN.phl[293]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_scaleZ.o" "MiaRN.phl[294]";
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_scaleY.o" "MiaRN.phl[295]";
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_scaleX.o" "MiaRN.phl[296]";
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_visibility.o" "MiaRN.phl[297]"
+		;
+connectAttr "All_Controls_L_thumb_03_ctrl_scaleZ.o" "MiaRN.phl[298]";
+connectAttr "All_Controls_L_thumb_03_ctrl_scaleY.o" "MiaRN.phl[299]";
+connectAttr "All_Controls_L_thumb_03_ctrl_scaleX.o" "MiaRN.phl[300]";
+connectAttr "All_Controls_L_thumb_03_ctrl_visibility.o" "MiaRN.phl[301]";
+connectAttr "All_Controls_L_thumb_02_ctrl_scaleZ.o" "MiaRN.phl[302]";
+connectAttr "All_Controls_L_thumb_02_ctrl_scaleY.o" "MiaRN.phl[303]";
+connectAttr "All_Controls_L_thumb_02_ctrl_scaleX.o" "MiaRN.phl[304]";
+connectAttr "All_Controls_L_thumb_02_ctrl_visibility.o" "MiaRN.phl[305]";
+connectAttr "All_Controls_L_thumb_01_ctrl_scaleZ.o" "MiaRN.phl[306]";
+connectAttr "All_Controls_L_thumb_01_ctrl_scaleY.o" "MiaRN.phl[307]";
+connectAttr "All_Controls_L_thumb_01_ctrl_scaleX.o" "MiaRN.phl[308]";
+connectAttr "All_Controls_L_thumb_01_ctrl_visibility.o" "MiaRN.phl[309]";
+connectAttr "All_Controls_L_hand_ctrl_scaleZ.o" "MiaRN.phl[310]";
+connectAttr "All_Controls_L_hand_ctrl_scaleY.o" "MiaRN.phl[311]";
+connectAttr "All_Controls_L_hand_ctrl_scaleX.o" "MiaRN.phl[312]";
+connectAttr "All_Controls_L_hand_ctrl_visibility.o" "MiaRN.phl[313]";
+connectAttr "All_Controls_R_wrist_ctrl_scaleZ.o" "MiaRN.phl[314]";
+connectAttr "All_Controls_R_wrist_ctrl_scaleY.o" "MiaRN.phl[315]";
+connectAttr "All_Controls_R_wrist_ctrl_scaleX.o" "MiaRN.phl[316]";
+connectAttr "All_Controls_R_wrist_ctrl_visibility.o" "MiaRN.phl[317]";
+connectAttr "All_Controls_R_elbow_ctrl_scaleZ.o" "MiaRN.phl[318]";
+connectAttr "All_Controls_R_elbow_ctrl_scaleY.o" "MiaRN.phl[319]";
+connectAttr "All_Controls_R_elbow_ctrl_scaleX.o" "MiaRN.phl[320]";
+connectAttr "All_Controls_R_elbow_ctrl_visibility.o" "MiaRN.phl[321]";
+connectAttr "All_Controls_R_shoulder_ctrl_scaleZ.o" "MiaRN.phl[322]";
+connectAttr "All_Controls_R_shoulder_ctrl_scaleY.o" "MiaRN.phl[323]";
+connectAttr "All_Controls_R_shoulder_ctrl_scaleX.o" "MiaRN.phl[324]";
+connectAttr "All_Controls_R_shoulder_ctrl_visibility.o" "MiaRN.phl[325]";
+connectAttr "All_Controls_R_clavicle_ctrl_scaleZ.o" "MiaRN.phl[326]";
+connectAttr "All_Controls_R_clavicle_ctrl_scaleY.o" "MiaRN.phl[327]";
+connectAttr "All_Controls_R_clavicle_ctrl_scaleX.o" "MiaRN.phl[328]";
+connectAttr "All_Controls_R_clavicle_ctrl_visibility.o" "MiaRN.phl[329]";
+connectAttr "All_Controls_L_wrist_ctrl_scaleZ.o" "MiaRN.phl[330]";
+connectAttr "All_Controls_L_wrist_ctrl_scaleY.o" "MiaRN.phl[331]";
+connectAttr "All_Controls_L_wrist_ctrl_scaleX.o" "MiaRN.phl[332]";
+connectAttr "All_Controls_L_wrist_ctrl_visibility.o" "MiaRN.phl[333]";
+connectAttr "All_Controls_L_elbow_ctrl_scaleZ.o" "MiaRN.phl[334]";
+connectAttr "All_Controls_L_elbow_ctrl_scaleY.o" "MiaRN.phl[335]";
+connectAttr "All_Controls_L_elbow_ctrl_scaleX.o" "MiaRN.phl[336]";
+connectAttr "All_Controls_L_elbow_ctrl_visibility.o" "MiaRN.phl[337]";
+connectAttr "All_Controls_L_shoulder_ctrl_scaleZ.o" "MiaRN.phl[338]";
+connectAttr "All_Controls_L_shoulder_ctrl_scaleY.o" "MiaRN.phl[339]";
+connectAttr "All_Controls_L_shoulder_ctrl_scaleX.o" "MiaRN.phl[340]";
+connectAttr "All_Controls_L_shoulder_ctrl_visibility.o" "MiaRN.phl[341]";
+connectAttr "All_Controls_L_clavicle_ctrl_scaleZ.o" "MiaRN.phl[342]";
+connectAttr "All_Controls_L_clavicle_ctrl_scaleY.o" "MiaRN.phl[343]";
+connectAttr "All_Controls_L_clavicle_ctrl_scaleX.o" "MiaRN.phl[344]";
+connectAttr "All_Controls_L_clavicle_ctrl_visibility.o" "MiaRN.phl[345]";
+connectAttr "All_Controls_base_hair__4_ctrl_scaleZ.o" "MiaRN.phl[346]";
+connectAttr "All_Controls_base_hair__4_ctrl_scaleY.o" "MiaRN.phl[347]";
+connectAttr "All_Controls_base_hair__4_ctrl_scaleX.o" "MiaRN.phl[348]";
+connectAttr "All_Controls_base_hair__4_ctrl_visibility.o" "MiaRN.phl[349]";
+connectAttr "All_Controls_base_hair__3_ctrl_scaleZ.o" "MiaRN.phl[350]";
+connectAttr "All_Controls_base_hair__3_ctrl_scaleY.o" "MiaRN.phl[351]";
+connectAttr "All_Controls_base_hair__3_ctrl_scaleX.o" "MiaRN.phl[352]";
+connectAttr "All_Controls_base_hair__3_ctrl_visibility.o" "MiaRN.phl[353]";
+connectAttr "All_Controls_base_hair__2_ctrl_scaleZ.o" "MiaRN.phl[354]";
+connectAttr "All_Controls_base_hair__2_ctrl_scaleY.o" "MiaRN.phl[355]";
+connectAttr "All_Controls_base_hair__2_ctrl_scaleX.o" "MiaRN.phl[356]";
+connectAttr "All_Controls_base_hair__2_ctrl_visibility.o" "MiaRN.phl[357]";
+connectAttr "All_Controls_base_hair__1_ctrl_scaleZ.o" "MiaRN.phl[358]";
+connectAttr "All_Controls_base_hair__1_ctrl_scaleY.o" "MiaRN.phl[359]";
+connectAttr "All_Controls_base_hair__1_ctrl_scaleX.o" "MiaRN.phl[360]";
+connectAttr "All_Controls_base_hair__1_ctrl_visibility.o" "MiaRN.phl[361]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_scaleZ.o" "MiaRN.phl[362]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_scaleY.o" "MiaRN.phl[363]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_scaleX.o" "MiaRN.phl[364]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_visibility.o" "MiaRN.phl[365]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_scaleZ.o" "MiaRN.phl[366]";
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_scaleY.o" "MiaRN.phl[367]";
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_scaleX.o" "MiaRN.phl[368]";
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_visibility.o" "MiaRN.phl[369]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_scaleZ.o" "MiaRN.phl[370]";
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_scaleY.o" "MiaRN.phl[371]";
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_scaleX.o" "MiaRN.phl[372]";
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_visibility.o" "MiaRN.phl[373]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_scaleZ.o" "MiaRN.phl[374]";
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_scaleY.o" "MiaRN.phl[375]";
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_scaleX.o" "MiaRN.phl[376]";
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_visibility.o" "MiaRN.phl[377]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_scaleZ.o" "MiaRN.phl[378]";
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_scaleY.o" "MiaRN.phl[379]";
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_scaleX.o" "MiaRN.phl[380]";
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_visibility.o" "MiaRN.phl[381]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_scaleZ.o" "MiaRN.phl[382]";
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_scaleY.o" "MiaRN.phl[383]";
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_scaleX.o" "MiaRN.phl[384]";
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_visibility.o" "MiaRN.phl[385]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_scaleZ.o" "MiaRN.phl[386]";
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_scaleY.o" "MiaRN.phl[387]";
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_scaleX.o" "MiaRN.phl[388]";
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_visibility.o" "MiaRN.phl[389]"
+		;
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_scaleZ.o" "MiaRN.phl[390]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_scaleY.o" "MiaRN.phl[391]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_scaleX.o" "MiaRN.phl[392]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_visibility.o" "MiaRN.phl[393]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_scaleZ.o" "MiaRN.phl[394]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_scaleY.o" "MiaRN.phl[395]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_scaleX.o" "MiaRN.phl[396]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_visibility.o" "MiaRN.phl[397]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_scaleZ.o" "MiaRN.phl[398]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_scaleY.o" "MiaRN.phl[399]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_scaleX.o" "MiaRN.phl[400]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_visibility.o" "MiaRN.phl[401]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_scaleZ.o" "MiaRN.phl[402]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_scaleY.o" "MiaRN.phl[403]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_scaleX.o" "MiaRN.phl[404]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_visibility.o" "MiaRN.phl[405]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_scaleZ.o" "MiaRN.phl[406]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_scaleY.o" "MiaRN.phl[407]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_scaleX.o" "MiaRN.phl[408]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_visibility.o" "MiaRN.phl[409]";
+connectAttr "All_Controls_C_back_curl4_ctrl_scaleZ.o" "MiaRN.phl[410]";
+connectAttr "All_Controls_C_back_curl4_ctrl_scaleY.o" "MiaRN.phl[411]";
+connectAttr "All_Controls_C_back_curl4_ctrl_scaleX.o" "MiaRN.phl[412]";
+connectAttr "All_Controls_C_back_curl4_ctrl_visibility.o" "MiaRN.phl[413]";
+connectAttr "All_Controls_C_back_curl3_ctrl_scaleZ.o" "MiaRN.phl[414]";
+connectAttr "All_Controls_C_back_curl3_ctrl_scaleY.o" "MiaRN.phl[415]";
+connectAttr "All_Controls_C_back_curl3_ctrl_scaleX.o" "MiaRN.phl[416]";
+connectAttr "All_Controls_C_back_curl3_ctrl_visibility.o" "MiaRN.phl[417]";
+connectAttr "All_Controls_C_back_curl2_ctrl_scaleZ.o" "MiaRN.phl[418]";
+connectAttr "All_Controls_C_back_curl2_ctrl_scaleY.o" "MiaRN.phl[419]";
+connectAttr "All_Controls_C_back_curl2_ctrl_scaleX.o" "MiaRN.phl[420]";
+connectAttr "All_Controls_C_back_curl2_ctrl_visibility.o" "MiaRN.phl[421]";
+connectAttr "All_Controls_C_back_curl1_ctrl_scaleZ.o" "MiaRN.phl[422]";
+connectAttr "All_Controls_C_back_curl1_ctrl_scaleY.o" "MiaRN.phl[423]";
+connectAttr "All_Controls_C_back_curl1_ctrl_scaleX.o" "MiaRN.phl[424]";
+connectAttr "All_Controls_C_back_curl1_ctrl_visibility.o" "MiaRN.phl[425]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_scaleZ.o" "MiaRN.phl[426]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_scaleY.o" "MiaRN.phl[427]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_scaleX.o" "MiaRN.phl[428]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_visibility.o" "MiaRN.phl[429]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_scaleZ.o" "MiaRN.phl[430]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_scaleY.o" "MiaRN.phl[431]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_scaleX.o" "MiaRN.phl[432]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_visibility.o" "MiaRN.phl[433]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_scaleZ.o" "MiaRN.phl[434]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_scaleY.o" "MiaRN.phl[435]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_scaleX.o" "MiaRN.phl[436]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_visibility.o" "MiaRN.phl[437]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_scaleZ.o" "MiaRN.phl[438]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_scaleY.o" "MiaRN.phl[439]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_scaleX.o" "MiaRN.phl[440]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_visibility.o" "MiaRN.phl[441]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_scaleZ.o" "MiaRN.phl[442]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_scaleY.o" "MiaRN.phl[443]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_scaleX.o" "MiaRN.phl[444]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_visibility.o" "MiaRN.phl[445]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_scaleZ.o" "MiaRN.phl[446]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_scaleY.o" "MiaRN.phl[447]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_scaleX.o" "MiaRN.phl[448]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_visibility.o" "MiaRN.phl[449]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_scaleZ.o" "MiaRN.phl[450]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_scaleY.o" "MiaRN.phl[451]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_scaleX.o" "MiaRN.phl[452]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_visibility.o" "MiaRN.phl[453]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_scaleZ.o" "MiaRN.phl[454]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_scaleY.o" "MiaRN.phl[455]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_scaleX.o" "MiaRN.phl[456]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_visibility.o" "MiaRN.phl[457]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_scaleZ.o" "MiaRN.phl[458]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_scaleY.o" "MiaRN.phl[459]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_scaleX.o" "MiaRN.phl[460]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_visibility.o" "MiaRN.phl[461]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_scaleZ.o" "MiaRN.phl[462]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_scaleY.o" "MiaRN.phl[463]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_scaleX.o" "MiaRN.phl[464]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_visibility.o" "MiaRN.phl[465]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_scaleZ.o" "MiaRN.phl[466]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_scaleY.o" "MiaRN.phl[467]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_scaleX.o" "MiaRN.phl[468]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_visibility.o" "MiaRN.phl[469]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_scaleZ.o" "MiaRN.phl[470]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_scaleY.o" "MiaRN.phl[471]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_scaleX.o" "MiaRN.phl[472]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_visibility.o" "MiaRN.phl[473]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_scaleZ.o" "MiaRN.phl[474]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_scaleY.o" "MiaRN.phl[475]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_scaleX.o" "MiaRN.phl[476]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_visibility.o" "MiaRN.phl[477]";
+connectAttr "All_Controls_tongue3_ctrl_scaleZ.o" "MiaRN.phl[478]";
+connectAttr "All_Controls_tongue3_ctrl_scaleY.o" "MiaRN.phl[479]";
+connectAttr "All_Controls_tongue3_ctrl_scaleX.o" "MiaRN.phl[480]";
+connectAttr "All_Controls_tongue3_ctrl_visibility.o" "MiaRN.phl[481]";
+connectAttr "All_Controls_tongue2_ctrl_scaleZ.o" "MiaRN.phl[482]";
+connectAttr "All_Controls_tongue2_ctrl_scaleY.o" "MiaRN.phl[483]";
+connectAttr "All_Controls_tongue2_ctrl_scaleX.o" "MiaRN.phl[484]";
+connectAttr "All_Controls_tongue2_ctrl_visibility.o" "MiaRN.phl[485]";
+connectAttr "All_Controls_tongue1_ctrl_scaleZ.o" "MiaRN.phl[486]";
+connectAttr "All_Controls_tongue1_ctrl_scaleY.o" "MiaRN.phl[487]";
+connectAttr "All_Controls_tongue1_ctrl_scaleX.o" "MiaRN.phl[488]";
+connectAttr "All_Controls_tongue1_ctrl_visibility.o" "MiaRN.phl[489]";
+connectAttr "All_Controls_lower_jaw_ctrl_scaleZ.o" "MiaRN.phl[490]";
+connectAttr "All_Controls_lower_jaw_ctrl_scaleY.o" "MiaRN.phl[491]";
+connectAttr "All_Controls_lower_jaw_ctrl_scaleX.o" "MiaRN.phl[492]";
+connectAttr "All_Controls_lower_jaw_ctrl_visibility.o" "MiaRN.phl[493]";
+connectAttr "All_Controls_head_jnt_01_ctrl_scaleZ.o" "MiaRN.phl[494]";
+connectAttr "All_Controls_head_jnt_01_ctrl_scaleY.o" "MiaRN.phl[495]";
+connectAttr "All_Controls_head_jnt_01_ctrl_scaleX.o" "MiaRN.phl[496]";
+connectAttr "All_Controls_head_jnt_01_ctrl_visibility.o" "MiaRN.phl[497]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_scaleZ.o" "MiaRN.phl[498]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_scaleY.o" "MiaRN.phl[499]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_scaleX.o" "MiaRN.phl[500]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_visibility.o" "MiaRN.phl[501]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_scaleZ.o" "MiaRN.phl[502]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_scaleY.o" "MiaRN.phl[503]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_scaleX.o" "MiaRN.phl[504]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_visibility.o" "MiaRN.phl[505]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_scaleZ.o" "MiaRN.phl[506]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_scaleY.o" "MiaRN.phl[507]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_scaleX.o" "MiaRN.phl[508]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_visibility.o" "MiaRN.phl[509]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_scaleZ.o" "MiaRN.phl[510]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_scaleY.o" "MiaRN.phl[511]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_scaleX.o" "MiaRN.phl[512]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_visibility.o" "MiaRN.phl[513]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_scaleZ.o" "MiaRN.phl[514]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_scaleY.o" "MiaRN.phl[515]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_scaleX.o" "MiaRN.phl[516]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_visibility.o" "MiaRN.phl[517]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_scaleZ.o" "MiaRN.phl[518]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_scaleY.o" "MiaRN.phl[519]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_scaleX.o" "MiaRN.phl[520]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_visibility.o" "MiaRN.phl[521]";
+connectAttr "All_Controls_R_ankle_ctrl_scaleZ.o" "MiaRN.phl[522]";
+connectAttr "All_Controls_R_ankle_ctrl_scaleY.o" "MiaRN.phl[523]";
+connectAttr "All_Controls_R_ankle_ctrl_scaleX.o" "MiaRN.phl[524]";
+connectAttr "All_Controls_R_ankle_ctrl_visibility.o" "MiaRN.phl[525]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_scaleZ.o" "MiaRN.phl[526]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_scaleY.o" "MiaRN.phl[527]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_scaleX.o" "MiaRN.phl[528]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_visibility.o" "MiaRN.phl[529]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_scaleZ.o" "MiaRN.phl[530]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_scaleY.o" "MiaRN.phl[531]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_scaleX.o" "MiaRN.phl[532]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_visibility.o" "MiaRN.phl[533]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_scaleZ.o" "MiaRN.phl[534]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_scaleY.o" "MiaRN.phl[535]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_scaleX.o" "MiaRN.phl[536]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_visibility.o" "MiaRN.phl[537]"
+		;
+connectAttr "All_Controls_L_ankle_ctrl_scaleZ.o" "MiaRN.phl[538]";
+connectAttr "All_Controls_L_ankle_ctrl_scaleY.o" "MiaRN.phl[539]";
+connectAttr "All_Controls_L_ankle_ctrl_scaleX.o" "MiaRN.phl[540]";
+connectAttr "All_Controls_L_ankle_ctrl_visibility.o" "MiaRN.phl[541]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_scaleZ.o" "MiaRN.phl[542]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_scaleY.o" "MiaRN.phl[543]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_scaleX.o" "MiaRN.phl[544]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_visibility.o" "MiaRN.phl[545]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_scaleZ.o" "MiaRN.phl[546]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_scaleY.o" "MiaRN.phl[547]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_scaleX.o" "MiaRN.phl[548]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_visibility.o" "MiaRN.phl[549]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_scaleZ.o" "MiaRN.phl[550]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_scaleY.o" "MiaRN.phl[551]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_scaleX.o" "MiaRN.phl[552]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_visibility.o" "MiaRN.phl[553]"
+		;
+connectAttr "All_Controls_pelvis_jnt_ctrl_scaleZ.o" "MiaRN.phl[554]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_scaleY.o" "MiaRN.phl[555]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_scaleX.o" "MiaRN.phl[556]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_visibility.o" "MiaRN.phl[557]";
+connectAttr "All_Controls_cog_ctrl_scaleZ.o" "MiaRN.phl[558]";
+connectAttr "All_Controls_cog_ctrl_scaleY.o" "MiaRN.phl[559]";
+connectAttr "All_Controls_cog_ctrl_scaleX.o" "MiaRN.phl[560]";
+connectAttr "All_Controls_cog_ctrl_visibility.o" "MiaRN.phl[561]";
+connectAttr "All_Controls_transform_ctrl_R_Leg_IKFK.o" "MiaRN.phl[562]";
+connectAttr "All_Controls_transform_ctrl_L_Leg_IKFK.o" "MiaRN.phl[563]";
+connectAttr "All_Controls_transform_ctrl_R_Arm_IKFK.o" "MiaRN.phl[564]";
+connectAttr "All_Controls_transform_ctrl_L_Arm_IKFK.o" "MiaRN.phl[565]";
+connectAttr "All_Controls_transform_ctrl_visibility.o" "MiaRN.phl[566]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_translateZ.o" "MiaRN.phl[567]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_translateY.o" "MiaRN.phl[568]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_translateX.o" "MiaRN.phl[569]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_translateZ.o" "MiaRN.phl[570]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_translateY.o" "MiaRN.phl[571]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_translateX.o" "MiaRN.phl[572]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_translateZ.o" "MiaRN.phl[573]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_translateY.o" "MiaRN.phl[574]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_translateX.o" "MiaRN.phl[575]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_translateZ.o" "MiaRN.phl[576]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_translateY.o" "MiaRN.phl[577]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_translateX.o" "MiaRN.phl[578]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_translateZ.o" "MiaRN.phl[579]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_translateY.o" "MiaRN.phl[580]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_translateX.o" "MiaRN.phl[581]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_translateZ.o" "MiaRN.phl[582]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_translateY.o" "MiaRN.phl[583]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_translateX.o" "MiaRN.phl[584]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_translateZ.o" "MiaRN.phl[585]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_translateY.o" "MiaRN.phl[586]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_translateX.o" "MiaRN.phl[587]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_translateZ.o" "MiaRN.phl[588]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_translateY.o" "MiaRN.phl[589]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_translateX.o" "MiaRN.phl[590]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_translateZ.o" "MiaRN.phl[591]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_translateY.o" "MiaRN.phl[592]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_translateX.o" "MiaRN.phl[593]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_translateZ.o" "MiaRN.phl[594]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_translateY.o" "MiaRN.phl[595]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_translateX.o" "MiaRN.phl[596]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_translateZ.o" "MiaRN.phl[597]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_translateY.o" "MiaRN.phl[598]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_translateX.o" "MiaRN.phl[599]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_translateZ.o" "MiaRN.phl[600]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_translateY.o" "MiaRN.phl[601]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_translateX.o" "MiaRN.phl[602]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_translateZ.o" "MiaRN.phl[603]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_translateY.o" "MiaRN.phl[604]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_translateX.o" "MiaRN.phl[605]";
+connectAttr "All_Controls_R_foot_ctrl_translateZ.o" "MiaRN.phl[606]";
+connectAttr "All_Controls_R_foot_ctrl_translateY.o" "MiaRN.phl[607]";
+connectAttr "All_Controls_R_foot_ctrl_translateX.o" "MiaRN.phl[608]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_translateZ.o" "MiaRN.phl[609]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_translateY.o" "MiaRN.phl[610]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_translateX.o" "MiaRN.phl[611]";
+connectAttr "All_Controls_L_foot_ctrl_translateZ.o" "MiaRN.phl[612]";
+connectAttr "All_Controls_L_foot_ctrl_translateY.o" "MiaRN.phl[613]";
+connectAttr "All_Controls_L_foot_ctrl_translateX.o" "MiaRN.phl[614]";
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_translateZ.o" "MiaRN.phl[615]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_translateY.o" "MiaRN.phl[616]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_translateX.o" "MiaRN.phl[617]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[618]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_translateY.o" "MiaRN.phl[619]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_translateX.o" "MiaRN.phl[620]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[621]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_translateY.o" "MiaRN.phl[622]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_translateX.o" "MiaRN.phl[623]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[624]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_translateY.o" "MiaRN.phl[625]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_translateX.o" "MiaRN.phl[626]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[627]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_translateY.o" "MiaRN.phl[628]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_translateX.o" "MiaRN.phl[629]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[630]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_translateY.o" "MiaRN.phl[631]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_translateX.o" "MiaRN.phl[632]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[633]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_translateY.o" "MiaRN.phl[634]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_translateX.o" "MiaRN.phl[635]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_translateZ.o" "MiaRN.phl[636]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_translateY.o" "MiaRN.phl[637]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_translateX.o" "MiaRN.phl[638]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_translateZ.o" "MiaRN.phl[639]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_translateY.o" "MiaRN.phl[640]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_translateX.o" "MiaRN.phl[641]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[642]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_translateY.o" "MiaRN.phl[643]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_translateX.o" "MiaRN.phl[644]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[645]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_translateY.o" "MiaRN.phl[646]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_translateX.o" "MiaRN.phl[647]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[648]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_translateY.o" "MiaRN.phl[649]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_translateX.o" "MiaRN.phl[650]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[651]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_translateY.o" "MiaRN.phl[652]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_translateX.o" "MiaRN.phl[653]"
+		;
+connectAttr "All_Controls_R_thumb_03_ctrl_translateZ.o" "MiaRN.phl[654]";
+connectAttr "All_Controls_R_thumb_03_ctrl_translateY.o" "MiaRN.phl[655]";
+connectAttr "All_Controls_R_thumb_03_ctrl_translateX.o" "MiaRN.phl[656]";
+connectAttr "All_Controls_R_thumb_02_ctrl_translateZ.o" "MiaRN.phl[657]";
+connectAttr "All_Controls_R_thumb_02_ctrl_translateY.o" "MiaRN.phl[658]";
+connectAttr "All_Controls_R_thumb_02_ctrl_translateX.o" "MiaRN.phl[659]";
+connectAttr "All_Controls_R_thumb_01_ctrl_translateZ.o" "MiaRN.phl[660]";
+connectAttr "All_Controls_R_thumb_01_ctrl_translateY.o" "MiaRN.phl[661]";
+connectAttr "All_Controls_R_thumb_01_ctrl_translateX.o" "MiaRN.phl[662]";
+connectAttr "All_Controls_R_hand_ctrl_translateZ.o" "MiaRN.phl[663]";
+connectAttr "All_Controls_R_hand_ctrl_translateY.o" "MiaRN.phl[664]";
+connectAttr "All_Controls_R_hand_ctrl_translateX.o" "MiaRN.phl[665]";
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_translateZ.o" "MiaRN.phl[666]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_translateY.o" "MiaRN.phl[667]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_translateX.o" "MiaRN.phl[668]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[669]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_translateY.o" "MiaRN.phl[670]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_translateX.o" "MiaRN.phl[671]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[672]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_translateY.o" "MiaRN.phl[673]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_translateX.o" "MiaRN.phl[674]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[675]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_translateY.o" "MiaRN.phl[676]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_translateX.o" "MiaRN.phl[677]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[678]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_translateY.o" "MiaRN.phl[679]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_translateX.o" "MiaRN.phl[680]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[681]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_translateY.o" "MiaRN.phl[682]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_translateX.o" "MiaRN.phl[683]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[684]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_translateY.o" "MiaRN.phl[685]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_translateX.o" "MiaRN.phl[686]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_translateZ.o" "MiaRN.phl[687]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_translateY.o" "MiaRN.phl[688]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_translateX.o" "MiaRN.phl[689]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_translateZ.o" "MiaRN.phl[690]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_translateY.o" "MiaRN.phl[691]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_translateX.o" "MiaRN.phl[692]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[693]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_translateY.o" "MiaRN.phl[694]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_translateX.o" "MiaRN.phl[695]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_translateZ.o" "MiaRN.phl[696]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_translateY.o" "MiaRN.phl[697]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_translateX.o" "MiaRN.phl[698]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_translateZ.o" "MiaRN.phl[699]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_translateY.o" "MiaRN.phl[700]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_translateX.o" "MiaRN.phl[701]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_translateZ.o" "MiaRN.phl[702]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_translateY.o" "MiaRN.phl[703]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_translateX.o" "MiaRN.phl[704]"
+		;
+connectAttr "All_Controls_L_thumb_03_ctrl_translateZ.o" "MiaRN.phl[705]";
+connectAttr "All_Controls_L_thumb_03_ctrl_translateY.o" "MiaRN.phl[706]";
+connectAttr "All_Controls_L_thumb_03_ctrl_translateX.o" "MiaRN.phl[707]";
+connectAttr "All_Controls_L_thumb_02_ctrl_translateZ.o" "MiaRN.phl[708]";
+connectAttr "All_Controls_L_thumb_02_ctrl_translateY.o" "MiaRN.phl[709]";
+connectAttr "All_Controls_L_thumb_02_ctrl_translateX.o" "MiaRN.phl[710]";
+connectAttr "All_Controls_L_thumb_01_ctrl_translateZ.o" "MiaRN.phl[711]";
+connectAttr "All_Controls_L_thumb_01_ctrl_translateY.o" "MiaRN.phl[712]";
+connectAttr "All_Controls_L_thumb_01_ctrl_translateX.o" "MiaRN.phl[713]";
+connectAttr "All_Controls_L_hand_ctrl_translateZ.o" "MiaRN.phl[714]";
+connectAttr "All_Controls_L_hand_ctrl_translateY.o" "MiaRN.phl[715]";
+connectAttr "All_Controls_L_hand_ctrl_translateX.o" "MiaRN.phl[716]";
+connectAttr "All_Controls_R_wrist_ctrl_translateZ.o" "MiaRN.phl[717]";
+connectAttr "All_Controls_R_wrist_ctrl_translateY.o" "MiaRN.phl[718]";
+connectAttr "All_Controls_R_wrist_ctrl_translateX.o" "MiaRN.phl[719]";
+connectAttr "All_Controls_R_elbow_ctrl_translateZ.o" "MiaRN.phl[720]";
+connectAttr "All_Controls_R_elbow_ctrl_translateY.o" "MiaRN.phl[721]";
+connectAttr "All_Controls_R_elbow_ctrl_translateX.o" "MiaRN.phl[722]";
+connectAttr "All_Controls_R_shoulder_ctrl_translateZ.o" "MiaRN.phl[723]";
+connectAttr "All_Controls_R_shoulder_ctrl_translateY.o" "MiaRN.phl[724]";
+connectAttr "All_Controls_R_shoulder_ctrl_translateX.o" "MiaRN.phl[725]";
+connectAttr "All_Controls_R_clavicle_ctrl_translateZ.o" "MiaRN.phl[726]";
+connectAttr "All_Controls_R_clavicle_ctrl_translateY.o" "MiaRN.phl[727]";
+connectAttr "All_Controls_R_clavicle_ctrl_translateX.o" "MiaRN.phl[728]";
+connectAttr "All_Controls_L_wrist_ctrl_translateZ.o" "MiaRN.phl[729]";
+connectAttr "All_Controls_L_wrist_ctrl_translateY.o" "MiaRN.phl[730]";
+connectAttr "All_Controls_L_wrist_ctrl_translateX.o" "MiaRN.phl[731]";
+connectAttr "All_Controls_L_elbow_ctrl_translateZ.o" "MiaRN.phl[732]";
+connectAttr "All_Controls_L_elbow_ctrl_translateY.o" "MiaRN.phl[733]";
+connectAttr "All_Controls_L_elbow_ctrl_translateX.o" "MiaRN.phl[734]";
+connectAttr "All_Controls_L_shoulder_ctrl_translateZ.o" "MiaRN.phl[735]";
+connectAttr "All_Controls_L_shoulder_ctrl_translateY.o" "MiaRN.phl[736]";
+connectAttr "All_Controls_L_shoulder_ctrl_translateX.o" "MiaRN.phl[737]";
+connectAttr "All_Controls_L_clavicle_ctrl_translateZ.o" "MiaRN.phl[738]";
+connectAttr "All_Controls_L_clavicle_ctrl_translateY.o" "MiaRN.phl[739]";
+connectAttr "All_Controls_L_clavicle_ctrl_translateX.o" "MiaRN.phl[740]";
+connectAttr "All_Controls_base_hair__4_ctrl_translateZ.o" "MiaRN.phl[741]";
+connectAttr "All_Controls_base_hair__4_ctrl_translateY.o" "MiaRN.phl[742]";
+connectAttr "All_Controls_base_hair__4_ctrl_translateX.o" "MiaRN.phl[743]";
+connectAttr "All_Controls_base_hair__3_ctrl_translateZ.o" "MiaRN.phl[744]";
+connectAttr "All_Controls_base_hair__3_ctrl_translateY.o" "MiaRN.phl[745]";
+connectAttr "All_Controls_base_hair__3_ctrl_translateX.o" "MiaRN.phl[746]";
+connectAttr "All_Controls_base_hair__2_ctrl_translateZ.o" "MiaRN.phl[747]";
+connectAttr "All_Controls_base_hair__2_ctrl_translateY.o" "MiaRN.phl[748]";
+connectAttr "All_Controls_base_hair__2_ctrl_translateX.o" "MiaRN.phl[749]";
+connectAttr "All_Controls_base_hair__1_ctrl_translateZ.o" "MiaRN.phl[750]";
+connectAttr "All_Controls_base_hair__1_ctrl_translateY.o" "MiaRN.phl[751]";
+connectAttr "All_Controls_base_hair__1_ctrl_translateX.o" "MiaRN.phl[752]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_translateZ.o" "MiaRN.phl[753]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_translateY.o" "MiaRN.phl[754]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_translateX.o" "MiaRN.phl[755]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_translateZ.o" "MiaRN.phl[756]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_translateY.o" "MiaRN.phl[757]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_translateX.o" "MiaRN.phl[758]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_translateZ.o" "MiaRN.phl[759]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_translateY.o" "MiaRN.phl[760]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_translateX.o" "MiaRN.phl[761]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_translateZ.o" "MiaRN.phl[762]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_translateY.o" "MiaRN.phl[763]"
+		;
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_translateX.o" "MiaRN.phl[764]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_translateZ.o" "MiaRN.phl[765]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_translateY.o" "MiaRN.phl[766]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_translateX.o" "MiaRN.phl[767]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_translateZ.o" "MiaRN.phl[768]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_translateY.o" "MiaRN.phl[769]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_translateX.o" "MiaRN.phl[770]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_translateZ.o" "MiaRN.phl[771]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_translateY.o" "MiaRN.phl[772]"
+		;
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_translateX.o" "MiaRN.phl[773]"
+		;
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_translateZ.o" "MiaRN.phl[774]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_translateY.o" "MiaRN.phl[775]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_translateX.o" "MiaRN.phl[776]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_translateZ.o" "MiaRN.phl[777]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_translateY.o" "MiaRN.phl[778]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_translateX.o" "MiaRN.phl[779]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_translateZ.o" "MiaRN.phl[780]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_translateY.o" "MiaRN.phl[781]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_translateX.o" "MiaRN.phl[782]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_translateZ.o" "MiaRN.phl[783]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_translateY.o" "MiaRN.phl[784]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_translateX.o" "MiaRN.phl[785]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_translateZ.o" "MiaRN.phl[786]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_translateY.o" "MiaRN.phl[787]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_translateX.o" "MiaRN.phl[788]";
+connectAttr "All_Controls_C_back_curl4_ctrl_translateZ.o" "MiaRN.phl[789]";
+connectAttr "All_Controls_C_back_curl4_ctrl_translateY.o" "MiaRN.phl[790]";
+connectAttr "All_Controls_C_back_curl4_ctrl_translateX.o" "MiaRN.phl[791]";
+connectAttr "All_Controls_C_back_curl3_ctrl_translateZ.o" "MiaRN.phl[792]";
+connectAttr "All_Controls_C_back_curl3_ctrl_translateY.o" "MiaRN.phl[793]";
+connectAttr "All_Controls_C_back_curl3_ctrl_translateX.o" "MiaRN.phl[794]";
+connectAttr "All_Controls_C_back_curl2_ctrl_translateZ.o" "MiaRN.phl[795]";
+connectAttr "All_Controls_C_back_curl2_ctrl_translateY.o" "MiaRN.phl[796]";
+connectAttr "All_Controls_C_back_curl2_ctrl_translateX.o" "MiaRN.phl[797]";
+connectAttr "All_Controls_C_back_curl1_ctrl_translateZ.o" "MiaRN.phl[798]";
+connectAttr "All_Controls_C_back_curl1_ctrl_translateY.o" "MiaRN.phl[799]";
+connectAttr "All_Controls_C_back_curl1_ctrl_translateX.o" "MiaRN.phl[800]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_translateZ.o" "MiaRN.phl[801]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_translateY.o" "MiaRN.phl[802]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_translateX.o" "MiaRN.phl[803]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_translateZ.o" "MiaRN.phl[804]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_translateY.o" "MiaRN.phl[805]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_translateX.o" "MiaRN.phl[806]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_translateZ.o" "MiaRN.phl[807]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_translateY.o" "MiaRN.phl[808]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_translateX.o" "MiaRN.phl[809]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_translateZ.o" "MiaRN.phl[810]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_translateY.o" "MiaRN.phl[811]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_translateX.o" "MiaRN.phl[812]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_translateZ.o" "MiaRN.phl[813]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_translateY.o" "MiaRN.phl[814]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_translateX.o" "MiaRN.phl[815]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_translateZ.o" "MiaRN.phl[816]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_translateY.o" "MiaRN.phl[817]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_translateX.o" "MiaRN.phl[818]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_translateZ.o" "MiaRN.phl[819]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_translateY.o" "MiaRN.phl[820]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_translateX.o" "MiaRN.phl[821]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_translateZ.o" "MiaRN.phl[822]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_translateY.o" "MiaRN.phl[823]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_translateX.o" "MiaRN.phl[824]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_translateZ.o" "MiaRN.phl[825]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_translateY.o" "MiaRN.phl[826]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_translateX.o" "MiaRN.phl[827]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_translateZ.o" "MiaRN.phl[828]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_translateY.o" "MiaRN.phl[829]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_translateX.o" "MiaRN.phl[830]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_translateZ.o" "MiaRN.phl[831]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_translateY.o" "MiaRN.phl[832]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_translateX.o" "MiaRN.phl[833]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_translateZ.o" "MiaRN.phl[834]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_translateY.o" "MiaRN.phl[835]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_translateX.o" "MiaRN.phl[836]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_translateZ.o" "MiaRN.phl[837]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_translateY.o" "MiaRN.phl[838]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_translateX.o" "MiaRN.phl[839]";
+connectAttr "All_Controls_tongue3_ctrl_translateZ.o" "MiaRN.phl[840]";
+connectAttr "All_Controls_tongue3_ctrl_translateY.o" "MiaRN.phl[841]";
+connectAttr "All_Controls_tongue3_ctrl_translateX.o" "MiaRN.phl[842]";
+connectAttr "All_Controls_tongue2_ctrl_translateZ.o" "MiaRN.phl[843]";
+connectAttr "All_Controls_tongue2_ctrl_translateY.o" "MiaRN.phl[844]";
+connectAttr "All_Controls_tongue2_ctrl_translateX.o" "MiaRN.phl[845]";
+connectAttr "All_Controls_tongue1_ctrl_translateZ.o" "MiaRN.phl[846]";
+connectAttr "All_Controls_tongue1_ctrl_translateY.o" "MiaRN.phl[847]";
+connectAttr "All_Controls_tongue1_ctrl_translateX.o" "MiaRN.phl[848]";
+connectAttr "All_Controls_lower_jaw_ctrl_translateZ.o" "MiaRN.phl[849]";
+connectAttr "All_Controls_lower_jaw_ctrl_translateY.o" "MiaRN.phl[850]";
+connectAttr "All_Controls_lower_jaw_ctrl_translateX.o" "MiaRN.phl[851]";
+connectAttr "All_Controls_head_jnt_01_ctrl_translateZ.o" "MiaRN.phl[852]";
+connectAttr "All_Controls_head_jnt_01_ctrl_translateY.o" "MiaRN.phl[853]";
+connectAttr "All_Controls_head_jnt_01_ctrl_translateX.o" "MiaRN.phl[854]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_translateZ.o" "MiaRN.phl[855]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_translateY.o" "MiaRN.phl[856]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_translateX.o" "MiaRN.phl[857]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_translateZ.o" "MiaRN.phl[858]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_translateY.o" "MiaRN.phl[859]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_translateX.o" "MiaRN.phl[860]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_translateZ.o" "MiaRN.phl[861]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_translateY.o" "MiaRN.phl[862]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_translateX.o" "MiaRN.phl[863]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_translateZ.o" "MiaRN.phl[864]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_translateY.o" "MiaRN.phl[865]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_translateX.o" "MiaRN.phl[866]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_translateZ.o" "MiaRN.phl[867]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_translateY.o" "MiaRN.phl[868]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_translateX.o" "MiaRN.phl[869]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_translateZ.o" "MiaRN.phl[870]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_translateY.o" "MiaRN.phl[871]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_translateX.o" "MiaRN.phl[872]";
+connectAttr "All_Controls_R_ankle_ctrl_translateZ.o" "MiaRN.phl[873]";
+connectAttr "All_Controls_R_ankle_ctrl_translateY.o" "MiaRN.phl[874]";
+connectAttr "All_Controls_R_ankle_ctrl_translateX.o" "MiaRN.phl[875]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_translateZ.o" "MiaRN.phl[876]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_translateY.o" "MiaRN.phl[877]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_translateX.o" "MiaRN.phl[878]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_translateZ.o" "MiaRN.phl[879]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_translateY.o" "MiaRN.phl[880]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_translateX.o" "MiaRN.phl[881]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_translateZ.o" "MiaRN.phl[882]"
+		;
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_translateY.o" "MiaRN.phl[883]"
+		;
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_translateX.o" "MiaRN.phl[884]"
+		;
+connectAttr "All_Controls_L_ankle_ctrl_translateZ.o" "MiaRN.phl[885]";
+connectAttr "All_Controls_L_ankle_ctrl_translateY.o" "MiaRN.phl[886]";
+connectAttr "All_Controls_L_ankle_ctrl_translateX.o" "MiaRN.phl[887]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_translateZ.o" "MiaRN.phl[888]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_translateY.o" "MiaRN.phl[889]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_translateX.o" "MiaRN.phl[890]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_translateZ.o" "MiaRN.phl[891]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_translateY.o" "MiaRN.phl[892]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_translateX.o" "MiaRN.phl[893]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_translateZ.o" "MiaRN.phl[894]"
+		;
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_translateY.o" "MiaRN.phl[895]"
+		;
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_translateX.o" "MiaRN.phl[896]"
+		;
+connectAttr "All_Controls_pelvis_jnt_ctrl_translateZ.o" "MiaRN.phl[897]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_translateY.o" "MiaRN.phl[898]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_translateX.o" "MiaRN.phl[899]";
+connectAttr "All_Controls_cog_ctrl_translateZ.o" "MiaRN.phl[900]";
+connectAttr "All_Controls_cog_ctrl_translateY.o" "MiaRN.phl[901]";
+connectAttr "All_Controls_cog_ctrl_translateX.o" "MiaRN.phl[902]";
+connectAttr "All_Controls_transform_ctrl_translateZ.o" "MiaRN.phl[903]";
+connectAttr "All_Controls_transform_ctrl_translateY.o" "MiaRN.phl[904]";
+connectAttr "All_Controls_transform_ctrl_translateX.o" "MiaRN.phl[905]";
+connectAttr "All_Controls_look_at__ctrl_translateZ1.o" "MiaRN.phl[906]";
+connectAttr "All_Controls_look_at__ctrl_translateY1.o" "MiaRN.phl[907]";
+connectAttr "All_Controls_look_at__ctrl_translateX1.o" "MiaRN.phl[908]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_rotateZ.o" "MiaRN.phl[909]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_rotateY.o" "MiaRN.phl[910]";
+connectAttr "All_Controls_R_Leg_PV_ctrl_rotateX.o" "MiaRN.phl[911]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[912]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_rotateY.o" "MiaRN.phl[913]";
+connectAttr "All_Controls_R_Leg_IK_Base_ctrl_rotateX.o" "MiaRN.phl[914]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_rotateZ.o" "MiaRN.phl[915]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_rotateY.o" "MiaRN.phl[916]";
+connectAttr "All_Controls_R_Leg_IK_ctrl_rotateX.o" "MiaRN.phl[917]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_rotateZ.o" "MiaRN.phl[918]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_rotateY.o" "MiaRN.phl[919]";
+connectAttr "All_Controls_L_Leg_PV_ctrl_rotateX.o" "MiaRN.phl[920]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[921]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_rotateY.o" "MiaRN.phl[922]";
+connectAttr "All_Controls_L_Leg_IK_Base_ctrl_rotateX.o" "MiaRN.phl[923]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_rotateZ.o" "MiaRN.phl[924]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_rotateY.o" "MiaRN.phl[925]";
+connectAttr "All_Controls_L_Leg_IK_ctrl_rotateX.o" "MiaRN.phl[926]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_rotateZ.o" "MiaRN.phl[927]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_rotateY.o" "MiaRN.phl[928]";
+connectAttr "All_Controls_R_Arm_PV_ctrl_rotateX.o" "MiaRN.phl[929]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[930]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_rotateY.o" "MiaRN.phl[931]";
+connectAttr "All_Controls_R_Arm_IK_Base_ctrl_rotateX.o" "MiaRN.phl[932]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_rotateZ.o" "MiaRN.phl[933]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_rotateY.o" "MiaRN.phl[934]";
+connectAttr "All_Controls_R_Arm_IK_ctrl_rotateX.o" "MiaRN.phl[935]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_rotateZ.o" "MiaRN.phl[936]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_rotateY.o" "MiaRN.phl[937]";
+connectAttr "All_Controls_L_Arm_PV_ctrl_rotateX.o" "MiaRN.phl[938]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_rotateZ.o" "MiaRN.phl[939]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_rotateY.o" "MiaRN.phl[940]";
+connectAttr "All_Controls_L_Arm_IK_Base_ctrl_rotateX.o" "MiaRN.phl[941]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_rotateZ.o" "MiaRN.phl[942]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_rotateY.o" "MiaRN.phl[943]";
+connectAttr "All_Controls_L_Arm_IK_ctrl_rotateX.o" "MiaRN.phl[944]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_rotateZ.o" "MiaRN.phl[945]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_rotateY.o" "MiaRN.phl[946]";
+connectAttr "All_Controls_R_ball_jnt_ctrl_rotateX.o" "MiaRN.phl[947]";
+connectAttr "All_Controls_R_foot_ctrl_rotateZ.o" "MiaRN.phl[948]";
+connectAttr "All_Controls_R_foot_ctrl_rotateY.o" "MiaRN.phl[949]";
+connectAttr "All_Controls_R_foot_ctrl_rotateX.o" "MiaRN.phl[950]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_rotateZ.o" "MiaRN.phl[951]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_rotateY.o" "MiaRN.phl[952]";
+connectAttr "All_Controls_L_ball_jnt_ctrl_rotateX.o" "MiaRN.phl[953]";
+connectAttr "All_Controls_L_foot_ctrl_rotateZ.o" "MiaRN.phl[954]";
+connectAttr "All_Controls_L_foot_ctrl_rotateY.o" "MiaRN.phl[955]";
+connectAttr "All_Controls_L_foot_ctrl_rotateX.o" "MiaRN.phl[956]";
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_rotateZ.o" "MiaRN.phl[957]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_rotateY.o" "MiaRN.phl[958]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_04_ctrl_rotateX.o" "MiaRN.phl[959]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[960]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[961]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[962]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[963]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[964]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[965]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[966]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[967]"
+		;
+connectAttr "All_Controls_R_finger_4_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[968]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[969]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[970]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[971]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[972]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[973]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[974]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[975]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[976]"
+		;
+connectAttr "All_Controls_R_finger_3_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[977]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_rotateZ.o" "MiaRN.phl[978]";
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_rotateY.o" "MiaRN.phl[979]";
+connectAttr "All_Controls_R_finger_2_knuckle_03ctrl_rotateX.o" "MiaRN.phl[980]";
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_rotateZ.o" "MiaRN.phl[981]";
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_rotateY.o" "MiaRN.phl[982]";
+connectAttr "All_Controls_R_finger_2_knuckle_02ctrl_rotateX.o" "MiaRN.phl[983]";
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[984]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[985]"
+		;
+connectAttr "All_Controls_R_finger_2_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[986]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[987]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[988]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[989]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[990]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[991]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[992]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[993]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[994]"
+		;
+connectAttr "All_Controls_R_finger_1_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[995]"
+		;
+connectAttr "All_Controls_R_thumb_03_ctrl_rotateZ.o" "MiaRN.phl[996]";
+connectAttr "All_Controls_R_thumb_03_ctrl_rotateY.o" "MiaRN.phl[997]";
+connectAttr "All_Controls_R_thumb_03_ctrl_rotateX.o" "MiaRN.phl[998]";
+connectAttr "All_Controls_R_thumb_02_ctrl_rotateZ.o" "MiaRN.phl[999]";
+connectAttr "All_Controls_R_thumb_02_ctrl_rotateY.o" "MiaRN.phl[1000]";
+connectAttr "All_Controls_R_thumb_02_ctrl_rotateX.o" "MiaRN.phl[1001]";
+connectAttr "All_Controls_R_thumb_01_ctrl_rotateZ.o" "MiaRN.phl[1002]";
+connectAttr "All_Controls_R_thumb_01_ctrl_rotateY.o" "MiaRN.phl[1003]";
+connectAttr "All_Controls_R_thumb_01_ctrl_rotateX.o" "MiaRN.phl[1004]";
+connectAttr "All_Controls_R_hand_ctrl_rotateZ.o" "MiaRN.phl[1005]";
+connectAttr "All_Controls_R_hand_ctrl_rotateY.o" "MiaRN.phl[1006]";
+connectAttr "All_Controls_R_hand_ctrl_rotateX.o" "MiaRN.phl[1007]";
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_rotateZ.o" "MiaRN.phl[1008]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_rotateY.o" "MiaRN.phl[1009]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_04_ctrl_rotateX.o" "MiaRN.phl[1010]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[1011]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[1012]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[1013]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[1014]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[1015]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[1016]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1017]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1018]"
+		;
+connectAttr "All_Controls_L_finger_4_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1019]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[1020]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[1021]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[1022]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[1023]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[1024]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[1025]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1026]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1027]"
+		;
+connectAttr "All_Controls_L_finger_3_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1028]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_rotateZ.o" "MiaRN.phl[1029]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_rotateY.o" "MiaRN.phl[1030]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_03ctrl_rotateX.o" "MiaRN.phl[1031]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_rotateZ.o" "MiaRN.phl[1032]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_rotateY.o" "MiaRN.phl[1033]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_02ctrl_rotateX.o" "MiaRN.phl[1034]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1035]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1036]"
+		;
+connectAttr "All_Controls_L_finger_2_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1037]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_rotateZ.o" "MiaRN.phl[1038]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_rotateY.o" "MiaRN.phl[1039]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_03_ctrl_rotateX.o" "MiaRN.phl[1040]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_rotateZ.o" "MiaRN.phl[1041]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_rotateY.o" "MiaRN.phl[1042]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_02_ctrl_rotateX.o" "MiaRN.phl[1043]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_rotateZ.o" "MiaRN.phl[1044]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_rotateY.o" "MiaRN.phl[1045]"
+		;
+connectAttr "All_Controls_L_finger_1_knuckle_01_ctrl_rotateX.o" "MiaRN.phl[1046]"
+		;
+connectAttr "All_Controls_L_thumb_03_ctrl_rotateZ.o" "MiaRN.phl[1047]";
+connectAttr "All_Controls_L_thumb_03_ctrl_rotateY.o" "MiaRN.phl[1048]";
+connectAttr "All_Controls_L_thumb_03_ctrl_rotateX.o" "MiaRN.phl[1049]";
+connectAttr "All_Controls_L_thumb_02_ctrl_rotateZ.o" "MiaRN.phl[1050]";
+connectAttr "All_Controls_L_thumb_02_ctrl_rotateY.o" "MiaRN.phl[1051]";
+connectAttr "All_Controls_L_thumb_02_ctrl_rotateX.o" "MiaRN.phl[1052]";
+connectAttr "All_Controls_L_thumb_01_ctrl_rotateZ.o" "MiaRN.phl[1053]";
+connectAttr "All_Controls_L_thumb_01_ctrl_rotateY.o" "MiaRN.phl[1054]";
+connectAttr "All_Controls_L_thumb_01_ctrl_rotateX.o" "MiaRN.phl[1055]";
+connectAttr "All_Controls_L_hand_ctrl_rotateZ.o" "MiaRN.phl[1056]";
+connectAttr "All_Controls_L_hand_ctrl_rotateY.o" "MiaRN.phl[1057]";
+connectAttr "All_Controls_L_hand_ctrl_rotateX.o" "MiaRN.phl[1058]";
+connectAttr "All_Controls_R_wrist_ctrl_rotateZ.o" "MiaRN.phl[1059]";
+connectAttr "All_Controls_R_wrist_ctrl_rotateY.o" "MiaRN.phl[1060]";
+connectAttr "All_Controls_R_wrist_ctrl_rotateX.o" "MiaRN.phl[1061]";
+connectAttr "All_Controls_R_elbow_ctrl_rotateZ.o" "MiaRN.phl[1062]";
+connectAttr "All_Controls_R_elbow_ctrl_rotateY.o" "MiaRN.phl[1063]";
+connectAttr "All_Controls_R_elbow_ctrl_rotateX.o" "MiaRN.phl[1064]";
+connectAttr "All_Controls_R_shoulder_ctrl_rotateZ.o" "MiaRN.phl[1065]";
+connectAttr "All_Controls_R_shoulder_ctrl_rotateY.o" "MiaRN.phl[1066]";
+connectAttr "All_Controls_R_shoulder_ctrl_rotateX.o" "MiaRN.phl[1067]";
+connectAttr "All_Controls_R_clavicle_ctrl_rotateZ.o" "MiaRN.phl[1068]";
+connectAttr "All_Controls_R_clavicle_ctrl_rotateY.o" "MiaRN.phl[1069]";
+connectAttr "All_Controls_R_clavicle_ctrl_rotateX.o" "MiaRN.phl[1070]";
+connectAttr "All_Controls_L_wrist_ctrl_rotateZ.o" "MiaRN.phl[1071]";
+connectAttr "All_Controls_L_wrist_ctrl_rotateY.o" "MiaRN.phl[1072]";
+connectAttr "All_Controls_L_wrist_ctrl_rotateX.o" "MiaRN.phl[1073]";
+connectAttr "All_Controls_L_elbow_ctrl_rotateZ.o" "MiaRN.phl[1074]";
+connectAttr "All_Controls_L_elbow_ctrl_rotateY.o" "MiaRN.phl[1075]";
+connectAttr "All_Controls_L_elbow_ctrl_rotateX.o" "MiaRN.phl[1076]";
+connectAttr "All_Controls_L_shoulder_ctrl_rotateZ.o" "MiaRN.phl[1077]";
+connectAttr "All_Controls_L_shoulder_ctrl_rotateY.o" "MiaRN.phl[1078]";
+connectAttr "All_Controls_L_shoulder_ctrl_rotateX.o" "MiaRN.phl[1079]";
+connectAttr "All_Controls_L_clavicle_ctrl_rotateZ.o" "MiaRN.phl[1080]";
+connectAttr "All_Controls_L_clavicle_ctrl_rotateY.o" "MiaRN.phl[1081]";
+connectAttr "All_Controls_L_clavicle_ctrl_rotateX.o" "MiaRN.phl[1082]";
+connectAttr "All_Controls_base_hair__4_ctrl_rotateZ.o" "MiaRN.phl[1083]";
+connectAttr "All_Controls_base_hair__4_ctrl_rotateY.o" "MiaRN.phl[1084]";
+connectAttr "All_Controls_base_hair__4_ctrl_rotateX.o" "MiaRN.phl[1085]";
+connectAttr "All_Controls_base_hair__3_ctrl_rotateZ.o" "MiaRN.phl[1086]";
+connectAttr "All_Controls_base_hair__3_ctrl_rotateY.o" "MiaRN.phl[1087]";
+connectAttr "All_Controls_base_hair__3_ctrl_rotateX.o" "MiaRN.phl[1088]";
+connectAttr "All_Controls_base_hair__2_ctrl_rotateZ.o" "MiaRN.phl[1089]";
+connectAttr "All_Controls_base_hair__2_ctrl_rotateY.o" "MiaRN.phl[1090]";
+connectAttr "All_Controls_base_hair__2_ctrl_rotateX.o" "MiaRN.phl[1091]";
+connectAttr "All_Controls_base_hair__1_ctrl_rotateZ.o" "MiaRN.phl[1092]";
+connectAttr "All_Controls_base_hair__1_ctrl_rotateY.o" "MiaRN.phl[1093]";
+connectAttr "All_Controls_base_hair__1_ctrl_rotateX.o" "MiaRN.phl[1094]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_rotateZ.o" "MiaRN.phl[1095]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_rotateY.o" "MiaRN.phl[1096]";
+connectAttr "All_Controls_C_front_hair_wisp4_ctrl_rotateX.o" "MiaRN.phl[1097]";
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1098]";
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_rotateY.o" "MiaRN.phl[1099]";
+connectAttr "All_Controls_C_front_hair_wisp3_ctrl_rotateX.o" "MiaRN.phl[1100]";
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1101]";
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_rotateY.o" "MiaRN.phl[1102]";
+connectAttr "All_Controls_C_front_hair_wisp2_ctrl_rotateX.o" "MiaRN.phl[1103]";
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1104]";
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_rotateY.o" "MiaRN.phl[1105]";
+connectAttr "All_Controls_C_front_hair_wisp1_ctrl_rotateX.o" "MiaRN.phl[1106]";
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1107]";
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_rotateY.o" "MiaRN.phl[1108]";
+connectAttr "All_Controls_R_front_hair_wisp3_ctrl_rotateX.o" "MiaRN.phl[1109]";
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1110]";
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_rotateY.o" "MiaRN.phl[1111]";
+connectAttr "All_Controls_R_front_hair_wisp2_ctrl_rotateX.o" "MiaRN.phl[1112]";
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1113]";
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_rotateY.o" "MiaRN.phl[1114]";
+connectAttr "All_Controls_R_front_hair_wisp1_ctrl_rotateX.o" "MiaRN.phl[1115]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_rotateZ.o" "MiaRN.phl[1116]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_rotateY.o" "MiaRN.phl[1117]";
+connectAttr "All_Controls_L_sideburn_curl5_ctrl_rotateX.o" "MiaRN.phl[1118]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_rotateZ.o" "MiaRN.phl[1119]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_rotateY.o" "MiaRN.phl[1120]";
+connectAttr "All_Controls_L_sideburn_curl4_ctrl_rotateX.o" "MiaRN.phl[1121]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_rotateZ.o" "MiaRN.phl[1122]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_rotateY.o" "MiaRN.phl[1123]";
+connectAttr "All_Controls_L_sideburn_curl3_ctrl_rotateX.o" "MiaRN.phl[1124]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_rotateZ.o" "MiaRN.phl[1125]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_rotateY.o" "MiaRN.phl[1126]";
+connectAttr "All_Controls_L_sideburn_curl2_ctrl_rotateX.o" "MiaRN.phl[1127]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_rotateZ.o" "MiaRN.phl[1128]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_rotateY.o" "MiaRN.phl[1129]";
+connectAttr "All_Controls_L_sideburn_curl1_ctrl_rotateX.o" "MiaRN.phl[1130]";
+connectAttr "All_Controls_C_back_curl4_ctrl_rotateZ.o" "MiaRN.phl[1131]";
+connectAttr "All_Controls_C_back_curl4_ctrl_rotateY.o" "MiaRN.phl[1132]";
+connectAttr "All_Controls_C_back_curl4_ctrl_rotateX.o" "MiaRN.phl[1133]";
+connectAttr "All_Controls_C_back_curl3_ctrl_rotateZ.o" "MiaRN.phl[1134]";
+connectAttr "All_Controls_C_back_curl3_ctrl_rotateY.o" "MiaRN.phl[1135]";
+connectAttr "All_Controls_C_back_curl3_ctrl_rotateX.o" "MiaRN.phl[1136]";
+connectAttr "All_Controls_C_back_curl2_ctrl_rotateZ.o" "MiaRN.phl[1137]";
+connectAttr "All_Controls_C_back_curl2_ctrl_rotateY.o" "MiaRN.phl[1138]";
+connectAttr "All_Controls_C_back_curl2_ctrl_rotateX.o" "MiaRN.phl[1139]";
+connectAttr "All_Controls_C_back_curl1_ctrl_rotateZ.o" "MiaRN.phl[1140]";
+connectAttr "All_Controls_C_back_curl1_ctrl_rotateY.o" "MiaRN.phl[1141]";
+connectAttr "All_Controls_C_back_curl1_ctrl_rotateX.o" "MiaRN.phl[1142]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_rotateZ.o" "MiaRN.phl[1143]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_rotateY.o" "MiaRN.phl[1144]";
+connectAttr "All_Controls_R_sideburn_curl5_ctrl_rotateX.o" "MiaRN.phl[1145]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_rotateZ.o" "MiaRN.phl[1146]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_rotateY.o" "MiaRN.phl[1147]";
+connectAttr "All_Controls_R_sideburn_curl4_ctrl_rotateX.o" "MiaRN.phl[1148]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_rotateZ.o" "MiaRN.phl[1149]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_rotateY.o" "MiaRN.phl[1150]";
+connectAttr "All_Controls_R_sideburn_curl3_ctrl_rotateX.o" "MiaRN.phl[1151]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_rotateZ.o" "MiaRN.phl[1152]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_rotateY.o" "MiaRN.phl[1153]";
+connectAttr "All_Controls_R_sideburn_curl2_ctrl_rotateX.o" "MiaRN.phl[1154]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_rotateZ.o" "MiaRN.phl[1155]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_rotateY.o" "MiaRN.phl[1156]";
+connectAttr "All_Controls_R_sideburn_curl1_ctrl_rotateX.o" "MiaRN.phl[1157]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1158]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_rotateY.o" "MiaRN.phl[1159]";
+connectAttr "All_Controls_R_top_wisp3_ctrl_rotateX.o" "MiaRN.phl[1160]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1161]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_rotateY.o" "MiaRN.phl[1162]";
+connectAttr "All_Controls_R_top_wisp2_ctrl_rotateX.o" "MiaRN.phl[1163]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1164]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_rotateY.o" "MiaRN.phl[1165]";
+connectAttr "All_Controls_R_top_wisp1_ctrl_rotateX.o" "MiaRN.phl[1166]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1167]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_rotateY.o" "MiaRN.phl[1168]";
+connectAttr "All_Controls_L_top_wisp2_ctrl_rotateX.o" "MiaRN.phl[1169]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1170]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_rotateY.o" "MiaRN.phl[1171]";
+connectAttr "All_Controls_L_top_wisp1_ctrl_rotateX.o" "MiaRN.phl[1172]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_rotateZ.o" "MiaRN.phl[1173]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_rotateY.o" "MiaRN.phl[1174]";
+connectAttr "All_Controls_C_top_wisp3_ctrl_rotateX.o" "MiaRN.phl[1175]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_rotateZ.o" "MiaRN.phl[1176]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_rotateY.o" "MiaRN.phl[1177]";
+connectAttr "All_Controls_C_top_wisp2_ctrl_rotateX.o" "MiaRN.phl[1178]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_rotateZ.o" "MiaRN.phl[1179]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_rotateY.o" "MiaRN.phl[1180]";
+connectAttr "All_Controls_C_top_wisp1_ctrl_rotateX.o" "MiaRN.phl[1181]";
+connectAttr "All_Controls_tongue3_ctrl_rotateZ.o" "MiaRN.phl[1182]";
+connectAttr "All_Controls_tongue3_ctrl_rotateY.o" "MiaRN.phl[1183]";
+connectAttr "All_Controls_tongue3_ctrl_rotateX.o" "MiaRN.phl[1184]";
+connectAttr "All_Controls_tongue2_ctrl_rotateZ.o" "MiaRN.phl[1185]";
+connectAttr "All_Controls_tongue2_ctrl_rotateY.o" "MiaRN.phl[1186]";
+connectAttr "All_Controls_tongue2_ctrl_rotateX.o" "MiaRN.phl[1187]";
+connectAttr "All_Controls_tongue1_ctrl_rotateZ.o" "MiaRN.phl[1188]";
+connectAttr "All_Controls_tongue1_ctrl_rotateY.o" "MiaRN.phl[1189]";
+connectAttr "All_Controls_tongue1_ctrl_rotateX.o" "MiaRN.phl[1190]";
+connectAttr "All_Controls_lower_jaw_ctrl_rotateZ.o" "MiaRN.phl[1191]";
+connectAttr "All_Controls_lower_jaw_ctrl_rotateY.o" "MiaRN.phl[1192]";
+connectAttr "All_Controls_lower_jaw_ctrl_rotateX.o" "MiaRN.phl[1193]";
+connectAttr "All_Controls_head_jnt_01_ctrl_rotateZ.o" "MiaRN.phl[1194]";
+connectAttr "All_Controls_head_jnt_01_ctrl_rotateY.o" "MiaRN.phl[1195]";
+connectAttr "All_Controls_head_jnt_01_ctrl_rotateX.o" "MiaRN.phl[1196]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_rotateZ.o" "MiaRN.phl[1197]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_rotateY.o" "MiaRN.phl[1198]";
+connectAttr "All_Controls_neck_jnt_02_ctrl_rotateX.o" "MiaRN.phl[1199]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_rotateZ.o" "MiaRN.phl[1200]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_rotateY.o" "MiaRN.phl[1201]";
+connectAttr "All_Controls_neck_jnt_01_ctrl_rotateX.o" "MiaRN.phl[1202]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_rotateZ.o" "MiaRN.phl[1203]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_rotateY.o" "MiaRN.phl[1204]";
+connectAttr "All_Controls_spine_jnt_04_ctrl_rotateX.o" "MiaRN.phl[1205]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_rotateZ.o" "MiaRN.phl[1206]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_rotateY.o" "MiaRN.phl[1207]";
+connectAttr "All_Controls_spine_jnt_03_ctrl_rotateX.o" "MiaRN.phl[1208]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_rotateZ.o" "MiaRN.phl[1209]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_rotateY.o" "MiaRN.phl[1210]";
+connectAttr "All_Controls_spine_jnt_02_ctrl_rotateX.o" "MiaRN.phl[1211]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_rotateZ.o" "MiaRN.phl[1212]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_rotateY.o" "MiaRN.phl[1213]";
+connectAttr "All_Controls_spine_jnt_01_ctrl_rotateX.o" "MiaRN.phl[1214]";
+connectAttr "All_Controls_R_ankle_ctrl_rotateZ.o" "MiaRN.phl[1215]";
+connectAttr "All_Controls_R_ankle_ctrl_rotateY.o" "MiaRN.phl[1216]";
+connectAttr "All_Controls_R_ankle_ctrl_rotateX.o" "MiaRN.phl[1217]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_rotateZ.o" "MiaRN.phl[1218]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_rotateY.o" "MiaRN.phl[1219]";
+connectAttr "All_Controls_R_knee_jnt_ctrl_rotateX.o" "MiaRN.phl[1220]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_rotateZ.o" "MiaRN.phl[1221]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_rotateY.o" "MiaRN.phl[1222]";
+connectAttr "All_Controls_R_hip_jnt_ctrl_rotateX.o" "MiaRN.phl[1223]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_rotateZ.o" "MiaRN.phl[1224]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_rotateY.o" "MiaRN.phl[1225]";
+connectAttr "All_Controls_R_leg_clavicle_jnt_ctrl_rotateX.o" "MiaRN.phl[1226]";
+connectAttr "All_Controls_L_ankle_ctrl_rotateZ.o" "MiaRN.phl[1227]";
+connectAttr "All_Controls_L_ankle_ctrl_rotateY.o" "MiaRN.phl[1228]";
+connectAttr "All_Controls_L_ankle_ctrl_rotateX.o" "MiaRN.phl[1229]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_rotateZ.o" "MiaRN.phl[1230]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_rotateY.o" "MiaRN.phl[1231]";
+connectAttr "All_Controls_L_knee_jnt_ctrl_rotateX.o" "MiaRN.phl[1232]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_rotateZ.o" "MiaRN.phl[1233]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_rotateY.o" "MiaRN.phl[1234]";
+connectAttr "All_Controls_L_hip_jnt_ctrl_rotateX.o" "MiaRN.phl[1235]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_rotateZ.o" "MiaRN.phl[1236]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_rotateY.o" "MiaRN.phl[1237]";
+connectAttr "All_Controls_L_leg_clavicle_jnt_ctrl_rotateX.o" "MiaRN.phl[1238]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_rotateZ.o" "MiaRN.phl[1239]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_rotateY.o" "MiaRN.phl[1240]";
+connectAttr "All_Controls_pelvis_jnt_ctrl_rotateX.o" "MiaRN.phl[1241]";
+connectAttr "All_Controls_cog_ctrl_rotateZ.o" "MiaRN.phl[1242]";
+connectAttr "All_Controls_cog_ctrl_rotateY.o" "MiaRN.phl[1243]";
+connectAttr "All_Controls_cog_ctrl_rotateX.o" "MiaRN.phl[1244]";
+connectAttr "All_Controls_transform_ctrl_rotateZ.o" "MiaRN.phl[1245]";
+connectAttr "All_Controls_transform_ctrl_rotateY.o" "MiaRN.phl[1246]";
+connectAttr "All_Controls_transform_ctrl_rotateX.o" "MiaRN.phl[1247]";
+connectAttr "All_Controls_look_at__ctrl_rotateZ1.o" "MiaRN.phl[1248]";
+connectAttr "All_Controls_look_at__ctrl_rotateY1.o" "MiaRN.phl[1249]";
+connectAttr "All_Controls_look_at__ctrl_rotateX1.o" "MiaRN.phl[1250]";
+connectAttr "MASTER_ctrl_grp_parentConstraint1.ctx" "books_and_boxes_propsRN.phl[1]"
+		;
+connectAttr "MASTER_ctrl_grp_parentConstraint1.cty" "books_and_boxes_propsRN.phl[2]"
+		;
+connectAttr "MASTER_ctrl_grp_parentConstraint1.ctz" "books_and_boxes_propsRN.phl[3]"
+		;
+connectAttr "MASTER_ctrl_grp_parentConstraint1.crx" "books_and_boxes_propsRN.phl[4]"
+		;
+connectAttr "MASTER_ctrl_grp_parentConstraint1.cry" "books_and_boxes_propsRN.phl[5]"
+		;
+connectAttr "MASTER_ctrl_grp_parentConstraint1.crz" "books_and_boxes_propsRN.phl[6]"
+		;
+connectAttr "books_and_boxes_propsRN.phl[7]" "MASTER_ctrl_grp_parentConstraint1.cro"
+		;
+connectAttr "books_and_boxes_propsRN.phl[8]" "MASTER_ctrl_grp_parentConstraint1.cpim"
+		;
+connectAttr "books_and_boxes_propsRN.phl[9]" "MASTER_ctrl_grp_parentConstraint1.crp"
+		;
+connectAttr "books_and_boxes_propsRN.phl[10]" "MASTER_ctrl_grp_parentConstraint1.crt"
+		;
+connectAttr "books_and_boxes_propsRN.phl[11]" "books_and_boxes_propsRN.phl[12]";
+connectAttr "books_and_boxes_propsRN.phl[13]" "books_and_boxes_propsRN.phl[14]";
+connectAttr "books_and_boxes_propsRN.phl[15]" "books_and_boxes_propsRN.phl[16]";
+connectAttr "books_and_boxes_propsRN.phl[17]" "books_and_boxes_propsRN.phl[18]";
+connectAttr "books_and_boxes_propsRN.phl[19]" "books_and_boxes_propsRN.phl[20]";
+connectAttr "books_and_boxes_propsRN.phl[21]" "books_and_boxes_propsRN.phl[22]";
+connectAttr "books_and_boxes_propsRN.phl[23]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "books_and_boxes_propsRN.phl[24]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "books_and_boxes_propsRN.phl[25]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "books_and_boxes_propsRN.phl[26]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "books_and_boxes_propsRN.phl[27]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "books_and_boxes_propsRN.phl[28]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "books_and_boxes_propsRN.phl[29]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "books_and_boxes_propsRN.phl[30]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "books_and_boxes_propsRN.phl[31]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "books_and_boxes_propsRN.phl[32]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "books_and_boxes_propsRN.phl[33]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "books_and_boxes_propsRN.phl[34]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "books_and_boxes_propsRN.phl[35]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "books_and_boxes_propsRN.phl[36]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "detachable_book_ctrl_FollowAutoFK.o" "books_and_boxes_propsRN.phl[37]"
+		;
+connectAttr "books_and_boxes_propsRN.phl[38]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "AllControls_R_hand_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[39]"
+		;
+connectAttr "AllControls_R_hand_ctrl_translateY.o" "books_and_boxes_propsRN.phl[40]"
+		;
+connectAttr "AllControls_R_hand_ctrl_translateX.o" "books_and_boxes_propsRN.phl[41]"
+		;
+connectAttr "AllControls_MASTER_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[42]"
+		;
+connectAttr "AllControls_MASTER_ctrl_translateY.o" "books_and_boxes_propsRN.phl[43]"
+		;
+connectAttr "AllControls_MASTER_ctrl_translateX.o" "books_and_boxes_propsRN.phl[44]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[45]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_translateY.o" "books_and_boxes_propsRN.phl[46]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_translateX.o" "books_and_boxes_propsRN.phl[47]"
+		;
+connectAttr "AllControls_box_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[48]"
+		;
+connectAttr "AllControls_box_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[49]"
+		;
+connectAttr "AllControls_box_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[50]"
+		;
+connectAttr "AllControls_Auto_FK_bounce_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[51]"
+		;
+connectAttr "AllControls_Auto_FK_bounce_ctrl_translateY.o" "books_and_boxes_propsRN.phl[52]"
+		;
+connectAttr "AllControls_Auto_FK_bounce_ctrl_translateX.o" "books_and_boxes_propsRN.phl[53]"
+		;
+connectAttr "AllControls_book_1_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[54]"
+		;
+connectAttr "AllControls_book_1_ctrl_translateY.o" "books_and_boxes_propsRN.phl[55]"
+		;
+connectAttr "AllControls_book_1_ctrl_translateX.o" "books_and_boxes_propsRN.phl[56]"
+		;
+connectAttr "AllControls_book_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[57]"
+		;
+connectAttr "AllControls_book_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[58]"
+		;
+connectAttr "AllControls_book_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[59]"
+		;
+connectAttr "AllControls_book_3_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[60]"
+		;
+connectAttr "AllControls_book_3_ctrl_translateY.o" "books_and_boxes_propsRN.phl[61]"
+		;
+connectAttr "AllControls_book_3_ctrl_translateX.o" "books_and_boxes_propsRN.phl[62]"
+		;
+connectAttr "AllControls_R_hand_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[63]"
+		;
+connectAttr "AllControls_R_hand_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[64]"
+		;
+connectAttr "AllControls_R_hand_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[65]"
+		;
+connectAttr "AllControls_MASTER_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[66]"
+		;
+connectAttr "AllControls_MASTER_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[67]"
+		;
+connectAttr "AllControls_MASTER_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[68]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[69]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[70]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[71]"
+		;
+connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[72]"
+		;
+connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[73]"
+		;
+connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[74]"
+		;
+connectAttr "AllControls_MASTER_ctrl_scaleZ.o" "books_and_boxes_propsRN.phl[75]"
+		;
+connectAttr "AllControls_MASTER_ctrl_scaleY.o" "books_and_boxes_propsRN.phl[76]"
+		;
+connectAttr "AllControls_MASTER_ctrl_scaleX.o" "books_and_boxes_propsRN.phl[77]"
+		;
+connectAttr "AllControls_MASTER_ctrl_visibility.o" "books_and_boxes_propsRN.phl[78]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_FollowRotate.o" "books_and_boxes_propsRN.phl[79]"
+		;
+connectAttr "AllControls_detachable_book_ctrl_FollowTranslate.o" "books_and_boxes_propsRN.phl[80]"
 		;
 connectAttr "layer1.di" "backdrop:backdrop.do";
 connectAttr "group1_translateX.o" "group1.tx";
@@ -19270,47 +18008,17 @@ connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "backdrop:backdropShape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "lambert2.msg" "materialInfo2.m";
-connectAttr "AllControls_box_2_ctrl_translateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[56].dn"
+connectAttr "nurbsCircle1_translateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "AllControls_box_2_ctrl_translateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[57].dn"
+connectAttr "nurbsCircle1_translateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "AllControls_book_2_ctrl_translateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[80].dn"
+connectAttr "nurbsCircle1_translateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "AllControls_book_2_ctrl_translateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[81].dn"
+connectAttr "nurbsCircle1_rotateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "AllControls_box_2_ctrl_translateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[82].dn"
+connectAttr "nurbsCircle1_rotateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "AllControls_book_1_ctrl_translateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[83].dn"
-		;
-connectAttr "AllControls_book_1_ctrl_translateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[84].dn"
-		;
-connectAttr "AllControls_book_1_ctrl_translateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[85].dn"
-		;
-connectAttr "AllControls_book_2_ctrl_translateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[156].dn"
-		;
-connectAttr "AllControls_book_3_ctrl_translateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[163].dn"
-		;
-connectAttr "AllControls_book_3_ctrl_translateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[164].dn"
-		;
-connectAttr "AllControls_book_3_ctrl_translateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[165].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_translateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[166].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_translateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[167].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_translateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[168].dn"
-		;
-connectAttr "detachable_book_ctrl_FollowAutoFK.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[169].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_FollowTranslate.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[170].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_FollowRotate.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[171].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_rotateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[172].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_rotateY.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[173].dn"
-		;
-connectAttr "AllControls_detachable_book_ctrl_rotateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[174].dn"
+connectAttr "nurbsCircle1_rotateZ.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
 connectAttr "backdrop:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface1SG.pa" ":renderPartition.st" -na;
