@@ -1,10 +1,8 @@
 
 string $selectedSkin[] = `ls -sl`;
 string $obj = $selectedSkin[0];
-string $skin = `findRelatedSkinCluster($obj)`;
 
-
-$bindJnts = `skinCluster -q -wi $skin`;
+$bindJnts = `skinCluster -q -inf $obj`;
 select -r $bindJnts;
 
 print($bindJnts);
