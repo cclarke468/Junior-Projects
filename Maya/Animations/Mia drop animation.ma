@@ -1,6 +1,6 @@
 //Maya ASCII 2022 scene
 //Name: Mia drop animation.ma
-//Last modified: Sun, Apr 30, 2023 08:35:12 PM
+//Last modified: Mon, May 01, 2023 12:58:52 AM
 //Codeset: 1252
 file -rdi 1 -ns "Mia" -rfn "MiaRN" -op "v=0;" -typ "mayaAscii" "C:/Users/caris/Desktop/Junior-Projects/Maya//Mia.ma";
 file -rdi 1 -ns "books_and_boxes_props1" -rfn "books_and_boxes_propsRN" -op
@@ -19,12 +19,12 @@ fileInfo "product" "Maya 2022";
 fileInfo "version" "2022";
 fileInfo "cutIdentifier" "202108111415-612a77abf4";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19044)";
-fileInfo "UUID" "0128EA02-4611-376D-E2FB-A2BD4258C51B";
+fileInfo "UUID" "F82F7634-4BDC-15BC-C58D-A88EB9B0FC8C";
 createNode transform -s -n "persp";
 	rename -uid "DCC7418E-42E3-3A73-084D-AE970A71C4EA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -74.226781885230963 170.32945466174792 341.25247377745927 ;
-	setAttr ".r" -type "double3" 353.24580217513198 8625.3999999997286 0 ;
+	setAttr ".t" -type "double3" -0.63100676163531411 67.582987594679182 399.12038894240578 ;
+	setAttr ".r" -type "double3" 369.44580217275978 8631.7999999994317 -2.0083798881433591e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E3D30C43-447C-E06A-CEDB-029471D046EC";
 	setAttr -k off ".v" no;
@@ -32,11 +32,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 10;
 	setAttr ".fcp" 100000000;
-	setAttr ".coi" 424.57873598163712;
+	setAttr ".coi" 381.94648599231755;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -16.88369015875903 110.33417631114391 -103.12033017274119 ;
+	setAttr ".tp" -type "double3" -67.562463499264723 44.764093567439815 61.830758520772264 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -245,6 +245,59 @@ createNode mesh -n "book_5_swapShape" -p "book_5_swap";
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.25 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode parentConstraint -n "book_5_swap_parentConstraint1" -p "book_5_swap";
+	rename -uid "37C0FB80-4C0F-AB81-3080-259CB8FC3D9C";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "detachable_book_swap_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -9.175939297279001e-08 -6.9388939039072091e-18 
+		-2.8610229536596421e-06 ;
+	setAttr ".tg[0].tor" -type "double3" 180 4.8503458892318635e-14 90 ;
+	setAttr ".lr" -type "double3" 179.99999999999989 -95.581661183089807 90 ;
+	setAttr ".rst" -type "double3" -23.367175767467906 -4.4113260108063841 24.308455756882122 ;
+	setAttr ".rsrr" -type "double3" 179.99999999999989 -95.581661183089807 90 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "book_5_swap_scaleConstraint1" -p "book_5_swap";
+	rename -uid "ACB2BF57-4A7A-2877-2DFF-E1A401E934F4";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "detachable_book_swap_ctrlW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode mesh -n "book_5_swapShapeOrig" -p "book_5_swap";
+	rename -uid "5F47B362-4D4C-D3E6-2C9C-66914CC33F7F";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 19 ".uvst[0].uvsp[0:18]" -type "float2" 0.625 0 0.875 0 0.875
 		 0.25 0.37499994 0.024997503 0.3776713 0 0.625 0.25 0.625 0.75 0.375 0.72500247 0.37767136
 		 0.5 0.625 0.5 0.3776713 0.99999994 0.625 0.99999994 0.125 0.024997503 0.37499994
@@ -288,49 +341,8 @@ createNode mesh -n "book_5_swapShape" -p "book_5_swap";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
-createNode parentConstraint -n "book_5_swap_parentConstraint1" -p "book_5_swap";
-	rename -uid "37C0FB80-4C0F-AB81-3080-259CB8FC3D9C";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "detachable_book_swap_ctrlW0" -dv 
-		1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -9.175939297279001e-08 -6.9388939039072091e-18 
-		-2.8610229536596421e-06 ;
-	setAttr ".tg[0].tor" -type "double3" 180 4.8503458892318635e-14 90 ;
-	setAttr ".lr" -type "double3" -6.4979452481149638 -84.418338816910079 -90 ;
-	setAttr ".rst" -type "double3" -23.367175767467906 -4.4113260108063841 24.308455756882122 ;
-	setAttr ".rsrr" -type "double3" 179.99999999999989 -95.581661183089807 90 ;
-	setAttr -k on ".w0";
-createNode scaleConstraint -n "book_5_swap_scaleConstraint1" -p "book_5_swap";
-	rename -uid "ACB2BF57-4A7A-2877-2DFF-E1A401E934F4";
-	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "detachable_book_swap_ctrlW0" -dv 
-		1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr -k on ".w0";
 createNode fosterParent -n "MiaRNfosterParent1";
-	rename -uid "BC51BDC7-4719-4747-F5B1-29AFEF8FE090";
+	rename -uid "A13FDF28-44E0-4BE6-19D6-0397129B8D91";
 createNode parentConstraint -n "R_Arm_IK_ctrl_grp_parentConstraint1" -p "MiaRNfosterParent1";
 	rename -uid "5C099DBC-493C-CBA9-D8B9-24945F811B38";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "R_hand_ctrlW0" -dv 1 -min 0 -at "double";
@@ -348,7 +360,7 @@ createNode parentConstraint -n "R_Arm_IK_ctrl_grp_parentConstraint1" -p "MiaRNfo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.9446851841571018 -1.661145052566205 2.5808023308687007 ;
 	setAttr ".tg[0].tor" -type "double3" 6.9514579008296229 89.999999999999844 0 ;
-	setAttr ".lr" -type "double3" 7.5625746856589791 -146.87124383826713 0.14320422426296017 ;
+	setAttr ".lr" -type "double3" 6.9514579008296069 -146.22644030816113 0 ;
 	setAttr ".rst" -type "double3" -35.764400482177734 91.524902343749986 -1.3477300405495924 ;
 	setAttr ".rsrr" -type "double3" -7.951386703658788e-16 6.6344382808653032e-15 3.9756933518293944e-15 ;
 	setAttr -k on ".w0";
@@ -369,12 +381,12 @@ createNode parentConstraint -n "L_Arm_IK_ctrl_grp_parentConstraint1" -p "MiaRNfo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.9446866553593303 -1.661155937454712 -2.5808123985558709 ;
 	setAttr ".tg[0].tor" -type "double3" 6.9514579008296229 89.999999999999844 0 ;
-	setAttr ".lr" -type "double3" 7.5625746856589791 -146.87124383826713 0.14320422426296017 ;
+	setAttr ".lr" -type "double3" 6.9514579008296069 -146.22644030816113 0 ;
 	setAttr ".rst" -type "double3" 35.764442443847656 91.524856567382812 -1.347730636596026 ;
 	setAttr ".rsrr" -type "double3" -7.951386703658788e-16 6.6344382808653032e-15 3.9756933518293944e-15 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "books_and_boxes_propsRNfosterParent1";
-	rename -uid "4ED141EB-461D-1DB8-D9D0-6DAE0E576CE2";
+	rename -uid "1D4BD123-4054-C4C4-6C2B-ACBC3A6A0E81";
 createNode parentConstraint -n "MASTER_ctrl_grp_parentConstraint1" -p "books_and_boxes_propsRNfosterParent1";
 	rename -uid "F82DF0EE-403C-DB4B-DA30-FDA4E08B9DE7";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "cog_ctrlW0" -dv 1 -min 0 -at "double";
@@ -393,7 +405,7 @@ createNode parentConstraint -n "MASTER_ctrl_grp_parentConstraint1" -p "books_and
 	setAttr ".tg[0].tot" -type "double3" 5.4010584514588765e-14 -88.385291557450344 
 		124.80754734606374 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000000000000185 0 90 ;
-	setAttr ".lr" -type "double3" -138.36944762023649 187.09562145465134 -75.796493298848446 ;
+	setAttr ".lr" -type "double3" -141.77792911636078 160.75567532005678 -106.41869651765138 ;
 	setAttr ".rst" -type "double3" -1.2434497875801753e-14 0 -4.5562759504670679e-30 ;
 	setAttr ".rsrr" -type "double3" -179.99999999999986 0 90 ;
 	setAttr -k on ".w0";
@@ -2438,20 +2450,19 @@ createNode reference -n "MiaRN";
 		2 "Mia:All_Controls" "uv[1:500]" (" 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 -0.99999999999999956 0.99999999999999956 0.99999999999999944 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.00000000000000044 0.99999999999999933 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.99999999999999944 0.99999999999999956 0.99999999999999989 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 "
 		+ "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
 		)
-		2 "Mia:All_Controls" "uv[505:749]" " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.99999999999999911 1.00000000000000089 1 1 1 1 1 1 1 1 1 0 0 1 1 4 1 0.99999999999999967 1.00000000000000044 1 3 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 3 1 1 1 1 0 0 0 0 0 0 0 0 3 3"
+		2 "Mia:All_Controls" "uv[505:749]" " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.99999999999999911 1.00000000000000089 1 1 1 1 1 1 1 1 1 0 0 1 1 4 1 0.99999999999999967 1.00000000000000044 1 3 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 3 1 1 1 1 0 0.00011474790785770406 0 0 0 0.0010248901760754325 0 0 3 3"
 		
 		2 "Mia:All_Controls" "unitlessValues" " -s 697"
 		2 "Mia:All_Controls" "linearValues" " -s 546"
-		2 "Mia:All_Controls" "lv[1:500]" (" 0 0 0 0 0 0 68.47196646517448926 -0.39452639937776901 -18.02205512148493938 0 0 0 0 0 0 106.97915185302912278 0.014083523995331859 -93.35845554043673644 0 0 0 0 0 0 5.35263848273129561 28.17944144320110311 12.3257195915911506 0 0 0 0 0 0 17.7298500170479052 6.2762468849541273 -12.35224937557472735 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.28186271412574371 0.022033001536701846 0.2004330874849245 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.39181233644554547 -0.16433008316091963 -0.73728291808012481 0.38255676825193929 0.019313022076330916 -0.75985834914031658 -1.47016081388355668 -0.91684978372552783 0.47875248552802019 0 0 0 0 0 0 0 0 0 0.95353428249144789 0.22051867856634677 -0.27889216599521277 0 0 0 -0.00051219030107292141 -0.0094488622268165661 -0.0019433363938240529 0 0 0 -54.83174498661627894 -153.0258283151143246 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
-		+ " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 103.32743019941167972 -58.2954408313301613 -49.25120992318992563 0 0 -121.62102414698233588 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "Mia:All_Controls" "lv[1:500]" (" 0 0 0 0 0 0 144.28937946166917072 0.22666933487667507 -0.30306338949595812 0 0 0 0 0 0 119.25598103765366886 -0.13224975437822709 -34.51639871746169774 0 0 0 0 0 0 -90.71462569735257375 76.57909965912793382 13.56974270690988327 0 0 0 0 0 0 -52.2444846940967409 83.09057594441024719 -58.23443737020771493 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.28186271412574371 0.022033001536701846 0.2004330874849245 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.39181233644554547 -0.16433008316091963 -0.73728291808012481 0.38255676825193929 0.019313022076330916 -0.75985834914031658 -1.47016081388355668 -0.91684978372552783 0.47875248552802019 0 0 0 0 0 0 0 0 0 0.95353428249144789 0.22051867856634677 -0.27889216599521277 0 0 0 -0.00051219030107292141 -0.0094488622268165661 -0.0019433363938240529 0 0 0 -54.83174498661627894 -153.0258283151143246 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+		+ "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 125.20018254948507774 -5.94399371102409457 -11.08526110268453735 0 0 -121.62102414698233588 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		)
-		2 "Mia:All_Controls" "lv[505:546]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.84345998332328664 0 31.21537812502162978 -2.75267856002545575 2.73159783683199064 -0.33187954360941685 11.72971942737861362 -3.64572826794268456 12.5145454130469016 -0.8724757615048695 0 0 0 0 0 0 0 2.69676756567151754 -27.16978166482623536 52.45758126691080747 -8.86062037505419475 22.01125294914124453 -39.50769027876694395"
+		2 "Mia:All_Controls" "lv[505:546]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.84345998332328664 0 31.21537812502170084 -37.58590298662073081 2.7315978368320124 -33.37515461272252537 -4.24845387077845515 -9.091750427969151 12.5145454130469016 -5.9781000155605053 0 0.0010248901760754325 0 0 0.00011474790785770406 0 0 6.43612956654841106 -5.47214409887396336 16.19746492797932547 -8.63856971047270861 7.62071768315237641 -23.41992264314522387"
 		
 		2 "Mia:All_Controls" "linearValues" " -s 498"
 		2 "Mia:All_Controls" "angularValues" " -s 546"
-		2 "Mia:All_Controls" "av[1:500]" (" 0 0 0 0 0 0 180 -37.48272034266927477 -180 0 0 0 0 0 0 0 615.89844425194348787 0 0 0 0 0 0 0 23.74810450297512077 -7.00634908430463099 -31.29768609990300732 0 0 0 0 0 0 -27.75730040450366332 -7.92838553470459306 -30.62273892320322943 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -17.20018107012764119 0 0 6.12504317756762262 0 0 25.79211759079106514 0 0 0 0 0 0 0 0 8.20405207434931327 0 0 26.67117386189804051 0 0 -12.33912875050646285 0 0 1.88459348826623052 0 -2.64965732613604565 28.40634293054432291 -1.81936397978930287 0 -4.37296080925611896 0 0 16.66005902853963505 0 0 23.34750005060750411 0 0 0 0 6.03419671191358908 -0.58381786485337805 -1.50266607633121096 16.9498794493787095 -14.36698229271367921 -4.36931882457476295 0 0 0 12.56504771038272494 -27.41574800546716162 25.01828675900175014 -1.4559509263982835 26.71590498311506678 7.78063260117408095 50.1913372062884946 17.87201431879013569 -29.2630932862783979 0 -13.553009955"
-		+ "43765552 0 -13.18582055502353789 -0.39526556914713568 -5.57991870060778439 -15.38049880345187148 8.72671165278720906 -31.76009125951920353 -14.07835045313764688 -26.27777517317057843 -13.30955962948641158 -6.02150142372700703 -43.23137629522158676 3.04687678177065768 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15.64787725289516374 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.67985238183016339 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4.5708013612785523 0 0 -10.64529225760273867 0 0 -25.88779906456428037 0 7.66213902908888222 0 0 13.94248916639221747 0 0 13.95387807627641941 0 0 20.31057128790276067 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -31.42246790740605533 -5.6589"
-		+ "7932600381459 221.81064986876967282 19.06705705309412124 0 89.99999999999997158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.85314817601589599 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "Mia:All_Controls" "av[1:500]" (" 0 0 0 0 0 0 180 65.97007850353696767 -180 0 0 0 0 0 0 0 560.981755893925083 0 0 0 0 0 0 0 9.19804041822368923 -31.08856371300759491 -11.6488204318491011 0 0 0 0 0 0 155.93103730887278857 0.0065178122896502539 -179.13878342933659837 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12.33912875050646285 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.03914143589601693 -0.77230462671313072 -1.50271646021455196 0 0 0 0 0 0 12.56504771038272494 -27.41574800546716162 25.01828675900175014 -1.4559509263982835 26.71590498311506678 7.78063260117408095 50.1913372062884946 17.87201431879013569 -29.2630932862783979 0 0 0 -13.18582055502353789 -0.39526556914713568 -5.57991870060778439 -15.38049880345187148 8.72671165278720906 -31.76009125951920353 -14.07835045313764688 -26.27777517317057843 -13.30955962948641158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -29.01961285295010384 0 0 19.60235626697168954 0 0 0 0 0 0 0 0"
+		+ " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.67985238183016339 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12.74415704655127257 -15.82123618878913973 0 0 -1.42088783907953897 0 -12.89530612382741737 0 0 0 0 0 0 0 1.46927604232733033 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5.53840338824091027 112.70832209494575693 -1.60888700682754759 0 89.99999999999997158 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.85314817601589599 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		)
 		2 "Mia:All_Controls" "av[505:546]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
@@ -6126,7 +6137,7 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|tiktok_camera|tiktok_cameraShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n"
 		+ "            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n"
-		+ "            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 224\n            -height 313\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 0\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 273\n            -height 715\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side|sideShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n"
@@ -6136,14 +6147,14 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp|perspShape\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 627\n            -height 313\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 764\n            -height 715\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
 		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n"
 		+ "            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n"
 		+ "            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
 		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n"
 		+ "                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -isSet 1\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
+		+ "                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
 		+ "                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
@@ -6163,16 +6174,16 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 74 100 -ps 2 26 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 627\\n    -height 313\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 627\\n    -height 313\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 764\\n    -height 715\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 764\\n    -height 715\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|tiktok_camera|tiktok_cameraShape\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 224\\n    -height 313\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|tiktok_camera|tiktok_cameraShape\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 224\\n    -height 313\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|tiktok_camera|tiktok_cameraShape\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 273\\n    -height 715\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|tiktok_camera|tiktok_cameraShape\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 273\\n    -height 715\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ttimeControl -e -displaySound 1 -sound Nintendo_Wii___Mii_Channel_Theme $gPlayBackSlider;\n\ngrid -spacing 10 -size 36 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "B89EFDB1-40B4-E454-7879-EB82B46F9B39";
-	setAttr ".b" -type "string" "playbackOptions -min 482 -max 723 -ast 1 -aet 800 ";
+	setAttr ".b" -type "string" "playbackOptions -min 344 -max 723 -ast 1 -aet 800 ";
 	setAttr ".st" 6;
 createNode reference -n "sharedReferenceNode";
 	rename -uid "83D821D8-4674-357C-23D1-7BAE41E623E1";
@@ -6196,7 +6207,6 @@ createNode materialInfo -n "materialInfo1";
 	rename -uid "D0C4139A-4459-27C4-ADD6-82B49A582C3A";
 createNode displayLayer -n "layer1";
 	rename -uid "6F4F6F4B-489B-A52B-3C15-4793916D4018";
-	setAttr ".dt" 2;
 	setAttr ".do" 1;
 createNode shapeEditorManager -n "books_and_boxes_props:shapeEditorManager";
 	rename -uid "2143E025-4472-FD7E-F1D8-FF8B6833A13E";
@@ -6210,7 +6220,7 @@ createNode renderLayer -n "books_and_boxes_props:defaultRenderLayer";
 createNode reference -n "books_and_boxes_propsRN";
 	rename -uid "5C6EBC52-4305-B3AE-539F-AA9001A938CA";
 	setAttr ".fn[0]" -type "string" "C:/Users/caris/Desktop/Junior-Projects/Maya//books and boxes props.ma";
-	setAttr -s 116 ".phl";
+	setAttr -s 117 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -6327,6 +6337,7 @@ createNode reference -n "books_and_boxes_propsRN";
 	setAttr ".phl[114]" 0;
 	setAttr ".phl[115]" 0;
 	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"books_and_boxes_propsRN"
 		"books_and_boxes_propsRN" 10
@@ -6350,7 +6361,7 @@ createNode reference -n "books_and_boxes_propsRN";
 		"FollowRotate" " -av -k 1 1"
 		2 "books_and_boxes_props1:AllControls" "attributeAliasList" " -type \"attributeAlias\" detachable_book_ctrl_rotateZ"
 		
-		"books_and_boxes_propsRN" 136
+		"books_and_boxes_propsRN" 139
 		0 "|books_and_boxes_propsRNfosterParent1|MASTER_ctrl_grp_parentConstraint1" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp" 
 		"-s -r "
@@ -6379,13 +6390,13 @@ createNode reference -n "books_and_boxes_propsRN";
 		"FollowTranslate" " -k 1"
 		2 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl" 
 		"FollowRotate" " -k 1"
-		2 "books_and_boxes_props1:AllControls" "uv[1:65]" " -s 65 1 1 1 1 1 1 1 1 4.16795529172351742 4.16795529172351742 4.16795529172351742 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4.16795529172351742 4.16795529172351742 4.16795529172351742 1"
+		2 "books_and_boxes_props1:AllControls" "uv[1:65]" " -s 65 1 1 1 1 1 1 1 1 4.16795529172351742 4.16795529172351742 4.16795529172351742 1 0 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 4.16795529172351742 4.16795529172351742 4.16795529172351742 1"
 		
 		2 "books_and_boxes_props1:AllControls" "unitlessValues" " -s 61"
-		2 "books_and_boxes_props1:AllControls" "lv[1:36]" " -s 36 0 0 0 0 0 0 -11.63912925967862755 -97.88454107739978838 66.44320221422373152 0.24494677224134412 -0.44816249976025935 0.11195543134445264 -1.77180094847316272 -0.78038701674967448 0 -1.90116623437001531 1.44041679266005884 -0.72756710206289987 0 0 0 0 0.70912830546923533 0 0 -0.87854738347000361 0 0 1.33215602040279979 0 0 0 0 -15.94220524276680351 -70.72244844776270156 63.58420376301325661"
+		2 "books_and_boxes_props1:AllControls" "lv[1:36]" " -s 36 0 0 0 0 0 0 -11.63912925967862755 -97.88454107739978838 66.44320221422373152 24.30845547860658584 -4.4113288582640342 -4.254 -1.77180094847316272 -0.78038701674967448 0 -1.90116623437001531 1.44041679266005884 -0.72756710206289987 0 0 0 0 0.70912830546923533 0 0 -0.87854738347000361 0 0 1.33215602040279979 0 0 0 0 -70.29705541322636009 -64.65716719114220723 0.877"
 		
 		2 "books_and_boxes_props1:AllControls" "linearValues" " -s 33"
-		2 "books_and_boxes_props1:AllControls" "av[1:36]" " -s 36 0 0 0 0 0 0 17.32522451046147793 0.86694734747166735 2.05120799406681753 0.20225328047579941 -0.5683991319591849 -15.04177370738448616 0 0 0 -1.22682440244936286 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -14.58602941586970658 -4.22734989834430586 -8.8733000416181973"
+		2 "books_and_boxes_props1:AllControls" "av[1:36]" " -s 36 0 0 0 0 0 0 17.32522451046147793 0.86694734747166735 2.05120799406681753 0.022198691140218482 -0.058656836385247012 92.0371134276480376 0 0 0 -1.05831828013541429 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -146.22644030816110217"
 		
 		2 "books_and_boxes_props1:AllControls" "angularValues" " -s 33"
 		2 "books_and_boxes_props1:AllControls" "animationMapping" (" -type \"characterMapping\" 127 \"books_and_boxes_props1:L_hand_ctrl.scaleZ\" 0 1 \"books_and_boxes_props1:L_hand_ctrl.scaleY\" 0 2 \"books_and_boxes_props1:L_hand_ctrl.scaleX\" 0 3 \"books_and_boxes_props1:L_hand_ctrl.rotateZ\" 2 1 \"books_and_boxes_props1:L_hand_ctrl.rotateY\" 2 2 \"books_and_boxes_props1:L_hand_ctrl.rotateX\" 2 3 \"books_and_boxes_props1:L_hand_ctrl.translateZ\" 1 1 \"books_and_boxes_props1:L_hand_ctrl.translateY\" 1 2 \"books_and_boxes_props1:L_hand_ctrl.translateX\" 1 3 \"books_and_boxes_props1:L_hand_ctrl.visibility\" 0 4 \"books_and_boxes_props1:R_hand_ctrl.scaleZ\" 0 5 \"books_and_boxes_props1:R_hand_ctrl.scaleY\" 0 6 \"books_and_boxes_props1:R_hand_ctrl.scaleX\" 0 7 \"books_and_boxes_props1:R_hand_ctrl.rotateZ\" 2 4 \"books_and_boxes_props1:R_hand_ctrl.rotateY\" 2 5 \"books_and_boxes_props1:R_hand_ctrl.rotateX\" 2 6 \"books_and_boxes_props1:R_hand_ctrl.translateZ\" 1 4 \"books_and_boxes_props1:R_hand_ctrl.translateY\" 1 5 \"books_and_boxes_props1:R_hand_ctrl.translateX\" 1 6 \"books_and_boxes_props1:R_hand_ctrl.visibility\" "
@@ -6404,6 +6415,9 @@ createNode reference -n "books_and_boxes_propsRN";
 		+ "\" 0 52 \"books_and_boxes_props1:book_3_ctrl.scaleX\" 0 53 \"books_and_boxes_props1:book_3_ctrl.rotateZ\" 2 28 \"books_and_boxes_props1:book_3_ctrl.rotateY\" 2 29 \"books_and_boxes_props1:book_3_ctrl.rotateX\" 2 30 \"books_and_boxes_props1:book_3_ctrl.translateZ\" 1 28 \"books_and_boxes_props1:book_3_ctrl.translateY\" 1 29 \"books_and_boxes_props1:book_3_ctrl.translateX\" 1 30 \"books_and_boxes_props1:book_3_ctrl.visibility\" 0 54 \"books_and_boxes_props1:book_4_ctrl.FollowRotate\" 0 55 \"books_and_boxes_props1:book_4_ctrl.FollowTranslate\" 0 56 \"books_and_boxes_props1:book_4_ctrl.scaleZ\" 0 57 \"books_and_boxes_props1:book_4_ctrl.scaleY\" 0 58 \"books_and_boxes_props1:book_4_ctrl.scaleX\" 0 59 \"books_and_boxes_props1:book_4_ctrl.rotateZ\" 2 31 \"books_and_boxes_props1:book_4_ctrl.rotateY\" 2 32 \"books_and_boxes_props1:book_4_ctrl.rotateX\" 2 33 \"books_and_boxes_props1:book_4_ctrl.translateZ\" 1 31 \"books_and_boxes_props1:book_4_ctrl.translateY\" 1 32 \"books_and_boxes_props1:book_4_ctrl.translateX\" 1 33 \"books_and_boxes_props1:book_4_ctrl.v"
 		+ "isibility\" 0 60 \"books_and_boxes_props1:MASTER_ctrl.FollowParent\" 0 61 \"books_and_boxes_props1:MASTER_ctrl.scaleZ\" 0 62 \"books_and_boxes_props1:MASTER_ctrl.scaleY\" 0 63 \"books_and_boxes_props1:MASTER_ctrl.scaleX\" 0 64 \"books_and_boxes_props1:MASTER_ctrl.rotateZ\" 2 34 \"books_and_boxes_props1:MASTER_ctrl.rotateY\" 2 35 \"books_and_boxes_props1:MASTER_ctrl.rotateX\" 2 36 \"books_and_boxes_props1:MASTER_ctrl.translateZ\" 1 34 \"books_and_boxes_props1:MASTER_ctrl.translateY\" 1 35 \"books_and_boxes_props1:MASTER_ctrl.translateX\" 1 36 \"books_and_boxes_props1:MASTER_ctrl.visibility\" 0 65"
 		)
+		2 "books_and_boxes_props1:file1" "defaultColor" " -type \"float3\" 0.5 0.5 0.5"
+		
+		2 "books_and_boxes_props1:file1" "exposure" " 0.45454543828964233"
 		3 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.FollowParent" 
 		"books_and_boxes_props1:AllControls.dnSetMembers[126]" ""
 		3 "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.visibility" 
@@ -6450,234 +6464,236 @@ createNode reference -n "books_and_boxes_propsRN";
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_5.visibility" 
 		"books_and_boxes_propsRN.placeHolderList[1]" "books_and_boxes_propsRN.placeHolderList[2]" 
 		""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateX" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:geo|books_and_boxes_props1:book_5|books_and_boxes_props1:book_5Shape.worldMesh" 
 		"books_and_boxes_propsRN.placeHolderList[3]" ""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateY" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateX" 
 		"books_and_boxes_propsRN.placeHolderList[4]" ""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateZ" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateY" 
 		"books_and_boxes_propsRN.placeHolderList[5]" ""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateX" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.translateZ" 
 		"books_and_boxes_propsRN.placeHolderList[6]" ""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateY" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateX" 
 		"books_and_boxes_propsRN.placeHolderList[7]" ""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateZ" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateY" 
 		"books_and_boxes_propsRN.placeHolderList[8]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateOrder" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateZ" 
 		"books_and_boxes_propsRN.placeHolderList[9]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.parentInverseMatrix" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotateOrder" 
 		"books_and_boxes_propsRN.placeHolderList[10]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotatePivot" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.parentInverseMatrix" 
 		"books_and_boxes_propsRN.placeHolderList[11]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotatePivotTranslate" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotatePivot" 
 		"books_and_boxes_propsRN.placeHolderList[12]" ""
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp.rotatePivotTranslate" 
+		"books_and_boxes_propsRN.placeHolderList[13]" ""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.FollowParent" 
-		"books_and_boxes_propsRN.placeHolderList[13]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_propsRN.placeHolderList[14]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[61]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.FollowParent" 
-		"books_and_boxes_propsRN.placeHolderList[14]" "books_and_boxes_propsRN.placeHolderList[15]" 
+		"books_and_boxes_propsRN.placeHolderList[15]" "books_and_boxes_propsRN.placeHolderList[16]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[34]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateZ" 
-		"books_and_boxes_propsRN.placeHolderList[16]" "books_and_boxes_propsRN.placeHolderList[17]" 
+		"books_and_boxes_propsRN.placeHolderList[17]" "books_and_boxes_propsRN.placeHolderList[18]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[35]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateY" 
-		"books_and_boxes_propsRN.placeHolderList[18]" "books_and_boxes_propsRN.placeHolderList[19]" 
+		"books_and_boxes_propsRN.placeHolderList[19]" "books_and_boxes_propsRN.placeHolderList[20]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[36]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateX" 
-		"books_and_boxes_propsRN.placeHolderList[20]" "books_and_boxes_propsRN.placeHolderList[21]" 
+		"books_and_boxes_propsRN.placeHolderList[21]" "books_and_boxes_propsRN.placeHolderList[22]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[34]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateZ" 
-		"books_and_boxes_propsRN.placeHolderList[22]" "books_and_boxes_propsRN.placeHolderList[23]" 
+		"books_and_boxes_propsRN.placeHolderList[23]" "books_and_boxes_propsRN.placeHolderList[24]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[35]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateY" 
-		"books_and_boxes_propsRN.placeHolderList[24]" "books_and_boxes_propsRN.placeHolderList[25]" 
+		"books_and_boxes_propsRN.placeHolderList[25]" "books_and_boxes_propsRN.placeHolderList[26]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[36]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateX" 
-		"books_and_boxes_propsRN.placeHolderList[26]" "books_and_boxes_propsRN.placeHolderList[27]" 
+		"books_and_boxes_propsRN.placeHolderList[27]" "books_and_boxes_propsRN.placeHolderList[28]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[62]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.scaleZ" 
-		"books_and_boxes_propsRN.placeHolderList[28]" "books_and_boxes_propsRN.placeHolderList[29]" 
+		"books_and_boxes_propsRN.placeHolderList[29]" "books_and_boxes_propsRN.placeHolderList[30]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[63]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.scaleY" 
-		"books_and_boxes_propsRN.placeHolderList[30]" "books_and_boxes_propsRN.placeHolderList[31]" 
+		"books_and_boxes_propsRN.placeHolderList[31]" "books_and_boxes_propsRN.placeHolderList[32]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[64]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.scaleX" 
-		"books_and_boxes_propsRN.placeHolderList[32]" "books_and_boxes_propsRN.placeHolderList[33]" 
+		"books_and_boxes_propsRN.placeHolderList[33]" "books_and_boxes_propsRN.placeHolderList[34]" 
 		""
 		5 0 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[65]" 
 		"|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.visibility" 
-		"books_and_boxes_propsRN.placeHolderList[34]" "books_and_boxes_propsRN.placeHolderList[35]" 
+		"books_and_boxes_propsRN.placeHolderList[35]" "books_and_boxes_propsRN.placeHolderList[36]" 
 		""
 		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.translate" 
-		"books_and_boxes_propsRN.placeHolderList[36]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotate" 
 		"books_and_boxes_propsRN.placeHolderList[37]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.scale" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotate" 
 		"books_and_boxes_propsRN.placeHolderList[38]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.parentMatrix" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.scale" 
 		"books_and_boxes_propsRN.placeHolderList[39]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotatePivot" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.parentMatrix" 
 		"books_and_boxes_propsRN.placeHolderList[40]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotatePivotTranslate" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotatePivot" 
 		"books_and_boxes_propsRN.placeHolderList[41]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotateOrder" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotatePivotTranslate" 
 		"books_and_boxes_propsRN.placeHolderList[42]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.translate" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:L_hand_ctrl_grp|books_and_boxes_props1:L_hand_ctrl.rotateOrder" 
 		"books_and_boxes_propsRN.placeHolderList[43]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotate" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.translate" 
 		"books_and_boxes_propsRN.placeHolderList[44]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.scale" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotate" 
 		"books_and_boxes_propsRN.placeHolderList[45]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.parentMatrix" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.scale" 
 		"books_and_boxes_propsRN.placeHolderList[46]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotatePivot" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.parentMatrix" 
 		"books_and_boxes_propsRN.placeHolderList[47]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotatePivotTranslate" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotatePivot" 
 		"books_and_boxes_propsRN.placeHolderList[48]" ""
-		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotateOrder" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotatePivotTranslate" 
 		"books_and_boxes_propsRN.placeHolderList[49]" ""
-		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl.FollowAutoFK" 
+		5 3 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl|books_and_boxes_props1:R_hand_ctrl_grp|books_and_boxes_props1:R_hand_ctrl.rotateOrder" 
 		"books_and_boxes_propsRN.placeHolderList[50]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[13]" 
+		5 4 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:detachable_book_ctrl_grp|books_and_boxes_props1:detachable_book_offset_ctrl_grp7|books_and_boxes_props1:detachable_book_ctrl.FollowAutoFK" 
 		"books_and_boxes_propsRN.placeHolderList[51]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[14]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[13]" 
 		"books_and_boxes_propsRN.placeHolderList[52]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[18]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[14]" 
 		"books_and_boxes_propsRN.placeHolderList[53]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[61]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[18]" 
 		"books_and_boxes_propsRN.placeHolderList[54]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[62]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[61]" 
 		"books_and_boxes_propsRN.placeHolderList[55]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[63]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[62]" 
 		"books_and_boxes_propsRN.placeHolderList[56]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[64]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[63]" 
 		"books_and_boxes_propsRN.placeHolderList[57]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[65]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[64]" 
 		"books_and_boxes_propsRN.placeHolderList[58]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[4]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.unitlessValues[65]" 
 		"books_and_boxes_propsRN.placeHolderList[59]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[5]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[4]" 
 		"books_and_boxes_propsRN.placeHolderList[60]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[6]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[5]" 
 		"books_and_boxes_propsRN.placeHolderList[61]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[10]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[6]" 
 		"books_and_boxes_propsRN.placeHolderList[62]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[11]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[10]" 
 		"books_and_boxes_propsRN.placeHolderList[63]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[12]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[11]" 
 		"books_and_boxes_propsRN.placeHolderList[64]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[13]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[12]" 
 		"books_and_boxes_propsRN.placeHolderList[65]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[14]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[13]" 
 		"books_and_boxes_propsRN.placeHolderList[66]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[15]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[14]" 
 		"books_and_boxes_propsRN.placeHolderList[67]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[16]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[15]" 
 		"books_and_boxes_propsRN.placeHolderList[68]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[17]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[16]" 
 		"books_and_boxes_propsRN.placeHolderList[69]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[18]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[17]" 
 		"books_and_boxes_propsRN.placeHolderList[70]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[22]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[18]" 
 		"books_and_boxes_propsRN.placeHolderList[71]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[23]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[22]" 
 		"books_and_boxes_propsRN.placeHolderList[72]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[24]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[23]" 
 		"books_and_boxes_propsRN.placeHolderList[73]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[25]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[24]" 
 		"books_and_boxes_propsRN.placeHolderList[74]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[26]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[25]" 
 		"books_and_boxes_propsRN.placeHolderList[75]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[27]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[26]" 
 		"books_and_boxes_propsRN.placeHolderList[76]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[28]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[27]" 
 		"books_and_boxes_propsRN.placeHolderList[77]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[29]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[28]" 
 		"books_and_boxes_propsRN.placeHolderList[78]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[30]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[29]" 
 		"books_and_boxes_propsRN.placeHolderList[79]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[34]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[30]" 
 		"books_and_boxes_propsRN.placeHolderList[80]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[35]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[34]" 
 		"books_and_boxes_propsRN.placeHolderList[81]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[36]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[35]" 
 		"books_and_boxes_propsRN.placeHolderList[82]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[4]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.linearValues[36]" 
 		"books_and_boxes_propsRN.placeHolderList[83]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[5]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[4]" 
 		"books_and_boxes_propsRN.placeHolderList[84]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[6]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[5]" 
 		"books_and_boxes_propsRN.placeHolderList[85]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[10]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[6]" 
 		"books_and_boxes_propsRN.placeHolderList[86]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[11]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[10]" 
 		"books_and_boxes_propsRN.placeHolderList[87]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[12]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[11]" 
 		"books_and_boxes_propsRN.placeHolderList[88]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[16]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[12]" 
 		"books_and_boxes_propsRN.placeHolderList[89]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[17]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[16]" 
 		"books_and_boxes_propsRN.placeHolderList[90]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[18]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[17]" 
 		"books_and_boxes_propsRN.placeHolderList[91]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[34]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[18]" 
 		"books_and_boxes_propsRN.placeHolderList[92]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[35]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[34]" 
 		"books_and_boxes_propsRN.placeHolderList[93]" ""
-		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[36]" 
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[35]" 
 		"books_and_boxes_propsRN.placeHolderList[94]" ""
+		5 4 "books_and_boxes_propsRN" "books_and_boxes_props1:AllControls.angularValues[36]" 
+		"books_and_boxes_propsRN.placeHolderList[95]" ""
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.FollowParent" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[126]" "books_and_boxes_propsRN.placeHolderList[95]" 
-		"books_and_boxes_propsRN.placeHolderList[96]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[126]" "books_and_boxes_propsRN.placeHolderList[96]" 
+		"books_and_boxes_propsRN.placeHolderList[97]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.scaleZ" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[127]" "books_and_boxes_propsRN.placeHolderList[97]" 
-		"books_and_boxes_propsRN.placeHolderList[98]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[127]" "books_and_boxes_propsRN.placeHolderList[98]" 
+		"books_and_boxes_propsRN.placeHolderList[99]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.scaleY" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[128]" "books_and_boxes_propsRN.placeHolderList[99]" 
-		"books_and_boxes_propsRN.placeHolderList[100]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[128]" "books_and_boxes_propsRN.placeHolderList[100]" 
+		"books_and_boxes_propsRN.placeHolderList[101]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.scaleX" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[129]" "books_and_boxes_propsRN.placeHolderList[101]" 
-		"books_and_boxes_propsRN.placeHolderList[102]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[129]" "books_and_boxes_propsRN.placeHolderList[102]" 
+		"books_and_boxes_propsRN.placeHolderList[103]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateZ" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[130]" "books_and_boxes_propsRN.placeHolderList[103]" 
-		"books_and_boxes_propsRN.placeHolderList[104]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[130]" "books_and_boxes_propsRN.placeHolderList[104]" 
+		"books_and_boxes_propsRN.placeHolderList[105]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateY" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[131]" "books_and_boxes_propsRN.placeHolderList[105]" 
-		"books_and_boxes_propsRN.placeHolderList[106]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[131]" "books_and_boxes_propsRN.placeHolderList[106]" 
+		"books_and_boxes_propsRN.placeHolderList[107]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.rotateX" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[132]" "books_and_boxes_propsRN.placeHolderList[107]" 
-		"books_and_boxes_propsRN.placeHolderList[108]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[132]" "books_and_boxes_propsRN.placeHolderList[108]" 
+		"books_and_boxes_propsRN.placeHolderList[109]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateZ" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[133]" "books_and_boxes_propsRN.placeHolderList[109]" 
-		"books_and_boxes_propsRN.placeHolderList[110]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[133]" "books_and_boxes_propsRN.placeHolderList[110]" 
+		"books_and_boxes_propsRN.placeHolderList[111]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateY" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[134]" "books_and_boxes_propsRN.placeHolderList[111]" 
-		"books_and_boxes_propsRN.placeHolderList[112]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[134]" "books_and_boxes_propsRN.placeHolderList[112]" 
+		"books_and_boxes_propsRN.placeHolderList[113]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.translateX" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[135]" "books_and_boxes_propsRN.placeHolderList[113]" 
-		"books_and_boxes_propsRN.placeHolderList[114]" "books_and_boxes_props1:AllControls.dnsm"
+		"books_and_boxes_props1:AllControls.dnSetMembers[135]" "books_and_boxes_propsRN.placeHolderList[114]" 
+		"books_and_boxes_propsRN.placeHolderList[115]" "books_and_boxes_props1:AllControls.dnsm"
 		
 		5 0 "books_and_boxes_propsRN" "|books_and_boxes_props1:stack_of_books_and_boxes|books_and_boxes_props1:Controls|books_and_boxes_props1:MASTER_ctrl_grp|books_and_boxes_props1:MASTER_ctrl.visibility" 
-		"books_and_boxes_props1:AllControls.dnSetMembers[136]" "books_and_boxes_propsRN.placeHolderList[115]" 
-		"books_and_boxes_propsRN.placeHolderList[116]" "books_and_boxes_props1:AllControls.dnsm";
+		"books_and_boxes_props1:AllControls.dnSetMembers[136]" "books_and_boxes_propsRN.placeHolderList[116]" 
+		"books_and_boxes_propsRN.placeHolderList[117]" "books_and_boxes_props1:AllControls.dnsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode audio -n "Nintendo_Wii___Mii_Channel_Theme";
@@ -15122,20 +15138,23 @@ createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateX";
 	rename -uid "4248BF31-403D-5883-4B58-828F902FBED5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 30 ".ktv[0:29]"  1 0 11 0.18789877919237163 19 -0.30465608822582502
+	setAttr -s 33 ".ktv[0:32]"  1 0 11 0.18789877919237163 19 -0.30465608822582502
 		 24 0.098434864271056521 32 -0.4290756550990501 101 -0.040843832491256532 220 -0.12800347650665764
 		 229 -0.12186999165106611 251 -0.10040922249580236 271 -0.059171946920835591 276 -0.059171946920835591
 		 287 -0.10040922249572244 291 -0.10040922249572244 307 -0.10040922249570565 318 -0.10040922249570565
 		 327 -0.10040922249572133 332 -0.40371576290554323 337 -0.72756710206288044 341 -0.72756710206289987
 		 344 -0.72756710206289987 395 -0.72756710206289987 411 -0.72756710206289987 415 -0.72756710206289987
-		 421 -0.72756710206289987 668 -0.72756710206289987 670 -0.72756710206289987 673 -0.72756710206289987
-		 676 -0.72756710206289987 716 3.0517163710931743 720 21.465426384555961;
-	setAttr -s 30 ".kit[25:29]"  1 18 1 18 18;
-	setAttr -s 30 ".kot[0:29]"  5 18 18 18 18 18 18 18 
+		 421 -0.72756710206289987 668 -0.72756710206289987 670 -0.72756710206289987 673 -0.71417538479604792
+		 676 -0.71892971946008266 681 -0.73289024788036006 689 -0.74302376576309637 697 -0.34046497051779767
+		 716 3.0517163710931743 720 21.465426384555961;
+	setAttr -s 33 ".kit[25:32]"  1 18 1 18 18 18 18 18;
+	setAttr -s 33 ".kot[0:32]"  5 18 18 18 18 18 18 18 
 		18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 18 5 
-		5 5 5 18 5;
-	setAttr -s 30 ".kix[25:29]"  1 1 1 0.14543725091252102 1;
-	setAttr -s 30 ".kiy[25:29]"  0 0 0 0.98936747775890044 0;
+		5 5 5 18 18 18 18 5;
+	setAttr -s 33 ".kix[25:32]"  1 1 1 0.99901217188905977 1 0.28423524469517802 
+		0.077558941570656792 1;
+	setAttr -s 33 ".kiy[25:32]"  0 0 0 -0.044437376357112736 0 0.95875457009240483 
+		0.99698776852198112 0;
 createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateY";
 	rename -uid "E3661FB7-41C6-060E-05F3-5C93640605AB";
 	setAttr ".tan" 18;
@@ -15148,41 +15167,41 @@ createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateY";
 		 337 -2.0633903873572814 341 -2.0633903873572734 344 -2.0633903873572734 347 0.22663583774220361
 		 361 0.22663583774220361 395 -2.0633903873572734 411 -2.0633903873572734 415 -2.0633903873572734
 		 421 -2.0633903873572734 430 -3.9012803493783448 469 -0.56694316937181899 529 1.4404167926600588
-		 540 1.4404167926600588 668 1.4404167926600588 670 1.4404167926600588 673 0.67960923965464315
-		 676 0.67960923965464315 681 -2.6390874648752973 689 -2.6390874648752973 697 -4.4096216500165104
+		 540 1.4404167926600588 668 1.4404167926600588 670 1.4404167926600588 673 1.2928619931869338
+		 676 1.0747447965850641 681 -3.2773239991536776 689 -3.740600254809296 697 -3.2323318814203397
 		 701 -3.5113444957930615 708 -3.7706429570898674 712 -3.7706429570898674 716 -4.185932638272055
 		 720 -4.1859326382720639;
 	setAttr -s 43 ".kit[30:42]"  1 18 1 18 1 18 18 18 
 		18 18 1 18 18;
 	setAttr -s 43 ".kot[30:42]"  1 18 1 18 1 18 18 18 
 		18 18 1 18 18;
-	setAttr -s 43 ".kix[30:42]"  1 1 1 1 0.1316223965171692 1 1 1 1 1 0.67963126751270364 
-		1 1;
-	setAttr -s 43 ".kiy[30:42]"  0 0 0 0 -0.9912999267300876 0 0 0 0 0 -0.73355391091526179 
-		0 0;
-	setAttr -s 43 ".kox[30:42]"  1 1 1 1 0.1316223965171692 1 1 1 1 1 0.67963126751270364 
-		1 1;
-	setAttr -s 43 ".koy[30:42]"  0 0 0 0 -0.9912999267300876 0 0 0 0 0 -0.73355391091526179 
-		0 0;
+	setAttr -s 43 ".kix[30:42]"  1 1 1 0.56438152667085939 0.1316223965171692 
+		0.23322372001791669 1 1 0.64827959438415905 1 0.67963126751270364 1 1;
+	setAttr -s 43 ".kiy[30:42]"  0 0 0 -0.8255140776223443 -0.9912999267300876 
+		-0.9724231056597763 0 0 -0.76140236899100222 0 -0.73355391091526179 0 0;
+	setAttr -s 43 ".kox[30:42]"  1 1 1 0.56438152667085939 0.1316223965171692 
+		0.23322372001791666 1 1 0.64827959438415894 1 0.67963126751270364 1 1;
+	setAttr -s 43 ".koy[30:42]"  0 0 0 -0.8255140776223443 -0.9912999267300876 
+		-0.97242310565977619 0 0 -0.76140236899100222 0 -0.73355391091526179 0 0;
 createNode animCurveTL -n "AllControls_Auto_FK_bounce_ctrl_translateZ";
 	rename -uid "5156D3B4-4DD8-71E1-46AE-FBAE9CA28821";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 33 ".ktv[0:32]"  1 9.8607613152626476e-29 11 -5.7347651772109231e-18
+	setAttr -s 34 ".ktv[0:33]"  1 9.8607613152626476e-29 11 -5.7347651772109231e-18
 		 19 2.4313778713990378e-17 24 0 32 0 101 0 220 -1.8184162325274167 251 -1.539192847985801
 		 271 -1.3154499033075817 276 -1.3154499033075817 287 -2.9492619959669732 291 -2.9492619959669732
 		 307 -3.6743295802310203 318 -3.6743295802310203 327 -9.6665764011971689 332 -3.9484714360713866
 		 337 -6.9489494161904943 341 -0.93827199656623672 344 -0.93827199656623672 347 0.050921912618189499
 		 361 0.050921912618189499 395 0.7163411268534513 411 0.7163411268534513 415 0.7163411268534513
 		 421 0.7163411268534513 529 -1.9011662343700153 540 -1.9011662343700153 668 -1.9011662343700153
-		 670 -1.9011662343700153 673 -0.45528036422225154 676 -0.45528036422225154 716 -0.45528036422225676
-		 720 -0.45528036422226564;
-	setAttr -s 33 ".kit[26:32]"  1 18 1 18 1 18 18;
-	setAttr -s 33 ".kot[26:32]"  1 18 1 18 1 18 18;
-	setAttr -s 33 ".kix[26:32]"  1 1 1 1 1 1 1;
-	setAttr -s 33 ".kiy[26:32]"  0 0 0 0 0 0 0;
-	setAttr -s 33 ".kox[26:32]"  1 1 1 1 1 1 1;
-	setAttr -s 33 ".koy[26:32]"  0 0 0 0 0 0 0;
+		 670 -1.9011662343700153 673 -0.45528036422225154 676 -0.45528036422225154 689 -0.45528036422225332
+		 716 -0.45528036422225676 720 -0.45528036422226564;
+	setAttr -s 34 ".kit[26:33]"  1 18 1 18 1 18 18 18;
+	setAttr -s 34 ".kot[26:33]"  1 18 1 18 1 18 18 18;
+	setAttr -s 34 ".kix[26:33]"  1 1 1 1 1 1 1 1;
+	setAttr -s 34 ".kiy[26:33]"  0 0 0 0 0 0 0 0;
+	setAttr -s 34 ".kox[26:33]"  1 1 1 1 1 1 1 1;
+	setAttr -s 34 ".koy[26:33]"  0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "AllControls_Auto_FK_bounce_ctrl_rotateX";
 	rename -uid "C2CEF086-45B6-4E98-1432-EB912A504A0C";
 	setAttr ".tan" 18;
@@ -18919,7 +18938,7 @@ createNode character -n "scene";
 	rename -uid "DAE8964A-488E-E0A0-56BB-688365ACBE2D";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -s 11 ".dnsm";
-	setAttr -s 5 ".uv[2:5]"  1 1 1 0;
+	setAttr -s 5 ".uv[2:5]"  1 1 1 1;
 	setAttr -s 5 ".uv";
 	setAttr -s 3 ".lv";
 	setAttr -s 3 ".lv";
@@ -18944,9 +18963,15 @@ createNode timeEditor -s -n "timeEditor";
 	setAttr ".ac" 0;
 createNode timeEditorTracks -n "Composition1";
 	rename -uid "EFB68359-4A1A-97E5-DC9F-B188F84C506C";
+createNode transferAttributes -n "transferAttributes1";
+	rename -uid "A355DA73-4BFE-939E-3B44-7CB926E1E57C";
+	setAttr ".uvs" 2;
+	setAttr ".spa" 4;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
 select -ne :time1;
-	setAttr ".o" 652;
-	setAttr ".unw" 652;
+	setAttr ".o" 597;
+	setAttr ".unw" 597;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -18960,16 +18985,18 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 21 ".u";
+	setAttr -s 22 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 4 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 10 ".tx";
+	setAttr -s 11 ".tx";
+select -ne :lambert1;
 select -ne :initialShadingGroup;
 	setAttr -s 8 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -21072,175 +21099,176 @@ connectAttr "All_Controls_L_Leg_PV_ctrl_rotateZ.o" "MiaRN.phl[1804]";
 connectAttr "All_Controls_L_Leg_PV_ctrl_rotateY.o" "MiaRN.phl[1805]";
 connectAttr "All_Controls_L_Leg_PV_ctrl_rotateX.o" "MiaRN.phl[1806]";
 connectAttr "books_and_boxes_propsRN.phl[1]" "books_and_boxes_propsRN.phl[2]";
-connectAttr "MASTER_ctrl_grp_parentConstraint1.ctx" "books_and_boxes_propsRN.phl[3]"
+connectAttr "books_and_boxes_propsRN.phl[3]" "transferAttributes1.src[0]";
+connectAttr "MASTER_ctrl_grp_parentConstraint1.ctx" "books_and_boxes_propsRN.phl[4]"
 		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.cty" "books_and_boxes_propsRN.phl[4]"
+connectAttr "MASTER_ctrl_grp_parentConstraint1.cty" "books_and_boxes_propsRN.phl[5]"
 		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.ctz" "books_and_boxes_propsRN.phl[5]"
+connectAttr "MASTER_ctrl_grp_parentConstraint1.ctz" "books_and_boxes_propsRN.phl[6]"
 		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.crx" "books_and_boxes_propsRN.phl[6]"
+connectAttr "MASTER_ctrl_grp_parentConstraint1.crx" "books_and_boxes_propsRN.phl[7]"
 		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.cry" "books_and_boxes_propsRN.phl[7]"
+connectAttr "MASTER_ctrl_grp_parentConstraint1.cry" "books_and_boxes_propsRN.phl[8]"
 		;
-connectAttr "MASTER_ctrl_grp_parentConstraint1.crz" "books_and_boxes_propsRN.phl[8]"
+connectAttr "MASTER_ctrl_grp_parentConstraint1.crz" "books_and_boxes_propsRN.phl[9]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[9]" "MASTER_ctrl_grp_parentConstraint1.cro"
+connectAttr "books_and_boxes_propsRN.phl[10]" "MASTER_ctrl_grp_parentConstraint1.cro"
 		;
-connectAttr "books_and_boxes_propsRN.phl[10]" "MASTER_ctrl_grp_parentConstraint1.cpim"
+connectAttr "books_and_boxes_propsRN.phl[11]" "MASTER_ctrl_grp_parentConstraint1.cpim"
 		;
-connectAttr "books_and_boxes_propsRN.phl[11]" "MASTER_ctrl_grp_parentConstraint1.crp"
+connectAttr "books_and_boxes_propsRN.phl[12]" "MASTER_ctrl_grp_parentConstraint1.crp"
 		;
-connectAttr "books_and_boxes_propsRN.phl[12]" "MASTER_ctrl_grp_parentConstraint1.crt"
+connectAttr "books_and_boxes_propsRN.phl[13]" "MASTER_ctrl_grp_parentConstraint1.crt"
 		;
-connectAttr "books_and_boxes_propsRN.phl[13]" "MASTER_ctrl_grp_parentConstraint1.w0"
+connectAttr "books_and_boxes_propsRN.phl[14]" "MASTER_ctrl_grp_parentConstraint1.w0"
 		;
-connectAttr "books_and_boxes_propsRN.phl[14]" "books_and_boxes_propsRN.phl[15]";
-connectAttr "books_and_boxes_propsRN.phl[16]" "books_and_boxes_propsRN.phl[17]";
-connectAttr "books_and_boxes_propsRN.phl[18]" "books_and_boxes_propsRN.phl[19]";
-connectAttr "books_and_boxes_propsRN.phl[20]" "books_and_boxes_propsRN.phl[21]";
-connectAttr "books_and_boxes_propsRN.phl[22]" "books_and_boxes_propsRN.phl[23]";
-connectAttr "books_and_boxes_propsRN.phl[24]" "books_and_boxes_propsRN.phl[25]";
-connectAttr "books_and_boxes_propsRN.phl[26]" "books_and_boxes_propsRN.phl[27]";
-connectAttr "books_and_boxes_propsRN.phl[28]" "books_and_boxes_propsRN.phl[29]";
-connectAttr "books_and_boxes_propsRN.phl[30]" "books_and_boxes_propsRN.phl[31]";
-connectAttr "books_and_boxes_propsRN.phl[32]" "books_and_boxes_propsRN.phl[33]";
-connectAttr "books_and_boxes_propsRN.phl[34]" "books_and_boxes_propsRN.phl[35]";
-connectAttr "books_and_boxes_propsRN.phl[36]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
+connectAttr "books_and_boxes_propsRN.phl[15]" "books_and_boxes_propsRN.phl[16]";
+connectAttr "books_and_boxes_propsRN.phl[17]" "books_and_boxes_propsRN.phl[18]";
+connectAttr "books_and_boxes_propsRN.phl[19]" "books_and_boxes_propsRN.phl[20]";
+connectAttr "books_and_boxes_propsRN.phl[21]" "books_and_boxes_propsRN.phl[22]";
+connectAttr "books_and_boxes_propsRN.phl[23]" "books_and_boxes_propsRN.phl[24]";
+connectAttr "books_and_boxes_propsRN.phl[25]" "books_and_boxes_propsRN.phl[26]";
+connectAttr "books_and_boxes_propsRN.phl[27]" "books_and_boxes_propsRN.phl[28]";
+connectAttr "books_and_boxes_propsRN.phl[29]" "books_and_boxes_propsRN.phl[30]";
+connectAttr "books_and_boxes_propsRN.phl[31]" "books_and_boxes_propsRN.phl[32]";
+connectAttr "books_and_boxes_propsRN.phl[33]" "books_and_boxes_propsRN.phl[34]";
+connectAttr "books_and_boxes_propsRN.phl[35]" "books_and_boxes_propsRN.phl[36]";
+connectAttr "books_and_boxes_propsRN.phl[37]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "books_and_boxes_propsRN.phl[37]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
+connectAttr "books_and_boxes_propsRN.phl[38]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "books_and_boxes_propsRN.phl[38]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
+connectAttr "books_and_boxes_propsRN.phl[39]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "books_and_boxes_propsRN.phl[39]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
+connectAttr "books_and_boxes_propsRN.phl[40]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "books_and_boxes_propsRN.phl[40]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
+connectAttr "books_and_boxes_propsRN.phl[41]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "books_and_boxes_propsRN.phl[41]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
+connectAttr "books_and_boxes_propsRN.phl[42]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "books_and_boxes_propsRN.phl[42]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
+connectAttr "books_and_boxes_propsRN.phl[43]" "L_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "books_and_boxes_propsRN.phl[43]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
+connectAttr "books_and_boxes_propsRN.phl[44]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "books_and_boxes_propsRN.phl[44]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
+connectAttr "books_and_boxes_propsRN.phl[45]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "books_and_boxes_propsRN.phl[45]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
+connectAttr "books_and_boxes_propsRN.phl[46]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "books_and_boxes_propsRN.phl[46]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
+connectAttr "books_and_boxes_propsRN.phl[47]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "books_and_boxes_propsRN.phl[47]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
+connectAttr "books_and_boxes_propsRN.phl[48]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "books_and_boxes_propsRN.phl[48]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
+connectAttr "books_and_boxes_propsRN.phl[49]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "books_and_boxes_propsRN.phl[49]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
+connectAttr "books_and_boxes_propsRN.phl[50]" "R_Arm_IK_ctrl_grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "detachable_book_ctrl_FollowAutoFK.o" "books_and_boxes_propsRN.phl[50]"
+connectAttr "detachable_book_ctrl_FollowAutoFK.o" "books_and_boxes_propsRN.phl[51]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_FollowRotate.o" "books_and_boxes_propsRN.phl[51]"
+connectAttr "AllControls_detachable_book_ctrl_FollowRotate.o" "books_and_boxes_propsRN.phl[52]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_FollowTranslate.o" "books_and_boxes_propsRN.phl[52]"
+connectAttr "AllControls_detachable_book_ctrl_FollowTranslate.o" "books_and_boxes_propsRN.phl[53]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_visibility.o" "books_and_boxes_propsRN.phl[53]"
+connectAttr "AllControls_detachable_book_ctrl_visibility.o" "books_and_boxes_propsRN.phl[54]"
 		;
-connectAttr "MASTER_ctrl_FollowParent.o" "books_and_boxes_propsRN.phl[54]";
-connectAttr "AllControls_MASTER_ctrl_scaleZ.o" "books_and_boxes_propsRN.phl[55]"
+connectAttr "MASTER_ctrl_FollowParent.o" "books_and_boxes_propsRN.phl[55]";
+connectAttr "AllControls_MASTER_ctrl_scaleZ.o" "books_and_boxes_propsRN.phl[56]"
 		;
-connectAttr "AllControls_MASTER_ctrl_scaleY.o" "books_and_boxes_propsRN.phl[56]"
+connectAttr "AllControls_MASTER_ctrl_scaleY.o" "books_and_boxes_propsRN.phl[57]"
 		;
-connectAttr "AllControls_MASTER_ctrl_scaleX.o" "books_and_boxes_propsRN.phl[57]"
+connectAttr "AllControls_MASTER_ctrl_scaleX.o" "books_and_boxes_propsRN.phl[58]"
 		;
-connectAttr "AllControls_MASTER_ctrl_visibility.o" "books_and_boxes_propsRN.phl[58]"
+connectAttr "AllControls_MASTER_ctrl_visibility.o" "books_and_boxes_propsRN.phl[59]"
 		;
-connectAttr "AllControls_R_hand_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[59]"
+connectAttr "AllControls_R_hand_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[60]"
 		;
-connectAttr "AllControls_R_hand_ctrl_translateY.o" "books_and_boxes_propsRN.phl[60]"
+connectAttr "AllControls_R_hand_ctrl_translateY.o" "books_and_boxes_propsRN.phl[61]"
 		;
-connectAttr "AllControls_R_hand_ctrl_translateX.o" "books_and_boxes_propsRN.phl[61]"
+connectAttr "AllControls_R_hand_ctrl_translateX.o" "books_and_boxes_propsRN.phl[62]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[62]"
+connectAttr "AllControls_detachable_book_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[63]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_translateY.o" "books_and_boxes_propsRN.phl[63]"
+connectAttr "AllControls_detachable_book_ctrl_translateY.o" "books_and_boxes_propsRN.phl[64]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_translateX.o" "books_and_boxes_propsRN.phl[64]"
+connectAttr "AllControls_detachable_book_ctrl_translateX.o" "books_and_boxes_propsRN.phl[65]"
 		;
-connectAttr "AllControls_box_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[65]"
+connectAttr "AllControls_box_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[66]"
 		;
-connectAttr "AllControls_box_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[66]"
+connectAttr "AllControls_box_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[67]"
 		;
-connectAttr "AllControls_box_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[67]"
+connectAttr "AllControls_box_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[68]"
 		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[68]"
+connectAttr "AllControls_Auto_FK_bounce_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[69]"
 		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_translateY.o" "books_and_boxes_propsRN.phl[69]"
+connectAttr "AllControls_Auto_FK_bounce_ctrl_translateY.o" "books_and_boxes_propsRN.phl[70]"
 		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_translateX.o" "books_and_boxes_propsRN.phl[70]"
+connectAttr "AllControls_Auto_FK_bounce_ctrl_translateX.o" "books_and_boxes_propsRN.phl[71]"
 		;
-connectAttr "AllControls_book_1_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[71]"
+connectAttr "AllControls_book_1_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[72]"
 		;
-connectAttr "AllControls_book_1_ctrl_translateY.o" "books_and_boxes_propsRN.phl[72]"
+connectAttr "AllControls_book_1_ctrl_translateY.o" "books_and_boxes_propsRN.phl[73]"
 		;
-connectAttr "AllControls_book_1_ctrl_translateX.o" "books_and_boxes_propsRN.phl[73]"
+connectAttr "AllControls_book_1_ctrl_translateX.o" "books_and_boxes_propsRN.phl[74]"
 		;
-connectAttr "AllControls_book_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[74]"
+connectAttr "AllControls_book_2_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[75]"
 		;
-connectAttr "AllControls_book_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[75]"
+connectAttr "AllControls_book_2_ctrl_translateY.o" "books_and_boxes_propsRN.phl[76]"
 		;
-connectAttr "AllControls_book_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[76]"
+connectAttr "AllControls_book_2_ctrl_translateX.o" "books_and_boxes_propsRN.phl[77]"
 		;
-connectAttr "AllControls_book_3_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[77]"
+connectAttr "AllControls_book_3_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[78]"
 		;
-connectAttr "AllControls_book_3_ctrl_translateY.o" "books_and_boxes_propsRN.phl[78]"
+connectAttr "AllControls_book_3_ctrl_translateY.o" "books_and_boxes_propsRN.phl[79]"
 		;
-connectAttr "AllControls_book_3_ctrl_translateX.o" "books_and_boxes_propsRN.phl[79]"
+connectAttr "AllControls_book_3_ctrl_translateX.o" "books_and_boxes_propsRN.phl[80]"
 		;
-connectAttr "AllControls_MASTER_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[80]"
+connectAttr "AllControls_MASTER_ctrl_translateZ.o" "books_and_boxes_propsRN.phl[81]"
 		;
-connectAttr "AllControls_MASTER_ctrl_translateY.o" "books_and_boxes_propsRN.phl[81]"
+connectAttr "AllControls_MASTER_ctrl_translateY.o" "books_and_boxes_propsRN.phl[82]"
 		;
-connectAttr "AllControls_MASTER_ctrl_translateX.o" "books_and_boxes_propsRN.phl[82]"
+connectAttr "AllControls_MASTER_ctrl_translateX.o" "books_and_boxes_propsRN.phl[83]"
 		;
-connectAttr "AllControls_R_hand_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[83]"
+connectAttr "AllControls_R_hand_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[84]"
 		;
-connectAttr "AllControls_R_hand_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[84]"
+connectAttr "AllControls_R_hand_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[85]"
 		;
-connectAttr "AllControls_R_hand_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[85]"
+connectAttr "AllControls_R_hand_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[86]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[86]"
+connectAttr "AllControls_detachable_book_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[87]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[87]"
+connectAttr "AllControls_detachable_book_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[88]"
 		;
-connectAttr "AllControls_detachable_book_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[88]"
+connectAttr "AllControls_detachable_book_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[89]"
 		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[89]"
+connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[90]"
 		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[90]"
+connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[91]"
 		;
-connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[91]"
+connectAttr "AllControls_Auto_FK_bounce_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[92]"
 		;
-connectAttr "AllControls_MASTER_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[92]"
+connectAttr "AllControls_MASTER_ctrl_rotateZ.o" "books_and_boxes_propsRN.phl[93]"
 		;
-connectAttr "AllControls_MASTER_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[93]"
+connectAttr "AllControls_MASTER_ctrl_rotateY.o" "books_and_boxes_propsRN.phl[94]"
 		;
-connectAttr "AllControls_MASTER_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[94]"
+connectAttr "AllControls_MASTER_ctrl_rotateX.o" "books_and_boxes_propsRN.phl[95]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[95]" "books_and_boxes_propsRN.phl[96]";
-connectAttr "books_and_boxes_propsRN.phl[97]" "books_and_boxes_propsRN.phl[98]";
-connectAttr "books_and_boxes_propsRN.phl[99]" "books_and_boxes_propsRN.phl[100]"
+connectAttr "books_and_boxes_propsRN.phl[96]" "books_and_boxes_propsRN.phl[97]";
+connectAttr "books_and_boxes_propsRN.phl[98]" "books_and_boxes_propsRN.phl[99]";
+connectAttr "books_and_boxes_propsRN.phl[100]" "books_and_boxes_propsRN.phl[101]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[101]" "books_and_boxes_propsRN.phl[102]"
+connectAttr "books_and_boxes_propsRN.phl[102]" "books_and_boxes_propsRN.phl[103]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[103]" "books_and_boxes_propsRN.phl[104]"
+connectAttr "books_and_boxes_propsRN.phl[104]" "books_and_boxes_propsRN.phl[105]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[105]" "books_and_boxes_propsRN.phl[106]"
+connectAttr "books_and_boxes_propsRN.phl[106]" "books_and_boxes_propsRN.phl[107]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[107]" "books_and_boxes_propsRN.phl[108]"
+connectAttr "books_and_boxes_propsRN.phl[108]" "books_and_boxes_propsRN.phl[109]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[109]" "books_and_boxes_propsRN.phl[110]"
+connectAttr "books_and_boxes_propsRN.phl[110]" "books_and_boxes_propsRN.phl[111]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[111]" "books_and_boxes_propsRN.phl[112]"
+connectAttr "books_and_boxes_propsRN.phl[112]" "books_and_boxes_propsRN.phl[113]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[113]" "books_and_boxes_propsRN.phl[114]"
+connectAttr "books_and_boxes_propsRN.phl[114]" "books_and_boxes_propsRN.phl[115]"
 		;
-connectAttr "books_and_boxes_propsRN.phl[115]" "books_and_boxes_propsRN.phl[116]"
+connectAttr "books_and_boxes_propsRN.phl[116]" "books_and_boxes_propsRN.phl[117]"
 		;
 connectAttr "layer1.di" "backdrop:backdrop.do";
 connectAttr "detachable_book_swap_ctrl_grp_parentConstraint1.crx" "detachable_book_swap_ctrl_grp.rx"
@@ -21288,6 +21316,7 @@ connectAttr "book_5_swap_scaleConstraint1.csx" "book_5_swap.sx";
 connectAttr "book_5_swap_scaleConstraint1.csy" "book_5_swap.sy";
 connectAttr "book_5_swap_scaleConstraint1.csz" "book_5_swap.sz";
 connectAttr "detachable_book_swap_ctrl.v" "book_5_swap.v";
+connectAttr "transferAttributes1.og[0]" "book_5_swapShape.i";
 connectAttr "book_5_swap.ro" "book_5_swap_parentConstraint1.cro";
 connectAttr "book_5_swap.pim" "book_5_swap_parentConstraint1.cpim";
 connectAttr "book_5_swap.rp" "book_5_swap_parentConstraint1.crp";
@@ -21390,6 +21419,7 @@ connectAttr "detachable_book_swap_ctrl_translateZ.o" "scene.lv[1]";
 connectAttr "detachable_book_swap_ctrl_translateY.o" "scene.lv[2]";
 connectAttr "detachable_book_swap_ctrl_translateX.o" "scene.lv[3]";
 connectAttr ":timeEditor.cmp[0]" "Composition1.cmp";
+connectAttr "book_5_swapShapeOrig.w" "transferAttributes1.ip[0].ig";
 connectAttr "backdrop:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "standardSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
